@@ -8,7 +8,7 @@ Verified locally on 20 October 2026 against the production build, served on `127
 | ----------------------- | ----------------------------------------------------------------------------------------------- |
 | `npm run lint`          | Pass                                                                                            |
 | `npm run typecheck`     | Pass                                                                                            |
-| `npm test`              | 11 tests pass                                                                                   |
+| `npm test`              | 12 tests pass                                                                                   |
 | `npm run format:check`  | Pass                                                                                            |
 | `npm run build`         | Pass; known portfolio pages prerendered                                                         |
 | `npm run test:smoke`    | All 19 pages pass; 3 missing URLs return 404; assets and preview SEO pass                       |
@@ -78,3 +78,17 @@ Automated checks: lint, type checks, eleven tests, and a production build passed
 Final browser checks: Bitlux's four gallery images loaded, and a full-size request-detail link opened the correct 1169 × 832 asset in a new tab. Linxx's seven-image gallery was inspected on desktop and at 320px; the repeated native gallery jump still worked after a theme change. The updated homepage and About content fit 320px without document overflow. Sofrix's disclosure showed the résumé dates and location. The Mobile apps filter included both Linxx and Get Foodies, and the new project’s text cover rendered without a broken image. The contact phone link uses the résumé number. No browser console errors/warnings were observed. Temporary viewport overrides were reset, the image-check tab was closed, and the portfolio tab was kept as the deliverable.
 
 New previews: [Bitlux gallery](previews/bitlux-gallery.jpg), [Linxx gallery](previews/linxx-gallery.jpg), and [mobile gallery](previews/linxx-gallery-mobile.jpg). Homepage, About, Work, Contact, and mobile previews were refreshed. Actual video playback remains untested because no recordings are supplied.
+
+## Experience and grid-background update
+
+The homepage now renders all five employers, role titles, and start/end month/year dates from the shared typed records. About moves experience above the full toolkit, opens all five role disclosures by default, and presents contribution bullets, project links, and skill badges. Both variants use the same company artwork and date renderer. Dates are semantic time elements, with a spoken “to” separator for assistive technology.
+
+Four supplied logos were migrated as optimized WebP images (73,632 bytes total); no SJ Empowers logo was found, so a text initials tile is used. Strategist HUB's white lettering has a consistent dark backing. Company provenance and rendering notes are in COMPANY-LOGOS.md.
+
+A shared server component provides static 24px, 48px, and 96px CSS grids, with a radial fade and optional static glow/crosshair markers. The hero uses small, the homepage approach uses medium, and contact regions use large. The decorative layers are aria-hidden and ignore pointer input. No client component, canvas, animation loop, dependency, or external asset was added for the backgrounds; global CSS remains unchanged.
+
+Checks passed: lint, type checks, twelve unit/content tests, and a production build. The production smoke check passed all nineteen pages and three missing-route 404s. It now checks actual rendered date elements on Home/About, all five expanded disclosures, contribution content, and company asset availability.
+
+Browser verification covered both themes, desktop composition at 1280px, and the About layout at 320px with no horizontal overflow. All four company images loaded, all five roles were open initially, and keyboard Enter collapsed/reopened the first role. The homepage role-details link reached the About section. Native-size previews confirmed that the three grid densities are visible while body text remains readable. No console errors/warnings were observed. Temporary viewport settings were reset and the preview tab retained.
+
+Focused previews: [homepage experience](previews/experience-home-dark.jpg), [expanded About experience](previews/experience-about-dark.jpg), [320px light experience](previews/experience-mobile-light.jpg), [small hero grid](previews/grid-hero-dark.jpg), [large dark contact grid](previews/grid-contact-dark.jpg), and [large light contact grid](previews/grid-contact-light.jpg). Older full-page previews record their earlier implementation state; these focused images are the current experience/grid reference.

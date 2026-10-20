@@ -31,6 +31,10 @@ All eleven Bitlux/Linxx screenshots listed by the old portfolio are included. No
 
 The new project records and tools currently lack real UI screenshots. Their typographic/decorative covers do not claim to be screenshots. Generated tool illustrations remain decorative.
 
+## Company artwork
+
+The four existing employer logos are now included on Home and About. SJ Empowers still needs an approved logo; its “SJ” text tile is an initials fallback.
+
 ## Profile clarifications
 
 - The updated résumé ends Sofrix in June 2026 but describes Shopify work as ongoing. The website does not invent a current employer. Confirm the present role or freelance status when ready.

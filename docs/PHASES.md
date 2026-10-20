@@ -33,3 +33,10 @@ Both phases are local commits. Run `git log --oneline` for the final artwork pha
 - `fix: verify résumé content and gallery navigation` — finish unique gallery anchors, repeat fragment navigation, responsive/browser verification, and updated screenshots.
 
 The original résumé is tracked as a source and its unchanged public download replaces the generated demo. These remain local commits with no push or deployment.
+
+## Experience and grid-background refinement
+
+- `feat: expand experience and add themed grid backgrounds` — shared roles/dates, original company logos, contribution bullets and badges, About entries open by default, and three static theme-aware grid sizes.
+- `docs: record experience and grid verification` — keyboard/mobile/theme checks, current focused screenshots, and content-editing notes.
+
+The changes are local; no remote, push, or deployment was added.
