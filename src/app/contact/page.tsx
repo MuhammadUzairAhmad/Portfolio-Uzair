@@ -7,6 +7,7 @@ import {
   MapPin,
   MessageSquare,
 } from "lucide-react";
+import { GridBackground } from "@/components/ui/grid-background";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/brand-icons";
 import { Container } from "@/components/layout/container";
 import { PageIntro } from "@/components/layout/page-intro";
@@ -22,26 +23,29 @@ export const metadata = pageMetadata(
 export default function ContactPage() {
   return (
     <main id="main-content">
-      <PageIntro
-        eyebrow="Contact"
-        title={
-          <>
-            What are you
-            <br />
-            working on?
-          </>
-        }
-        description="I’m always open to interesting projects, collaborations or just a conversation about ideas, products and technology."
-        note={
-          <>
-            Ideas,
-            <br />
-            projects,
-            <br />
-            collaborations.
-          </>
-        }
-      />
+      <div className="relative isolate">
+        <GridBackground size="large" glow />
+        <PageIntro
+          eyebrow="Contact"
+          title={
+            <>
+              What are you
+              <br />
+              working on?
+            </>
+          }
+          description="I’m always open to interesting projects, collaborations or just a conversation about ideas, products and technology."
+          note={
+            <>
+              Ideas,
+              <br />
+              projects,
+              <br />
+              collaborations.
+            </>
+          }
+        />
+      </div>
       <Container className="pb-8">
         <section
           className="rounded-xl border border-border bg-surface/70 p-5 sm:p-7"

@@ -7,7 +7,7 @@ All personal and project data lives in `src/content/`. You can update these Type
 | `src/content/profile.ts`    | Profile, featured project slug, biography, contact/social links, résumé, education, current focus, languages, and certifications |
 | `src/content/projects.ts`   | All eleven project records, case-study copy, stacks, contributions, screenshots, live links                                      |
 | `src/content/tools.ts`      | TypeSpark, GlobePick, Blogsite, cover styles and tool stories                                                                    |
-| `src/content/experience.ts` | Companies, roles, descriptions, and confirmed dates                                                                              |
+| `src/content/experience.ts` | Companies, roles, YYYY-MM start/end dates, contribution bullets, project links, skill badges, and logo assets                    |
 | `src/content/services.ts`   | Services, related work, skill groups, and process steps                                                                          |
 | `src/content/toolkit.ts`    | Homepage skill highlights, project evidence links, and grouped libraries on About                                                |
 | `src/content/tool-art.ts`   | Decorative tool artwork paths and image dimensions                                                                               |
@@ -117,3 +117,11 @@ Copy `.env.example` to `.env.local`, set `NEXT_PUBLIC_SITE_URL` to your real HTT
 Only then set `PORTFOLIO_PUBLIC=true` and rebuild. A public build refuses to proceed with known demo flags, draft employment dates, a demo résumé, or an invalid site URL. The public build enables indexing, canonical URLs, the sitemap, and Person structured data. This is a content safeguard; it does not verify claims or client permissions for you.
 
 The current project has no server form, database, tracking, or external font request. Contact actions use your email and scheduling link. Adding a form later should include real delivery, clear success/error feedback, spam controls, and environment-based secrets.
+
+## Experience presentation and grid backgrounds
+
+Home and About share `src/components/experience/experience-list.tsx` and the typed records in `src/content/experience.ts`. Home shows all five companies, roles, and start/end dates. About places experience before the full toolkit and renders every role open initially, with contribution bullets and skill badges; native disclosures still let a reader collapse an entry.
+
+Edit `startDate` and `endDate` using `YYYY-MM`. Date labels are derived automatically and rendered as semantic time elements. Omit `endDate` only for a genuinely current position. `highlights` contains a title, description, and optional project slug; `skills` controls the badges. `logo` stores a public asset path, width, height, and optional `tone: "dark"` for artwork with white lettering. No logo means the entry's `initials` are used. Four original logos are supplied; the SJ Empowers logo still needs an approved asset. See COMPANY-LOGOS.md for provenance.
+
+`src/components/ui/grid-background.tsx` provides three static CSS grid sizes: `small` (24px), `medium` (48px), and `large` (96px). The homepage hero uses small; the homepage approach section uses medium; shared contact calls to action and the Contact intro use large. Optional glow and crosshair markers are static. The component is decorative, ignores pointer events, and has no client state, animation loop, image request, or added library. Keep section wrappers positioned and isolated when reusing it. All component styling remains in Tailwind utilities; no new global component styles were added.

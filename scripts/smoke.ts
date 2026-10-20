@@ -1,3 +1,4 @@
+import { experience } from "../src/content/experience.ts";
 import { toolArtwork } from "../src/content/tool-art.ts";
 import assert from "node:assert/strict";
 import { projects } from "../src/content/projects.ts";
@@ -24,10 +25,32 @@ for (const route of routes) {
     1,
     `${route}: one main heading`,
   );
+  if (route === "/" || route === "/about") {
+    for (const item of experience) {
+      assert.ok(html.includes(item.company));
+      assert.ok(html.includes(item.role));
+      assert.match(
+        html,
+        new RegExp(`<time[^>]*datetime="${item.startDate}"`, "i"),
+      );
+      if (item.endDate)
+        assert.match(
+          html,
+          new RegExp(`<time[^>]*datetime="${item.endDate}"`, "i"),
+        );
+    }
+  }
   if (route === "/") assert.match(html, /id="skills"/);
   if (route === "/about") {
     assert.match(html, /id="toolkit"/);
     assert.match(html, /Jul 2025/);
+    assert.equal(
+      (html.match(/<details[^>]*\bopen(?:[ >="\'])/g) ?? []).length,
+      experience.length,
+    );
+    for (const item of experience)
+      for (const point of item.highlights)
+        assert.ok(html.includes(point.description));
     assert.match(html, /uzair-mern-stack-resume.pdf/);
     assert.doesNotMatch(html, /View demo résumé|Dates to confirm/);
   }
@@ -56,6 +79,7 @@ for (const path of [
   profile.resume.href,
   "/icon.svg",
   "/opengraph-image",
+  ...experience.flatMap((item) => (item.logo ? [item.logo.src] : [])),
   ...Object.values(toolArtwork).map((artwork) => artwork.src),
   ...new Set(
     projects

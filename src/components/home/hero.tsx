@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GridBackground } from "@/components/ui/grid-background";
 import { preload } from "react-dom";
 import { ArrowRight, MapPin } from "lucide-react";
 import { Container, Eyebrow } from "@/components/layout/container";
@@ -10,7 +11,8 @@ export function Hero() {
   const project = getProject(profile.heroProjectSlug);
   if (project?.mockup) preload(project.mockup, { as: "image" });
   return (
-    <section>
+    <section className="relative isolate">
+      <GridBackground size="small" />
       <Container className="grid items-center gap-5 border-b border-border py-10 md:grid-cols-[1.06fr_1fr] md:gap-4 md:py-12 lg:py-14">
         <div className="relative z-10">
           <Eyebrow className="max-w-64 leading-relaxed text-foreground">

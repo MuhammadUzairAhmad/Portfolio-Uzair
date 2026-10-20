@@ -1,3 +1,4 @@
+import { experience } from "../src/content/experience.ts";
 import { toolkitHighlights, toolkitGroups } from "../src/content/toolkit.ts";
 import { toolArtwork } from "../src/content/tool-art.ts";
 import test from "node:test";
@@ -121,5 +122,22 @@ test("project galleries have valid assets and preserve screenshot metadata", () 
           );
       }
     }
+  }
+});
+
+test("employment dates, company assets, and contribution links are valid", () => {
+  for (const item of experience) {
+    assert.match(item.startDate, /^\d{4}-(0[1-9]|1[0-2])$/);
+    if (item.endDate) {
+      assert.match(item.endDate, /^\d{4}-(0[1-9]|1[0-2])$/);
+      assert.ok(item.endDate >= item.startDate);
+    }
+    if (item.logo) {
+      assert.ok(existsSync(join(process.cwd(), "public", item.logo.src)));
+      assert.ok(item.logo.width > 0 && item.logo.height > 0);
+    }
+    assert.ok(item.highlights.length && item.skills.length);
+    for (const point of item.highlights)
+      if (point.project) assert.ok(getProject(point.project));
   }
 });

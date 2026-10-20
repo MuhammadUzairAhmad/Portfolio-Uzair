@@ -1,13 +1,14 @@
 import { ArrowRight, Monitor, Database, Smartphone } from "lucide-react";
+import { GridBackground } from "@/components/ui/grid-background";
 import { Container, Eyebrow } from "@/components/layout/container";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { ProjectCard } from "@/components/projects/project-card";
-import { Badge, DemoBadge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
 import { services, approach } from "@/content/services";
 import { projects } from "@/content/projects";
 import { tools } from "@/content/tools";
-import { experience } from "@/content/experience";
+import { ExperienceList } from "@/components/experience/experience-list";
 import { profile } from "@/content/profile";
 const icons = [Monitor, Database, Smartphone];
 export function Services() {
@@ -97,41 +98,16 @@ export function ToolsSection() {
     </section>
   );
 }
-export function ExperienceList({ full = false }: { full?: boolean }) {
-  return (
-    <div className="relative pl-6 before:absolute before:bottom-5 before:left-[5px] before:top-5 before:w-px before:bg-border">
-      {(full ? experience : experience.slice(0, 4)).map((item) => (
-        <article
-          key={item.company}
-          className="relative grid gap-2 border-b border-border py-4 last:border-0 sm:grid-cols-[1fr_1fr] before:absolute before:-left-6 before:top-5 before:size-3 before:rounded-full before:bg-primary"
-        >
-          <div>
-            <p className="text-sm font-semibold">{item.company}</p>
-            {full && (
-              <p className="mt-2 max-w-md text-xs leading-relaxed text-muted-foreground">
-                {item.description}
-              </p>
-            )}
-          </div>
-          <div>
-            <p className="text-sm text-muted-foreground">{item.role}</p>
-            {full && (
-              <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px] text-muted-foreground">
-                {item.period}
-                {item.datesDemo && <DemoBadge />}
-              </div>
-            )}
-          </div>
-        </article>
-      ))}
-    </div>
-  );
-}
 export function ExperienceSection() {
   return (
     <section>
       <Container className="border-b border-border py-7">
-        <SectionHeading eyebrow="Experience" title="Where I’ve worked" />
+        <SectionHeading
+          eyebrow="Experience"
+          title="Where I’ve worked"
+          href="/about#experience"
+          action="Role details"
+        />
         <ExperienceList />
       </Container>
     </section>
@@ -163,7 +139,8 @@ export function ApproachSection({
     </>
   );
   return standalone ? (
-    <section>
+    <section className="relative isolate">
+      <GridBackground size="medium" />
       <Container className="border-b border-border py-7">{content}</Container>
     </section>
   ) : (

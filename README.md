@@ -29,6 +29,8 @@ npm run start -- --hostname 127.0.0.1 --port 4337
 - Tools archive and three individual tool stories.
 - Eleven original Bitlux/Linxx screenshots in lazy-loaded galleries, full-size links, and optional native video support.
 - About with a grouped development toolkit, contact, custom 404, social sharing image, favicon, robots, and sitemap.
+- Shared experience timeline with real logos, roles/dates, and expanded contribution cards on About.
+- Small, medium, and large static CSS grids adapted to both themes.
 - Native theme selector, keyboard-friendly mobile navigation, copy-email feedback, and real contact links.
 - Typed editable data, labeled demo narratives, and the updated two-page résumé PDF.
 - Shared button variants, cards, badges, tables, containers, and case-study components.

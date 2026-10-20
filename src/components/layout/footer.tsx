@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GridBackground } from "@/components/ui/grid-background";
 import { ArrowRight, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/brand-icons";
 import { profile, contentSettings } from "@/content/profile";
@@ -31,8 +32,9 @@ export function SocialLinks() {
 }
 export function ContactCta() {
   return (
-    <section>
-      <Container className="flex flex-col justify-between gap-5 py-7 sm:flex-row sm:items-center">
+    <section className="relative isolate">
+      <GridBackground size="large" glow markers />
+      <Container className="flex flex-col justify-between gap-5 py-12 sm:flex-row sm:items-center">
         <div>
           <Eyebrow>Get in touch</Eyebrow>
           <h2 className="mt-1.5">Have something in mind?</h2>
