@@ -1,28 +1,53 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { profile } from "@/content/profile";
+import { ArrowRight, Mail } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/brand-icons";
+import { profile, contentSettings } from "@/content/profile";
 import { Container, Eyebrow } from "./container";
 import { ButtonLink } from "@/components/ui/button";
+export function SocialLinks() {
+  return (
+    <nav
+      aria-label="Social links"
+      className="flex flex-wrap items-center gap-5 text-xs"
+    >
+      {[
+        { label: "GitHub", href: profile.github, Icon: GithubIcon },
+        { label: "LinkedIn", href: profile.linkedin, Icon: LinkedinIcon },
+        { label: "Email", href: `mailto:${profile.email}`, Icon: Mail },
+      ].map(({ label, href, Icon }) => (
+        <a
+          key={label}
+          href={href}
+          target={label === "Email" ? undefined : "_blank"}
+          rel={label === "Email" ? undefined : "noreferrer"}
+          className="inline-flex items-center gap-2 hover:text-primary"
+        >
+          <Icon size={16} aria-hidden />
+          {label}
+        </a>
+      ))}
+    </nav>
+  );
+}
 export function ContactCta() {
   return (
-    <section className="border-t border-border bg-surface py-16 sm:py-24">
-      <Container className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+    <section>
+      <Container className="flex flex-col justify-between gap-5 py-7 sm:flex-row sm:items-center">
         <div>
-          <Eyebrow>A good place to start</Eyebrow>
-          <h2 className="mt-4 max-w-xl text-4xl sm:text-5xl">
-            Have something{" "}
-            <span className="font-serif font-normal italic text-primary">
-              in mind?
-            </span>
-          </h2>
-          <p className="mt-5 max-w-md text-sm text-muted-foreground">
-            A product to build, a team to join, or an idea worth exploring.
-            Let’s talk.
+          <Eyebrow>Get in touch</Eyebrow>
+          <h2 className="mt-1.5">Have something in mind?</h2>
+          <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
+            I’m always open to discussing new projects, interesting ideas or
+            opportunities to be part of your vision.
           </p>
         </div>
-        <ButtonLink href="/contact" size="lg">
-          Start a conversation <ArrowUpRight size={17} aria-hidden />
-        </ButtonLink>
+        <div className="flex flex-col items-start gap-5 sm:items-end">
+          <ButtonLink href="/contact">
+            Let’s talk
+            <ArrowRight size={15} aria-hidden />
+          </ButtonLink>
+          <SocialLinks />
+        </div>
       </Container>
     </section>
   );
@@ -30,35 +55,17 @@ export function ContactCta() {
 export async function Footer() {
   "use cache";
   return (
-    <footer className="border-t border-border py-8">
-      <Container className="flex flex-col justify-between gap-5 text-xs text-muted-foreground sm:flex-row sm:items-center">
-        <p>
-          © {new Date().getFullYear()} {profile.shortName}. Thoughtfully built.
+    <footer>
+      <Container className="flex flex-wrap items-center justify-between gap-4 border-t border-border py-5">
+        <Link href="/" className="text-xl font-extrabold tracking-tighter">
+          UZAIR<span className="text-primary">.</span>
+        </Link>
+        <p className="text-[10px] text-muted-foreground">
+          {contentSettings.demoMode && (
+            <span className="mr-3">Preview · Demo copy labeled</span>
+          )}
+          © {new Date().getFullYear()} {profile.name}
         </p>
-        <nav
-          aria-label="Social links"
-          className="flex flex-wrap items-center gap-6"
-        >
-          <a
-            href={profile.github}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-foreground"
-          >
-            GitHub ↗
-          </a>
-          <a
-            href={profile.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-foreground"
-          >
-            LinkedIn ↗
-          </a>
-          <Link href="/contact" className="hover:text-foreground">
-            Say hello ↗
-          </Link>
-        </nav>
       </Container>
     </footer>
   );

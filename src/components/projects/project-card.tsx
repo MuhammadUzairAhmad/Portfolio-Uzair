@@ -1,94 +1,186 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { PortfolioProject } from "@/types/content";
 import { projectHref } from "@/lib/content";
 import { cn } from "@/lib/cn";
 import { Badge } from "@/components/ui/badge";
+import { DevicePreview } from "./device-preview";
 import { ToolVisual } from "./tool-visual";
+const tones = {
+  bitlux: "bg-[#faf5e9] dark:bg-[#171c13]",
+  linxx: "bg-[#fff0e7] dark:bg-[#211a14]",
+  skillmatch: "bg-[#eaf5f9] dark:bg-[#0b2223]",
+};
 export function ProjectCard({
   project,
   featured = false,
+  archive = false,
+  index,
 }: {
   project: PortfolioProject;
   featured?: boolean;
+  archive?: boolean;
+  index?: number;
 }) {
-  const image = project.image;
+  if (project.category === "Tools")
+    return <ToolCard project={project} archive={archive} index={index} />;
+  const wide = featured || archive;
   return (
     <article
       className={cn(
-        "group overflow-hidden rounded-lg border border-border bg-background",
+        "group relative isolate overflow-hidden rounded-xl border border-border/65",
+        tones[project.slug as keyof typeof tones] ?? "bg-surface",
         featured && "md:col-span-2",
       )}
     >
       <Link
         href={projectHref(project)}
         className={cn(
-          "block focus-visible:outline-offset-[-3px]",
-          featured && "md:grid md:grid-cols-[1.2fr_1fr]",
+          "relative grid min-h-60 grid-cols-[.9fr_1.1fr] gap-1 p-5 sm:p-6",
+          wide && "sm:min-h-72 sm:grid-cols-[.9fr_1.2fr] sm:p-8",
         )}
       >
-        {project.illustration ? (
-          <ToolVisual kind={project.illustration} />
-        ) : (
-          <div
-            className={cn(
-              "relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-surface p-6 sm:p-8",
-              featured && "md:aspect-auto md:min-h-80",
-            )}
-          >
-            {image && (
-              <Image
-                src={image.src}
-                alt={`${project.name} application interface`}
-                width={image.width}
-                height={image.height}
-                sizes={
-                  featured
-                    ? "(min-width: 1280px) 650px, (min-width: 768px) 55vw, 100vw"
-                    : "(min-width: 1280px) 590px, (min-width: 768px) 46vw, 100vw"
-                }
-                className="h-auto max-h-80 w-full rounded-md object-contain shadow-md transition-transform duration-300 motion-safe:group-hover:scale-[1.025]"
-              />
-            )}
-          </div>
-        )}
-        <div
-          className={cn(
-            "flex flex-col p-6 sm:p-7",
-            featured && "md:justify-center md:p-10",
-          )}
-        >
-          <div className="mb-3 flex items-center justify-between gap-4">
-            <span className="font-mono text-[9px] uppercase tracking-[.15em] text-muted-foreground">
-              {project.category} · {project.status}
+        <div className="relative z-10 flex flex-col items-start">
+          {index !== undefined && (
+            <span className="mb-3 flex size-8 items-center justify-center rounded-full bg-accent font-serif text-sm text-primary">
+              {String(index + 1).padStart(2, "0")}
             </span>
-            <ArrowUpRight
-              size={18}
-              className="shrink-0 text-primary"
-              aria-hidden
-            />
-          </div>
-          <h3
-            className={cn("text-2xl tracking-tight", featured && "sm:text-3xl")}
-          >
+          )}
+          <h3 className={cn("text-xl sm:text-2xl", wide && "sm:text-4xl")}>
             {project.name}
           </h3>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-            {project.summary}
+          <p className="mt-1 max-w-xs text-xs font-medium leading-relaxed sm:text-sm">
+            {project.slug === "linxx"
+              ? "Ambassador marketplace · Web + Mobile"
+              : project.slug === "skillmatch"
+                ? "Recruitment & assessments"
+                : project.subtitle}
           </p>
-          <div className="mt-5 flex flex-wrap gap-2">
+          {wide && (
+            <p className="mt-3 max-w-xs text-xs leading-relaxed text-muted-foreground sm:text-sm">
+              {project.summary}
+            </p>
+          )}
+          <div className="mt-auto flex flex-wrap gap-1.5 pt-5">
             {project.stack.slice(0, 3).map((tech) => (
               <Badge key={tech}>{tech}</Badge>
             ))}
           </div>
-          <span className="mt-6 text-xs font-medium text-primary">
-            Read the{" "}
-            {project.category === "Tools" ? "tool story" : "case study"}{" "}
-            <span aria-hidden>↗</span>
+          <span className="mt-4 inline-flex items-center gap-3 text-xs font-medium text-primary">
+            Read case study
+            <ArrowRight size={13} aria-hidden />
           </span>
+        </div>
+        <div className="relative flex min-w-0 items-center">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#c0a76518,transparent_70%)] dark:bg-[radial-gradient(ellipse_at_center,#b3d94922,transparent_70%)]" />
+          <DevicePreview
+            project={project}
+            compact={!wide}
+            className={cn(
+              "absolute -right-6 top-1/2 h-56 w-[115%] max-w-none -translate-y-1/2 transition-transform duration-300 motion-safe:group-hover:-translate-y-[52%]",
+              wide && "sm:-right-5 sm:h-72 sm:w-[118%]",
+            )}
+          />
         </div>
       </Link>
     </article>
+  );
+}
+export function ToolCard({
+  project,
+  archive = false,
+  index,
+}: {
+  project: PortfolioProject;
+  archive?: boolean;
+  index?: number;
+}) {
+  return (
+    <article
+      className={cn(
+        "group overflow-hidden rounded-xl border border-border",
+        project.illustration === "type"
+          ? "bg-[#f8f3f4] dark:bg-[#18141f]"
+          : project.illustration === "globe"
+            ? "bg-[#eff6f5] dark:bg-[#0d1c1d]"
+            : "bg-[#f9f5ea] dark:bg-[#221f14]",
+      )}
+    >
+      <Link
+        href={projectHref(project)}
+        className={cn(
+          "flex h-full flex-col p-5",
+          archive && "grid min-h-72 items-center gap-6 sm:grid-cols-2 sm:p-7",
+        )}
+      >
+        <div className={cn(archive && "flex h-full flex-col items-start")}>
+          {archive && (
+            <span className="mb-2 font-serif text-lg text-primary">
+              {String((index ?? 0) + 1).padStart(2, "0")}
+            </span>
+          )}
+          <h3 className={cn("text-xl", archive && "text-3xl")}>
+            {project.name}
+          </h3>
+          <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+            {project.summary}
+          </p>
+          {archive && (
+            <div className="mt-auto flex flex-wrap gap-2 pt-5">
+              {project.scope.map((scope) => (
+                <Badge key={scope}>{scope}</Badge>
+              ))}
+            </div>
+          )}
+          {archive && (
+            <span className="mt-5 inline-flex items-center gap-3 text-sm font-medium text-primary">
+              Explore project
+              <ArrowRight size={14} aria-hidden />
+            </span>
+          )}
+        </div>
+        <ToolVisual
+          kind={project.illustration}
+          detailed={archive}
+          className={archive ? "h-56" : "my-auto h-36 sm:h-40"}
+        />
+        {!archive && (
+          <span className="mt-2 inline-flex items-center gap-3 text-xs font-medium text-primary">
+            Explore project
+            <ArrowRight size={13} aria-hidden />
+          </span>
+        )}
+      </Link>
+    </article>
+  );
+}
+
+export function NextProjectCard({ project }: { project: PortfolioProject }) {
+  return (
+    <Link
+      href={projectHref(project)}
+      className="grid items-center gap-4 rounded-xl border border-border bg-surface p-4 sm:grid-cols-[160px_1fr_auto]"
+    >
+      <div className="h-28 overflow-hidden">
+        {project.illustration ? (
+          <ToolVisual kind={project.illustration} className="h-28" />
+        ) : (
+          <DevicePreview project={project} />
+        )}
+      </div>
+      <div>
+        <h3 className="text-xl">{project.name}</h3>
+        <p className="mt-1 text-xs text-muted-foreground">{project.subtitle}</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {project.stack.slice(0, 3).map((tech) => (
+            <Badge key={tech}>{tech}</Badge>
+          ))}
+        </div>
+      </div>
+      <span className="flex items-center gap-3 text-xs font-medium text-primary">
+        View case study
+        <ArrowRight size={14} aria-hidden />
+      </span>
+    </Link>
   );
 }

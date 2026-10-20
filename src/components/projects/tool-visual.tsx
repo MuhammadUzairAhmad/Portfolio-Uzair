@@ -1,65 +1,78 @@
-import { Globe2, ArrowUpRight, Type, AlignLeft } from "lucide-react";
 import { cn } from "@/lib/cn";
 export function ToolVisual({
   kind,
   className,
+  detailed = false,
 }: {
   kind?: "type" | "globe" | "blog";
   className?: string;
+  detailed?: boolean;
 }) {
   return (
     <div
       aria-hidden="true"
       className={cn(
-        "relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-border",
-        kind === "type"
-          ? "bg-[#e8e3f0] text-[#4d3769]"
-          : kind === "globe"
-            ? "bg-[#e4ecdf] text-[#355638]"
-            : "bg-[#f2e7da] text-[#75513a]",
+        "relative flex h-36 items-center justify-center",
         className,
       )}
     >
       {kind === "type" ? (
         <>
-          <span className="absolute left-5 top-5 font-mono text-[9px] uppercase tracking-widest">
-            Words, with personality.
+          <span
+            className={cn(
+              "font-serif text-[90px] leading-none tracking-[-.13em] text-[#131532] dark:text-[#bc8bdf]",
+              detailed &&
+                "relative z-10 -rotate-6 rounded-md border border-white/20 bg-[#252927] p-5 text-8xl text-[#eee8d8] shadow-xl",
+            )}
+          >
+            Aa
           </span>
-          <span className="font-serif text-7xl italic tracking-tighter lg:text-8xl">
-            Aa<span className="font-sans text-4xl font-light">✳</span>
+          <span className="ml-6 text-5xl text-[#1a1b3d] dark:text-[#c7a0e5]">
+            ✦
           </span>
-          <Type className="absolute bottom-5 right-5 opacity-50" size={18} />
-          <div className="absolute bottom-5 left-5 flex gap-1">
-            <span className="h-1 w-8 bg-current opacity-40" />
-            <span className="h-1 w-4 bg-current opacity-20" />
-          </div>
+          {detailed && (
+            <div className="absolute right-[12%] top-2 rotate-12 rounded-sm bg-[#f0e4c9] px-6 py-7 font-serif text-5xl italic text-[#64543d] shadow-lg">
+              Aa
+            </div>
+          )}
         </>
       ) : kind === "globe" ? (
         <>
-          <div className="absolute inset-5 rounded-full border border-current opacity-10" />
-          <Globe2 size={120} strokeWidth={0.6} />
-          <span className="absolute left-5 top-5 font-mono text-[9px] uppercase tracking-widest">
-            A world to explore.
+          <span
+            className={cn(
+              "text-[104px] leading-none drop-shadow-lg",
+              detailed && "text-[180px]",
+            )}
+          >
+            🌍
           </span>
-          <span className="absolute bottom-5 right-5 text-xl">↗</span>
+          {detailed && (
+            <div className="absolute bottom-0 right-1 w-32 rotate-6 rounded-md border border-[#d7dfc6] bg-[#f7f8e9] p-3 text-[9px] text-[#304621] shadow-lg">
+              <b>Capitals Quiz</b>
+              <p className="mt-2">Which city is the capital?</p>
+              {[1, 2, 3].map((n) => (
+                <div key={n} className="mt-2 flex items-center gap-2">
+                  <span className="size-2 rounded-full border border-[#86a262]" />
+                  <span className="h-1 w-14 rounded bg-[#dce4cd]" />
+                </div>
+              ))}
+            </div>
+          )}
         </>
       ) : (
-        <>
-          <div className="w-[65%] -rotate-6 rounded-sm border border-[#d6c2ad] bg-[#fbf7f0] p-5 shadow-sm">
-            <div className="flex justify-between border-b border-[#d6c2ad] pb-2 text-[9px]">
-              The Journal <ArrowUpRight size={10} />
-            </div>
-            <p className="my-4 font-serif text-3xl italic">
-              Stories
-              <br />
-              worth sharing.
-            </p>
-            <AlignLeft size={28} strokeWidth={0.8} />
+        <div className={cn("relative h-28 w-36", detailed && "scale-150")}>
+          <div className="absolute inset-1 -rotate-12 rounded-sm bg-[#e8d8b9] shadow-sm" />
+          <div className="absolute inset-1 rotate-12 rounded-sm bg-[#ecdfc5] shadow-sm" />
+          <div className="absolute inset-1 rounded-sm border border-[#ded2ba] bg-[#fffdf5] px-5 py-4 shadow-md">
+            <div className="mb-2 h-1 w-7 bg-[#30352e]" />
+            {[1, 2, 3, 4, 5].map((n) => (
+              <div
+                key={n}
+                className={cn("mt-1.5 h-px bg-[#858b7e]", n === 3 && "w-2/3")}
+              />
+            ))}
           </div>
-          <span className="absolute bottom-4 right-5 font-mono text-[9px] uppercase tracking-widest">
-            Made for reading.
-          </span>
-        </>
+        </div>
       )}
     </div>
   );

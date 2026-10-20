@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import { ThemeProviderShell } from "@/components/theme/provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { contentSettings } from "@/content/profile";
 import { publication } from "@/lib/seo";
 import { profile } from "@/content/profile";
 import "./globals.css";
@@ -13,6 +12,12 @@ const body = localFont({
   variable: "--font-body",
   display: "swap",
   weight: "100 1000",
+});
+const handwriting = localFont({
+  src: "../../node_modules/@fontsource/caveat/files/caveat-latin-400-normal.woff2",
+  variable: "--font-handwriting",
+  display: "swap",
+  weight: "400",
 });
 const editorial = localFont({
   src: "../../node_modules/@fontsource/libre-baskerville/files/libre-baskerville-latin-400-italic.woff2",
@@ -44,7 +49,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${body.variable} ${editorial.variable}`}>
+      <body
+        className={`${body.variable} ${editorial.variable} ${handwriting.variable}`}
+      >
         <ThemeProviderShell>
           <a
             href="#main-content"
@@ -52,11 +59,6 @@ export default function RootLayout({
           >
             Skip to content
           </a>
-          {contentSettings.demoMode && (
-            <div className="border-b border-border bg-surface px-4 py-2 text-center font-mono text-[9px] tracking-wide text-muted-foreground">
-              PORTFOLIO PREVIEW · Demo copy is labeled.
-            </div>
-          )}
           {publication.isPublic && (
             <script
               type="application/ld+json"

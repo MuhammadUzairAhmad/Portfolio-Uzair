@@ -3,6 +3,7 @@ import type { PortfolioProject } from "../types/content.ts";
 export const projects: PortfolioProject[] = [
   {
     slug: "bitlux",
+    mockup: "/images/projects/bitlux.webp",
     name: "Bitlux",
     category: "Web platforms",
     subtitle: "Private jet booking & operations",
@@ -79,6 +80,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "linxx",
+    mockup: "/images/projects/linxx.webp",
     name: "Linxx",
     category: "Web & mobile",
     subtitle: "An ambassador marketplace, across screens",
@@ -157,6 +159,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "skillmatch",
+    mockup: "/images/projects/skillmatch.webp",
     name: "SkillMatch",
     category: "Web platforms",
     subtitle: "Connecting candidates and recruiters",
@@ -240,6 +243,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "hestiya",
+    mockup: "/images/projects/hestiya.webp",
     name: "Hestiya",
     category: "Web3",
     subtitle: "A blockchain-connected carbon marketplace",
@@ -298,6 +302,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "gaming-platform",
+    mockup: "/images/projects/gaming-platform.webp",
     name: "Gaming Platform",
     category: "Web platforms",
     subtitle: "Games, referrals, and connected rewards",
@@ -360,6 +365,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "development-solutions-group",
+    mockup: "/images/projects/development-solutions-group.webp",
     name: "Development Solutions Group",
     category: "Websites",
     subtitle: "A clear digital presence for a corporate brand",

@@ -1,15 +1,15 @@
 "use client";
 import { useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Container } from "./container";
 import { ThemeToggle } from "@/components/theme/toggle";
-import { buttonClasses } from "@/components/ui/button";
 const links = [
   { href: "/#services", label: "Services" },
   { href: "/work", label: "Work" },
   { href: "/tools", label: "Tools" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -27,24 +27,24 @@ export function Header() {
         }
       }}
     >
-      <Container className="flex h-20 items-center justify-between gap-4">
+      <Container className="flex h-[76px] items-center justify-between gap-4">
         <Link
           href="/"
           aria-label="Uzair — home"
-          className="text-xl font-bold tracking-[-.06em]"
+          className="text-2xl font-extrabold tracking-[-.06em]"
           onClick={close}
         >
           UZAIR<span className="text-primary">.</span>
         </Link>
         <nav
           aria-label="Main navigation"
-          className="hidden items-center gap-8 md:flex"
+          className="hidden items-center gap-7 md:flex"
         >
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+              className="text-xs text-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>
@@ -52,16 +52,6 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-2 sm:gap-3">
           <ThemeToggle />
-          <Link
-            href="/contact"
-            className={buttonClasses({
-              size: "sm",
-              className: "hidden sm:inline-flex",
-            })}
-            onClick={close}
-          >
-            Let’s talk <ArrowUpRight size={13} aria-hidden />
-          </Link>
           <button
             ref={trigger}
             type="button"
@@ -82,18 +72,16 @@ export function Header() {
           className="border-t border-border bg-background md:hidden"
         >
           <Container className="flex flex-col py-5">
-            {[...links, { href: "/contact", label: "Get in touch" }].map(
-              (link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={close}
-                  className="border-b border-border py-4 text-sm last:border-0"
-                >
-                  {link.label}
-                </Link>
-              ),
-            )}
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={close}
+                className="border-b border-border py-4 text-sm last:border-0"
+              >
+                {link.label}
+              </Link>
+            ))}
           </Container>
         </nav>
       )}

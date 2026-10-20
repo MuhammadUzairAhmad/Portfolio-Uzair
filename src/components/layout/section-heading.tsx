@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Eyebrow } from "./container";
 export function SectionHeading({
   eyebrow,
@@ -15,23 +15,23 @@ export function SectionHeading({
   action?: string;
 }) {
   return (
-    <div className="mb-8 flex flex-col justify-between gap-5 sm:mb-10 sm:flex-row sm:items-end">
-      <div className="max-w-2xl">
+    <div className="mb-5 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+      <div>
         <Eyebrow>{eyebrow}</Eyebrow>
-        <h2 className="mt-3">{title}</h2>
-        {description && (
-          <p className="mt-3 max-w-xl text-sm text-muted-foreground">
-            {description}
-          </p>
-        )}
+        <h2 className="mt-1.5">{title}</h2>
       </div>
+      {description && (
+        <p className="max-w-56 text-xs leading-relaxed text-muted-foreground sm:text-right">
+          {description}
+        </p>
+      )}
       {href && (
         <Link
           href={href}
-          className="flex w-fit shrink-0 items-center gap-5 border-b border-border pb-1 text-xs font-medium hover:text-primary"
+          className="flex w-fit shrink-0 items-center gap-4 py-1 text-xs font-medium text-primary"
         >
           {action}
-          <ArrowUpRight size={14} aria-hidden />
+          <ArrowRight size={15} aria-hidden />
         </Link>
       )}
     </div>
