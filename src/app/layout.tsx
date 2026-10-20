@@ -37,7 +37,7 @@ const editorial = localFont({
 });
 export const metadata: Metadata = {
   title: {
-    default: "Muhammad Uzair Ahmad — Full-stack Developer",
+    default: `${profile.name} — ${profile.role}`,
     template: "%s | Muhammad Uzair Ahmad",
   },
   description:
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   robots: { index: publication.isPublic, follow: publication.isPublic },
   openGraph: {
     type: "website",
-    siteName: "Uzair — Full-stack Developer",
-    title: "Muhammad Uzair Ahmad — Full-stack Developer",
+    siteName: `Uzair — ${profile.role}`,
+    title: `${profile.name} — ${profile.role}`,
     description:
       "Good ideas. Carefully built. Web and mobile products by Muhammad Uzair Ahmad.",
   },

@@ -78,6 +78,15 @@ export default function ContactPage() {
           </div>
           <div className="mt-3">
             <CopyEmail email={profile.email} fullWidth />
+            <p className="mt-4 text-xs text-muted-foreground">
+              Prefer a phone call?{" "}
+              <a
+                href={profile.phoneHref}
+                className="ml-1 inline-block text-primary underline underline-offset-4"
+              >
+                {profile.phone}
+              </a>
+            </p>
           </div>
         </section>
         <section className="mt-5 rounded-xl border border-border p-5 sm:p-7">

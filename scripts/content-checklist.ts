@@ -14,4 +14,6 @@ for (const item of experience)
   console.log(
     `${item.datesDemo ? "[ ]" : "[x]"} ${item.company}: employment dates`,
   );
-console.log(`${profile.resume.demo ? "[ ]" : "[x]"} Replace demo résumé`);
+console.log(
+  `${profile.resume.demo ? "[ ]" : "[x]"} Résumé download is current`,
+);

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
-export const alt =
-  "Muhammad Uzair Ahmad — Full-stack Developer. Good ideas. Carefully built.";
+import { profile } from "@/content/profile";
+export const alt = `${profile.name} — ${profile.role}. Good ideas. Carefully built.`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export default function Image() {
@@ -26,7 +26,7 @@ export default function Image() {
         }}
       >
         <span>UZAIR.</span>
-        <span>FULL-STACK DEVELOPER</span>
+        <span>{profile.role.toUpperCase()}</span>
       </div>
       <div
         style={{

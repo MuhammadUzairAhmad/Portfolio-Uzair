@@ -16,6 +16,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { Table, TableHead, TableCell } from "@/components/ui/table";
 import { DevicePreview } from "./device-preview";
 import { ToolVisual } from "./tool-visual";
+import { ProjectGallery } from "./project-gallery";
 import { NextProjectCard } from "./project-card";
 import { demoFields } from "@/lib/content";
 const technologyRoles: Record<string, string> = {
@@ -167,8 +168,18 @@ export function CaseStudy({
             />
           )}
         </div>
-        {project.liveUrl && (
-          <div className="mt-4 flex justify-end">
+        <div className="mt-4 flex flex-wrap items-center justify-end gap-3">
+          {!project.liveUrl && project.status === "Private project" && (
+            <p className="mr-auto text-xs text-muted-foreground">
+              Company project · no public demo
+            </p>
+          )}
+          {!!project.media?.length && (
+            <ButtonLink href="#gallery" variant="outline" size="sm">
+              View screenshots & media <ArrowRight size={13} aria-hidden />
+            </ButtonLink>
+          )}
+          {project.liveUrl && (
             <ButtonLink
               href={project.liveUrl}
               target="_blank"
@@ -176,11 +187,10 @@ export function CaseStudy({
               variant="outline"
               size="sm"
             >
-              View live project
-              <ArrowRight size={13} aria-hidden />
+              Open project <ArrowRight size={13} aria-hidden />
             </ButtonLink>
-          </div>
-        )}
+          )}
+        </div>
         <div className="mt-6 grid gap-6 lg:grid-cols-[240px_1fr] lg:gap-10">
           <aside className="border-border lg:border-r lg:pr-6">
             <nav
@@ -367,6 +377,7 @@ export function CaseStudy({
               </div>
             </div>
           </div>
+          <ProjectGallery projectName={project.name} media={project.media} />
         </StorySection>
         <StorySection id="outcomes" number="06" title="Results & lessons">
           <div className="grid gap-4 rounded-xl bg-surface p-5 sm:grid-cols-3">

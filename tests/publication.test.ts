@@ -1,4 +1,5 @@
 import test from "node:test";
+import { profile } from "../src/content/profile.ts";
 import assert from "node:assert/strict";
 import {
   validSiteUrl,
@@ -32,8 +33,18 @@ test("a public flag cannot expose demo content", () => {
     PORTFOLIO_PUBLIC: "true",
   });
   assert.equal(state.isPublic, false);
-  assert.ok(state.issues.some((issue) => issue.includes("résumé")));
+  assert.ok(!state.issues.some((issue) => issue.includes("résumé")));
   assert.ok(state.issues.some((issue) => issue.includes("Bitlux")));
-  assert.ok(state.issues.some((issue) => issue.includes("employment dates")));
+  assert.ok(!state.issues.some((issue) => issue.includes("employment dates")));
   assert.ok(publicationIssues().length > 0);
+});
+
+test("a demo résumé is still blocked if reintroduced", () => {
+  const original = profile.resume.demo;
+  try {
+    profile.resume.demo = true;
+    assert.ok(publicationIssues().some((issue) => issue.includes("résumé")));
+  } finally {
+    profile.resume.demo = original;
+  }
 });

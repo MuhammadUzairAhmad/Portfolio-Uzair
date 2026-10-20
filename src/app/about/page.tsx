@@ -1,3 +1,4 @@
+import { BackgroundSection } from "@/components/about/background-section";
 import { ToolkitSection } from "@/components/about/toolkit-section";
 import {
   Monitor,
@@ -123,7 +124,7 @@ export default function AboutPage() {
                   {item.description}
                 </p>
                 <p className="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                  {item.period}
+                  {item.period} · {item.location}
                   {item.datesDemo && <DemoBadge />}
                 </p>
               </div>
@@ -159,6 +160,9 @@ export default function AboutPage() {
               <p className="text-xs text-muted-foreground">
                 {profile.education.institution} · {profile.education.period}
               </p>
+              <p className="mt-1 text-xs text-muted-foreground">
+                GPA {profile.education.gpa}
+              </p>
             </div>
             <div className="flex items-center gap-3">
               <ButtonLink
@@ -176,6 +180,7 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+      <BackgroundSection />
       <ContactCta />
     </main>
   );

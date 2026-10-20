@@ -23,7 +23,26 @@ export function DevicePreview({
         sizes="(min-width:1024px) 600px, 90vw"
         className={cn("h-full w-full rounded-lg object-contain", className)}
       />
-    ) : null;
+    ) : (
+      <div
+        aria-hidden="true"
+        className={cn(
+          "flex h-full w-full flex-col items-center justify-center gap-3 rounded-lg bg-accent/40 p-5",
+          className,
+        )}
+      >
+        <span className="font-serif text-5xl text-primary">
+          {project.name
+            .split(" ")
+            .map((word) => word[0])
+            .slice(0, 2)
+            .join("")}
+        </span>
+        <span className="text-center font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+          {project.platform}
+        </span>
+      </div>
+    );
   const bitlux = project.slug === "bitlux";
   return (
     <svg
@@ -33,7 +52,6 @@ export function DevicePreview({
       className={cn(
         "h-full w-full overflow-hidden drop-shadow-[0_12px_14px_#00000018]",
         className,
-        (compact = false),
       )}
     >
       <defs>

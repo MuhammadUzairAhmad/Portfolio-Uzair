@@ -2,25 +2,29 @@
 
 All personal and project data lives in `src/content/`. You can update these TypeScript objects without editing the layouts. TypeScript and the tests catch missing required fields and broken local asset references.
 
-| File                        | What to change                                                                                                                       |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `src/content/profile.ts`    | Name, role, hero headline and featured project slug, intro, biography, contact/social links, résumé, education, footer preview label |
-| `src/content/projects.ts`   | All six project records, case-study copy, stacks, contributions, screenshots, live links                                             |
-| `src/content/tools.ts`      | TypeSpark, GlobePick, Blogsite, cover styles and tool stories                                                                        |
-| `src/content/experience.ts` | Companies, roles, descriptions, and confirmed dates                                                                                  |
-| `src/content/services.ts`   | Services, related work, skill groups, and process steps                                                                              |
-| `src/content/toolkit.ts`    | Homepage skill highlights, project evidence links, and grouped libraries on About                                                    |
-| `src/content/tool-art.ts`   | Decorative tool artwork paths and image dimensions                                                                                   |
-| `src/app/globals.css`       | Shared light/dark theme tokens, typography, container, accessibility base                                                            |
+| File                        | What to change                                                                                                                   |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `src/content/profile.ts`    | Profile, featured project slug, biography, contact/social links, résumé, education, current focus, languages, and certifications |
+| `src/content/projects.ts`   | All eleven project records, case-study copy, stacks, contributions, screenshots, live links                                      |
+| `src/content/tools.ts`      | TypeSpark, GlobePick, Blogsite, cover styles and tool stories                                                                    |
+| `src/content/experience.ts` | Companies, roles, descriptions, and confirmed dates                                                                              |
+| `src/content/services.ts`   | Services, related work, skill groups, and process steps                                                                          |
+| `src/content/toolkit.ts`    | Homepage skill highlights, project evidence links, and grouped libraries on About                                                |
+| `src/content/tool-art.ts`   | Decorative tool artwork paths and image dimensions                                                                               |
+| `src/app/globals.css`       | Shared light/dark theme tokens, typography, container, accessibility base                                                        |
 
 Component/page-specific styling stays in Tailwind class names. UI labels and editorial section titles live in their components; actual portfolio facts live in the data above.
+
+## Imported résumé and remaining gaps
+
+The October 2026 résumé is now the source for profile details, employment dates, and the downloadable PDF. The updated PDF is served unchanged at `/documents/uzair-mern-stack-resume.pdf`; its source stays at the repository root. `docs/CONTENT-SOURCES.md` records source precedence. `docs/CONTENT-GAPS.md` lists project-specific missing information. Existing demo flags now apply to remaining case-study drafts, rather than the résumé or employment dates.
 
 ## Replace demo copy
 
 1. Run `npm run content:checklist` to see the current gaps.
 2. Find a field with `demo: true`, replace its text with a verified account, and remove the flag or set it to `false`. Its label disappears automatically.
-3. Confirm experience dates and set each `datesDemo` to `false`.
-4. Put your real résumé in `public/documents/`, update `profile.resume.href` and `label`, and set `profile.resume.demo` to `false`. Remove the old demo file if it is no longer useful.
+3. Employment dates are already imported and `datesDemo` is `false`; update `experience.ts` if your employment changes.
+4. The real résumé is already linked. For a future replacement, update the PDF in `public/documents/` and the path in `profile.ts`; keep `profile.resume.demo` as `false`.
 5. After review, set `contentSettings.demoMode` to `false` to remove the footer preview label.
 
 Project cards use `cardSubtitle` when provided, otherwise `subtitle`. The homepage timeline intentionally shows companies and roles; confirmed dates remain in the expandable About experience rows.
@@ -47,13 +51,49 @@ image: {
 },
 ```
 
-`image` is the plain screenshot fallback. The current six projects also have a `mockup` path for the existing device artwork. The device presentation uses SVG clip paths around that artwork, preserving the original screen pixels while matching the reference background. These existing mockups share a 1640 × 924 composition (the optimized exports retain those proportions). If you add an unrelated screenshot or montage, remove `mockup` and use the `image` object; the component will display the plain image correctly. Only set `mockup` for artwork matching the existing device template.
+`image` is the plain screenshot fallback. The original six projects also have a `mockup` path for the existing device artwork. The device presentation uses SVG clip paths around that artwork, preserving the original screen pixels while matching the reference background. These existing mockups share a 1640 × 924 composition (the optimized exports retain those proportions). If you add an unrelated screenshot or montage, remove `mockup` and use the `image` object; the component will display the plain image correctly. Only set `mockup` for artwork matching the existing device template.
 
 Dimensions reserve the correct space while the image loads. Keep product screenshots readable and preserve their proportions. The plain screenshot fallback uses `next/image` for appropriately sized variants. Existing device presentations use the pre-optimized WebP montage inside a responsive SVG, and the hero montage is preloaded. Tool covers are decorative static illustrations, not actual product screenshots. Set `illustration` to `type`, `globe`, or `blog`. Their optimized transparent WebP files live in `public/images/tools/`; change paths and dimensions in `src/content/tool-art.ts` to replace them. They use responsive `next/image` delivery. Generation prompts are recorded in `docs/TOOL-ART-PROMPTS.md`.
 
 ## Update libraries and skills
 
 Edit `src/content/toolkit.ts`. `toolkitHighlights` controls the four homepage cards; each `project` slug links to related work. `toolkitGroups` controls the six detailed groups on `/about#toolkit`. These lists describe experience across projects, not dependencies installed in this portfolio. Keep experience levels accurate (Docker is currently labeled basic setup), and keep project examples relevant. No layout edits are needed when changing the names or rows.
+
+## Screenshots and videos
+
+Each project can have a `media` array. Bitlux currently has four screenshot entries and Linxx has seven, migrated from the old portfolio. Use a local image in `public/images/projects/` with its real dimensions:
+
+```ts
+media: [
+  {
+    kind: "image",
+    src: "/images/projects/gallery/my-screen.webp",
+    width: 1440,
+    height: 900,
+    alt: "Describe the actual screen",
+    caption: "Explain the workflow shown",
+  },
+],
+```
+
+For video, place an MP4 or WebM in `public/videos/`, and add the following object to that same array. This is an editing example; the sample paths are not installed assets:
+
+```ts
+{
+  kind: "video",
+  src: "/videos/my-project-walkthrough.mp4",
+  width: 1920,
+  height: 1080,
+  caption: "Booking workflow walkthrough",
+  poster: "/images/projects/my-video-poster.webp",
+  captions: { src: "/videos/my-project-en.vtt", language: "en", label: "English" },
+  transcript: "A text description of the demonstrated workflow.",
+}
+```
+
+The gallery reserves image space, lazy-loads screenshots, and opens the full-size asset on selection. Videos use native controls, inline playback, and `preload="none"`; there is no autoplay. Add captions/transcripts when a recording has speech or meaningful audio. No project video files were found in the old portfolio during this migration, so the live data has no video entries yet. Actual video playback should be checked after adding the real file.
+
+A supplied `liveUrl` shows an external project button. Without it, no demo link is invented; the case study and any gallery remain usable. Projects without a screenshot use a typographic cover. Add `image` when a real screen is available, and the cover switches automatically. A recorded URL does not guarantee that a third-party deployment is still accessible.
 
 ## Local checks
 

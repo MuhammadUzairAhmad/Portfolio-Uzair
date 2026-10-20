@@ -15,11 +15,13 @@ export const metadata = pageMetadata(
 );
 export default function WorkPage() {
   const tags = (category: string) =>
-    category === "Web & mobile"
-      ? ["Mobile apps", "Web applications"]
-      : category === "Websites"
-        ? ["Web applications"]
-        : ["Platforms", "Web applications"];
+    category === "Mobile apps"
+      ? ["Mobile apps"]
+      : category === "Web & mobile"
+        ? ["Mobile apps", "Web applications"]
+        : category === "Websites"
+          ? ["Web applications"]
+          : ["Platforms", "Web applications"];
   return (
     <main id="main-content">
       <PageIntro
@@ -56,10 +58,11 @@ export default function WorkPage() {
                 content: (
                   <Link
                     href={projectHref(p)}
+                    prefetch
                     className="flex items-center gap-4 rounded-lg border border-border px-4 py-4 hover:bg-surface"
                   >
                     <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-accent font-serif text-primary">
-                      0{i + 4}
+                      {String(i + 4).padStart(2, "0")}
                     </span>
                     <div className="min-w-0 flex-1">
                       <h3 className="text-sm sm:text-base">{p.name}</h3>

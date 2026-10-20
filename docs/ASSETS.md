@@ -19,7 +19,7 @@ Combined source size: 3,573,515 bytes. Combined output size: 233,790 bytes (93.5
 
 ## Demo resume
 
-`public/documents/uzair-resume-demo.pdf` is an explicitly labeled one-page DEMO, not a publication-ready resume. Profile source: `../portfolio/about-me.md`. It contains the documented name, role, contact links, employer/role summaries, capabilities, and education. Pakistan was requested as the profile location. No new performance metrics or current employment claim were invented. Dates for employment were deliberately omitted pending confirmation.
+Historical record: the generated `public/documents/uzair-resume-demo.pdf` was replaced on 20 October 2026 by the owner’s updated two-page PDF. The old generated file is no longer served. The following paragraphs record its original provenance. It was an explicitly labeled one-page DEMO, not a publication-ready resume. Profile source: `../portfolio/about-me.md`. It contains the documented name, role, contact links, employer/role summaries, capabilities, and education. Pakistan was requested as the profile location. No new performance metrics or current employment claim were invented. Dates for employment were deliberately omitted pending confirmation.
 
 A prominent demo banner and footer instruct the owner to verify and replace it before publication. Keep the demo label on any website download link until replacement. Update this file directly or generate a final resume with confirmed details, then update the centrally defined profile download URL.
 
@@ -51,3 +51,27 @@ Created with the built-in ImageGen tool from the supplied connected-pages refere
 | `/images/tools/blogsite-preview-v2.webp`  | 900 × 675  | 65,384 |
 
 All three have a real alpha channel; transparent backgrounds were preserved during proportional resizing and WebP encoding with Sharp. Combined source size: 153,460 bytes (about 150 KiB). Responsive Next.js image variants are used; the first Tools archive image and tool detail hero are preloaded, with other tool images lazy by default. No 3D or animation runtime was added.
+
+## Résumé and project-gallery migration
+
+The owner's `Uzair-MERN-Stack-Resume.pdf` was copied unchanged to `public/documents/uzair-mern-stack-resume.pdf` (138,238 bytes, two pages). Both pages were rendered and read; no PDF editing or content rewriting was performed.
+
+Eleven original screenshots from `../portfolio/public/project-model-image/` are now available in project galleries. Images were visually inspected and only proportionally resized (maximum width 1440, no upscaling) and encoded to WebP quality 88. The two existing flat exports are reused. No screenshot content was generated or replaced.
+
+| Original                       | Output                                                 | Dimensions | Output bytes |
+| ------------------------------ | ------------------------------------------------------ | ---------- | -----------: |
+| `bitlux-2.png`                 | `/images/projects/bitlux-screen.webp`                  | 1169 × 832 |       49,492 |
+| `bitlux-3.png`                 | `/images/projects/gallery/bitlux-request-detail.webp`  | 1169 × 832 |       45,452 |
+| `bitlux-login.png`             | `/images/projects/gallery/bitlux-login.webp`           | 1169 × 832 |       76,106 |
+| `bitlux.png`                   | `/images/projects/gallery/bitlux-requests-table.webp`  | 1169 × 832 |       51,652 |
+| `linxx-desktop.png`            | `/images/projects/linxx-screen.webp`                   | 1440 × 798 |       53,958 |
+| `linxx-tablet-admin.png`       | `/images/projects/gallery/linxx-admin-wide.webp`       | 1440 × 798 |       54,544 |
+| `linxx-desktop-admin.png`      | `/images/projects/gallery/linxx-brand-admin.webp`      | 768 × 1312 |       64,394 |
+| `linxx-mobile-app-home.png`    | `/images/projects/gallery/linxx-mobile-discovery.webp` | 387 × 838  |       30,744 |
+| `linxx-mobile-app-earning.png` | `/images/projects/gallery/linxx-mobile-earnings.webp`  | 387 × 838  |       23,982 |
+| `linxx-mobile-app-profile.png` | `/images/projects/gallery/linxx-mobile-profile.webp`   | 387 × 838  |       30,776 |
+| `linxx-tablet.png`             | `/images/projects/gallery/linxx-tablet-jobs.webp`      | 768 × 1152 |       65,510 |
+
+All eleven exports total 546,610 bytes, including the two reused files. The nine new files total 443,160 bytes. Gallery images use responsive Next.js delivery and lazy loading. There are no additional gallery scripts or dependencies.
+
+No MP4, WebM, MOV, M4V, or MKV project recordings were found when searching the old portfolio outside dependency, Git, and build folders. Its unrelated confetti GIF was not migrated as project evidence. The gallery accepts real video records once supplied.

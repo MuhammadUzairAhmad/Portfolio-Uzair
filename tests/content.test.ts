@@ -38,14 +38,15 @@ test("content resolves to unique valid portfolio routes", () => {
   assert.equal(getProject("not-a-project"), undefined);
   assert.equal(getTool("bitlux"), undefined);
 });
-test("every linked local asset exists and each card has a visual", () => {
+test("local assets exist and featured cards have visuals", () => {
   for (const item of all) {
     if (item.mockup)
       assert.ok(
         existsSync(join(process.cwd(), "public", item.mockup)),
         item.mockup,
       );
-    assert.ok(item.image || item.illustration, `${item.name} needs a visual`);
+    if (item.featured || item.category === "Tools")
+      assert.ok(item.image || item.illustration, `${item.name} needs a visual`);
     if (item.image)
       assert.ok(
         existsSync(join(process.cwd(), "public", item.image.src)),
@@ -95,5 +96,30 @@ test("tool illustrations exist and toolkit examples resolve to real projects", (
   for (const item of toolkitHighlights) {
     assert.ok(getProject(item.project));
     assert.ok(item.skills.length > 0);
+  }
+});
+
+// Media records must stay tied to valid local assets; this also checks future video additions.
+test("project galleries have valid assets and preserve screenshot metadata", () => {
+  assert.equal(getProject("bitlux")?.media?.length, 4);
+  assert.equal(getProject("linxx")?.media?.length, 7);
+  for (const project of all) {
+    for (const media of project.media ?? []) {
+      assert.ok(media.caption && media.width > 0 && media.height > 0);
+      assert.ok(
+        existsSync(join(process.cwd(), "public", media.src)),
+        media.src,
+      );
+      if (media.kind === "image") assert.ok(media.alt);
+      if (media.kind === "video") {
+        assert.match(media.src, /\.(mp4|webm)$/);
+        if (media.poster)
+          assert.ok(existsSync(join(process.cwd(), "public", media.poster)));
+        if (media.captions)
+          assert.ok(
+            existsSync(join(process.cwd(), "public", media.captions.src)),
+          );
+      }
+    }
   }
 });

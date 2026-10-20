@@ -5,6 +5,7 @@ import {
   Smartphone,
   Wrench,
   CheckCheck,
+  Plug,
 } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { SectionHeading } from "@/components/layout/section-heading";
@@ -16,6 +17,7 @@ const icons = {
   mobile: Smartphone,
   workflow: Wrench,
   quality: CheckCheck,
+  integrations: Plug,
 };
 export function ToolkitSection() {
   return (

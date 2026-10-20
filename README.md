@@ -25,11 +25,12 @@ npm run start -- --hostname 127.0.0.1 --port 4337
 ## Included
 
 - Homepage: hero, services, selected projects, practical skill highlights, tools, work experience, process, about, and contact.
-- Work archive and six complete case-study routes.
+- Work archive and eleven project case-study routes.
 - Tools archive and three individual tool stories.
+- Eleven original Bitlux/Linxx screenshots in lazy-loaded galleries, full-size links, and optional native video support.
 - About with a grouped development toolkit, contact, custom 404, social sharing image, favicon, robots, and sitemap.
 - Native theme selector, keyboard-friendly mobile navigation, copy-email feedback, and real contact links.
-- Typed editable data, labeled demo narratives, and a clearly marked demo résumé PDF.
+- Typed editable data, labeled demo narratives, and the updated two-page résumé PDF.
 - Shared button variants, cards, badges, tables, containers, and case-study components.
 
 Static server rendering is enforced by the current Next.js `ensureStatic` configuration. Client components are limited to themes, navigation, project filtering, and email copying. Fonts are hosted locally, image assets are optimized with reserved layout space, and this project has no Three.js dependency. Global CSS contains shared foundations; page and component styles use Tailwind utilities.
@@ -46,7 +47,7 @@ Start with [`docs/CONTENT-GUIDE.md`](docs/CONTENT-GUIDE.md). Main data files are
 npm run content:checklist
 ```
 
-The site stays in preview mode until the demo narratives, résumé, and employment dates are reviewed. The publication checklist and environment setup are documented in the guide. Actual field performance should be measured after deployment; no production Core Web Vitals score is claimed here.
+The résumé and employment dates have been updated from the October 2026 source. The site stays in preview mode while remaining case-study drafts are reviewed. See [`docs/CONTENT-GAPS.md`](docs/CONTENT-GAPS.md) for the remaining information to add. The publication checklist and environment setup are documented in the guide. Actual field performance should be measured after deployment; no production Core Web Vitals score is claimed here.
 
 ## Quality checks
 

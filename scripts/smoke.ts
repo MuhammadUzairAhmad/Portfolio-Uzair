@@ -25,7 +25,20 @@ for (const route of routes) {
     `${route}: one main heading`,
   );
   if (route === "/") assert.match(html, /id="skills"/);
-  if (route === "/about") assert.match(html, /id="toolkit"/);
+  if (route === "/about") {
+    assert.match(html, /id="toolkit"/);
+    assert.match(html, /Jul 2025/);
+    assert.match(html, /uzair-mern-stack-resume.pdf/);
+    assert.doesNotMatch(html, /View demo résumé|Dates to confirm/);
+  }
+  const project = projects.find((item) => projectHref(item) === route);
+  if (project?.media?.length) {
+    assert.match(html, /id="gallery"/);
+    for (const media of project.media) assert.ok(html.includes(media.caption));
+  }
+  if (project?.liveUrl) assert.ok(html.includes(`href="${project.liveUrl}"`));
+  if (project && !project.liveUrl)
+    assert.doesNotMatch(html, /Open project<|View live project/);
   console.log(`PASS ${route}`);
 }
 for (const route of ["/missing", "/work/missing", "/tools/missing"]) {
@@ -45,7 +58,16 @@ for (const path of [
   ...Object.values(toolArtwork).map((artwork) => artwork.src),
   ...new Set(
     projects
-      .flatMap((p) => [p.image?.src, p.mockup])
+      .flatMap((p) => [
+        p.image?.src,
+        p.mockup,
+        ...(p.media ?? []).flatMap((media) => [
+          media.src,
+          ...(media.kind === "video"
+            ? [media.poster, media.captions?.src]
+            : []),
+        ]),
+      ])
       .filter((path): path is string => !!path),
   ),
 ]) {
