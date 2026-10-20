@@ -27,7 +27,8 @@ export function ContactCta() {
     </section>
   );
 }
-export function Footer() {
+export async function Footer() {
+  "use cache";
   return (
     <footer className="border-t border-border py-8">
       <Container className="flex flex-col justify-between gap-5 text-xs text-muted-foreground sm:flex-row sm:items-center">
