@@ -13,12 +13,7 @@ export function ProjectCard({
   project: PortfolioProject;
   featured?: boolean;
 }) {
-  const image =
-    project.slug === "bitlux"
-      ? "/images/projects/bitlux-screen.webp"
-      : project.slug === "linxx"
-        ? "/images/projects/linxx-screen.webp"
-        : project.image;
+  const image = project.image;
   return (
     <article
       className={cn(
@@ -44,10 +39,10 @@ export function ProjectCard({
           >
             {image && (
               <Image
-                src={image}
+                src={image.src}
                 alt={`${project.name} application interface`}
-                width={1440}
-                height={900}
+                width={image.width}
+                height={image.height}
                 sizes={
                   featured
                     ? "(min-width: 1280px) 650px, (min-width: 768px) 55vw, 100vw"

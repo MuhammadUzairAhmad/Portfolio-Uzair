@@ -18,7 +18,15 @@ export function Header() {
     setOpen(false);
   }
   return (
-    <header className="relative z-20 border-b border-border bg-background">
+    <header
+      className="relative z-20 border-b border-border bg-background"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && open) {
+          close();
+          trigger.current?.focus();
+        }
+      }}
+    >
       <Container className="flex h-20 items-center justify-between gap-4">
         <Link
           href="/"
@@ -72,12 +80,6 @@ export function Header() {
           id="mobile-navigation"
           aria-label="Mobile navigation"
           className="border-t border-border bg-background md:hidden"
-          onKeyDown={(event) => {
-            if (event.key === "Escape") {
-              close();
-              trigger.current?.focus();
-            }
-          }}
         >
           <Container className="flex flex-col py-5">
             {[...links, { href: "/contact", label: "Get in touch" }].map(

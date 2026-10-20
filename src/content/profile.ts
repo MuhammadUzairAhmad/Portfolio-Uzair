@@ -6,6 +6,7 @@ export const profile = {
   role: "Full-stack Developer",
   location: "Pakistan",
   timeZone: "UTC+05:00",
+  heroProjectSlug: "bitlux",
   headline: ["Good ideas.", "Carefully built."],
   introduction:
     "I build useful web and mobile products, from thoughtful interfaces to the systems behind them.",

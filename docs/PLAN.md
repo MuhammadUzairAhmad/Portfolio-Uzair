@@ -1,3 +1,5 @@
+> Implementation note: the standalone app has now been built in `uzair-portfolio`. This file records the design plan; see `PHASES.md` and `VERIFICATION.md` for implementation status.
+
 # New portfolio plan
 
 Prepared: 20 October 2026
@@ -17,10 +19,10 @@ Status: Planning only. No new application has been scaffolded under this plan.
 
 One site should support two visitor journeys without a mode switch or two duplicated websites.
 
-| Visitor | Questions the site must answer | Main evidence | Useful next action |
-| --- | --- | --- | --- |
-| Recruiter or hiring manager | What can Uzair build? What did he personally contribute? How does he work in a team? | Experience, technical case studies, résumé, GitHub, clear role and scope | View/download résumé; contact about a role |
-| Direct client | Can Uzair solve this kind of problem? What can he deliver? What will working together involve? | Services, relevant project examples, tools, process, credible outcomes | Start a project conversation; book a call |
+| Visitor                     | Questions the site must answer                                                                 | Main evidence                                                            | Useful next action                         |
+| --------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------ |
+| Recruiter or hiring manager | What can Uzair build? What did he personally contribute? How does he work in a team?           | Experience, technical case studies, résumé, GitHub, clear role and scope | View/download résumé; contact about a role |
+| Direct client               | Can Uzair solve this kind of problem? What can he deliver? What will working together involve? | Services, relevant project examples, tools, process, credible outcomes   | Start a project conversation; book a call  |
 
 Lead with a clear professional role and useful work. The homepage introduces both journeys; project pages provide the evidence. Services should describe deliverables and suitable problems rather than a wall of technology names.
 
@@ -48,24 +50,24 @@ Reference images:
 
 ## 4. Portfolio coverage audit
 
-| Area | Covered by the concept? | What is needed for the final portfolio |
-| --- | --- | --- |
-| Hero / introduction | Yes | Clear role, specialisms, location, concise positioning, two purposeful calls to action |
-| Services | Yes | Three useful service categories, expected deliverables, supporting work links |
-| Selected projects | Yes | Three strongest examples initially; choose based on contribution evidence and available visuals |
-| Project archive | Yes | Remaining projects with accurate categories, summaries, status, and links |
-| Project case studies | Structure covered | Verified original problem, role, team context, constraints, solution, tradeoffs, contributions, evidence, and lessons |
-| Client tools | Yes | TypeSpark, GlobePick, and Blogsite; confirm individual attribution, status, permitted screenshots, and any public URLs |
-| Experience | Yes | Accurate job titles, employer names, dates, and current employment status |
-| Skills | Partially | Grouped capabilities with links to work that demonstrates them; avoid percentage-based skill ratings |
-| Approach | Yes | A short practical four-step process, expectations for feedback, testing, handoff, and collaboration |
-| About | Yes | Concise personal background, professional interests, verified education if useful, authentic optional portrait |
-| Résumé | Missing from the visual coverage | Current accessible PDF, visible download/view link, alignment with the experience page |
-| Contact | Yes | Correct email, GitHub, LinkedIn, and working calendar link; useful prompts for both roles and projects |
-| Credibility | Incomplete | Real work evidence first; attributable, approved testimonials only if available |
-| Accessibility and mobile | Not established by the images | Keyboard, focus, semantics, contrast in both themes, reflow, motion preferences, touch behavior |
-| Discoverability | Implementation work | Route metadata, canonical URLs, social previews, sitemap, robots, relevant structured data, meaningful image descriptions |
-| Error and utility states | Implementation work | Proper not-found page, broken-link handling, image fallbacks, clipboard failure handling |
+| Area                     | Covered by the concept?          | What is needed for the final portfolio                                                                                    |
+| ------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Hero / introduction      | Yes                              | Clear role, specialisms, location, concise positioning, two purposeful calls to action                                    |
+| Services                 | Yes                              | Three useful service categories, expected deliverables, supporting work links                                             |
+| Selected projects        | Yes                              | Three strongest examples initially; choose based on contribution evidence and available visuals                           |
+| Project archive          | Yes                              | Remaining projects with accurate categories, summaries, status, and links                                                 |
+| Project case studies     | Structure covered                | Verified original problem, role, team context, constraints, solution, tradeoffs, contributions, evidence, and lessons     |
+| Client tools             | Yes                              | TypeSpark, GlobePick, and Blogsite; confirm individual attribution, status, permitted screenshots, and any public URLs    |
+| Experience               | Yes                              | Accurate job titles, employer names, dates, and current employment status                                                 |
+| Skills                   | Partially                        | Grouped capabilities with links to work that demonstrates them; avoid percentage-based skill ratings                      |
+| Approach                 | Yes                              | A short practical four-step process, expectations for feedback, testing, handoff, and collaboration                       |
+| About                    | Yes                              | Concise personal background, professional interests, verified education if useful, authentic optional portrait            |
+| Résumé                   | Missing from the visual coverage | Current accessible PDF, visible download/view link, alignment with the experience page                                    |
+| Contact                  | Yes                              | Correct email, GitHub, LinkedIn, and working calendar link; useful prompts for both roles and projects                    |
+| Credibility              | Incomplete                       | Real work evidence first; attributable, approved testimonials only if available                                           |
+| Accessibility and mobile | Not established by the images    | Keyboard, focus, semantics, contrast in both themes, reflow, motion preferences, touch behavior                           |
+| Discoverability          | Implementation work              | Route metadata, canonical URLs, social previews, sitemap, robots, relevant structured data, meaningful image descriptions |
+| Error and utility states | Implementation work              | Proper not-found page, broken-link handling, image fallbacks, clipboard failure handling                                  |
 
 ### Minimum content needed before public launch
 
@@ -84,16 +86,16 @@ Testimonials, a blog, pricing, a newsletter, and a live availability badge are o
 
 ### Routes
 
-| Route | Purpose |
-| --- | --- |
-| `/` | Introduce Uzair, show the strongest work, and direct visitors to evidence or contact |
-| `/work` | Browse the project archive |
-| `/work/[slug]` | Read an individual project case study |
-| `/tools` | Explore focused client tools and smaller products |
-| `/tools/[slug]` | Read an individual tool's overview, contribution, technical story, and status |
-| `/about` | Professional background, capabilities, full experience, résumé, and approach |
-| `/contact` | Email, calendar, social links, location/time zone, and what to share |
-| Framework not-found page | Recover from invalid or removed URLs |
+| Route                    | Purpose                                                                              |
+| ------------------------ | ------------------------------------------------------------------------------------ |
+| `/`                      | Introduce Uzair, show the strongest work, and direct visitors to evidence or contact |
+| `/work`                  | Browse the project archive                                                           |
+| `/work/[slug]`           | Read an individual project case study                                                |
+| `/tools`                 | Explore focused client tools and smaller products                                    |
+| `/tools/[slug]`          | Read an individual tool's overview, contribution, technical story, and status        |
+| `/about`                 | Professional background, capabilities, full experience, résumé, and approach         |
+| `/contact`               | Email, calendar, social links, location/time zone, and what to share                 |
+| Framework not-found page | Recover from invalid or removed URLs                                                 |
 
 Services and approach are homepage sections for the initial release. Add dedicated pages only if there is enough distinct content and a clear visitor need. A résumé is a downloadable document, not an extra app route by default.
 
@@ -229,20 +231,20 @@ Do not place page-specific selectors, component skins, or long button/card style
 
 Build the components actually used by the portfolio, with normal HTML semantics and small APIs.
 
-| Component | Planned responsibility |
-| --- | --- |
-| `Button` | Native button, typed primary/secondary/outline/ghost variants; small/default/large/icon sizes; disabled and focus behavior |
-| `ButtonLink` | Internal Next.js link or external anchor using the same shared button classes; no nested interactive elements |
-| `Card` primitives | Shared surface, padding variants, header/content/footer where useful; explicit project/tool card compositions |
-| `Badge` | Technology, category, or verified project-status label |
-| `Table` primitives | Semantic table/caption/header/body/row/cell for genuine tabular comparisons in case studies; contained mobile overflow when needed |
-| `Container`, `Section`, `SectionHeading` | Consistent page width, section rhythm, and headings without dictating every page's layout |
-| `Header`, `MobileNav`, `Footer` | Shared navigation, active route, keyboard/touch behavior, social and résumé access |
-| `ThemeToggle` | Accessible theme choice and persistence |
-| `ProjectCard`, `ToolCard` | Reusable content presentations with truthful links and status |
-| `CaseStudyLayout`, `CaseStudyMeta`, `ContributionList` | Consistent project/tool detail presentation |
-| `ExperienceList`, `ApproachSteps` | Shared data presentation on home/about without duplicating content |
-| `CopyEmailButton` | Explicit clipboard action with success and failure feedback; a normal email link always remains usable |
+| Component                                              | Planned responsibility                                                                                                             |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `Button`                                               | Native button, typed primary/secondary/outline/ghost variants; small/default/large/icon sizes; disabled and focus behavior         |
+| `ButtonLink`                                           | Internal Next.js link or external anchor using the same shared button classes; no nested interactive elements                      |
+| `Card` primitives                                      | Shared surface, padding variants, header/content/footer where useful; explicit project/tool card compositions                      |
+| `Badge`                                                | Technology, category, or verified project-status label                                                                             |
+| `Table` primitives                                     | Semantic table/caption/header/body/row/cell for genuine tabular comparisons in case studies; contained mobile overflow when needed |
+| `Container`, `Section`, `SectionHeading`               | Consistent page width, section rhythm, and headings without dictating every page's layout                                          |
+| `Header`, `MobileNav`, `Footer`                        | Shared navigation, active route, keyboard/touch behavior, social and résumé access                                                 |
+| `ThemeToggle`                                          | Accessible theme choice and persistence                                                                                            |
+| `ProjectCard`, `ToolCard`                              | Reusable content presentations with truthful links and status                                                                      |
+| `CaseStudyLayout`, `CaseStudyMeta`, `ContributionList` | Consistent project/tool detail presentation                                                                                        |
+| `ExperienceList`, `ApproachSteps`                      | Shared data presentation on home/about without duplicating content                                                                 |
+| `CopyEmailButton`                                      | Explicit clipboard action with success and failure feedback; a normal email link always remains usable                             |
 
 Avoid building a sortable/filterable data-table framework for a portfolio. Experience can be a semantic list. A simple comparison table is sufficient when the content is actually tabular.
 

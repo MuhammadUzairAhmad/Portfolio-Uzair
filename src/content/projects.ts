@@ -8,7 +8,11 @@ export const projects: PortfolioProject[] = [
     subtitle: "Private jet booking & operations",
     summary:
       "Connecting booking workflows, operational tools, and the details behind private aviation.",
-    image: "/images/projects/bitlux.webp",
+    image: {
+      src: "/images/projects/bitlux-screen.webp",
+      width: 1169,
+      height: 832,
+    },
     featured: true,
     role: "Full-stack contributor",
     team: "Sofrix",
@@ -80,7 +84,11 @@ export const projects: PortfolioProject[] = [
     subtitle: "An ambassador marketplace, across screens",
     summary:
       "A connected marketplace experience for brands and ambassadors on web and mobile.",
-    image: "/images/projects/linxx.webp",
+    image: {
+      src: "/images/projects/linxx-screen.webp",
+      width: 1440,
+      height: 798,
+    },
     featured: true,
     role: "Full-stack contributor",
     team: "Sofrix",
@@ -154,7 +162,11 @@ export const projects: PortfolioProject[] = [
     subtitle: "Connecting candidates and recruiters",
     summary:
       "Applications, assessments, and recruiting workflows brought into a connected platform.",
-    image: "/images/projects/skillmatch.webp",
+    image: {
+      src: "/images/projects/skillmatch.webp",
+      width: 1440,
+      height: 811,
+    },
     featured: true,
     role: "Full-stack contributor",
     team: "Netixsol",
@@ -233,7 +245,7 @@ export const projects: PortfolioProject[] = [
     subtitle: "A blockchain-connected carbon marketplace",
     summary:
       "Marketplace interfaces, wallet connectivity, and smart contract interactions for carbon credits.",
-    image: "/images/projects/hestiya.webp",
+    image: { src: "/images/projects/hestiya.webp", width: 1440, height: 811 },
     role: "Engineering contributor",
     team: "Weiblocks",
     platform: "Web",
@@ -291,7 +303,11 @@ export const projects: PortfolioProject[] = [
     subtitle: "Games, referrals, and connected rewards",
     summary:
       "A platform combining a spin-wheel experience, referrals, credit claiming, and administrative controls.",
-    image: "/images/projects/gaming-platform.webp",
+    image: {
+      src: "/images/projects/gaming-platform.webp",
+      width: 1440,
+      height: 811,
+    },
     role: "Full-stack contributor",
     team: "Weiblocks",
     platform: "Web",
@@ -349,7 +365,11 @@ export const projects: PortfolioProject[] = [
     subtitle: "A clear digital presence for a corporate brand",
     summary:
       "A responsive website translating company brand guidelines into services, work, and contact flows.",
-    image: "/images/projects/development-solutions-group.webp",
+    image: {
+      src: "/images/projects/development-solutions-group.webp",
+      width: 1440,
+      height: 811,
+    },
     role: "Frontend developer",
     team: "Sofrix",
     platform: "Web",

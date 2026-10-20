@@ -7,6 +7,7 @@ import { contentSettings } from "@/content/profile";
 import { publication } from "@/lib/seo";
 import { profile } from "@/content/profile";
 import "./globals.css";
+export const ensureStatic = "navigation";
 const body = localFont({
   src: "../../node_modules/@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2",
   variable: "--font-body",

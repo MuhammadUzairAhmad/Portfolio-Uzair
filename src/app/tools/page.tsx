@@ -19,6 +19,7 @@ export default function ToolsPage() {
       />
       <section className="py-12 sm:py-16" aria-label="Tool collection">
         <Container>
+          <h2 className="sr-only">Tool collection</h2>
           <p className="mb-7 text-xs text-muted-foreground">
             Illustrated covers introduce each tool. Open a story to see its
             scope and contributions.

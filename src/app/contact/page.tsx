@@ -72,7 +72,7 @@ export default function ContactPage() {
                 strokeWidth={1.3}
                 aria-hidden
               />
-              <h3>For your team</h3>
+              <h2 className="text-xl">For your team</h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Share the role, product, and how the team works. My case studies
                 offer a closer look at my contribution and technical approach.
@@ -94,7 +94,7 @@ export default function ContactPage() {
                 strokeWidth={1.3}
                 aria-hidden
               />
-              <h3>For your project</h3>
+              <h2 className="text-xl">For your project</h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 A short brief, target timeline, and budget range help make the
                 first conversation useful. Early ideas are welcome too.

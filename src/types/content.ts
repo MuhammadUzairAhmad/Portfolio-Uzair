@@ -11,7 +11,7 @@ export type PortfolioProject = {
   category: "Web platforms" | "Web & mobile" | "Web3" | "Websites" | "Tools";
   subtitle: string;
   summary: string;
-  image?: string;
+  image?: { src: string; width: number; height: number };
   featured?: boolean;
   role: string;
   team: string;

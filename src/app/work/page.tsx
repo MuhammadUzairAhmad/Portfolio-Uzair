@@ -19,6 +19,7 @@ export default function WorkPage() {
       />
       <section className="py-12 sm:py-16" aria-label="Project collection">
         <Container>
+          <h2 className="sr-only">Project collection</h2>
           <p className="mb-7 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
             {projects.length.toString().padStart(2, "0")} projects · Web /
             Mobile / Web3

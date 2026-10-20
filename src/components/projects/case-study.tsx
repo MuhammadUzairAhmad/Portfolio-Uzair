@@ -37,12 +37,7 @@ export function CaseStudy({
   next: PortfolioProject;
 }) {
   const isTool = project.category === "Tools";
-  const image =
-    project.slug === "bitlux"
-      ? "/images/projects/bitlux-screen.webp"
-      : project.slug === "linxx"
-        ? "/images/projects/linxx-screen.webp"
-        : project.image;
+  const image = project.image;
   return (
     <main id="main-content">
       <section className="border-b border-border py-12 sm:py-16">
@@ -106,10 +101,10 @@ export function CaseStudy({
               image && (
                 <div className="p-5 sm:p-12">
                   <Image
-                    src={image}
+                    src={image.src}
                     alt={`${project.name} product interface`}
-                    width={1440}
-                    height={900}
+                    width={image.width}
+                    height={image.height}
                     sizes="(min-width:1280px) 1100px, 90vw"
                     preload
                     className="mx-auto h-auto max-h-[620px] w-full rounded-md object-contain"
@@ -192,7 +187,12 @@ export function CaseStudy({
           <section id="decisions" className="scroll-mt-8">
             <Eyebrow>05 / Behind the choices</Eyebrow>
             <h2 className="mt-3">Decisions, with a reason.</h2>
-            <div className="mt-6 overflow-x-auto rounded-lg border border-border">
+            <div
+              role="region"
+              aria-label="Scrollable technical decisions"
+              tabIndex={0}
+              className="mt-6 overflow-x-auto rounded-lg border border-border"
+            >
               <Table>
                 <caption className="sr-only">
                   Technical decisions for {project.name}

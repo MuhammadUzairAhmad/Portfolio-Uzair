@@ -99,7 +99,7 @@ export default function AboutPage() {
         <Container className="grid gap-8 md:grid-cols-2">
           <div>
             <Eyebrow>Education</Eyebrow>
-            <h3 className="mt-4">{profile.education.qualification}</h3>
+            <h2 className="mt-4 text-xl">{profile.education.qualification}</h2>
             <p className="mt-3 text-sm text-muted-foreground">
               {profile.education.institution} · {profile.education.period}
             </p>
