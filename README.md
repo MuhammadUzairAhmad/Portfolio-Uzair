@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Muhammad Uzair Ahmad — Portfolio
 
-## Getting Started
+A fresh Next.js portfolio with a src directory, Tailwind-first components, server-rendered content, and light/dark/system themes.
 
-First, run the development server:
+## Development
 
-```bash
+Use a supported Node LTS version (minimum 22.18).
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Phase history
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Work is committed locally in phases. No Git remote is configured. After creating a repository, add its URL as `origin` and push this branch; the existing commit history will be preserved.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Stack
 
-## Learn More
+Next.js 16.4.2 / React 19.3.0 / Tailwind CSS 4.3.x / TypeScript / bundled DM Sans and Libre Baskerville fonts.
 
-To learn more about Next.js, take a look at the following resources:
+## Content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Editable content lives in `src/content/`. Missing project stories use contextual demo copy, visibly labeled in the UI. Replace those fields and the demo résumé before publishing. The complete editing guide and verification report will be added during implementation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Local work only
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The original portfolio is a separate application. This repository does not inherit its 3D libraries or configuration.
