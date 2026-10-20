@@ -1,0 +1,31 @@
+export type Narrative = { text: string; demo?: boolean };
+export type Decision = {
+  topic: string;
+  choice: string;
+  reason: string;
+  demo?: boolean;
+};
+export type PortfolioProject = {
+  slug: string;
+  name: string;
+  category: "Web platforms" | "Web & mobile" | "Web3" | "Websites" | "Tools";
+  subtitle: string;
+  summary: string;
+  image?: string;
+  featured?: boolean;
+  role: string;
+  team: string;
+  platform: string;
+  status: "Public link" | "Private project" | "Preview";
+  stack: string[];
+  scope: string[];
+  overview: string;
+  contributions: { title: string; description: string }[];
+  problem: Narrative;
+  solution: Narrative;
+  decisions: Decision[];
+  results: Narrative[];
+  lessons: Narrative;
+  liveUrl?: string;
+  illustration?: "type" | "globe" | "blog";
+};
