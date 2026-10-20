@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProviderShell } from "@/components/theme/provider";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { contentSettings } from "@/content/profile";
 import "./globals.css";
 const body = localFont({
   src: "../../node_modules/@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2",
@@ -30,7 +33,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${body.variable} ${editorial.variable}`}>
-        <ThemeProviderShell>{children}</ThemeProviderShell>
+        <ThemeProviderShell>
+          <a
+            href="#main-content"
+            className="sr-only fixed left-4 top-4 z-50 rounded-md bg-primary p-3 text-sm text-primary-foreground focus:not-sr-only"
+          >
+            Skip to content
+          </a>
+          {contentSettings.demoMode && (
+            <div className="border-b border-border bg-surface px-4 py-2 text-center font-mono text-[9px] tracking-wide text-muted-foreground">
+              PORTFOLIO PREVIEW · Demo copy is labeled.
+            </div>
+          )}
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProviderShell>
       </body>
     </html>
   );
