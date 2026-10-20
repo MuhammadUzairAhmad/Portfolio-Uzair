@@ -49,6 +49,7 @@ export function Hero() {
         {project && (
           <Link
             href={projectHref(project)}
+            prefetch
             className="relative isolate block aspect-[1.04] overflow-hidden rounded-3xl bg-[radial-gradient(ellipse_at_60%_50%,#f0e5cd85,transparent_75%)] dark:bg-[radial-gradient(ellipse_at_45%_55%,#b6cf5240,transparent_70%)]"
           >
             <div className="absolute right-7 top-6 z-10 flex items-center gap-4">

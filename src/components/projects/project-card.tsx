@@ -35,6 +35,7 @@ export function ProjectCard({
     >
       <Link
         href={projectHref(project)}
+        prefetch
         className={cn(
           "relative grid min-h-60 grid-cols-[.9fr_1.1fr] gap-1 p-5 sm:p-6",
           wide && "sm:min-h-72 sm:grid-cols-[.9fr_1.2fr] sm:p-8",
@@ -104,6 +105,7 @@ export function ToolCard({
     >
       <Link
         href={projectHref(project)}
+        prefetch
         className={cn(
           "flex h-full flex-col p-5",
           archive && "grid min-h-72 items-center gap-6 sm:grid-cols-2 sm:p-7",
@@ -155,6 +157,7 @@ export function NextProjectCard({ project }: { project: PortfolioProject }) {
   return (
     <Link
       href={projectHref(project)}
+      prefetch
       className="grid items-center gap-4 rounded-xl border border-border bg-surface p-4 sm:grid-cols-[160px_1fr_auto]"
     >
       <div className="h-28 overflow-hidden">

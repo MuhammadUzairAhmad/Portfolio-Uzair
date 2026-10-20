@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import { CaseStudyLoading } from "@/components/projects/case-study-loading";
 import { notFound } from "next/navigation";
 import { projects } from "@/content/projects";
 import { getProject } from "@/lib/content";
@@ -16,7 +18,7 @@ export async function generateMetadata({
   if (!project) return {};
   return pageMetadata(project.name, project.summary, `/work/${slug}`);
 }
-export default async function ProjectPage({
+async function ProjectDetails({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -33,5 +35,17 @@ export default async function ProjectPage({
       project={project}
       next={collection[(index + 1) % collection.length]}
     />
+  );
+}
+
+export default function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  return (
+    <Suspense fallback={<CaseStudyLoading />}>
+      <ProjectDetails params={params} />
+    </Suspense>
   );
 }
