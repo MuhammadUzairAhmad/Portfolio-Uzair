@@ -86,7 +86,7 @@ export function ToolsSection() {
         <SectionHeading
           eyebrow="Tools & smaller products"
           title="Tools & smaller products"
-          description="Side projects and useful tools I’ve built along the way."
+          description="Client projects and useful tools I’ve built along the way."
         />
         <div className="grid gap-4 sm:grid-cols-3">
           {tools.map((tool) => (

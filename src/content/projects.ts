@@ -80,6 +80,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "linxx",
+    cardSubtitle: "Ambassador marketplace · Web + Mobile",
     mockup: "/images/projects/linxx.webp",
     name: "Linxx",
     category: "Web & mobile",
@@ -159,6 +160,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     slug: "skillmatch",
+    cardSubtitle: "Recruitment & assessments",
     mockup: "/images/projects/skillmatch.webp",
     name: "SkillMatch",
     category: "Web platforms",

@@ -39,7 +39,11 @@ for (const path of [
   profile.resume.href,
   "/icon.svg",
   "/opengraph-image",
-  ...projects.map((p) => p.image?.src).filter((path): path is string => !!path),
+  ...new Set(
+    projects
+      .flatMap((p) => [p.image?.src, p.mockup])
+      .filter((path): path is string => !!path),
+  ),
 ]) {
   const response = await fetch(origin + path);
   assert.equal(response.status, 200, path);

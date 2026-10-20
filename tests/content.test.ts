@@ -38,6 +38,11 @@ test("content resolves to unique valid portfolio routes", () => {
 });
 test("every linked local asset exists and each card has a visual", () => {
   for (const item of all) {
+    if (item.mockup)
+      assert.ok(
+        existsSync(join(process.cwd(), "public", item.mockup)),
+        item.mockup,
+      );
     assert.ok(item.image || item.illustration, `${item.name} needs a visual`);
     if (item.image)
       assert.ok(

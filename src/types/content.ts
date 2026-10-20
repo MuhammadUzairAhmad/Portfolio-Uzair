@@ -10,6 +10,7 @@ export type PortfolioProject = {
   name: string;
   category: "Web platforms" | "Web & mobile" | "Web3" | "Websites" | "Tools";
   subtitle: string;
+  cardSubtitle?: string;
   summary: string;
   mockup?: string;
   image?: { src: string; width: number; height: number };

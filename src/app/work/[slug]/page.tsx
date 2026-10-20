@@ -24,11 +24,14 @@ export default async function ProjectPage({
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) notFound();
-  const index = projects.indexOf(project);
+  const collection = project.featured
+    ? projects.filter((item) => item.featured)
+    : projects;
+  const index = collection.indexOf(project);
   return (
     <CaseStudy
       project={project}
-      next={projects[(index + 1) % projects.length]}
+      next={collection[(index + 1) % collection.length]}
     />
   );
 }

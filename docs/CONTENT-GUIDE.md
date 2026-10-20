@@ -2,14 +2,14 @@
 
 All personal and project data lives in `src/content/`. You can update these TypeScript objects without editing the layouts. TypeScript and the tests catch missing required fields and broken local asset references.
 
-| File                        | What to change                                                                                                                 |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `src/content/profile.ts`    | Name, role, hero headline and featured project slug, intro, biography, contact/social links, résumé, education, preview banner |
-| `src/content/projects.ts`   | All six project records, case-study copy, stacks, contributions, screenshots, live links                                       |
-| `src/content/tools.ts`      | TypeSpark, GlobePick, Blogsite, cover styles and tool stories                                                                  |
-| `src/content/experience.ts` | Companies, roles, descriptions, and confirmed dates                                                                            |
-| `src/content/services.ts`   | Services, related work, skill groups, and process steps                                                                        |
-| `src/app/globals.css`       | Shared light/dark theme tokens, typography, container, accessibility base                                                      |
+| File                        | What to change                                                                                                                       |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `src/content/profile.ts`    | Name, role, hero headline and featured project slug, intro, biography, contact/social links, résumé, education, footer preview label |
+| `src/content/projects.ts`   | All six project records, case-study copy, stacks, contributions, screenshots, live links                                             |
+| `src/content/tools.ts`      | TypeSpark, GlobePick, Blogsite, cover styles and tool stories                                                                        |
+| `src/content/experience.ts` | Companies, roles, descriptions, and confirmed dates                                                                                  |
+| `src/content/services.ts`   | Services, related work, skill groups, and process steps                                                                              |
+| `src/app/globals.css`       | Shared light/dark theme tokens, typography, container, accessibility base                                                            |
 
 Component/page-specific styling stays in Tailwind class names. UI labels and editorial section titles live in their components; actual portfolio facts live in the data above.
 
@@ -19,7 +19,9 @@ Component/page-specific styling stays in Tailwind class names. UI labels and edi
 2. Find a field with `demo: true`, replace its text with a verified account, and remove the flag or set it to `false`. Its label disappears automatically.
 3. Confirm experience dates and set each `datesDemo` to `false`.
 4. Put your real résumé in `public/documents/`, update `profile.resume.href` and `label`, and set `profile.resume.demo` to `false`. Remove the old demo file if it is no longer useful.
-5. After review, set `contentSettings.demoMode` to `false` to remove the preview banner.
+5. After review, set `contentSettings.demoMode` to `false` to remove the footer preview label.
+
+Project cards use `cardSubtitle` when provided, otherwise `subtitle`. The homepage timeline intentionally shows companies and roles; confirmed dates remain in the expandable About experience rows.
 
 A case study contains `overview`, `role`, `team`, `platform`, `scope`, `stack`, `contributions`, `problem`, `solution`, `decisions`, `results`, and `lessons`. A narrative is `{ text: "Your copy", demo: false }`. A decision is `{ topic, choice, reason, demo }`.
 
@@ -43,7 +45,9 @@ image: {
 },
 ```
 
-Dimensions reserve the correct space while the image loads. Keep product screenshots readable and preserve their proportions. `next/image` generates appropriately sized variants; hero images are preloaded and collection images are lazy loaded. Tool covers are decorative component illustrations, not claims about the actual product UI. Set `illustration` to `type`, `globe`, or `blog` for those covers.
+`image` is the plain screenshot fallback. The current six projects also have a `mockup` path for the existing device artwork. The device presentation uses SVG clip paths around that artwork, preserving the original screen pixels while matching the reference background. These existing mockups share a 1640 × 924 composition (the optimized exports retain those proportions). If you add an unrelated screenshot or montage, remove `mockup` and use the `image` object; the component will display the plain image correctly. Only set `mockup` for artwork matching the existing device template.
+
+Dimensions reserve the correct space while the image loads. Keep product screenshots readable and preserve their proportions. The plain screenshot fallback uses `next/image` for appropriately sized variants. Existing device presentations use the pre-optimized WebP montage inside a responsive SVG, and the hero montage is preloaded. Tool covers are decorative component illustrations, not claims about the actual product UI. Set `illustration` to `type`, `globe`, or `blog` for those covers.
 
 ## Local checks
 

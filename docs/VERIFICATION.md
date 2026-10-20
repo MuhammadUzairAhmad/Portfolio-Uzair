@@ -35,8 +35,18 @@ Screenshots are in `docs/previews/`: [light homepage](previews/home-light.jpg), 
 
 ## Performance and accessibility boundaries
 
-The app uses local fonts, optimized WebP source images, responsive `next/image`, accurate dimensions, lazy collection images, static server output, and small client components. It contains no Three.js, animation runtime, autoplay video, tracking, or remote font fetch. The original six screenshot exports were reduced from 3.57 MB to 234 KB, with two additional flat UI screenshots totaling 103 KB; see `ASSETS.md`.
+The app uses local fonts, optimized WebP source images, responsive SVG device presentations and `next/image` fallbacks, reserved image space, static server output, and small client components. It contains no Three.js, animation runtime, autoplay video, tracking, or remote font fetch. The original six screenshot exports were reduced from 3.57 MB to 234 KB, with two additional flat UI screenshots totaling 103 KB; see `ASSETS.md`.
 
 Keyboard controls, visible focus, native select semantics, headings, image descriptions, skip link, and reduced-motion handling are implemented. This was not a full assistive-technology audit. No hosted Lighthouse or real-user Core Web Vitals measurements have been collected; actual performance depends on deployment, caching, network, and future content.
 
 Real contact and scheduling links are present. External email delivery and calendar booking were not triggered. No form pretends to submit data. There is no database or backend mail service to configure for the current contact flow.
+
+## Reference alignment follow-up
+
+The original approved homepage, case-study, and connected-page design boards were reopened and used for the follow-up layout changes. The redesigned compositions replace the first implementation’s oversized sections, vertical project cards, large monogram block, and broad contact bands. Local screenshot previews have been refreshed to reflect the matching version.
+
+The follow-up adds a working Work filter (All / Web applications / Mobile apps / Platforms), expandable About experience rows, self-hosted handwritten annotations, and the six numbered case-study sections. Source mockups are also covered by local asset checks and the production smoke script.
+
+Final follow-up checks: production build, lint, type checks, eight unit tests, formatting, and the production smoke checks passed. The revised homepage and SkillMatch detail fit at 320px; the table scrolls within its own region. Menu Escape handling, the mobile contact copy action, the Work mobile-app filter, and the About experience disclosure were exercised. No warnings or errors appeared in the final production browser log. The final mobile email card stacks its icon above the address to avoid squeezing it into a narrow text column.
+
+Additional final page previews: [Work](previews/work.jpg), [Tools](previews/tools.jpg), [About](previews/about.jpg), and [Contact](previews/contact.jpg).

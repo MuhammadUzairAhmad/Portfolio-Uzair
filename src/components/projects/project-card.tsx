@@ -50,11 +50,7 @@ export function ProjectCard({
             {project.name}
           </h3>
           <p className="mt-1 max-w-xs text-xs font-medium leading-relaxed sm:text-sm">
-            {project.slug === "linxx"
-              ? "Ambassador marketplace · Web + Mobile"
-              : project.slug === "skillmatch"
-                ? "Recruitment & assessments"
-                : project.subtitle}
+            {project.cardSubtitle ?? project.subtitle}
           </p>
           {wide && (
             <p className="mt-3 max-w-xs text-xs leading-relaxed text-muted-foreground sm:text-sm">

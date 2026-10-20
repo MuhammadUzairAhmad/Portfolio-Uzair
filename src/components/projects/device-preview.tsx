@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useId } from "react";
 import type { PortfolioProject } from "@/types/content";
 import { cn } from "@/lib/cn";
@@ -12,7 +13,17 @@ export function DevicePreview({
   compact?: boolean;
 }) {
   const id = useId().replaceAll(":", "");
-  if (!project.mockup) return null;
+  if (!project.mockup)
+    return project.image ? (
+      <Image
+        src={project.image.src}
+        width={project.image.width}
+        height={project.image.height}
+        alt={`${project.name} application interface`}
+        sizes="(min-width:1024px) 600px, 90vw"
+        className={cn("h-full w-full rounded-lg object-contain", className)}
+      />
+    ) : null;
   const bitlux = project.slug === "bitlux";
   return (
     <svg

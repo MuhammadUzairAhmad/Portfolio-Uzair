@@ -1,130 +1,175 @@
-import { ArrowUpRight, Download } from "lucide-react";
+import {
+  Monitor,
+  Database,
+  Link2,
+  Smartphone,
+  ChevronRight,
+  Download,
+} from "lucide-react";
 import { Container, Eyebrow } from "@/components/layout/container";
-import { SectionHeading } from "@/components/layout/section-heading";
-import { ExperienceList } from "@/components/home/sections";
+import { PageIntro } from "@/components/layout/page-intro";
 import { ContactCta } from "@/components/layout/footer";
 import { ButtonLink } from "@/components/ui/button";
-import { Badge, DemoBadge } from "@/components/ui/badge";
+import { DemoBadge } from "@/components/ui/badge";
 import { profile } from "@/content/profile";
-import { capabilities } from "@/content/services";
+import { capabilities, approach } from "@/content/services";
+import { experience } from "@/content/experience";
 import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata(
   "About",
-  "Meet Muhammad Uzair Ahmad, a full-stack developer based in Pakistan.",
+  "Curious by nature. Practical by approach.",
   "/about",
 );
+const icons = [Monitor, Database, Link2, Smartphone];
 export default function AboutPage() {
   return (
     <main id="main-content">
-      <section className="border-b border-border py-14 sm:py-20">
-        <Container className="grid items-center gap-10 lg:grid-cols-[1.3fr_.7fr]">
-          <div>
-            <Eyebrow>A little about me</Eyebrow>
-            <h1 className="mt-5 text-5xl sm:text-6xl">
-              A builder.
+      <div className="relative">
+        <PageIntro
+          eyebrow="About"
+          title={
+            <>
+              Curious by nature.
               <br />
-              <span className="font-serif text-[.85em] font-normal italic text-primary">
-                Always curious.
-              </span>
-            </h1>
-            <p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">
-              {profile.about}
+              <span className="text-primary">Practical by approach.</span>
+            </>
+          }
+          description={profile.about}
+          note={
+            <>
+              Build
+              <br />
+              useful things
+              <br />
+              for people.
+            </>
+          }
+        />
+        <Container className="pointer-events-none relative hidden h-0 lg:block">
+          <div
+            aria-hidden="true"
+            className="absolute bottom-3 right-5 flex size-32 rotate-6 items-center justify-center rounded-sm bg-[#f3eedf] dark:bg-[#17251a]"
+          >
+            <span className="-rotate-6 font-serif text-7xl tracking-[-.2em] text-primary">
+              UA
+            </span>
+          </div>
+        </Container>
+      </div>
+      <section>
+        <Container className="border-y border-border py-7">
+          <Eyebrow>What I bring</Eyebrow>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {capabilities.map((item, i) => {
+              const Icon = icons[i];
+              return (
+                <article
+                  key={item.title}
+                  className="rounded-lg border border-border p-5"
+                >
+                  <Icon
+                    size={29}
+                    strokeWidth={1.4}
+                    className="mb-4 text-primary"
+                    aria-hidden
+                  />
+                  <h2 className="text-lg">{item.title}</h2>
+                  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                    {item.description}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+      <section id="experience" className="scroll-mt-5">
+        <Container className="border-b border-border py-7">
+          <div className="mb-4 flex flex-wrap justify-between gap-2">
+            <Eyebrow>Work experience</Eyebrow>
+            <p className="text-xs text-muted-foreground">
+              Different problems. A richer perspective.
             </p>
-            <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
-              My work spans web platforms, mobile interfaces, integrations, and
-              focused client tools. I enjoy connecting the visible experience
-              with the systems that make it useful.
+          </div>
+          {experience.map((item) => (
+            <details
+              key={item.company}
+              className="group border-t border-border"
+            >
+              <summary className="flex min-h-16 list-none items-center gap-4 py-4">
+                <span
+                  aria-hidden="true"
+                  className="flex size-8 shrink-0 items-center justify-center rounded-md bg-accent text-sm font-bold text-primary"
+                >
+                  {item.company[0]}
+                </span>
+                <span className="flex-1 text-sm font-semibold">
+                  {item.company}
+                </span>
+                <span className="hidden text-xs text-muted-foreground sm:block">
+                  {item.role}
+                </span>
+                <ChevronRight
+                  size={15}
+                  className="shrink-0 transition-transform group-open:rotate-90"
+                  aria-hidden
+                />
+              </summary>
+              <div className="pb-5 pl-12">
+                <p className="mb-2 text-sm sm:hidden">{item.role}</p>
+                <p className="max-w-xl text-sm text-muted-foreground">
+                  {item.description}
+                </p>
+                <p className="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                  {item.period}
+                  {item.datesDemo && <DemoBadge />}
+                </p>
+              </div>
+            </details>
+          ))}
+        </Container>
+      </section>
+      <section>
+        <Container className="py-7">
+          <div className="mb-5 flex justify-between">
+            <Eyebrow>How I work</Eyebrow>
+            <p className="text-xs text-muted-foreground">
+              From idea to impact.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3">
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {approach.map((item, i) => (
+              <article key={item.title} className="rounded-lg bg-surface p-5">
+                <span className="font-serif text-4xl text-[#a65f29] dark:text-primary">
+                  0{i + 1}
+                </span>
+                <h2 className="mt-4 text-base">{item.title}</h2>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                  {item.description}
+                </p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-7 flex flex-wrap items-center justify-between gap-5 border-t border-border pt-6">
+            <div>
+              <Eyebrow>Education</Eyebrow>
+              <p className="mt-2 text-sm">{profile.education.qualification}</p>
+              <p className="text-xs text-muted-foreground">
+                {profile.education.institution} · {profile.education.period}
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
               <ButtonLink
                 href={profile.resume.href}
+                size="sm"
+                variant="outline"
                 target="_blank"
                 rel="noreferrer"
               >
                 {profile.resume.label}
-                <Download size={15} aria-hidden />
+                <Download size={13} aria-hidden />
               </ButtonLink>
               {profile.resume.demo && <DemoBadge />}
-            </div>
-          </div>
-          <div
-            aria-label="Uzair’s initials"
-            className="flex aspect-square max-h-96 items-center justify-center rounded-lg border border-border bg-accent"
-          >
-            <span className="font-serif text-9xl italic tracking-tighter text-primary">
-              ua.
-            </span>
-          </div>
-        </Container>
-      </section>
-      <section className="border-b border-border py-16 sm:py-24">
-        <Container>
-          <SectionHeading
-            eyebrow="The craft"
-            title="A connected set of skills."
-          />
-          <div className="grid gap-5 sm:grid-cols-2">
-            {capabilities.map((item) => (
-              <article
-                key={item.title}
-                className="rounded-lg border border-border p-7"
-              >
-                <h3>{item.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground">
-                  {item.description}
-                </p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {item.skills.map((skill) => (
-                    <Badge key={skill}>{skill}</Badge>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </Container>
-      </section>
-      <section
-        id="experience"
-        className="scroll-mt-8 border-b border-border py-16 sm:py-24"
-      >
-        <Container>
-          <SectionHeading
-            eyebrow="The journey"
-            title="People, products, and places I’ve learned."
-          />
-          <ExperienceList full />
-        </Container>
-      </section>
-      <section className="py-16 sm:py-20">
-        <Container className="grid gap-8 md:grid-cols-2">
-          <div>
-            <Eyebrow>Education</Eyebrow>
-            <h2 className="mt-4 text-xl">{profile.education.qualification}</h2>
-            <p className="mt-3 text-sm text-muted-foreground">
-              {profile.education.institution} · {profile.education.period}
-            </p>
-          </div>
-          <div>
-            <Eyebrow>Elsewhere</Eyebrow>
-            <p className="mt-4 text-sm text-muted-foreground">
-              Code, professional background, and a place to say hello.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-6">
-              {[
-                { label: "GitHub", href: profile.github },
-                { label: "LinkedIn", href: profile.linkedin },
-              ].map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-3 text-xs text-primary"
-                >
-                  {link.label}
-                  <ArrowUpRight size={14} aria-hidden />
-                </a>
-              ))}
             </div>
           </div>
         </Container>

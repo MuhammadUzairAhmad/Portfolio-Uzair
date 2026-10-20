@@ -32,9 +32,11 @@ npm run start -- --hostname 127.0.0.1 --port 4337
 - Typed editable data, labeled demo narratives, and a clearly marked demo résumé PDF.
 - Shared button variants, cards, badges, tables, containers, and case-study components.
 
-Static server rendering is enforced by the current Next.js `ensureStatic` configuration. Client components are limited to themes, navigation, and email copying. Fonts are hosted locally, images have responsive sizes and real dimensions, and this project has no Three.js dependency. Global CSS contains shared foundations; page and component styles use Tailwind utilities.
+Static server rendering is enforced by the current Next.js `ensureStatic` configuration. Client components are limited to themes, navigation, project filtering, and email copying. Fonts are hosted locally, image assets are optimized with reserved layout space, and this project has no Three.js dependency. Global CSS contains shared foundations; page and component styles use Tailwind utilities.
 
 Preview screenshots: [light](docs/previews/home-light.jpg), [dark](docs/previews/home-dark.jpg), [mobile](docs/previews/mobile.jpg), and [case study](docs/previews/case-study.jpg).
+
+Reference-aligned inner pages: [Work](docs/previews/work.jpg), [Tools](docs/previews/tools.jpg), [About](docs/previews/about.jpg), and [Contact](docs/previews/contact.jpg).
 
 ## Update your data
 

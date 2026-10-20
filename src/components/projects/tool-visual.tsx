@@ -1,3 +1,4 @@
+import { MapPin } from "lucide-react";
 import { cn } from "@/lib/cn";
 export function ToolVisual({
   kind,
@@ -31,6 +32,11 @@ export function ToolVisual({
             ✦
           </span>
           {detailed && (
+            <div className="absolute left-[13%] top-1 z-20 -rotate-6 font-mono text-[9px] text-[#e9e4d5]">
+              TypeSpark ＋
+            </div>
+          )}
+          {detailed && (
             <div className="absolute right-[12%] top-2 rotate-12 rounded-sm bg-[#f0e4c9] px-6 py-7 font-serif text-5xl italic text-[#64543d] shadow-lg">
               Aa
             </div>
@@ -46,6 +52,18 @@ export function ToolVisual({
           >
             🌍
           </span>
+          {detailed && (
+            <>
+              <MapPin
+                size={26}
+                className="absolute left-[36%] top-4 fill-[#e1eebc] text-[#527746]"
+              />
+              <MapPin
+                size={23}
+                className="absolute right-[25%] top-[36%] fill-[#e1eebc] text-[#527746]"
+              />
+            </>
+          )}
           {detailed && (
             <div className="absolute bottom-0 right-1 w-32 rotate-6 rounded-md border border-[#d7dfc6] bg-[#f7f8e9] p-3 text-[9px] text-[#304621] shadow-lg">
               <b>Capitals Quiz</b>
@@ -64,6 +82,11 @@ export function ToolVisual({
           <div className="absolute inset-1 -rotate-12 rounded-sm bg-[#e8d8b9] shadow-sm" />
           <div className="absolute inset-1 rotate-12 rounded-sm bg-[#ecdfc5] shadow-sm" />
           <div className="absolute inset-1 rounded-sm border border-[#ded2ba] bg-[#fffdf5] px-5 py-4 shadow-md">
+            {detailed && (
+              <span className="absolute -left-4 -top-2 -rotate-12 font-serif text-6xl not-italic text-[#45483c]">
+                A
+              </span>
+            )}
             <div className="mb-2 h-1 w-7 bg-[#30352e]" />
             {[1, 2, 3, 4, 5].map((n) => (
               <div

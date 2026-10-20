@@ -20,11 +20,20 @@ const handwriting = localFont({
   weight: "400",
 });
 const editorial = localFont({
-  src: "../../node_modules/@fontsource/libre-baskerville/files/libre-baskerville-latin-400-italic.woff2",
+  src: [
+    {
+      path: "../../node_modules/@fontsource/libre-baskerville/files/libre-baskerville-latin-400-normal.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../node_modules/@fontsource/libre-baskerville/files/libre-baskerville-latin-400-italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+  ],
   variable: "--font-editorial",
   display: "swap",
-  weight: "400",
-  style: "italic",
 });
 export const metadata: Metadata = {
   title: {

@@ -1,32 +1,81 @@
-import Image from "next/image";
+import type { ReactNode } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Code2,
+  Users,
+  ShieldCheck,
+  Lightbulb,
+} from "lucide-react";
 import type { PortfolioProject, Narrative } from "@/types/content";
 import { Container, Eyebrow } from "@/components/layout/container";
 import { ContactCta } from "@/components/layout/footer";
 import { Badge, DemoBadge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
 import { Table, TableHead, TableCell } from "@/components/ui/table";
+import { DevicePreview } from "./device-preview";
 import { ToolVisual } from "./tool-visual";
-import { demoFields, projectHref } from "@/lib/content";
+import { NextProjectCard } from "./project-card";
+import { demoFields } from "@/lib/content";
+const technologyRoles: Record<string, string> = {
+  "Next.js": "Web interface",
+  React: "Interface",
+  TypeScript: "Application language",
+  NestJS: "API / business logic",
+  MongoDB: "Database",
+  Salesforce: "CRM integration",
+  Capacitor: "Mobile wrapper",
+  Plaid: "Financial integration",
+  Wagmi: "Wallet connections",
+  "Tailwind CSS": "Styling",
+};
 const sections = [
   { id: "overview", label: "Overview" },
-  { id: "challenge", label: "The challenge" },
-  { id: "solution", label: "The solution" },
-  { id: "contributions", label: "My contributions" },
-  { id: "decisions", label: "Technical decisions" },
-  { id: "outcomes", label: "Outcomes & lessons" },
+  { id: "challenge", label: "The problem" },
+  { id: "contributions", label: "My role & contributions" },
+  { id: "decisions", label: "Solution & decisions" },
+  { id: "implementation", label: "Implementation" },
+  { id: "outcomes", label: "Results & lessons" },
 ];
-function NarrativeBlock({ content }: { content: Narrative }) {
+function NarrativeCopy({ content }: { content: Narrative }) {
   return (
     <div>
       {content.demo && (
-        <div className="mb-3">
+        <div className="mb-2">
           <DemoBadge />
         </div>
       )}
-      <p className="leading-relaxed text-muted-foreground">{content.text}</p>
+      <p className="text-sm leading-relaxed text-muted-foreground">
+        {content.text}
+      </p>
     </div>
+  );
+}
+function StorySection({
+  id,
+  number,
+  title,
+  children,
+}: {
+  id: string;
+  number: string;
+  title: string;
+  children: ReactNode;
+}) {
+  return (
+    <section
+      id={id}
+      className="grid scroll-mt-6 grid-cols-[35px_1fr] gap-3 border-t border-border py-6 sm:grid-cols-[52px_1fr] sm:gap-5"
+    >
+      <span className="font-serif text-3xl leading-tight text-primary sm:text-4xl">
+        {number}
+      </span>
+      <div className="min-w-0">
+        <h2 className="mb-4 text-xl sm:text-2xl">{title}</h2>
+        {children}
+      </div>
+    </section>
   );
 }
 export function CaseStudy({
@@ -37,235 +86,320 @@ export function CaseStudy({
   next: PortfolioProject;
 }) {
   const isTool = project.category === "Tools";
-  const image = project.image;
+  const icons = [Code2, ShieldCheck, Lightbulb];
   return (
     <main id="main-content">
-      <section className="border-b border-border py-12 sm:py-16">
-        <Container>
+      <Container className="pt-7">
+        <nav
+          aria-label="Breadcrumb"
+          className="flex items-center gap-3 text-xs text-muted-foreground"
+        >
           <Link
             href={isTool ? "/tools" : "/work"}
-            className="inline-flex items-center gap-3 text-xs text-muted-foreground hover:text-foreground"
+            className="hover:text-primary"
           >
-            <ArrowLeft size={14} aria-hidden />
-            All {isTool ? "tools" : "projects"}
+            {isTool ? "Tools" : "Work"}
           </Link>
-          <div className="mt-10 flex flex-col justify-between gap-7 md:flex-row md:items-end">
-            <div className="max-w-3xl">
-              <Eyebrow>
-                {project.category} / {project.status}
-              </Eyebrow>
-              <h1 className="mt-4 text-5xl sm:text-7xl">{project.name}</h1>
-              <p className="mt-5 text-lg text-muted-foreground">
-                {project.subtitle}
-              </p>
-            </div>
-            {project.liveUrl && (
-              <ButtonLink
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer"
-                variant="outline"
-              >
-                View live project <ArrowUpRight size={15} aria-hidden />
-              </ButtonLink>
-            )}
-          </div>
-          {demoFields(project) > 0 && (
-            <p className="mt-7 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
-              <DemoBadge />
-              Some narrative details are illustrative and await review.
+          <span>/</span>
+          <span className="text-primary">{project.name}</span>
+        </nav>
+        <div className="relative mt-5">
+          <h1 className="max-w-4xl text-4xl sm:text-6xl lg:text-7xl">
+            {project.name}
+          </h1>
+          <p className="mt-3 max-w-3xl text-lg font-semibold text-primary sm:text-2xl">
+            {project.subtitle}.
+          </p>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            {project.summary}
+          </p>
+          {project.slug === "skillmatch" && (
+            <p
+              aria-hidden="true"
+              className="absolute right-6 top-0 hidden -rotate-12 font-hand text-3xl text-primary lg:block"
+            >
+              Better
+              <br />
+              opportunities
+              <br />
+              for people
+              <br />—
             </p>
           )}
-          <dl className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-7 md:grid-cols-4">
-            {[
-              { label: "My role", value: project.role },
-              { label: "Team / context", value: project.team },
-              { label: "Platform", value: project.platform },
-              { label: "Scope", value: project.scope.join(" · ") },
-            ].map((item) => (
-              <div key={item.label}>
-                <dt className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground">
-                  {item.label}
-                </dt>
-                <dd className="mt-2 text-sm">{item.value}</dd>
+          {demoFields(project) > 0 && (
+            <p className="mt-4 flex flex-wrap items-center gap-2 text-[10px] text-muted-foreground">
+              <DemoBadge />
+              Illustrative details are marked below.
+            </p>
+          )}
+        </div>
+        <dl className="mt-6 grid grid-cols-2 gap-5 rounded-xl bg-surface px-5 py-5 sm:grid-cols-4 sm:gap-0">
+          {[
+            { label: "Role", value: project.role },
+            { label: "Team", value: project.team },
+            { label: "Platform", value: project.platform },
+            { label: "Stack", value: project.stack.slice(0, 3).join(" · ") },
+          ].map((item) => (
+            <div
+              key={item.label}
+              className="sm:border-r sm:border-border sm:px-5 sm:first:pl-0 sm:last:border-0"
+            >
+              <dt className="text-xs font-semibold">{item.label}</dt>
+              <dd className="mt-1.5 text-[11px] text-muted-foreground">
+                {item.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+        <div className="relative mt-5 flex aspect-[1.8] items-center justify-center overflow-hidden rounded-xl bg-[#faf5e9] sm:aspect-[2.15] dark:bg-[#121d17]">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#d5c59935,transparent_75%)] dark:bg-[radial-gradient(ellipse_at_center,#a7d54040,transparent_68%)]" />
+          {project.illustration ? (
+            <ToolVisual
+              kind={project.illustration}
+              detailed
+              className="h-full w-full scale-125"
+            />
+          ) : (
+            <DevicePreview
+              project={project}
+              className="relative h-[94%] w-[94%]"
+            />
+          )}
+        </div>
+        {project.liveUrl && (
+          <div className="mt-4 flex justify-end">
+            <ButtonLink
+              href={project.liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              variant="outline"
+              size="sm"
+            >
+              View live project
+              <ArrowRight size={13} aria-hidden />
+            </ButtonLink>
+          </div>
+        )}
+        <div className="mt-6 grid gap-6 lg:grid-cols-[240px_1fr] lg:gap-10">
+          <aside className="border-border lg:border-r lg:pr-6">
+            <nav
+              aria-label="Case study contents"
+              className="flex flex-wrap gap-3 lg:sticky lg:top-5 lg:flex-col"
+            >
+              <Eyebrow className="w-full mb-1">On this page</Eyebrow>
+              {sections.map((section, i) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="flex items-center gap-3 rounded py-2 text-[11px] text-muted-foreground hover:bg-surface hover:text-primary"
+                >
+                  <span className="font-mono text-[10px]">0{i + 1}</span>
+                  {section.label}
+                </a>
+              ))}
+            </nav>
+          </aside>
+          <div className="min-w-0">
+            <StorySection id="overview" number="01" title="Overview">
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {project.overview}
+              </p>
+            </StorySection>
+            <StorySection id="challenge" number="02" title="The problem">
+              <NarrativeCopy content={project.problem} />
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {[
+                  {
+                    title: "The experience",
+                    text: project.scope[0],
+                    Icon: Users,
+                  },
+                  {
+                    title: "The workflow",
+                    text: project.scope[1] ?? project.platform,
+                    Icon: Code2,
+                  },
+                ].map(({ title, text, Icon }) => (
+                  <div
+                    key={title}
+                    className="rounded-lg border border-border bg-surface/60 p-4"
+                  >
+                    <Icon
+                      size={20}
+                      className="mb-3 text-primary"
+                      strokeWidth={1.5}
+                      aria-hidden
+                    />
+                    <h3 className="text-sm">{title}</h3>
+                    <p className="mt-1 text-xs text-muted-foreground">{text}</p>
+                  </div>
+                ))}
+              </div>
+            </StorySection>
+          </div>
+        </div>
+        <StorySection
+          id="contributions"
+          number="03"
+          title="My role & contributions"
+        >
+          <div className="space-y-3">
+            {project.contributions.map((item, i) => (
+              <article
+                key={item.title}
+                className="grid items-start gap-3 sm:grid-cols-[35px_190px_1fr]"
+              >
+                <span className="flex size-8 items-center justify-center rounded-lg bg-accent text-sm text-primary">
+                  0{i + 1}
+                </span>
+                <h3 className="pt-1 text-sm">{item.title}</h3>
+                <p className="pt-1 text-sm leading-relaxed text-muted-foreground">
+                  {item.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </StorySection>
+        <StorySection
+          id="decisions"
+          number="04"
+          title="Solution & technical decisions"
+        >
+          <div className="mb-5">
+            <NarrativeCopy content={project.solution} />
+          </div>
+          <div className="mb-5 grid gap-3 sm:grid-cols-3">
+            {project.stack.slice(0, 3).map((tech, i) => (
+              <div
+                key={tech}
+                className="relative flex items-center gap-3 rounded-lg border border-border p-4"
+              >
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-foreground text-lg font-bold text-background">
+                  {tech[0]}
+                </span>
+                <div>
+                  <p className="text-sm font-semibold">{tech}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    {technologyRoles[tech] ?? "Project technology"}
+                  </p>
+                </div>
+                {i < 2 && (
+                  <ArrowRight
+                    size={16}
+                    className="absolute -right-2.5 z-10 hidden bg-background text-primary sm:block"
+                    aria-hidden
+                  />
+                )}
               </div>
             ))}
-          </dl>
-          <div className="mt-10 overflow-hidden rounded-lg border border-border bg-surface">
-            {project.illustration ? (
-              <ToolVisual
-                kind={project.illustration}
-                className="aspect-[16/8] max-h-[480px] border-0"
-              />
-            ) : (
-              image && (
-                <div className="p-5 sm:p-12">
-                  <Image
-                    src={image.src}
-                    alt={`${project.name} product interface`}
-                    width={image.width}
-                    height={image.height}
-                    sizes="(min-width:1280px) 1100px, 90vw"
-                    preload
-                    className="mx-auto h-auto max-h-[620px] w-full rounded-md object-contain"
-                  />
-                </div>
-              )
-            )}
           </div>
-        </Container>
-      </section>
-      <Container className="grid gap-10 py-14 sm:py-20 lg:grid-cols-[190px_1fr] lg:gap-16">
-        <aside>
-          <nav
-            aria-label="Case study contents"
-            className="flex flex-wrap gap-x-6 gap-y-3 lg:sticky lg:top-8 lg:flex-col"
+          <div
+            role="region"
+            aria-label="Scrollable technical decisions"
+            tabIndex={0}
+            className="overflow-x-auto rounded-lg border border-border"
           >
-            <Eyebrow className="w-full mb-1">In this story</Eyebrow>
-            {sections.map((section) => (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                className="text-xs text-muted-foreground hover:text-primary"
-              >
-                {section.label}
-              </a>
-            ))}
-          </nav>
-        </aside>
-        <div className="min-w-0 max-w-3xl space-y-14">
-          <section id="overview" className="scroll-mt-8">
-            <Eyebrow>01 / Context</Eyebrow>
-            <h2 className="mt-3">The overview.</h2>
-            <p className="mt-5 leading-relaxed text-muted-foreground">
-              {project.overview}
-            </p>
-            <div className="mt-6 flex flex-wrap gap-2">
-              {project.stack.map((tech) => (
-                <Badge key={tech}>{tech}</Badge>
-              ))}
+            <Table>
+              <caption className="sr-only">
+                Technical decisions for {project.name}
+              </caption>
+              <thead>
+                <tr>
+                  <TableHead scope="col">Topic</TableHead>
+                  <TableHead scope="col">Decision</TableHead>
+                  <TableHead scope="col">Reasoning</TableHead>
+                </tr>
+              </thead>
+              <tbody>
+                {project.decisions.map((item) => (
+                  <tr key={item.topic}>
+                    <TableCell className="min-w-32 font-medium text-foreground">
+                      {item.topic}
+                      {item.demo && (
+                        <div className="mt-2">
+                          <DemoBadge />
+                        </div>
+                      )}
+                    </TableCell>
+                    <TableCell className="min-w-40">{item.choice}</TableCell>
+                    <TableCell className="min-w-48">{item.reason}</TableCell>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </div>
+        </StorySection>
+        <StorySection id="implementation" number="05" title="Implementation">
+          <div className="grid items-center gap-6 sm:grid-cols-2">
+            <div className="flex aspect-[1.7] items-center justify-center overflow-hidden rounded-lg border border-border bg-surface">
+              {project.illustration ? (
+                <ToolVisual
+                  kind={project.illustration}
+                  detailed
+                  className="w-full"
+                />
+              ) : (
+                <DevicePreview project={project} />
+              )}
             </div>
-          </section>
-          <section
-            id="challenge"
-            className="scroll-mt-8 border-t border-border pt-8"
-          >
-            <Eyebrow>02 / The problem</Eyebrow>
-            <h2 className="mb-5 mt-3">What needed to work better.</h2>
-            <NarrativeBlock content={project.problem} />
-          </section>
-          <section
-            id="solution"
-            className="scroll-mt-8 rounded-lg border border-border bg-surface p-6 sm:p-8"
-          >
-            <Eyebrow>03 / The solution</Eyebrow>
-            <h2 className="mb-5 mt-3">A practical way forward.</h2>
-            <NarrativeBlock content={project.solution} />
-          </section>
-          <section id="contributions" className="scroll-mt-8">
-            <Eyebrow>04 / My contribution</Eyebrow>
-            <h2 className="mt-3">Where I made a difference.</h2>
-            <div className="mt-6">
-              {project.contributions.map((item, i) => (
+            <div>
+              <h3 className="mb-4 text-sm">Key features</h3>
+              <ul className="space-y-3">
+                {project.scope.map((scope) => (
+                  <li
+                    key={scope}
+                    className="flex items-center gap-3 text-sm text-muted-foreground"
+                  >
+                    <CheckCircle2
+                      size={16}
+                      className="shrink-0 text-primary"
+                      aria-hidden
+                    />
+                    {scope}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {project.stack.slice(3).map((tech) => (
+                  <Badge key={tech}>{tech}</Badge>
+                ))}
+              </div>
+            </div>
+          </div>
+        </StorySection>
+        <StorySection id="outcomes" number="06" title="Results & lessons">
+          <div className="grid gap-4 rounded-xl bg-surface p-5 sm:grid-cols-3">
+            {[
+              { title: "Shipped features", content: project.results[0] },
+              {
+                title: project.results[1]
+                  ? "Verified outcomes"
+                  : "Product scope",
+                content: project.results[1] ?? {
+                  text: project.scope.join(" · "),
+                },
+              },
+              { title: "Tradeoffs & lessons", content: project.lessons },
+            ].map((item, i) => {
+              const Icon = icons[i];
+              return (
                 <article
                   key={item.title}
-                  className="flex gap-5 border-t border-border py-5"
+                  className="sm:border-r sm:border-border sm:pr-4 sm:last:border-0"
                 >
-                  <span className="pt-1 font-mono text-[10px] text-primary">
-                    0{i + 1}
-                  </span>
-                  <div>
-                    <h3 className="text-base">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
+                  <Icon size={20} className="mb-3 text-primary" aria-hidden />
+                  <h3 className="mb-3 text-sm">{item.title}</h3>
+                  <NarrativeCopy content={item.content} />
                 </article>
-              ))}
-            </div>
-          </section>
-          <section id="decisions" className="scroll-mt-8">
-            <Eyebrow>05 / Behind the choices</Eyebrow>
-            <h2 className="mt-3">Decisions, with a reason.</h2>
-            <div
-              role="region"
-              aria-label="Scrollable technical decisions"
-              tabIndex={0}
-              className="mt-6 overflow-x-auto rounded-lg border border-border"
-            >
-              <Table>
-                <caption className="sr-only">
-                  Technical decisions for {project.name}
-                </caption>
-                <thead>
-                  <tr>
-                    <TableHead scope="col">Area</TableHead>
-                    <TableHead scope="col">Choice</TableHead>
-                    <TableHead scope="col">Why</TableHead>
-                  </tr>
-                </thead>
-                <tbody>
-                  {project.decisions.map((decision) => (
-                    <tr key={decision.topic}>
-                      <TableCell className="min-w-28 font-medium text-foreground">
-                        {decision.topic}
-                        {decision.demo && (
-                          <div className="mt-2">
-                            <DemoBadge />
-                          </div>
-                        )}
-                      </TableCell>
-                      <TableCell className="min-w-36">
-                        {decision.choice}
-                      </TableCell>
-                      <TableCell className="min-w-44">
-                        {decision.reason}
-                      </TableCell>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-          </section>
-          <section
-            id="outcomes"
-            className="scroll-mt-8 border-t border-border pt-8"
-          >
-            <Eyebrow>06 / Outcomes & reflection</Eyebrow>
-            <h2 className="mt-3">What came out of it.</h2>
-            <ul className="mt-6 space-y-5">
-              {project.results.map((result, i) => (
-                <li key={i} className="border-l-2 border-primary pl-5">
-                  <NarrativeBlock content={result} />
-                </li>
-              ))}
-            </ul>
-            <h3 className="mb-4 mt-9">What I took forward</h3>
-            <NarrativeBlock content={project.lessons} />
-          </section>
-        </div>
+              );
+            })}
+          </div>
+        </StorySection>
+        <section className="border-t border-border py-6">
+          <h2 className="mb-4 text-xl">Next {isTool ? "tool" : "project"}</h2>
+          <NextProjectCard project={next} />
+        </section>
       </Container>
-      <section className="border-t border-border py-10">
-        <Container>
-          <Link
-            href={projectHref(next)}
-            className="group flex items-center justify-between gap-6"
-          >
-            <div>
-              <Eyebrow>Next {isTool ? "tool" : "project"}</Eyebrow>
-              <p className="mt-3 text-2xl font-medium tracking-tight sm:text-4xl">
-                {next.name}
-              </p>
-            </div>
-            <ArrowRight
-              size={28}
-              strokeWidth={1}
-              className="text-primary transition-transform motion-safe:group-hover:translate-x-1"
-              aria-hidden
-            />
-          </Link>
-        </Container>
-      </section>
       <ContactCta />
     </main>
   );

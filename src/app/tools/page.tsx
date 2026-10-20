@@ -1,34 +1,43 @@
 import { PageIntro } from "@/components/layout/page-intro";
 import { Container } from "@/components/layout/container";
-import { ProjectCard } from "@/components/projects/project-card";
+import { ToolCard } from "@/components/projects/project-card";
 import { ContactCta } from "@/components/layout/footer";
 import { tools } from "@/content/tools";
 import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata(
   "Tools & experiments",
-  "Focused client tools for text, geography, and publishing.",
+  "Small tools. Useful possibilities.",
   "/tools",
 );
 export default function ToolsPage() {
   return (
     <main id="main-content">
       <PageIntro
-        eyebrow="Useful, by design"
-        title="Small tools. Everyday possibilities."
-        description="Focused client tools for creating, exploring, and publishing. Each starts with a specific task and a simpler way to get it done."
+        eyebrow="Tools"
+        title={
+          <>
+            Small tools.
+            <br />
+            <span className="text-primary">Useful possibilities.</span>
+          </>
+        }
+        description="A collection of small products and experiments built to explore ideas, solve specific problems and learn new things."
+        note={
+          <>
+            Ideas
+            <br />
+            into useful
+            <br />
+            things.
+          </>
+        }
       />
-      <section className="py-12 sm:py-16" aria-label="Tool collection">
-        <Container>
+      <section aria-label="Tool collection">
+        <Container className="space-y-5 pb-7">
           <h2 className="sr-only">Tool collection</h2>
-          <p className="mb-7 text-xs text-muted-foreground">
-            Illustrated covers introduce each tool. Open a story to see its
-            scope and contributions.
-          </p>
-          <div className="grid gap-5 md:grid-cols-3">
-            {tools.map((tool) => (
-              <ProjectCard key={tool.slug} project={tool} />
-            ))}
-          </div>
+          {tools.map((tool, i) => (
+            <ToolCard key={tool.slug} project={tool} archive index={i} />
+          ))}
         </Container>
       </section>
       <ContactCta />

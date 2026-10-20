@@ -33,3 +33,9 @@ Additional screenshots were taken from the existing `../portfolio/public/project
 | ------------------- | ------------------------------------- | ----------------- | ----------------- | -----------: | -----------: |
 | `bitlux-2.png`      | `/images/projects/bitlux-screen.webp` | 1169 x 832        | 1169 x 832        |       67,895 |       49,492 |
 | `linxx-desktop.png` | `/images/projects/linxx-screen.webp`  | 1688 x 936        | 1440 x 798        |       65,079 |       53,958 |
+
+## Reference alignment presentation
+
+The existing optimized mockup artwork is now displayed through inline SVG clip paths to match the overlapping device presentation in the approved design. Its application screen pixels remain those of the original artwork. Device stands are drawn as simple SVG frame elements. No Three.js or client animation runtime is involved. A project without a matching `mockup` falls back to its ordinary `image` asset.
+
+The additional Caveat Latin font (400) is self-hosted through `next/font/local` for the handwritten annotations. Both normal and italic Libre Baskerville faces are used so numbers, monograms, and the italic hero match their respective treatments.

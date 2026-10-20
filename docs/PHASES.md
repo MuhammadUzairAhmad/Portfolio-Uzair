@@ -12,3 +12,10 @@
 Run `git log --oneline` for the exact final phase commit ID. The standalone repository is `/home/uzairahmad/Desktop/uzair-portfolio`, on `main`. No remote, push, deployment, or modification of the original portfolio is part of this build.
 
 A normal future push to a new empty repository will preserve this entire history. See `README.md` for commands.
+
+## Reference alignment follow-up
+
+- `b5eb826` — match the original homepage composition, palette, timeline, device previews, and compact sections.
+- `fix: reproduce approved inner pages and verify responsive layouts` — align Work, Tools, About, Contact, and the numbered case-study structure; verify mobile behavior and refresh previews.
+
+These commits extend the existing local history. No remote or push was added.

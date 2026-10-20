@@ -2,7 +2,13 @@
 import { useState } from "react";
 import { Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
-export function CopyEmail({ email }: { email: string }) {
+export function CopyEmail({
+  email,
+  fullWidth = false,
+}: {
+  email: string;
+  fullWidth?: boolean;
+}) {
   const [status, setStatus] = useState<"idle" | "copied" | "failed">("idle");
   async function copy() {
     try {
@@ -14,7 +20,11 @@ export function CopyEmail({ email }: { email: string }) {
   }
   return (
     <div>
-      <Button variant="outline" onClick={copy}>
+      <Button
+        variant="outline"
+        className={fullWidth ? "w-full" : undefined}
+        onClick={copy}
+      >
         {status === "copied" ? (
           <Check size={14} aria-hidden />
         ) : (
@@ -22,7 +32,12 @@ export function CopyEmail({ email }: { email: string }) {
         )}
         {status === "copied" ? "Email copied" : "Copy email"}
       </Button>
-      <p role="status" className="mt-2 min-h-5 text-xs text-muted-foreground">
+      <p
+        role="status"
+        className={
+          fullWidth ? "sr-only" : "mt-2 min-h-5 text-xs text-muted-foreground"
+        }
+      >
         {status === "copied"
           ? "Ready to paste into your email app."
           : status === "failed"
