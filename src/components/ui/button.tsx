@@ -54,7 +54,7 @@ export function ButtonLink({
   ...props
 }: ComponentProps<"a"> & StyleProps & { href: string }) {
   const classes = buttonClasses({ variant, size, className });
-  return href.startsWith("/") || href.startsWith("#") ? (
+  return href.startsWith("/") ? (
     <Link href={href} className={classes} {...props}>
       {children}
     </Link>

@@ -4,16 +4,16 @@ Verified locally on 20 October 2026 against the production build, served on `127
 
 ## Automated checks
 
-| Check                   | Result                                                                                                      |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `npm run lint`          | Pass                                                                                                        |
-| `npm run typecheck`     | Pass                                                                                                        |
-| `npm test`              | 9 tests pass                                                                                                |
-| `npm run format:check`  | Pass                                                                                                        |
-| `npm run build`         | Pass; known portfolio pages prerendered                                                                     |
-| `npm run test:smoke`    | All 14 pages pass; 3 missing URLs return 404; assets and preview SEO pass                                   |
-| `npm audit --omit=dev`  | 0 known production dependency vulnerabilities                                                               |
-| `npm run check:publish` | Intentionally blocked: demo narratives, résumé, employment dates, and real deployment URL still need review |
+| Check                   | Result                                                                                          |
+| ----------------------- | ----------------------------------------------------------------------------------------------- |
+| `npm run lint`          | Pass                                                                                            |
+| `npm run typecheck`     | Pass                                                                                            |
+| `npm test`              | 11 tests pass                                                                                   |
+| `npm run format:check`  | Pass                                                                                            |
+| `npm run build`         | Pass; known portfolio pages prerendered                                                         |
+| `npm run test:smoke`    | All 19 pages pass; 3 missing URLs return 404; assets and preview SEO pass                       |
+| `npm audit --omit=dev`  | 0 known production dependency vulnerabilities                                                   |
+| `npm run check:publish` | Intentionally blocked: remaining draft narratives and the real deployment URL still need review |
 
 The smoke script verifies page status, one H1 per page, preview noindex metadata, robots, an empty preview sitemap, the PDF, social image, icon, and every project source image. Unit tests cover content routes, service evidence links, featured work, assets, demo field accounting, and publication configuration.
 
@@ -62,3 +62,19 @@ The homepage adds four concise skill cards linked to related projects. About add
 The updated homepage/toolkit fit 320px, and Tools archive/detail artwork was inspected at 390px. Desktop light/dark previews were refreshed at 1280px; no document-level horizontal overflow or browser console errors/warnings were observed in these checks. The homepage toolkit link navigates to the correct About section. Temporary viewport overrides were reset after testing.
 
 Updated previews: [skills and tools](previews/skills-dark.jpg), [tools archive](previews/tools.jpg), [About toolkit](previews/about.jpg), and [mobile tools](previews/tools-mobile.jpg).
+
+## October résumé and project-media migration
+
+The updated two-page résumé was rendered and read. Its public copy is byte-identical to the supplied source (SHA-256 `ed8a19c50723a3c315bcdd040adae5cb2ccbe7999817b6299fdce1e17012a734`). Profile, dates, roles, LinkedIn, education/GPA, languages, certifications, and project contributions were updated. The generated demo PDF was removed. Source precedence and remaining gaps are recorded in CONTENT-SOURCES.md and CONTENT-GAPS.md.
+
+The site now contains eleven project routes plus three tool routes (nineteen pages including the five main pages). Five project records were added from the résumé/old portfolio. The original three featured projects remain featured. Text covers are used where there is no actual screenshot.
+
+Bitlux has four original screenshots and Linxx has seven. All image dimensions and paths are preserved in typed media records; images use lazy responsive delivery and full-size links. Gallery anchors are unique per project, and fragment buttons use native anchor behavior. This avoids cross-route retained-DOM ID collisions and allows repeat navigation after a theme or viewport change.
+
+Native video entries are supported with controls, no autoplay, `preload="none"`, optional posters, captions, and transcript. No project video file was found in the source checkout. Actual video playback is therefore unverified and will need checking when real recordings are supplied.
+
+Automated checks: lint, type checks, eleven tests, and a production build passed for the migration. The expanded smoke check passed all nineteen pages, three missing-route 404s, actual résumé/galleries, live-link presence or omission, preview SEO, and every local media asset. Updated checks confirm that the résumé and dates no longer appear as missing publication content; remaining narrative flags still prevent accidental publication.
+
+Final browser checks: Bitlux's four gallery images loaded, and a full-size request-detail link opened the correct 1169 × 832 asset in a new tab. Linxx's seven-image gallery was inspected on desktop and at 320px; the repeated native gallery jump still worked after a theme change. The updated homepage and About content fit 320px without document overflow. Sofrix's disclosure showed the résumé dates and location. The Mobile apps filter included both Linxx and Get Foodies, and the new project’s text cover rendered without a broken image. The contact phone link uses the résumé number. No browser console errors/warnings were observed. Temporary viewport overrides were reset, the image-check tab was closed, and the portfolio tab was kept as the deliverable.
+
+New previews: [Bitlux gallery](previews/bitlux-gallery.jpg), [Linxx gallery](previews/linxx-gallery.jpg), and [mobile gallery](previews/linxx-gallery-mobile.jpg). Homepage, About, Work, Contact, and mobile previews were refreshed. Actual video playback remains untested because no recordings are supplied.

@@ -175,7 +175,11 @@ export function CaseStudy({
             </p>
           )}
           {!!project.media?.length && (
-            <ButtonLink href="#gallery" variant="outline" size="sm">
+            <ButtonLink
+              href={`#${project.slug}-gallery`}
+              variant="outline"
+              size="sm"
+            >
               View screenshots & media <ArrowRight size={13} aria-hidden />
             </ButtonLink>
           )}
@@ -377,7 +381,11 @@ export function CaseStudy({
               </div>
             </div>
           </div>
-          <ProjectGallery projectName={project.name} media={project.media} />
+          <ProjectGallery
+            id={`${project.slug}-gallery`}
+            projectName={project.name}
+            media={project.media}
+          />
         </StorySection>
         <StorySection id="outcomes" number="06" title="Results & lessons">
           <div className="grid gap-4 rounded-xl bg-surface p-5 sm:grid-cols-3">

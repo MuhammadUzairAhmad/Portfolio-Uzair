@@ -33,7 +33,8 @@ for (const route of routes) {
   }
   const project = projects.find((item) => projectHref(item) === route);
   if (project?.media?.length) {
-    assert.match(html, /id="gallery"/);
+    assert.ok(html.includes(`id="${project.slug}-gallery"`));
+    assert.ok(html.includes(`href="#${project.slug}-gallery"`));
     for (const media of project.media) assert.ok(html.includes(media.caption));
   }
   if (project?.liveUrl) assert.ok(html.includes(`href="${project.liveUrl}"`));

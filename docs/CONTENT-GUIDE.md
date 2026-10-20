@@ -57,7 +57,7 @@ Dimensions reserve the correct space while the image loads. Keep product screens
 
 ## Update libraries and skills
 
-Edit `src/content/toolkit.ts`. `toolkitHighlights` controls the four homepage cards; each `project` slug links to related work. `toolkitGroups` controls the six detailed groups on `/about#toolkit`. These lists describe experience across projects, not dependencies installed in this portfolio. Keep experience levels accurate (Docker is currently labeled basic setup), and keep project examples relevant. No layout edits are needed when changing the names or rows.
+Edit `src/content/toolkit.ts`. `toolkitHighlights` controls the four homepage cards; each `project` slug links to related work. `toolkitGroups` controls the seven detailed groups on `/about#toolkit`. These lists describe experience across projects, not dependencies installed in this portfolio. Keep experience levels accurate (Docker is currently labeled basic setup), and keep project examples relevant. No layout edits are needed when changing the names or rows.
 
 ## Screenshots and videos
 

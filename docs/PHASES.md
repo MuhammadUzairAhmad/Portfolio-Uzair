@@ -26,3 +26,10 @@ These commits extend the existing local history. No remote or push was added.
 - `feat: add practical toolkit and richer tool previews` — add homepage skill evidence, detailed About libraries, three optimized static tool illustrations, editable asset/content mappings, and verification updates.
 
 Both phases are local commits. Run `git log --oneline` for the final artwork phase ID.
+
+## Résumé and media migration
+
+- `e698697` — import the October résumé, update profile and employment, add five project records, migrate all eleven Bitlux/Linxx screenshots, add native video support, and record remaining content gaps.
+- `fix: verify résumé content and gallery navigation` — finish unique gallery anchors, repeat fragment navigation, responsive/browser verification, and updated screenshots.
+
+The original résumé is tracked as a source and its unchanged public download replaces the generated demo. These remain local commits with no push or deployment.

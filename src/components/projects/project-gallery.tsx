@@ -3,15 +3,17 @@ import { ArrowUpRight } from "lucide-react";
 import type { ProjectMedia } from "@/types/content";
 export function ProjectGallery({
   projectName,
+  id,
   media,
 }: {
   projectName: string;
+  id: string;
   media?: ProjectMedia[];
 }) {
   if (!media?.length) return null;
   return (
     <section
-      id="gallery"
+      id={id}
       aria-label={`${projectName} screenshots and walkthroughs`}
       className="mt-7 scroll-mt-6 border-t border-border pt-6"
     >
