@@ -19,3 +19,10 @@ A normal future push to a new empty repository will preserve this entire history
 - `fix: reproduce approved inner pages and verify responsive layouts` — align Work, Tools, About, Contact, and the numbered case-study structure; verify mobile behavior and refresh previews.
 
 These commits extend the existing local history. No remote or push was added.
+
+## Toolkit and tool-art follow-up
+
+- `00c19bd` — stream URL-dependent project/tool details behind Suspense; prefetch case-study links.
+- `feat: add practical toolkit and richer tool previews` — add homepage skill evidence, detailed About libraries, three optimized static tool illustrations, editable asset/content mappings, and verification updates.
+
+Both phases are local commits. Run `git log --oneline` for the final artwork phase ID.

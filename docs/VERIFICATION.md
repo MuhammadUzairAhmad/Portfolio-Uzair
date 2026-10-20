@@ -8,7 +8,7 @@ Verified locally on 20 October 2026 against the production build, served on `127
 | ----------------------- | ----------------------------------------------------------------------------------------------------------- |
 | `npm run lint`          | Pass                                                                                                        |
 | `npm run typecheck`     | Pass                                                                                                        |
-| `npm test`              | 8 tests pass                                                                                                |
+| `npm test`              | 9 tests pass                                                                                                |
 | `npm run format:check`  | Pass                                                                                                        |
 | `npm run build`         | Pass; known portfolio pages prerendered                                                                     |
 | `npm run test:smoke`    | All 14 pages pass; 3 missing URLs return 404; assets and preview SEO pass                                   |
@@ -50,3 +50,15 @@ The follow-up adds a working Work filter (All / Web applications / Mobile apps /
 Final follow-up checks: production build, lint, type checks, eight unit tests, formatting, and the production smoke checks passed. The revised homepage and SkillMatch detail fit at 320px; the table scrolls within its own region. Menu Escape handling, the mobile contact copy action, the Work mobile-app filter, and the About experience disclosure were exercised. No warnings or errors appeared in the final production browser log. The final mobile email card stacks its icon above the address to avoid squeezing it into a narrow text column.
 
 Additional final page previews: [Work](previews/work.jpg), [Tools](previews/tools.jpg), [About](previews/about.jpg), and [Contact](previews/contact.jpg).
+
+## Navigation warning, toolkit, and tool-art follow-up
+
+Project and tool route params are now read inside Suspense, following the installed Next.js instant-navigation guidance. Known pages retain static prerendering and missing slugs still return HTTP 404. Case-study links prefetch their destination. The navigation warning was checked in the actual development server on localhost:3000: project-to-project and tools-to-detail navigation completed, the Next Dev Tools menu had no Insights warning, and no console warnings/errors were observed. See [development check](previews/navigation-dev-check.jpg).
+
+The production build, lint, type checks, nine content tests, and route smoke checks passed. Smoke checks now also verify the homepage skills anchor, About toolkit anchor, and all three artwork source files. New content tests check that illustrations exist and skill examples resolve to project records.
+
+The homepage adds four concise skill cards linked to related projects. About adds six grouped library/workflow lists based on the old portfolio's documented skills. These are server-rendered content with no added client dependency. Three transparent tool illustrations total about 150 KiB before responsive resizing. See ASSETS.md for provenance.
+
+The updated homepage/toolkit fit 320px, and Tools archive/detail artwork was inspected at 390px. Desktop light/dark previews were refreshed at 1280px; no document-level horizontal overflow or browser console errors/warnings were observed in these checks. The homepage toolkit link navigates to the correct About section. Temporary viewport overrides were reset after testing.
+
+Updated previews: [skills and tools](previews/skills-dark.jpg), [tools archive](previews/tools.jpg), [About toolkit](previews/about.jpg), and [mobile tools](previews/tools-mobile.jpg).

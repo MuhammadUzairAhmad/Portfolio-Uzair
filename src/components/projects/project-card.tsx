@@ -140,6 +140,7 @@ export function ToolCard({
         <ToolVisual
           kind={project.illustration}
           detailed={archive}
+          eager={archive && index === 0}
           className={archive ? "h-56" : "my-auto h-36 sm:h-40"}
         />
         {!archive && (

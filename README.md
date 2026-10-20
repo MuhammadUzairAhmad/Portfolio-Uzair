@@ -24,10 +24,10 @@ npm run start -- --hostname 127.0.0.1 --port 4337
 
 ## Included
 
-- Homepage: hero, services, selected projects, tools, work experience, process, about, and contact.
+- Homepage: hero, services, selected projects, practical skill highlights, tools, work experience, process, about, and contact.
 - Work archive and six complete case-study routes.
 - Tools archive and three individual tool stories.
-- About, contact, custom 404, social sharing image, favicon, robots, and sitemap.
+- About with a grouped development toolkit, contact, custom 404, social sharing image, favicon, robots, and sitemap.
 - Native theme selector, keyboard-friendly mobile navigation, copy-email feedback, and real contact links.
 - Typed editable data, labeled demo narratives, and a clearly marked demo résumé PDF.
 - Shared button variants, cards, badges, tables, containers, and case-study components.

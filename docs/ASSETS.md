@@ -39,3 +39,15 @@ Additional screenshots were taken from the existing `../portfolio/public/project
 The existing optimized mockup artwork is now displayed through inline SVG clip paths to match the overlapping device presentation in the approved design. Its application screen pixels remain those of the original artwork. Device stands are drawn as simple SVG frame elements. No Three.js or client animation runtime is involved. A project without a matching `mockup` falls back to its ordinary `image` asset.
 
 The additional Caveat Latin font (400) is self-hosted through `next/font/local` for the handwritten annotations. Both normal and italic Libre Baskerville faces are used so numbers, monograms, and the italic hero match their respective treatments.
+
+## Tool preview illustrations
+
+Created with the built-in ImageGen tool from the supplied connected-pages reference board. These are decorative product illustrations, not screenshots of the tools. Exact prompts and original generation paths are saved in [TOOL-ART-PROMPTS.md](TOOL-ART-PROMPTS.md). GlobePick's geography is stylized artwork, not map data.
+
+| Public output                             | Dimensions |  Bytes |
+| ----------------------------------------- | ---------- | -----: |
+| `/images/tools/typespark-preview-v2.webp` | 900 × 675  | 43,140 |
+| `/images/tools/globepick-preview-v2.webp` | 900 × 675  | 44,936 |
+| `/images/tools/blogsite-preview-v2.webp`  | 900 × 675  | 65,384 |
+
+All three have a real alpha channel; transparent backgrounds were preserved during proportional resizing and WebP encoding with Sharp. Combined source size: 153,460 bytes (about 150 KiB). Responsive Next.js image variants are used; the first Tools archive image and tool detail hero are preloaded, with other tool images lazy by default. No 3D or animation runtime was added.

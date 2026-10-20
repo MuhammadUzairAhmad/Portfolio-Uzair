@@ -9,6 +9,8 @@ All personal and project data lives in `src/content/`. You can update these Type
 | `src/content/tools.ts`      | TypeSpark, GlobePick, Blogsite, cover styles and tool stories                                                                        |
 | `src/content/experience.ts` | Companies, roles, descriptions, and confirmed dates                                                                                  |
 | `src/content/services.ts`   | Services, related work, skill groups, and process steps                                                                              |
+| `src/content/toolkit.ts`    | Homepage skill highlights, project evidence links, and grouped libraries on About                                                    |
+| `src/content/tool-art.ts`   | Decorative tool artwork paths and image dimensions                                                                                   |
 | `src/app/globals.css`       | Shared light/dark theme tokens, typography, container, accessibility base                                                            |
 
 Component/page-specific styling stays in Tailwind class names. UI labels and editorial section titles live in their components; actual portfolio facts live in the data above.
@@ -47,7 +49,11 @@ image: {
 
 `image` is the plain screenshot fallback. The current six projects also have a `mockup` path for the existing device artwork. The device presentation uses SVG clip paths around that artwork, preserving the original screen pixels while matching the reference background. These existing mockups share a 1640 × 924 composition (the optimized exports retain those proportions). If you add an unrelated screenshot or montage, remove `mockup` and use the `image` object; the component will display the plain image correctly. Only set `mockup` for artwork matching the existing device template.
 
-Dimensions reserve the correct space while the image loads. Keep product screenshots readable and preserve their proportions. The plain screenshot fallback uses `next/image` for appropriately sized variants. Existing device presentations use the pre-optimized WebP montage inside a responsive SVG, and the hero montage is preloaded. Tool covers are decorative component illustrations, not claims about the actual product UI. Set `illustration` to `type`, `globe`, or `blog` for those covers.
+Dimensions reserve the correct space while the image loads. Keep product screenshots readable and preserve their proportions. The plain screenshot fallback uses `next/image` for appropriately sized variants. Existing device presentations use the pre-optimized WebP montage inside a responsive SVG, and the hero montage is preloaded. Tool covers are decorative static illustrations, not actual product screenshots. Set `illustration` to `type`, `globe`, or `blog`. Their optimized transparent WebP files live in `public/images/tools/`; change paths and dimensions in `src/content/tool-art.ts` to replace them. They use responsive `next/image` delivery. Generation prompts are recorded in `docs/TOOL-ART-PROMPTS.md`.
+
+## Update libraries and skills
+
+Edit `src/content/toolkit.ts`. `toolkitHighlights` controls the four homepage cards; each `project` slug links to related work. `toolkitGroups` controls the six detailed groups on `/about#toolkit`. These lists describe experience across projects, not dependencies installed in this portfolio. Keep experience levels accurate (Docker is currently labeled basic setup), and keep project examples relevant. No layout edits are needed when changing the names or rows.
 
 ## Local checks
 

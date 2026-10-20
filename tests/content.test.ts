@@ -1,3 +1,5 @@
+import { toolkitHighlights, toolkitGroups } from "../src/content/toolkit.ts";
+import { toolArtwork } from "../src/content/tool-art.ts";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { existsSync } from "node:fs";
@@ -75,4 +77,23 @@ test("every type of illustrative narrative is counted", () => {
     demoFields(item),
     2 + item.decisions.length + item.results.length,
   );
+});
+
+test("tool illustrations exist and toolkit examples resolve to real projects", () => {
+  for (const artwork of Object.values(toolArtwork)) {
+    assert.ok(existsSync(join(process.cwd(), "public", artwork.src)));
+    assert.ok(artwork.width > 0 && artwork.height > 0);
+  }
+  assert.equal(
+    new Set(toolkitGroups.map((group) => group.id)).size,
+    toolkitGroups.length,
+  );
+  for (const group of toolkitGroups) {
+    assert.ok(group.rows.length > 0);
+    for (const row of group.rows) assert.ok(row.label && row.items.length > 0);
+  }
+  for (const item of toolkitHighlights) {
+    assert.ok(getProject(item.project));
+    assert.ok(item.skills.length > 0);
+  }
 });

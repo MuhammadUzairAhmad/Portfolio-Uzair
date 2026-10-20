@@ -1,102 +1,40 @@
-import { MapPin } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/cn";
+import { toolArtwork } from "@/content/tool-art";
 export function ToolVisual({
   kind,
   className,
   detailed = false,
+  eager = false,
 }: {
   kind?: "type" | "globe" | "blog";
   className?: string;
   detailed?: boolean;
+  eager?: boolean;
 }) {
+  const artwork = toolArtwork[kind ?? "blog"];
   return (
     <div
       aria-hidden="true"
       className={cn(
-        "relative flex h-36 items-center justify-center",
+        "relative isolate flex h-36 items-center justify-center",
         className,
       )}
     >
-      {kind === "type" ? (
-        <>
-          <span
-            className={cn(
-              "font-serif text-[90px] leading-none tracking-[-.13em] text-[#131532] dark:text-[#bc8bdf]",
-              detailed &&
-                "relative z-10 -rotate-6 rounded-md border border-white/20 bg-[#252927] p-5 text-8xl text-[#eee8d8] shadow-xl",
-            )}
-          >
-            Aa
-          </span>
-          <span className="ml-6 text-5xl text-[#1a1b3d] dark:text-[#c7a0e5]">
-            ✦
-          </span>
-          {detailed && (
-            <div className="absolute left-[13%] top-1 z-20 -rotate-6 font-mono text-[9px] text-[#e9e4d5]">
-              TypeSpark ＋
-            </div>
-          )}
-          {detailed && (
-            <div className="absolute right-[12%] top-2 rotate-12 rounded-sm bg-[#f0e4c9] px-6 py-7 font-serif text-5xl italic text-[#64543d] shadow-lg">
-              Aa
-            </div>
-          )}
-        </>
-      ) : kind === "globe" ? (
-        <>
-          <span
-            className={cn(
-              "text-[104px] leading-none drop-shadow-lg",
-              detailed && "text-[180px]",
-            )}
-          >
-            🌍
-          </span>
-          {detailed && (
-            <>
-              <MapPin
-                size={26}
-                className="absolute left-[36%] top-4 fill-[#e1eebc] text-[#527746]"
-              />
-              <MapPin
-                size={23}
-                className="absolute right-[25%] top-[36%] fill-[#e1eebc] text-[#527746]"
-              />
-            </>
-          )}
-          {detailed && (
-            <div className="absolute bottom-0 right-1 w-32 rotate-6 rounded-md border border-[#d7dfc6] bg-[#f7f8e9] p-3 text-[9px] text-[#304621] shadow-lg">
-              <b>Capitals Quiz</b>
-              <p className="mt-2">Which city is the capital?</p>
-              {[1, 2, 3].map((n) => (
-                <div key={n} className="mt-2 flex items-center gap-2">
-                  <span className="size-2 rounded-full border border-[#86a262]" />
-                  <span className="h-1 w-14 rounded bg-[#dce4cd]" />
-                </div>
-              ))}
-            </div>
-          )}
-        </>
-      ) : (
-        <div className={cn("relative h-28 w-36", detailed && "scale-150")}>
-          <div className="absolute inset-1 -rotate-12 rounded-sm bg-[#e8d8b9] shadow-sm" />
-          <div className="absolute inset-1 rotate-12 rounded-sm bg-[#ecdfc5] shadow-sm" />
-          <div className="absolute inset-1 rounded-sm border border-[#ded2ba] bg-[#fffdf5] px-5 py-4 shadow-md">
-            {detailed && (
-              <span className="absolute -left-4 -top-2 -rotate-12 font-serif text-6xl not-italic text-[#45483c]">
-                A
-              </span>
-            )}
-            <div className="mb-2 h-1 w-7 bg-[#30352e]" />
-            {[1, 2, 3, 4, 5].map((n) => (
-              <div
-                key={n}
-                className={cn("mt-1.5 h-px bg-[#858b7e]", n === 3 && "w-2/3")}
-              />
-            ))}
-          </div>
-        </div>
-      )}
+      <div className="absolute inset-[15%] -z-10 rounded-full bg-[#aca779]/10 blur-2xl dark:bg-[#b0c263]/10" />
+      <Image
+        src={artwork.src}
+        width={artwork.width}
+        height={artwork.height}
+        alt=""
+        preload={eager}
+        sizes={
+          detailed
+            ? "(min-width:1280px) 520px, (min-width:768px) 45vw, 90vw"
+            : "(min-width:1024px) 320px, (min-width:640px) 30vw, 90vw"
+        }
+        className="relative h-full w-full object-contain transition-transform duration-300 motion-safe:group-hover:scale-[1.035]"
+      />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { ToolkitSection } from "@/components/about/toolkit-section";
 import {
   Monitor,
   Database,
@@ -83,6 +84,7 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+      <ToolkitSection />
       <section id="experience" className="scroll-mt-5">
         <Container className="border-b border-border py-7">
           <div className="mb-4 flex flex-wrap justify-between gap-2">

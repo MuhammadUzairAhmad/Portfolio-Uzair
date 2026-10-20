@@ -1,3 +1,4 @@
+import { toolArtwork } from "../src/content/tool-art.ts";
 import assert from "node:assert/strict";
 import { projects } from "../src/content/projects.ts";
 import { tools } from "../src/content/tools.ts";
@@ -23,6 +24,8 @@ for (const route of routes) {
     1,
     `${route}: one main heading`,
   );
+  if (route === "/") assert.match(html, /id="skills"/);
+  if (route === "/about") assert.match(html, /id="toolkit"/);
   console.log(`PASS ${route}`);
 }
 for (const route of ["/missing", "/work/missing", "/tools/missing"]) {
@@ -39,6 +42,7 @@ for (const path of [
   profile.resume.href,
   "/icon.svg",
   "/opengraph-image",
+  ...Object.values(toolArtwork).map((artwork) => artwork.src),
   ...new Set(
     projects
       .flatMap((p) => [p.image?.src, p.mockup])

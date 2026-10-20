@@ -157,7 +157,8 @@ export function CaseStudy({
             <ToolVisual
               kind={project.illustration}
               detailed
-              className="h-full w-full scale-125"
+              className="h-full w-full px-5 py-6"
+              eager
             />
           ) : (
             <DevicePreview
