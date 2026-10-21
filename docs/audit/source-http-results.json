@@ -1,0 +1,116 @@
+{
+  "routes": 18,
+  "failures": [],
+  "external": [
+    "https://github.com/MuhammadUzairAhmad",
+    "https://www.linkedin.com/in/muhammad-uzair-ahmad-dev/",
+    "https://calendly.com/uzairsb321/30min",
+    "https://bitlux-ops.vercel.app/",
+    "https://www.skillmatch.tech/",
+    "https://marketplace.hestiya.com/",
+    "https://gaming-platform-frontend-eight.vercel.app/",
+    "https://development-solution-group.vercel.app/",
+    "https://kw.com/",
+    "https://apps.shopify.com/groovepacker-lite?st_source=autocomplete&surface_detail=autocomplete_apps"
+  ],
+  "assets": [
+    {
+      "path": "/_next/static/chunks/0hrdb9vn08wbp.css",
+      "status": 200,
+      "bytes": 41932
+    },
+    {
+      "path": "/_next/static/chunks/1ckvzn7sfprko.js",
+      "status": 200,
+      "bytes": 5584
+    },
+    {
+      "path": "/images/projects/skillmatch.webp",
+      "status": 200,
+      "bytes": 48920
+    },
+    {
+      "path": "/icon.svg?icon.03fxv_30atqz9.svg",
+      "status": 200,
+      "bytes": 227
+    },
+    {
+      "path": "/documents/uzair-mern-stack-resume.pdf",
+      "status": 200,
+      "bytes": 138238
+    },
+    {
+      "path": "/images/projects/bitlux.webp",
+      "status": 200,
+      "bytes": 27506
+    },
+    {
+      "path": "/images/projects/linxx.webp",
+      "status": 200,
+      "bytes": 33396
+    },
+    {
+      "path": "/images/projects/hestiya.webp",
+      "status": 200,
+      "bytes": 48046
+    },
+    {
+      "path": "/images/projects/gaming-platform.webp",
+      "status": 200,
+      "bytes": 29942
+    },
+    {
+      "path": "/images/projects/development-solutions-group.webp",
+      "status": 200,
+      "bytes": 45980
+    }
+  ],
+  "hiddenScope": [
+    {
+      "slug": "bitlux",
+      "notVisibleScope": [
+        "Performance & rendering fixes",
+        "TanStack Query API requests & caching",
+        "Figma UI updates, reusable components & validation",
+        "Backend API integrations",
+        "Dynamic ticket PDFs with jsPDF"
+      ]
+    },
+    {
+      "slug": "linxx",
+      "notVisibleScope": [
+        "Marketplace listings & ambassador/shopper flows",
+        "Backend API integration & end-to-end flow testing",
+        "Approval/decline workflows",
+        "GPS discovery & Plaid integration",
+        "Capacitor mobile fixes & deployment support",
+        "Backend & API contributions"
+      ]
+    },
+    {
+      "slug": "skillmatch",
+      "notVisibleScope": [
+        "Responsive screens & dashboards",
+        "Validation & reusable components",
+        "Authentication & API integration",
+        "Backend APIs under senior guidance"
+      ]
+    },
+    {
+      "slug": "gaming-platform",
+      "notVisibleScope": [
+        "Google OAuth & email/password accounts",
+        "Wallet & client-provided contract integration",
+        "Spin-wheel gameplay & reward history",
+        "Referral validation, bonuses & credit claims",
+        "User management & transfer/claim approvals",
+        "Configurable referral percentages, prizes & free-spin timing"
+      ]
+    }
+  ],
+  "checks": {
+    "foodiesNodeExpress": false,
+    "skillmatchAuthContribution": false
+  },
+  "scopeComparisonNote": "hiddenScope is an exact-phrase comparison only. Many phrases are represented by reworded contributions/maps. It is not a list of semantic omissions; confirmed findings are in SOURCE-AND-E2E-AUDIT.md."
+}

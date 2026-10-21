@@ -1,0 +1,435 @@
+{
+  "mobileDark": [
+    {
+      "route": "/",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/tools",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/about",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/contact",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/bitlux",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/linxx",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/skillmatch",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/hestiya",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/gaming-platform",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/development-solutions-group",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/get-foodies",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/onyx",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/keller-williams",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/shopify-app",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/tools/typespark",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/tools/globepick",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/tools/blogsite",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    }
+  ],
+  "mobileLight": [
+    {
+      "route": "/",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/tools",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/about",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/contact",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/bitlux",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/linxx",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/skillmatch",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/hestiya",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/gaming-platform",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/development-solutions-group",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/get-foodies",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/onyx",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/keller-williams",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/work/shopify-app",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/tools/typespark",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/tools/globepick",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "route": "/tools/blogsite",
+      "brokenImages": [],
+      "document": 305,
+      "viewport": 320
+    }
+  ],
+  "desktopDark": [
+    {
+      "route": "/",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/work",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/tools",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/about",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/contact",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/work/bitlux",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/work/linxx",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/work/skillmatch",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/work/hestiya",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/work/gaming-platform",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/work/development-solutions-group",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/work/get-foodies",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/work/onyx",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/work/keller-williams",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/work/shopify-app",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/tools/typespark",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/tools/globepick",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    },
+    {
+      "route": "/tools/blogsite",
+      "brokenImages": [],
+      "document": 1265,
+      "viewport": 1280
+    }
+  ],
+  "filters": [
+    {
+      "filter": "Web applications",
+      "projects": [
+        "Project collection",
+        "Bitlux",
+        "Linxx",
+        "SkillMatch",
+        "Hestiya Marketplace",
+        "Gaming Platform",
+        "Development Solutions Group",
+        "Onyx",
+        "Keller Williams",
+        "Shopify GP-Lite / Barcode Buddy"
+      ]
+    },
+    {
+      "filter": "Mobile apps",
+      "projects": ["Project collection", "Linxx", "Get Foodies"]
+    },
+    {
+      "filter": "Full-stack",
+      "projects": [
+        "Project collection",
+        "Bitlux",
+        "Linxx",
+        "SkillMatch",
+        "Gaming Platform",
+        "Get Foodies",
+        "Shopify GP-Lite / Barcode Buddy"
+      ]
+    },
+    {
+      "filter": "Platforms",
+      "projects": [
+        "Project collection",
+        "Bitlux",
+        "SkillMatch",
+        "Hestiya Marketplace",
+        "Gaming Platform",
+        "Onyx",
+        "Keller Williams",
+        "Shopify GP-Lite / Barcode Buddy"
+      ]
+    },
+    {
+      "filter": "All",
+      "projects": [
+        "Project collection",
+        "Bitlux",
+        "Linxx",
+        "SkillMatch",
+        "Hestiya Marketplace",
+        "Gaming Platform",
+        "Development Solutions Group",
+        "Get Foodies",
+        "Onyx",
+        "Keller Williams",
+        "Shopify GP-Lite / Barcode Buddy"
+      ]
+    }
+  ],
+  "external": [
+    {
+      "url": "https://bitlux-ops.vercel.app/",
+      "title": "404: NOT_FOUND",
+      "text": "- main:\n  - region \"This page doesn’t exist\":\n    - heading \"This page doesn’t exist\" [level=1]\n    - paragraph: It may have been moved, removed, or never existed.\n    - generic \"HTTP status, error code, and request ID\":\n      - paragraph: 404 DEPLOYMENT_NOT_FOUND\n      - paragraph: bom1::wgj2t-1792622728686-72089bd5b820\n- generic \"Documentation, logs, and debugging actions\":\n  - link \"View DEPLOYMENT_NOT_FOUND documentation\":\n    - /url: https://vercel.com/docs/errors/deployment_not_found\n    - generic: View Documentation\n  - button \"Copy DEPLOYMENT_NOT_FOUND debugging instructions to clipboard\":\n    - generic: Copy Debug Prompt\n  - status"
+    },
+    {
+      "url": "https://www.skillmatch.tech/",
+      "title": "SkillMatch: skills-based hiring and assessments",
+      "text": "- main:\n  - link:\n    - /url: /\n  - list:\n    - link \"Home\":\n      - /url: /\n    - link \"About Us\":\n      - /url: /about-us\n    - link \"Find Jobs\":\n      - /url: /jobs\n    - link \"Browse Companies\":\n      - /url: /all-companies\n    - link \"Pricing\":\n      - /url: /pricing-and-plan\n    - text: Resources\n    - link \"Contact Us\":\n      - /url: /contact-us\n  - button \"Login\": Login\n  - link \"Start Free Trial\":\n    - /url: /signup?type=company\n    - button \"Start Free Trial\": Start Free Trial\n  - 'heading \"Assess, Advance, Achieve: Your Path to Engineering Excellence\" [level=1]'\n  - link \"Book a Demo\":\n    - /url: https://calendly.com/skillmatch-info/30min\n    - button \"Book a Demo\": Book a Demo\n  - button \"logo Start Free Trial\":\n    - img \"logo\"\n    - generic: Start Free Trial\n  - paragraph: Post a job, see who fits first with an AI résumé match score, and send proctored MCQ, coding and React assessments that are graded automatically, so you choose the best candidate on evidence.\n  - list:\n    - listitem: MCQ questions\n    - listitem: Coding tests\n    - listitem: React tasks\n    - listitem: Built-in proctoring\n    - listitem: AI résumé match score\n  - img \"logo\"\n  - heading \"One Place for Screening\" [level=5]\n  - paragraph: Post jobs, review applicants and send skills assessments from one dashboard, instead of juggling separate tools.\n  - img \"logo\"\n  - heading \"Hire on Evidence\" [level=5]\n  - paragraph: Job-like coding and React tasks show how candidates actually work, so decisions rest on more than a résumé.\n  - img \"logo\"\n  - heading \"Proctoring Built In\" [level=5]\n  - para"
+    },
+    {
+      "url": "https://marketplace.hestiya.com/",
+      "title": "Hestiya Marketplace",
+      "text": "- navigation:\n  - link \"Hestiya\":\n    - /url: /marketplace\n    - text: Hestiya\n- heading \"Welcome to Hestiya\" [level=4]\n- button \"Welcome to Marketplace\""
+    },
+    {
+      "url": "https://gaming-platform-frontend-eight.vercel.app/",
+      "title": "Create Next App",
+      "text": "- banner:\n  - link \"GamingPlatform\":\n    - /url: /\n    - generic: GamingPlatform\n  - navigation:\n    - button \"EN\":\n      - text: EN\n    - link \"Log In\":\n      - /url: /login\n      - button \"Log In\":\n        - text: Log In\n    - link \"Register\":\n      - /url: /register\n      - button \"Register\":\n        - text: Register\n- main:\n  - heading \"Spin the Wheel of Fortune!\" [level=1]\n  - paragraph: Join the excitement of the Wheel of Fortune. Spin, win, and multiply your credits instantly.\n  - button \"Play Now!\"\n  - heading \"Wheel of Fortune\" [level=3]\n  - paragraph: Spin the wheel and multiply your credits instantly. With each spin, you have the chance to win big prizes and increase your fortune.\n  - text: Instant Winnings\n  - text: Big Prizes\n  - text: Easy to Play\n  - button \"Spin the Wheel\"\n  - heading \"Why choose our Wheel of Fortune?\" [level=2]\n  - heading \"Instant Winnings\" [level=3]\n  - paragraph: Multiply your credits with each spin of the wheel. The winnings can be huge!\n  - heading \"Active Community\" [level=3]\n  - paragraph: Join thousands of excited players. Share strategies and celebrate victories.\n  - heading \"Constant Improvements\" [level=3]\n  - paragraph: We're always updating and improving the game for an optimal experience.\n  - heading \"Ready to Try Your Luck?\" [level=2]\n  - paragraph: Don't wait any longer. Join us and start spinning the Wheel of Fortune to win big prizes.\n  - button \"Create Free Account\"\n- contentinfo:\n  - paragraph: © 2024 GamingPlatform. All rights reserved.\n  - link \"Terms of Service\":\n    - /url: /terms\n  - link \"Privacy Policy\":\n    - /ur"
+    },
+    {
+      "url": "https://development-solution-group.vercel.app/",
+      "title": "Development Solutions Group (DSG)",
+      "text": "- link \"DSG Logo\":\n  - /url: /\n  - img \"DSG Logo\"\n- navigation:\n  - link \"Home\":\n    - /url: /\n    - text: Home\n  - link \"About\":\n    - /url: /about\n    - text: About\n  - link \"Track Record\":\n    - /url: /track-record\n    - text: Track Record\n  - link \"Contact\":\n    - /url: /contact-us\n    - text: Contact\n- heading \"Smart Development Smart Results\" [level=1]\n- link \"Discover\":\n  - /url: /track-record\n  - text: Discover"
+    },
+    {
+      "url": "https://kw.com/",
+      "error": "Error: Timed out waiting for tab 6 to navigate to https://kw.com/."
+    },
+    {
+      "url": "https://apps.shopify.com/groovepacker-lite?st_source=autocomplete&surface_detail=autocomplete_apps",
+      "title": "Pick Bot ‑ Barcode Buddy - Stop Shipping Errors! Fool-Proof Barcode Pick Pack Scanning | Shopify App Store",
+      "text": "- banner:\n  - navigation:\n    - link \"Shopify App Store logo\":\n      - /url: /\n      - generic: Shopify App Store\n    - searchbox \"Search apps, guides, and more\"\n    - region\n    - button \"Browse apps\":\n      - text: Browse apps\n    - link \"Log in\":\n      - /url: /login/initiate_shopify_auth_without_shop?redirect_uri=%2Fgroovepacker-lite%3Fshow_store_picker%3D1%26st_source%3Dautocomplete%26surface_detail%3Dautocomplete_apps&return_to=%2Fgroovepacker-lite%3Fst_source%3Dautocomplete%26surface_detail%3Dautocomplete_apps\n    - link \"Start for free\":\n      - /url: https://admin.shopify.com/signup?_s=01a160a5-04c6-e300-d74e-4bb275dad26b&_y=01a160a5-04c6-10da-2bda-3798d97f08ed&locale=en&signup_page=https%3A%2F%2Fapps.shopify.com%2Fgroovepacker-lite%3Fst_source%3Dautocomplete%26surface_detail%3Dautocomplete_apps&signup_types%5B%5D=paid_trial_experience\n- main:\n  - figure:\n    - img \"Pick Bot ‑ Barcode Buddy\"\n  - heading \"Pick Bot ‑ Barcode Buddy\" [level=1]\n  - term: Pricing\n  - definition:\n    - generic: From $0.01/month\n  - term: Rating\n  - definition:\n    - generic: \"4.3\"\n    - link \"11 Reviews\":\n      - /url: \"#adp-reviews\"\n      - text: (11)\n  - term: Developer\n  - definition:\n    - link \"Groove Industries\":\n      - /url: https://apps.shopify.com/partners/groove-industries\n  - link \"Install\":\n    - /url: \"#\"\n  - heading \"Featured images gallery\" [level=2]\n  - img \"Easy Pick pack scanning for perfect orders\"\n  - list:\n    - img \"barcode scan of packing slip barcode to start\"\n    - img \"displayed order items move below as barcode is scanned\"\n    - img \"barcode scan feedback for c"
+    },
+    {
+      "url": "https://calendly.com/uzairsb321/30min",
+      "title": "Calendly",
+      "text": ""
+    }
+  ]
+}
