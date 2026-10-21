@@ -2,6 +2,10 @@
 
 Reviewed 22 October 2026. This is an audit, not a website-content update. The old portfolio, résumé PDF and external profiles were not modified. Local production preview: http://127.0.0.1:4337/.
 
+## Follow-up implementation
+
+The owner-approved follow-up removes Bitlux’s broken action, restores Get Foodies Node/Express and visible SkillMatch authentication, and completes TypeSpark/GlobePick written stories using their build chats and code. Their verified stacks and qualitative Codex development workflows now render. Lessons are optional. Blogsite alone retains five narrative draft fields. The owner deferred résumé/GitHub changes. The audit below remains the historical findings, not a claim that these resolved items are still missing.
+
 ## Conclusion
 
 The main page and project inventory is covered. The strongest next improvements are correcting inconsistencies, restoring a few supported contribution details, and strengthening evidence. Another general homepage section is less useful than these changes. The portfolio is suitable in structure for hiring teams and direct clients, but is not ready for public launch: a project destination is broken, the downloadable résumé contains older claims, three tool stories remain deferred, and public SEO is deliberately disabled.

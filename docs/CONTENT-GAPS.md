@@ -4,15 +4,11 @@ The owner’s `portfolio-content-additions.md` has been applied. All ten company
 
 ## Required next content
 
-Only the three deliberately deferred tool records still have draft fields:
+Only Blogsite retains draft narrative fields (5). Its actual stack, shipped-page scope, brief and outcome remain to be confirmed. Optional lessons are not a completion requirement.
 
-| Project   | Still needed                                                                                                                        |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| TypeSpark | Client brief, project-specific implementation choices, outcome/learning, and real UI screenshots or recording. Optional public URL. |
-| GlobePick | Original brief, implementation/printing or data decisions, outcome/learning, and real UI media. Optional public URL.                |
-| Blogsite  | Actual stack/libraries, shipped pages, brief, outcomes/learning, and real UI media. Optional public URL.                            |
+TypeSpark and GlobePick now have verified written stories, contributions, stacks, decisions and delivered capabilities, grounded in their build chats, READMEs and source files. They use the concise tool-detail layout with no mandatory learning section. Real screenshots/recordings and live links can be added later; neither is required to describe a private or unreleased project accurately. Their decorative covers are not evidence of product UI.
 
-Their public pages now show verified project snapshots only; draft instructions, unconfirmed decisions, and unfinished outcomes/lessons are not rendered. Internal draft flags remain in the source and publication checks. Their existing verified descriptions and decorative artwork are preserved. Further plans are not treated as shipped features. Run `npm run content:checklist` for current field counts.
+Blogsite still hides draft technical decisions/outcomes/lessons and its unconfirmed stack. Its existing verified layout overview and contributions remain visible. Run `npm run content:checklist` for current field counts.
 
 ## Media and external access
 
@@ -29,7 +25,7 @@ Team sizes, project dates, repositories, measured results, certification credent
 
 ## Before launch
 
-Complete the three deferred tool stories, choose the actual deployment URL, review canonical metadata/sitemap/robots, check external links and playback, and run build/content checks. Preview/noindex remains enabled; nothing has been published or pushed.
+Complete the remaining Blogsite story, choose the actual deployment URL, review canonical metadata/sitemap/robots, check external links and playback, and run build/content checks. Preview/noindex remains enabled; nothing has been published or pushed.
 
 ## Evidence still useful after the review improvements
 
@@ -38,3 +34,9 @@ Seven contribution maps now summarize documented work, and Gaming Platform has a
 ## Optional backend detail follow-up — 22 October 2026
 
 Full-stack contributions are now confirmed for Bitlux, Linxx and Get Foodies. Specific backend features/endpoints, whether each was created or improved, and a concrete problem/solution example would strengthen engineering evidence. No unsupported backend framework, endpoint, metric or ownership claim has been added. Onyx remains integration-only.
+
+## Owner decisions after the audit — 22 October 2026
+
+Bitlux’s unavailable public URL has been removed; all four original screens remain. Get Foodies now includes the résumé-supported Node.js and Express stack. SkillMatch explicitly describes authentication implementation. The owner will update the résumé and external GitHub profile later; neither is edited here.
+
+A project needs an overview, clear personal contribution and relevant stack. Add a concise delivered capability/outcome where supported. Decisions and lessons are optional, and unavailable company-laptop media is not a missing narrative. The SJ focus-label detail and more specific backend examples remain optional evidence improvements, not reasons to invent facts.

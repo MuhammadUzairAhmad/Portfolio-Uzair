@@ -159,3 +159,9 @@ Tools with remaining narrative draft flags use `ToolSnapshot`, showing only the 
 ## Explicit scope and involvement
 
 `profile.heroProjectSlug` selects SkillMatch independently of featured-project order. `developmentScope` explicitly controls Full-stack archive filtering; do not infer backend ownership from role text or API integration alone. `involvement` supplies SkillMatch’s “Contributed from day one” badge independently of optional product status. Employment `focus` is a secondary description; preserve official résumé `role` and date fields. See the latest clarification in `CONTENT-SOURCES.md`.
+
+## Concise tool details and optional content
+
+All Tools use `ToolSnapshot`, including complete records. It shows overview, role/contributions, verified stack and any confirmed decisions, workflow and outcomes. Lessons are optional and omitted when absent; demo-marked decisions/results/lessons never render. TypeSpark/GlobePick are complete written records. Blogsite retains draft fields and `stackVerified: false`, so its unconfirmed stack is hidden.
+
+Set `developmentWorkflow` only when confirmed; current Codex wording is qualitative, with no invented speed percentage. Add a future owner-supplied live URL through `productUrl`. Optional `media` and `walkthroughs` use the existing on-page viewers. Absent URLs or company-laptop evidence do not create empty media sections or require fabricated screenshots.

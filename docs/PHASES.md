@@ -62,3 +62,8 @@ The changes are local; no remote, push, or deployment was added.
 
 - Implementation phase: full-stack hero identity, SkillMatch hero/day-one involvement, explicit project-scope filtering, clarified backend contributions and separate employment-focus labels, with regression coverage.
 - Documentation phase: latest owner-source precedence, updated reviewable project copy, optional backend evidence gaps and verified desktop/mobile preview. Local commits only.
+
+### Tool stories and optional project sections — 22 October 2026
+
+- Content/UI phase: remove Bitlux external URL, restore supported stack/authentication facts, complete TypeSpark/GlobePick from build evidence, render concise tool detail pages with optional decisions/lessons and confirmed Codex workflows, and update regression/smoke coverage.
+- Documentation phase: source provenance, resolved audit items, remaining Blogsite/owner material, editing guidance and verification. Local only; résumé/GitHub deferred by owner.

@@ -142,3 +142,13 @@ Homepage role and introduction now explicitly lead with Full-Stack Developer, ME
 Validation passed: 19 content/media/publication tests, ESLint, route type generation/TypeScript, production build, diff whitespace checks, and HTTP smoke checks across all 18 portfolio pages plus four expected 404s and source assets/preview metadata. Browser verification confirmed the SkillMatch hero navigates to its case study and shows the day-one badge, the Full-stack filter includes exactly six projects, and homepage layouts have no document overflow at 1280px and 320px. Both themes fit the 320px viewport. Temporary viewport overrides were reset and dark mode restored.
 
 Preview: [MERN/Next.js hero with SkillMatch](previews/mern-skillmatch-hero.jpg). No remote, push or deployment was added.
+
+## Concise tool stories and audit follow-up — 22 October 2026
+
+Removed Bitlux’s broken public URL while preserving its four real screenshots. Restored Node.js/Express to Get Foodies and explicit authentication implementation to SkillMatch. TypeSpark/GlobePick stories now use confirmed build-chat, README and implementation evidence, with verified stacks, local-processing scope, decisions, delivered capabilities and qualitative Codex-assisted workflow wording. No live URLs or speed percentages were invented. Both omit learning sections. Blogsite remains the only deferred story, with five draft fields and hidden unconfirmed stack. The résumé and GitHub were deferred by the owner.
+
+All Tools use the shared concise detail layout; absent or demo decisions/results/lessons are omitted. Future product links and media remain data-driven using the existing viewers. No extra dependencies or animation were added.
+
+Validation passed: 20 unit/content/media/publication tests, ESLint, TypeScript/route types, production build, repository formatting and diff whitespace checks, and all 18 production page smoke checks plus four expected 404s and local assets. Browser checks confirmed complete TypeSpark/GlobePick stories, linked next-tool navigation, no mandatory lesson heading, and hidden Blogsite draft/stack content. At 320px, updated Home/Tools/three tool details/Bitlux/Get Foodies/SkillMatch fit without document overflow in dark mode; all three tool detail pages also fit in light. A 1280px desktop TypeSpark layout was visually inspected. Bitlux has zero Open project actions and four image triggers; its on-page viewer opens/closes successfully. No browser error was captured during these checks. Viewport overrides were reset and dark TypeSpark restored.
+
+Previews: [TypeSpark desktop](previews/typespark-story-desktop.jpg), [GlobePick full story](previews/globepick-story-full.jpg). No push, publication, remote or external-profile change was made.
