@@ -92,3 +92,9 @@ Checks passed: lint, type checks, twelve unit/content tests, and a production bu
 Browser verification covered both themes, desktop composition at 1280px, and the About layout at 320px with no horizontal overflow. All four company images loaded, all five roles were open initially, and keyboard Enter collapsed/reopened the first role. The homepage role-details link reached the About section. Native-size previews confirmed that the three grid densities are visible while body text remains readable. No console errors/warnings were observed. Temporary viewport settings were reset and the preview tab retained.
 
 Focused previews: [homepage experience](previews/experience-home-dark.jpg), [expanded About experience](previews/experience-about-dark.jpg), [320px light experience](previews/experience-mobile-light.jpg), [small hero grid](previews/grid-hero-dark.jpg), [large dark contact grid](previews/grid-contact-dark.jpg), and [large light contact grid](previews/grid-contact-light.jpg). Older full-page previews record their earlier implementation state; these focused images are the current experience/grid reference.
+
+## Faint grids on page introductions — 21 October 2026
+
+Work, Tools, and About now opt into the shared small-grid layer through `PageIntro`, at 70% opacity. The decoration stays inside the introductory section, leaving the project/tool collections and About content surfaces clean. Contact keeps its existing separate large grid. No dependencies or client logic were added.
+
+Lint, type checks, all twelve tests, production build, and the nineteen-page smoke check passed. Browser checks inspected Work in dark mode, Tools in light mode, and About at 320px with no horizontal overflow. No console warnings/errors were observed; the viewport override was reset. Focused previews: [Work](previews/intro-work-dark.jpg), [Tools](previews/intro-tools-light.jpg), [mobile About](previews/intro-about-mobile-light.jpg).

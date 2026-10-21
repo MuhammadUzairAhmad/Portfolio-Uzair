@@ -13,6 +13,7 @@ export default function ToolsPage() {
   return (
     <main id="main-content">
       <PageIntro
+        grid
         eyebrow="Tools"
         title={
           <>

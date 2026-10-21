@@ -40,3 +40,5 @@ The original résumé is tracked as a source and its unchanged public download r
 - `docs: record experience and grid verification` — keyboard/mobile/theme checks, current focused screenshots, and content-editing notes.
 
 The changes are local; no remote, push, or deployment was added.
+
+- `feat: add subtle grids to page introductions` — apply the small static grid to Work, Tools, and About intros and verify theme/mobile layouts. Local commit only.

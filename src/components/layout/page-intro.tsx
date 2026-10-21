@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { GridBackground } from "@/components/ui/grid-background";
 import { Container, Eyebrow } from "./container";
 export function PageIntro({
   eyebrow,
@@ -6,15 +7,18 @@ export function PageIntro({
   description,
   subtitle,
   note,
+  grid = false,
 }: {
   eyebrow: string;
   title: ReactNode;
   description: string;
   subtitle?: string;
   note?: ReactNode;
+  grid?: boolean;
 }) {
   return (
-    <section>
+    <section className={grid ? "relative isolate" : undefined}>
+      {grid && <GridBackground size="small" className="opacity-70" />}
       <Container className="relative py-10 sm:py-12">
         <Eyebrow className="text-primary">{eyebrow}</Eyebrow>
         <h1 className="mt-3 max-w-3xl text-4xl sm:text-5xl lg:text-[64px]">

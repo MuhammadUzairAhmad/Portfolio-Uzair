@@ -22,6 +22,7 @@ export default function AboutPage() {
     <main id="main-content">
       <div className="relative">
         <PageIntro
+          grid
           eyebrow="About"
           title={
             <>

@@ -25,6 +25,7 @@ export default function WorkPage() {
   return (
     <main id="main-content">
       <PageIntro
+        grid
         eyebrow="Work"
         title="Selected work."
         subtitle="The products. The decisions. My contribution."
