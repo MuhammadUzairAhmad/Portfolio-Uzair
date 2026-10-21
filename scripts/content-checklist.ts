@@ -7,7 +7,7 @@ console.log("Content review checklist\n");
 for (const project of [...projects, ...tools]) {
   const count = demoFields(project);
   console.log(
-    `${count ? "[ ]" : "[x]"} ${project.name}: ${count} demo narrative fields`,
+    `${count ? "[ ]" : "[x]"} ${project.name}: ${count ? `${count} draft fields remaining` : "core narrative ready"}`,
   );
 }
 for (const item of experience)
@@ -16,4 +16,11 @@ for (const item of experience)
   );
 console.log(
   `${profile.resume.demo ? "[ ]" : "[x]"} Résumé download is current`,
+);
+
+console.log(
+  `\n${projects.flatMap((project) => project.walkthroughs ?? []).length} external Loom walkthrough links supplied. Playback/access needs publication-environment verification.`,
+);
+console.log(
+  "Private projects and optional metrics, lessons, or media do not require draft badges.",
 );

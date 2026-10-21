@@ -17,5 +17,5 @@ export function demoFields(project: PortfolioProject) {
     ...project.decisions,
     ...project.results,
     project.lessons,
-  ].filter((item) => item.demo).length;
+  ].filter((item) => item?.demo).length;
 }

@@ -53,7 +53,10 @@ export type PortfolioProject = {
   solution: Narrative;
   decisions: Decision[];
   results: Narrative[];
-  lessons: Narrative;
-  liveUrl?: string;
+  lessons?: Narrative;
+  productUrl?: string;
+  productLinkLabel?: string;
+  projectStatus?: "Ongoing product" | "Completed feature work";
+  walkthroughs?: { label: string; url: string; provider: "Loom" }[];
   illustration?: "type" | "globe" | "blog";
 };

@@ -7,6 +7,8 @@ import {
   Users,
   ShieldCheck,
   Lightbulb,
+  PlayCircle,
+  ExternalLink,
 } from "lucide-react";
 import type { PortfolioProject, Narrative } from "@/types/content";
 import { Container, Eyebrow } from "@/components/layout/container";
@@ -127,6 +129,11 @@ export function CaseStudy({
               <br />—
             </p>
           )}
+          {project.projectStatus && (
+            <div className="mt-4">
+              <Badge>{project.projectStatus}</Badge>
+            </div>
+          )}
           {demoFields(project) > 0 && (
             <p className="mt-4 flex flex-wrap items-center gap-2 text-[10px] text-muted-foreground">
               <DemoBadge />
@@ -169,10 +176,20 @@ export function CaseStudy({
           )}
         </div>
         <div className="mt-4 flex flex-wrap items-center justify-end gap-3">
-          {!project.liveUrl && project.status === "Private project" && (
+          {!project.productUrl && project.status === "Private project" && (
             <p className="mr-auto text-xs text-muted-foreground">
-              Company project · no public demo
+              Private project · no public app link
             </p>
+          )}
+          {!!project.walkthroughs?.length && (
+            <ButtonLink
+              href={`#${project.slug}-walkthroughs`}
+              variant="outline"
+              size="sm"
+            >
+              Watch walkthrough{project.walkthroughs.length > 1 ? "s" : ""}{" "}
+              <PlayCircle size={13} aria-hidden />
+            </ButtonLink>
           )}
           {!!project.media?.length && (
             <ButtonLink
@@ -183,15 +200,16 @@ export function CaseStudy({
               View screenshots & media <ArrowRight size={13} aria-hidden />
             </ButtonLink>
           )}
-          {project.liveUrl && (
+          {project.productUrl && (
             <ButtonLink
-              href={project.liveUrl}
+              href={project.productUrl}
               target="_blank"
               rel="noreferrer"
               variant="outline"
               size="sm"
             >
-              Open project <ArrowRight size={13} aria-hidden />
+              {project.productLinkLabel ?? "Open project"}{" "}
+              <ArrowRight size={13} aria-hidden />
             </ButtonLink>
           )}
         </div>
@@ -209,7 +227,9 @@ export function CaseStudy({
                   className="flex items-center gap-3 rounded py-2 text-[11px] text-muted-foreground hover:bg-surface hover:text-primary"
                 >
                   <span className="font-mono text-[10px]">0{i + 1}</span>
-                  {section.label}
+                  {section.id === "outcomes" && !project.lessons
+                    ? "Results"
+                    : section.label}
                 </a>
               ))}
             </nav>
@@ -284,7 +304,7 @@ export function CaseStudy({
             <NarrativeCopy content={project.solution} />
           </div>
           <div className="mb-5 grid gap-3 sm:grid-cols-3">
-            {project.stack.slice(0, 3).map((tech, i) => (
+            {project.stack.slice(0, 3).map((tech) => (
               <div
                 key={tech}
                 className="relative flex items-center gap-3 rounded-lg border border-border p-4"
@@ -298,51 +318,46 @@ export function CaseStudy({
                     {technologyRoles[tech] ?? "Project technology"}
                   </p>
                 </div>
-                {i < 2 && (
-                  <ArrowRight
-                    size={16}
-                    className="absolute -right-2.5 z-10 hidden bg-background text-primary sm:block"
-                    aria-hidden
-                  />
-                )}
               </div>
             ))}
           </div>
-          <div
-            role="region"
-            aria-label="Scrollable technical decisions"
-            tabIndex={0}
-            className="overflow-x-auto rounded-lg border border-border"
-          >
-            <Table>
-              <caption className="sr-only">
-                Technical decisions for {project.name}
-              </caption>
-              <thead>
-                <tr>
-                  <TableHead scope="col">Topic</TableHead>
-                  <TableHead scope="col">Decision</TableHead>
-                  <TableHead scope="col">Reasoning</TableHead>
-                </tr>
-              </thead>
-              <tbody>
-                {project.decisions.map((item) => (
-                  <tr key={item.topic}>
-                    <TableCell className="min-w-32 font-medium text-foreground">
-                      {item.topic}
-                      {item.demo && (
-                        <div className="mt-2">
-                          <DemoBadge />
-                        </div>
-                      )}
-                    </TableCell>
-                    <TableCell className="min-w-40">{item.choice}</TableCell>
-                    <TableCell className="min-w-48">{item.reason}</TableCell>
+          {project.decisions.length > 0 && (
+            <div
+              role="region"
+              aria-label="Scrollable technical decisions"
+              tabIndex={0}
+              className="overflow-x-auto rounded-lg border border-border"
+            >
+              <Table>
+                <caption className="sr-only">
+                  Technical decisions for {project.name}
+                </caption>
+                <thead>
+                  <tr>
+                    <TableHead scope="col">Topic</TableHead>
+                    <TableHead scope="col">Decision</TableHead>
+                    <TableHead scope="col">Reasoning</TableHead>
                   </tr>
-                ))}
-              </tbody>
-            </Table>
-          </div>
+                </thead>
+                <tbody>
+                  {project.decisions.map((item) => (
+                    <tr key={item.topic}>
+                      <TableCell className="min-w-32 font-medium text-foreground">
+                        {item.topic}
+                        {item.demo && (
+                          <div className="mt-2">
+                            <DemoBadge />
+                          </div>
+                        )}
+                      </TableCell>
+                      <TableCell className="min-w-40">{item.choice}</TableCell>
+                      <TableCell className="min-w-48">{item.reason}</TableCell>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </div>
+          )}
         </StorySection>
         <StorySection id="implementation" number="05" title="Implementation">
           <div className="grid items-center gap-6 sm:grid-cols-2">
@@ -381,27 +396,67 @@ export function CaseStudy({
               </div>
             </div>
           </div>
+          {!!project.walkthroughs?.length && (
+            <section
+              id={`${project.slug}-walkthroughs`}
+              className="mt-8 scroll-mt-6"
+            >
+              <h3 className="text-lg">Project walkthroughs</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                External recordings hosted on Loom.
+              </p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {project.walkthroughs.map((recording) => (
+                  <a
+                    key={recording.url}
+                    href={recording.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-3 rounded-xl border border-border bg-surface p-4 transition-colors hover:border-primary"
+                  >
+                    <PlayCircle
+                      className="shrink-0 text-primary"
+                      size={24}
+                      aria-hidden
+                    />
+                    <span className="flex-1">
+                      <span className="block text-sm font-semibold">
+                        {recording.label}
+                      </span>
+                      <span className="mt-1 block text-xs text-muted-foreground">
+                        Watch on {recording.provider} · opens in a new tab
+                      </span>
+                    </span>
+                    <ExternalLink size={15} aria-hidden />
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
           <ProjectGallery
             id={`${project.slug}-gallery`}
             projectName={project.name}
             media={project.media}
           />
         </StorySection>
-        <StorySection id="outcomes" number="06" title="Results & lessons">
-          <div className="grid gap-4 rounded-xl bg-surface p-5 sm:grid-cols-3">
+        <StorySection
+          id="outcomes"
+          number="06"
+          title={project.lessons ? "Results & lessons" : "Results"}
+        >
+          <div
+            className={`grid gap-4 rounded-xl bg-surface p-5 ${project.results.length + (project.lessons ? 1 : 0) > 1 ? "sm:grid-cols-2" : ""}`}
+          >
             {[
-              { title: "Shipped features", content: project.results[0] },
-              {
-                title: project.results[1]
-                  ? "Verified outcomes"
-                  : "Product scope",
-                content: project.results[1] ?? {
-                  text: project.scope.join(" · "),
-                },
-              },
-              { title: "Tradeoffs & lessons", content: project.lessons },
+              ...project.results.map((content, i) => ({
+                title: i === 0 ? "Outcome" : "Additional outcome",
+                content,
+              })),
+              ...(project.lessons
+                ? [{ title: "Lessons learned", content: project.lessons }]
+                : []),
             ].map((item, i) => {
-              const Icon = icons[i];
+              const Icon = icons[i % icons.length];
               return (
                 <article
                   key={item.title}

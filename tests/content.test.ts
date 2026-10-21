@@ -30,10 +30,7 @@ test("content resolves to unique valid portfolio routes", () => {
     );
     assert.ok(item.name && item.summary && item.overview && item.role);
     assert.ok(
-      item.stack.length &&
-        item.contributions.length &&
-        item.decisions.length &&
-        item.results.length,
+      item.stack.length && item.contributions.length && item.results.length,
     );
   }
   assert.equal(getProject("not-a-project"), undefined);
@@ -53,7 +50,8 @@ test("local assets exist and featured cards have visuals", () => {
         existsSync(join(process.cwd(), "public", item.image.src)),
         item.image.src,
       );
-    if (item.liveUrl) assert.equal(new URL(item.liveUrl).protocol, "https:");
+    if (item.productUrl)
+      assert.equal(new URL(item.productUrl).protocol, "https:");
   }
   assert.ok(existsSync(join(process.cwd(), "public", profile.resume.href)));
   for (const file of ["bitlux-screen.webp", "linxx-screen.webp"])
@@ -67,7 +65,7 @@ test("every type of illustrative narrative is counted", () => {
   const item = structuredClone(projects[0]);
   item.problem.demo = true;
   item.solution.demo = true;
-  item.lessons.demo = true;
+  item.lessons = { text: "Illustrative lesson", demo: true };
   item.decisions = item.decisions.map((x) => ({ ...x, demo: true }));
   item.results = item.results.map((x) => ({ ...x, demo: true }));
   assert.equal(
@@ -140,4 +138,45 @@ test("employment dates, company assets, and contribution links are valid", () =>
     for (const point of item.highlights)
       if (point.project) assert.ok(getProject(point.project));
   }
+});
+
+test("owner handoff completes commercial narratives and keeps deferred tools pending", () => {
+  assert.equal(projects.length, 10);
+  assert.equal(getProject("welcome-to-food"), undefined);
+  assert.deepEqual(
+    projects.filter((p) => p.featured).map((p) => p.slug),
+    ["bitlux", "linxx", "skillmatch"],
+  );
+  for (const project of projects)
+    assert.equal(demoFields(project), 0, project.name);
+  for (const tool of tools) assert.ok(demoFields(tool) > 0, tool.name);
+  const onyx = getProject("onyx")!;
+  assert.equal(onyx.status, "Private project");
+  assert.equal(onyx.productUrl, undefined);
+  assert.equal(onyx.walkthroughs, undefined);
+  assert.equal(onyx.media?.length ?? 0, 0);
+  assert.equal(getProject("development-solutions-group")?.lessons, undefined);
+});
+
+test("external walkthroughs stay distinct from product links and local media", () => {
+  const recordings = projects.flatMap((p) => p.walkthroughs ?? []);
+  assert.equal(recordings.length, 5);
+  assert.equal(new Set(recordings.map((r) => r.url)).size, 5);
+  assert.deepEqual(
+    getProject("linxx")?.walkthroughs?.map((r) => r.label),
+    ["Web walkthrough", "Mobile walkthrough"],
+  );
+  for (const recording of recordings) {
+    assert.match(
+      recording.url,
+      /^https:\/\/www\.loom\.com\/share\/[a-f0-9]{32}$/,
+    );
+    assert.ok(recording.label);
+    assert.equal(recording.provider, "Loom");
+  }
+  assert.match(getProject("shopify-app")?.productLinkLabel ?? "", /App Store/);
+  assert.match(
+    getProject("keller-williams")?.productLinkLabel ?? "",
+    /Keller Williams website/,
+  );
 });

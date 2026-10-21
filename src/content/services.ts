@@ -13,8 +13,8 @@ export const services = [
     title: "Full-stack systems",
     description:
       "The APIs, data, and integrations that turn a polished interface into a working product.",
-    skills: ["Node.js", "NestJS", "PostgreSQL"],
-    project: "bitlux",
+    skills: ["Next.js", "MongoDB", "NextAuth"],
+    project: "gaming-platform",
   },
   {
     id: "mobile",
@@ -63,7 +63,7 @@ export const capabilities = [
   {
     title: "Connections",
     description: "Bringing services and product workflows together.",
-    skills: ["Salesforce", "Payment integrations", "Web3", "REST APIs"],
+    skills: ["Clerk", "Plaid", "Web3", "REST APIs"],
   },
   {
     title: "Mobile",

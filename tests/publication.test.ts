@@ -34,7 +34,8 @@ test("a public flag cannot expose demo content", () => {
   });
   assert.equal(state.isPublic, false);
   assert.ok(!state.issues.some((issue) => issue.includes("résumé")));
-  assert.ok(state.issues.some((issue) => issue.includes("Bitlux")));
+  assert.ok(!state.issues.some((issue) => issue.includes("Bitlux")));
+  assert.ok(state.issues.some((issue) => issue.includes("TypeSpark")));
   assert.ok(!state.issues.some((issue) => issue.includes("employment dates")));
   assert.ok(publicationIssues().length > 0);
 });

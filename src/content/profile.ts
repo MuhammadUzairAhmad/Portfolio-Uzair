@@ -30,8 +30,8 @@ export const profile = {
   },
   phone: "+92 323 6639090",
   phoneHref: "tel:+923236639090",
-  currentFocus:
-    "Contributing to a non-embedded Shopify application with React and Ruby on Rails, implementing end-to-end features and system integrations while learning Rails.",
+  recentWork:
+    "Completed Shopify GP-Lite feature work across React and Ruby on Rails, combining embedded and standalone workflows, mobile camera scanning, product labels, and Shopify GraphQL integrations.",
   languages: ["English", "Urdu"],
   certifications: [
     "Jira Fundamentals Badge",

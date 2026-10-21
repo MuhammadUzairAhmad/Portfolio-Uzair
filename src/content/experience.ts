@@ -40,20 +40,14 @@ export const experience: ExperienceEntry[] = [
       {
         title: "Bitlux",
         description:
-          "Built components, fixed bugs, integrated APIs, and generated dynamic ticket-query PDFs with jsPDF.",
+          "Investigated rendering/performance issues, added TanStack Query caching, refined Figma interfaces, and integrated APIs and jsPDF ticket generation.",
         project: "bitlux",
       },
       {
         title: "Onyx",
         description:
-          "Brought the desktop printing workflow to the web with real-time job tracking and provided API integrations.",
+          "Integrated existing desktop printing APIs and a frontend Socket.io listener for job and printer status.",
         project: "onyx",
-      },
-      {
-        title: "Shopify application",
-        description:
-          "Contributed end-to-end features and system integration using React and Ruby on Rails, while learning Rails.",
-        project: "shopify-app",
       },
     ],
     skills: [
@@ -83,13 +77,13 @@ export const experience: ExperienceEntry[] = [
       {
         title: "Hestiya",
         description:
-          "Built the full marketplace frontend and integrated backend APIs, wallet connectivity, and smart contracts for carbon credit trading.",
+          "Built the marketplace frontend from Figma, integrated another developer’s Python APIs and Clerk authentication, and connected wallets and smart contracts.",
         project: "hestiya",
       },
       {
         title: "Gaming Platform",
         description:
-          "Built the application UI, including the spin-wheel game, referral system, and wallet-based purchases.",
+          "Built frontend and backend functionality with authentication, wallets, spin-wheel gameplay, referrals, credits, and user/admin workflows.",
         project: "gaming-platform",
       },
     ],
@@ -117,15 +111,15 @@ export const experience: ExperienceEntry[] = [
     initials: "SH",
     highlights: [
       {
-        title: "Real estate platform",
+        title: "Keller Williams",
         description:
-          "Contributed to a US real-estate application built around a microfrontend architecture.",
+          "Resolved tickets while shadowing the CTO across 27+ interconnected React/Next.js repositories and shared packages.",
         project: "keller-williams",
       },
       {
         title: "Product improvements",
         description:
-          "Worked on i18next integration, internationalization, bug fixes, and frontend improvements within the team.",
+          "Added i18next keys for up to 22 languages, incorporated generated translation PRs, retested repository dependencies, and maintained Jest/CI coverage checks.",
       },
     ],
     skills: [
@@ -159,7 +153,7 @@ export const experience: ExperienceEntry[] = [
       {
         title: "Authentication & APIs",
         description:
-          "Implemented authentication, integrated backend APIs, and contributed to API creation.",
+          "Worked on authentication and API integrations, and created backend APIs under senior developer guidance.",
       },
       {
         title: "Full-stack delivery",

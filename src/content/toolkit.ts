@@ -29,7 +29,7 @@ export const toolkitHighlights = [
     title: "Integrations",
     description:
       "Connecting business services, documents, and everyday workflows.",
-    skills: ["Salesforce", "REST APIs", "Plaid", "jsPDF"],
+    skills: ["Clerk", "REST APIs", "Plaid", "jsPDF"],
     project: "bitlux",
   },
 ];
@@ -187,8 +187,8 @@ export const toolkitGroups = [
         items: ["Wagmi", "Wallet connectivity", "Smart contract integration"],
       },
       {
-        label: "Current learning",
-        items: ["Ruby on Rails", "Shopify non-embedded apps"],
+        label: "Commerce experience",
+        items: ["Ruby on Rails", "Shopify embedded & standalone apps"],
       },
     ],
   },

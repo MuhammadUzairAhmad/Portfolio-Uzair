@@ -60,12 +60,40 @@ for (const route of routes) {
     assert.ok(html.includes(`href="#${project.slug}-gallery"`));
     for (const media of project.media) assert.ok(html.includes(media.caption));
   }
-  if (project?.liveUrl) assert.ok(html.includes(`href="${project.liveUrl}"`));
-  if (project && !project.liveUrl)
+  if (project?.productUrl)
+    assert.ok(
+      html.includes(`href="${project.productUrl.replaceAll("&", "&amp;")}"`),
+    );
+  if (project && !project.productUrl)
     assert.doesNotMatch(html, /Open project<|View live project/);
+  if (project) {
+    assert.doesNotMatch(
+      html,
+      /Illustrative details are marked below|>Demo copy<\/span>/,
+    );
+    for (const recording of project.walkthroughs ?? []) {
+      assert.ok(html.includes(`href="${recording.url}"`));
+      assert.ok(html.includes(recording.label));
+    }
+    if (!project.decisions.length)
+      assert.doesNotMatch(html, /Scrollable technical decisions/);
+    if (!project.lessons) assert.doesNotMatch(html, /Lessons learned/);
+    if (project.slug === "onyx")
+      assert.doesNotMatch(
+        html,
+        /Watch walkthrough|View screenshots &amp; media/,
+      );
+  }
+  if (["/", "/work"].includes(route))
+    assert.doesNotMatch(html, /welcome-to-food|Welcome to Food/);
   console.log(`PASS ${route}`);
 }
-for (const route of ["/missing", "/work/missing", "/tools/missing"]) {
+for (const route of [
+  "/missing",
+  "/work/missing",
+  "/tools/missing",
+  "/work/welcome-to-food",
+]) {
   const response = await fetch(origin + route);
   assert.equal(response.status, 404, route);
   assert.match(await response.text(), /Nothing here/);
