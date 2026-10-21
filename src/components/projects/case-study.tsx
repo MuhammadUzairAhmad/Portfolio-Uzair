@@ -8,7 +8,6 @@ import {
   ShieldCheck,
   Lightbulb,
   PlayCircle,
-  ExternalLink,
 } from "lucide-react";
 import type { PortfolioProject, Narrative } from "@/types/content";
 import { Container, Eyebrow } from "@/components/layout/container";
@@ -18,6 +17,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { Table, TableHead, TableCell } from "@/components/ui/table";
 import { DevicePreview } from "./device-preview";
 import { ToolVisual } from "./tool-visual";
+import { ProjectWalkthroughs } from "./project-walkthroughs";
 import { ProjectGallery } from "./project-gallery";
 import { NextProjectCard } from "./project-card";
 import { demoFields } from "@/lib/content";
@@ -236,9 +236,16 @@ export function CaseStudy({
           </aside>
           <div className="min-w-0">
             <StorySection id="overview" number="01" title="Overview">
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                {project.overview}
-              </p>
+              <div className="space-y-4">
+                {project.overview.split("\n\n").map((paragraph) => (
+                  <p
+                    key={paragraph}
+                    className="text-sm leading-relaxed text-muted-foreground"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </StorySection>
             <StorySection id="challenge" number="02" title="The problem">
               <NarrativeCopy content={project.problem} />
@@ -397,41 +404,10 @@ export function CaseStudy({
             </div>
           </div>
           {!!project.walkthroughs?.length && (
-            <section
+            <ProjectWalkthroughs
               id={`${project.slug}-walkthroughs`}
-              className="mt-8 scroll-mt-6"
-            >
-              <h3 className="text-lg">Project walkthroughs</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                External recordings hosted on Loom.
-              </p>
-              <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                {project.walkthroughs.map((recording) => (
-                  <a
-                    key={recording.url}
-                    href={recording.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-3 rounded-xl border border-border bg-surface p-4 transition-colors hover:border-primary"
-                  >
-                    <PlayCircle
-                      className="shrink-0 text-primary"
-                      size={24}
-                      aria-hidden
-                    />
-                    <span className="flex-1">
-                      <span className="block text-sm font-semibold">
-                        {recording.label}
-                      </span>
-                      <span className="mt-1 block text-xs text-muted-foreground">
-                        Watch on {recording.provider} · opens in a new tab
-                      </span>
-                    </span>
-                    <ExternalLink size={15} aria-hidden />
-                  </a>
-                ))}
-              </div>
-            </section>
+              recordings={project.walkthroughs}
+            />
           )}
           <ProjectGallery
             id={`${project.slug}-gallery`}

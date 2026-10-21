@@ -72,9 +72,10 @@ for (const route of routes) {
       /Illustrative details are marked below|>Demo copy<\/span>/,
     );
     for (const recording of project.walkthroughs ?? []) {
-      assert.ok(html.includes(`href="${recording.url}"`));
+      assert.match(html, /<button[^>]*type="button"/);
       assert.ok(html.includes(recording.label));
     }
+    assert.doesNotMatch(html, /<iframe\b/); // Loom loads only after viewer interaction.
     if (!project.decisions.length)
       assert.doesNotMatch(html, /Scrollable technical decisions/);
     if (!project.lessons) assert.doesNotMatch(html, /Lessons learned/);

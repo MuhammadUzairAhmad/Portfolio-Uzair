@@ -1,5 +1,8 @@
+"use client";
+import { useState } from "react";
+import { MediaLightbox } from "./media-lightbox";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { Expand } from "lucide-react";
 import type { ProjectMedia } from "@/types/content";
 export function ProjectGallery({
   projectName,
@@ -10,6 +13,7 @@ export function ProjectGallery({
   id: string;
   media?: ProjectMedia[];
 }) {
+  const [selected, setSelected] = useState<number | null>(null);
   if (!media?.length) return null;
   return (
     <section
@@ -18,9 +22,9 @@ export function ProjectGallery({
       className="mt-7 scroll-mt-6 border-t border-border pt-6"
     >
       <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
-        <h3 className="text-lg">Screenshots & walkthroughs</h3>
+        <h3 className="text-lg">Screenshots & media</h3>
         <p className="text-xs text-muted-foreground">
-          Select an image to view it full size.
+          Select an image to explore it here.
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -30,12 +34,11 @@ export function ProjectGallery({
             className="min-w-0 overflow-hidden rounded-xl border border-border bg-surface/40"
           >
             {item.kind === "image" ? (
-              <a
-                href={item.src}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Open full-size image: ${item.alt}`}
-                className="group relative flex aspect-[4/3] items-center justify-center bg-surface p-3"
+              <button
+                type="button"
+                onClick={() => setSelected(index)}
+                aria-label={`View image: ${item.alt}`}
+                className="group relative flex w-full aspect-[4/3] items-center justify-center bg-surface p-3"
               >
                 <Image
                   src={item.src}
@@ -46,9 +49,9 @@ export function ProjectGallery({
                   className="h-full w-full object-contain transition-transform duration-200 motion-safe:group-hover:scale-[1.025]"
                 />
                 <span className="absolute bottom-2 right-2 rounded-md border border-border bg-background p-2 text-primary">
-                  <ArrowUpRight size={14} aria-hidden />
+                  <Expand size={14} aria-hidden />
                 </span>
-              </a>
+              </button>
             ) : (
               <div>
                 <video
@@ -100,6 +103,14 @@ export function ProjectGallery({
           </figure>
         ))}
       </div>
+      {selected !== null && (
+        <MediaLightbox
+          items={media}
+          index={selected}
+          onIndexChange={setSelected}
+          onClose={() => setSelected(null)}
+        />
+      )}
     </section>
   );
 }

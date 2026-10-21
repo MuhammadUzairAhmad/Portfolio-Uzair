@@ -91,7 +91,7 @@ For video, place an MP4 or WebM in `public/videos/`, and add the following objec
 }
 ```
 
-The gallery reserves image space, lazy-loads screenshots, and opens the full-size asset on selection. Videos use native controls, inline playback, and `preload="none"`; there is no autoplay. Add captions/transcripts when a recording has speech or meaningful audio. There are no local video entries currently. Five owner-supplied Loom recordings are separate external links, so they do not require local files or invented thumbnails. Actual playback/access should be checked in the publication environment.
+The gallery reserves image space, lazy-loads screenshots, and opens an on-page viewer on selection. Videos use native controls, inline playback, and `preload="none"`; there is no autoplay. Add captions/transcripts when a recording has speech or meaningful audio. There are no local video entries currently. Five owner-supplied Loom recordings open as on-demand embedded players in the same viewer, so they do not require local files or invented thumbnails. Actual playback/access should be checked in the publication environment.
 
 A supplied `productUrl` shows an external project button; `productLinkLabel` provides an accurate label, such as an App Store listing or company website. Without it, no demo link is invented; the case study and any gallery remain usable. Projects without a screenshot use a typographic cover. Add `image` when a real screen is available, and the cover switches automatically. A recorded URL does not guarantee that a third-party deployment is still accessible.
 
@@ -138,4 +138,10 @@ walkthroughs: [
 ],
 ```
 
-The UI links directly to the recording in a new tab and identifies Loom. It does not embed, download, autoplay, or fabricate a thumbnail. Keep web/mobile recordings separately labeled. Optional `projectStatus` is `Ongoing product` or `Completed feature work`; this is independent of employment dates and `status` access classification. Keep preview/noindex until launch review.
+The recording button opens an on-page native dialog. Its Loom iframe mounts only while open and uses autoplay=0. Closing or switching videos unmounts the player. A secondary Open on Loom link is available for playback trouble. Images use the same viewer with previous/next controls and arrow keys; Escape closes the dialog. No fabricated thumbnails or video downloads are added. Keep web/mobile recordings separately labeled. Optional `projectStatus` is `Ongoing product` or `Completed feature work`; this is independent of employment dates and `status` access classification. Keep preview/noindex until launch review.
+
+## Tone and theme
+
+`docs/PROJECT-COPY.md` contains the audience-focused project summaries, overviews, and outcomes. Lead with product context and delivered work, keep implementation choices deeper in the case study, and place learning after contribution. Preserve the owner handoff for facts and contribution boundaries.
+
+The header theme control is a light/dark button. New visitors start in light mode; explicit choices persist through next-themes. There is no system dropdown.

@@ -47,3 +47,8 @@ The changes are local; no remote, push, or deployment was added.
 
 - `e82d959` — apply ten owner-supplied case studies, correct ownership and completed/ongoing product context, add five labeled external Loom walkthroughs, preserve screenshot galleries, remove Welcome to Food, and adapt optional result/decision content.
 - Follow-up documentation commit records the reduced remaining-content list, source precedence, editing fields, browser previews, and final production verification. No remote or publication was added.
+
+### Audience and interaction improvements — 22 October 2026
+
+- `067ff6c` — expand all ten main project introductions and overviews for clients, recruiters and engineers; save a readable copy document and content review.
+- Follow-up interaction phase adds native image/Loom lightboxes, keyboard/focus behavior, direct persistent light/dark switching, validation and updated screenshots.
