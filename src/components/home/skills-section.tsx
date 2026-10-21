@@ -28,8 +28,8 @@ export function SkillsSection() {
           action="Full libraries & tools"
         />
         <p className="-mt-2 mb-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
-          The tools matter most when they help solve the right problem. Here’s
-          how I put them to work.
+          Each capability links to a project where I used it. Explore the work
+          behind the stack.
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {toolkitHighlights.map((item) => {
@@ -47,7 +47,7 @@ export function SkillsSection() {
                   aria-hidden
                 />
                 <h3 className="text-lg">{item.title}</h3>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {item.description}
                 </p>
                 <div className="mb-5 mt-4 flex flex-wrap gap-1.5">
@@ -59,7 +59,7 @@ export function SkillsSection() {
                   <Link
                     href={`/work/${project.slug}`}
                     prefetch
-                    className="mt-auto flex items-center justify-between gap-3 border-t border-border pt-3 text-[11px] font-medium text-primary"
+                    className="mt-auto flex items-center justify-between gap-3 border-t border-border pt-3 text-xs font-medium text-primary"
                   >
                     <span>Related work: {project.name}</span>
                     <ArrowUpRight size={13} className="shrink-0" aria-hidden />

@@ -15,9 +15,9 @@ export default function Home() {
       <Hero />
       <Services />
       <SelectedWork />
+      <ExperienceSection />
       <SkillsSection />
       <ToolsSection />
-      <ExperienceSection />
       <ApproachSection />
       <AboutTeaser />
       <ContactCta />

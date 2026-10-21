@@ -16,24 +16,28 @@ export function ProjectFilters({
   return (
     <>
       <div className="mb-6 flex flex-wrap gap-2" aria-label="Filter projects">
-        {["All", "Web applications", "Mobile apps", "Platforms"].map(
-          (label) => (
-            <button
-              key={label}
-              type="button"
-              aria-pressed={label === filter}
-              onClick={() => setFilter(label)}
-              className={cn(
-                "min-h-10 rounded-md border px-4 py-2 text-xs transition-colors",
-                label === filter
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "border-border hover:bg-surface",
-              )}
-            >
-              {label}
-            </button>
-          ),
-        )}
+        {[
+          "All",
+          "Web applications",
+          "Mobile apps",
+          "Full-stack",
+          "Platforms",
+        ].map((label) => (
+          <button
+            key={label}
+            type="button"
+            aria-pressed={label === filter}
+            onClick={() => setFilter(label)}
+            className={cn(
+              "min-h-10 rounded-md border px-4 py-2 text-xs transition-colors",
+              label === filter
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-border hover:bg-surface",
+            )}
+          >
+            {label}
+          </button>
+        ))}
         <Link
           href="/tools"
           className="flex min-h-10 items-center rounded-md border border-border px-4 py-2 text-xs hover:bg-surface"

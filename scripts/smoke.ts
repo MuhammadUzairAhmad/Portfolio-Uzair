@@ -1,3 +1,4 @@
+import { services } from "../src/content/services.ts";
 import { experience } from "../src/content/experience.ts";
 import { toolArtwork } from "../src/content/tool-art.ts";
 import assert from "node:assert/strict";
@@ -40,7 +41,32 @@ for (const route of routes) {
         );
     }
   }
-  if (route === "/") assert.match(html, /id="skills"/);
+  if (route === "/") {
+    assert.match(html, /id="skills"/);
+    assert.match(html, /Full-stack spotlight/);
+    assert.match(html, /Gaming Platform/);
+    assert.match(html, /Frontend &amp; backend development/);
+    assert.match(html, /uzair-mern-stack-resume.pdf/);
+    for (const service of services)
+      assert.ok(
+        html.includes(service.description.replaceAll("&", "&amp;")),
+        service.title,
+      );
+  }
+  if (route === "/contact") {
+    assert.match(html, /Hiring for your team/);
+    assert.match(html, /Building or improving a product/);
+    assert.match(html, /subject=Software%20engineering%20role/);
+    assert.match(html, /subject=Project%20enquiry/);
+  }
+  if (route.startsWith("/tools/")) {
+    assert.match(html, /Project snapshot/);
+    assert.doesNotMatch(
+      html,
+      /Replace this draft|Add a verified lesson|framework and public URL remain to be verified|Illustrative details/,
+    );
+    assert.doesNotMatch(html, /Scrollable technical decisions/);
+  }
   if (route === "/about") {
     assert.match(html, /id="toolkit"/);
     assert.match(html, /Jul 2025/);
@@ -75,6 +101,7 @@ for (const route of routes) {
       assert.match(html, /<button[^>]*type="button"/);
       assert.ok(html.includes(recording.label));
     }
+    if (project.implementation) assert.match(html, /Contribution map/);
     assert.doesNotMatch(html, /<iframe\b/); // Loom loads only after viewer interaction.
     if (!project.decisions.length)
       assert.doesNotMatch(html, /Scrollable technical decisions/);

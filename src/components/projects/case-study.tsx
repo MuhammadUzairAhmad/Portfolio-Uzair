@@ -4,7 +4,6 @@ import {
   ArrowRight,
   CheckCircle2,
   Code2,
-  Users,
   ShieldCheck,
   Lightbulb,
   PlayCircle,
@@ -18,21 +17,11 @@ import { Table, TableHead, TableCell } from "@/components/ui/table";
 import { DevicePreview } from "./device-preview";
 import { ToolVisual } from "./tool-visual";
 import { ProjectWalkthroughs } from "./project-walkthroughs";
+import { ImplementationMap } from "./implementation-map";
+import { ToolSnapshot } from "./tool-snapshot";
 import { ProjectGallery } from "./project-gallery";
 import { NextProjectCard } from "./project-card";
 import { demoFields } from "@/lib/content";
-const technologyRoles: Record<string, string> = {
-  "Next.js": "Web interface",
-  React: "Interface",
-  TypeScript: "Application language",
-  NestJS: "API / business logic",
-  MongoDB: "Database",
-  Salesforce: "CRM integration",
-  Capacitor: "Mobile wrapper",
-  Plaid: "Financial integration",
-  Wagmi: "Wallet connections",
-  "Tailwind CSS": "Styling",
-};
 const sections = [
   { id: "overview", label: "Overview" },
   { id: "challenge", label: "The problem" },
@@ -90,6 +79,8 @@ export function CaseStudy({
 }) {
   const isTool = project.category === "Tools";
   const icons = [Code2, ShieldCheck, Lightbulb];
+  if (isTool && demoFields(project) > 0)
+    return <ToolSnapshot project={project} next={next} />;
   return (
     <main id="main-content">
       <Container className="pt-7">
@@ -146,35 +137,47 @@ export function CaseStudy({
             { label: "Role", value: project.role },
             { label: "Team", value: project.team },
             { label: "Platform", value: project.platform },
-            { label: "Stack", value: project.stack.slice(0, 3).join(" · ") },
+            {
+              label: "Stack",
+              value: (
+                project.keyTechnologies ?? project.stack.slice(0, 3)
+              ).join(" · "),
+            },
           ].map((item) => (
             <div
               key={item.label}
               className="sm:border-r sm:border-border sm:px-5 sm:first:pl-0 sm:last:border-0"
             >
               <dt className="text-xs font-semibold">{item.label}</dt>
-              <dd className="mt-1.5 text-[11px] text-muted-foreground">
+              <dd className="mt-1.5 text-sm text-muted-foreground">
                 {item.value}
               </dd>
             </div>
           ))}
         </dl>
-        <div className="relative mt-5 flex aspect-[1.8] items-center justify-center overflow-hidden rounded-xl bg-[#faf5e9] sm:aspect-[2.15] dark:bg-[#121d17]">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#d5c59935,transparent_75%)] dark:bg-[radial-gradient(ellipse_at_center,#a7d54040,transparent_68%)]" />
-          {project.illustration ? (
-            <ToolVisual
-              kind={project.illustration}
-              detailed
-              className="h-full w-full px-5 py-6"
-              eager
-            />
-          ) : (
-            <DevicePreview
-              project={project}
-              className="relative h-[94%] w-[94%]"
-            />
-          )}
-        </div>
+        {!(project.image || project.mockup || project.illustration) &&
+        project.implementation ? (
+          <div className="mt-5">
+            <ImplementationMap map={project.implementation} compact />
+          </div>
+        ) : (
+          <div className="relative mt-5 flex aspect-[1.8] items-center justify-center overflow-hidden rounded-xl bg-[#faf5e9] sm:aspect-[2.15] dark:bg-[#121d17]">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#d5c59935,transparent_75%)] dark:bg-[radial-gradient(ellipse_at_center,#a7d54040,transparent_68%)]" />
+            {project.illustration ? (
+              <ToolVisual
+                kind={project.illustration}
+                detailed
+                className="h-full w-full px-5 py-6"
+                eager
+              />
+            ) : (
+              <DevicePreview
+                project={project}
+                className="relative h-[94%] w-[94%]"
+              />
+            )}
+          </div>
+        )}
         <div className="mt-4 flex flex-wrap items-center justify-end gap-3">
           {!project.productUrl && project.status === "Private project" && (
             <p className="mr-auto text-xs text-muted-foreground">
@@ -224,9 +227,9 @@ export function CaseStudy({
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  className="flex items-center gap-3 rounded py-2 text-[11px] text-muted-foreground hover:bg-surface hover:text-primary"
+                  className="flex items-center gap-3 rounded py-2 text-sm text-muted-foreground hover:bg-surface hover:text-primary"
                 >
-                  <span className="font-mono text-[10px]">0{i + 1}</span>
+                  <span className="font-mono text-xs">0{i + 1}</span>
                   {section.id === "outcomes" && !project.lessons
                     ? "Results"
                     : section.label}
@@ -237,46 +240,20 @@ export function CaseStudy({
           <div className="min-w-0">
             <StorySection id="overview" number="01" title="Overview">
               <div className="space-y-4">
-                {project.overview.split("\n\n").map((paragraph) => (
-                  <p
-                    key={paragraph}
-                    className="text-sm leading-relaxed text-muted-foreground"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                {(project.context ?? project.overview)
+                  .split("\n\n")
+                  .map((paragraph) => (
+                    <p
+                      key={paragraph}
+                      className="text-sm leading-relaxed text-muted-foreground"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
               </div>
             </StorySection>
             <StorySection id="challenge" number="02" title="The problem">
               <NarrativeCopy content={project.problem} />
-              <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                {[
-                  {
-                    title: "The experience",
-                    text: project.scope[0],
-                    Icon: Users,
-                  },
-                  {
-                    title: "The workflow",
-                    text: project.scope[1] ?? project.platform,
-                    Icon: Code2,
-                  },
-                ].map(({ title, text, Icon }) => (
-                  <div
-                    key={title}
-                    className="rounded-lg border border-border bg-surface/60 p-4"
-                  >
-                    <Icon
-                      size={20}
-                      className="mb-3 text-primary"
-                      strokeWidth={1.5}
-                      aria-hidden
-                    />
-                    <h3 className="text-sm">{title}</h3>
-                    <p className="mt-1 text-xs text-muted-foreground">{text}</p>
-                  </div>
-                ))}
-              </div>
             </StorySection>
           </div>
         </div>
@@ -309,24 +286,6 @@ export function CaseStudy({
         >
           <div className="mb-5">
             <NarrativeCopy content={project.solution} />
-          </div>
-          <div className="mb-5 grid gap-3 sm:grid-cols-3">
-            {project.stack.slice(0, 3).map((tech) => (
-              <div
-                key={tech}
-                className="relative flex items-center gap-3 rounded-lg border border-border p-4"
-              >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-foreground text-lg font-bold text-background">
-                  {tech[0]}
-                </span>
-                <div>
-                  <p className="text-sm font-semibold">{tech}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    {technologyRoles[tech] ?? "Project technology"}
-                  </p>
-                </div>
-              </div>
-            ))}
           </div>
           {project.decisions.length > 0 && (
             <div
@@ -367,41 +326,32 @@ export function CaseStudy({
           )}
         </StorySection>
         <StorySection id="implementation" number="05" title="Implementation">
-          <div className="grid items-center gap-6 sm:grid-cols-2">
-            <div className="flex aspect-[1.7] items-center justify-center overflow-hidden rounded-lg border border-border bg-surface">
-              {project.illustration ? (
-                <ToolVisual
-                  kind={project.illustration}
-                  detailed
-                  className="w-full"
-                />
-              ) : (
-                <DevicePreview project={project} />
-              )}
-            </div>
-            <div>
-              <h3 className="mb-4 text-sm">Key features</h3>
-              <ul className="space-y-3">
-                {project.scope.map((scope) => (
-                  <li
-                    key={scope}
-                    className="flex items-center gap-3 text-sm text-muted-foreground"
-                  >
-                    <CheckCircle2
-                      size={16}
-                      className="shrink-0 text-primary"
-                      aria-hidden
-                    />
-                    {scope}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {project.stack.slice(3).map((tech) => (
-                  <Badge key={tech}>{tech}</Badge>
-                ))}
-              </div>
-            </div>
+          {project.implementation && (project.image || project.mockup) ? (
+            <ImplementationMap map={project.implementation} />
+          ) : (
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {project.scope.map((scope) => (
+                <li
+                  key={scope}
+                  className="flex items-start gap-3 rounded-lg border border-border p-4 text-sm leading-relaxed text-muted-foreground"
+                >
+                  <CheckCircle2
+                    size={17}
+                    className="mt-0.5 shrink-0 text-primary"
+                    aria-hidden
+                  />
+                  {scope}
+                </li>
+              ))}
+            </ul>
+          )}
+          <div
+            className="mt-5 flex flex-wrap gap-2"
+            aria-label="Project technologies"
+          >
+            {project.stack.map((tech) => (
+              <Badge key={tech}>{tech}</Badge>
+            ))}
           </div>
           {!!project.walkthroughs?.length && (
             <ProjectWalkthroughs

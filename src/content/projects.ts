@@ -1,5 +1,5 @@
 import type { PortfolioProject } from "../types/content.ts";
-// Facts: owner handoff, 21 October 2026. Audience-focused editing, 22 October 2026.
+// Facts: owner handoff; contribution maps summarize documented scope, not measured outcomes.
 export const projects: PortfolioProject[] = [
   {
     slug: "bitlux",
@@ -122,6 +122,28 @@ export const projects: PortfolioProject[] = [
     },
     projectStatus: "Ongoing product",
     productUrl: "https://bitlux-ops.vercel.app/",
+    context:
+      "Bitlux supports the work behind private-jet bookings, bringing trip requests, operational screens, and ticket documents into a web application. I contributed to an existing product where performance issues, inconsistent data rendering, and changing interface designs needed attention alongside new feature work.",
+    implementation: {
+      title: "Improving the booking workflow",
+      description: "The areas I changed within the existing application.",
+      steps: [
+        {
+          title: "Interface",
+          description: "Updated Figma screens, validation and toast feedback.",
+        },
+        {
+          title: "Requests & caching",
+          description:
+            "Introduced TanStack Query for API handling and server-data caching.",
+        },
+        {
+          title: "Operational documents",
+          description:
+            "Integrated backend APIs and generated dynamic ticket PDFs with jsPDF.",
+        },
+      ],
+    },
   },
   {
     slug: "linxx",
@@ -276,6 +298,30 @@ export const projects: PortfolioProject[] = [
         provider: "Loom",
       },
     ],
+    context:
+      "Linxx connects marketplace listings with ambassador and shopper workflows across web and mobile. Its features include job discovery, GPS-related functionality, approvals, and a Plaid integration. My work focused on connecting these interfaces to backend services and making the affected user journeys work from beginning to end.",
+    implementation: {
+      title: "Connected across web and mobile",
+      description:
+        "My integration, debugging and verification work across the product.",
+      steps: [
+        {
+          title: "Marketplace journeys",
+          description:
+            "Connected backend APIs to listings, approvals and other interfaces.",
+        },
+        {
+          title: "Mobile behavior",
+          description:
+            "Investigated and fixed issues in the Capacitor mobile experience.",
+        },
+        {
+          title: "Flow verification",
+          description:
+            "Tested affected end-to-end journeys across web and mobile.",
+        },
+      ],
+    },
   },
   {
     slug: "skillmatch",
@@ -359,6 +405,30 @@ export const projects: PortfolioProject[] = [
       text: "Built my foundation in professional frontend development, reusable component design, state management, validation, and API integration, while gaining initial backend experience with senior support.",
     },
     productUrl: "https://www.skillmatch.tech/",
+    context:
+      "SkillMatch brings candidate profiles, job workflows, assessments, and recruitment dashboards into one platform. Candidates and hiring teams need connected interfaces to move between account details, opportunities, and administrative tasks. I worked within the development team to build the screens and integrations behind those experiences.",
+    implementation: {
+      title: "Building connected recruitment features",
+      description:
+        "Frontend delivery and senior-guided backend contributions within the team.",
+      steps: [
+        {
+          title: "Screens & forms",
+          description:
+            "Built responsive candidate, recruiter and admin interfaces with validation.",
+        },
+        {
+          title: "Shared frontend",
+          description:
+            "Developed reusable components and worked with Redux Toolkit and TanStack Query.",
+        },
+        {
+          title: "Backend services",
+          description:
+            "Integrated APIs and created APIs under senior developer guidance.",
+        },
+      ],
+    },
   },
   {
     slug: "hestiya",
@@ -452,13 +522,15 @@ export const projects: PortfolioProject[] = [
         provider: "Loom",
       },
     ],
+    context:
+      "Hestiya Marketplace is a Web3 carbon-credit platform for discovering credits, trading, managing holdings, and retirement. The project needed a frontend that brought together conventional account and marketplace features with wallet connections and blockchain transactions. I owned the React frontend implementation, starting from supplied Figma designs.",
   },
   {
     slug: "gaming-platform",
     mockup: "/images/projects/gaming-platform.webp",
     name: "Gaming Platform",
     category: "Web platforms",
-    subtitle: "Games, referrals, and connected rewards",
+    subtitle: "A complete application, built from a frontend demo",
     summary:
       "A wallet-connected gaming product developed from a client’s v0 demo. I built frontend and backend features covering sign-in, gameplay, referrals, credits, and administrative workflows, and integrated the client-provided smart contract.",
     image: {
@@ -470,6 +542,7 @@ export const projects: PortfolioProject[] = [
     team: "Weiblocks",
     platform: "Web",
     status: "Public link",
+    keyTechnologies: ["Next.js", "MongoDB", "NextAuth"],
     stack: [
       "Next.js",
       "TypeScript",
@@ -546,6 +619,36 @@ export const projects: PortfolioProject[] = [
         provider: "Loom",
       },
     ],
+    context:
+      "The client began with a frontend demo created in v0. To become a working product, it needed application data, authentication, wallet connections, gameplay, and the user and administrative workflows behind referrals and credits. I converted that starting point into a Next.js application and built both frontend and backend functionality.",
+    implementation: {
+      title: "Full-stack delivery, from demo to product",
+      description:
+        "I built the application frontend and backend. The client supplied the smart contract.",
+      steps: [
+        {
+          title: "Frontend & backend",
+          description:
+            "Converted the v0 demo into a working Next.js application.",
+        },
+        {
+          title: "Accounts & application data",
+          description:
+            "Implemented NextAuth Google/credentials authentication and MongoDB-backed features.",
+        },
+        {
+          title: "Wallets & gameplay",
+          description:
+            "Integrated wallets and the client’s contract alongside spins, referrals, bonuses and credits.",
+        },
+        {
+          title: "User & admin workflows",
+          description:
+            "Built history views, account management, approvals and configurable reward settings.",
+        },
+      ],
+    },
+    cardSubtitle: "Full-stack application · Frontend + backend",
   },
   {
     slug: "development-solutions-group",
@@ -596,6 +699,8 @@ export const projects: PortfolioProject[] = [
       },
     ],
     productUrl: "https://development-solution-group.vercel.app/",
+    context:
+      "Development Solutions Group needed a company website that followed the client’s requested design and presented its business and projects. The scope was focused: responsive Home, About, Projects, and Contact interfaces with a consistent presentation across screen sizes.",
   },
   {
     role: "Software Engineer",
@@ -675,6 +780,8 @@ export const projects: PortfolioProject[] = [
         provider: "Loom",
       },
     ],
+    context:
+      "Get Foodies is a company food application for iOS and Android, with onboarding, multilingual interfaces, and location-related features. The project started with Figma designs that needed to become a mobile interface connected to backend services. I built the application UI from scratch using React Native and Expo.",
   },
   {
     role: "Frontend Developer",
@@ -740,6 +847,30 @@ export const projects: PortfolioProject[] = [
     ],
     lessons: {
       text: "Learned to consume event-driven updates through a frontend Socket.io listener and represent the different stages of a physical printing workflow.",
+    },
+    context:
+      "Onyx desktop printing software connects to physical printers, accepts PDF jobs and copy quantities, and reports job and printer states. The client wanted different users to operate the workflow through a browser from different locations, rather than relying on a single computer’s interface. My role was to build and integrate the web frontend around the existing desktop application.",
+    implementation: {
+      title: "Browser operation, desktop execution",
+      description:
+        "The web frontend integrated existing desktop APIs and their event source.",
+      steps: [
+        {
+          title: "Web actions",
+          description:
+            "Connected browser controls to the desktop application’s APIs.",
+        },
+        {
+          title: "Existing print system",
+          description:
+            "The desktop software accepted PDF/copy commands and executed printing.",
+        },
+        {
+          title: "Status in the browser",
+          description:
+            "A frontend Socket.io listener displayed job stages and printer connectivity.",
+        },
+      ],
     },
   },
   {
@@ -828,6 +959,30 @@ export const projects: PortfolioProject[] = [
     },
     productUrl: "https://kw.com/",
     productLinkLabel: "Visit Keller Williams website",
+    context:
+      "Keller Williams provided experience working within a real-estate platform made up of more than 27 interconnected React/Next.js repositories. These included applications and shared packages, such as table components, with translation support for up to 22 languages. I contributed as a Junior Software Engineer at Strategist HUB while shadowing the CTO.",
+    implementation: {
+      title: "Working through repository dependencies",
+      description:
+        "An explanatory view of my ticket and translation workflow in the existing platform.",
+      steps: [
+        {
+          title: "Trace the issue",
+          description:
+            "Investigated bugs and missing keys through parent/child repositories.",
+        },
+        {
+          title: "Update & review",
+          description:
+            "Added i18next pairs and incorporated the team’s generated translation PRs.",
+        },
+        {
+          title: "Verify dependants",
+          description:
+            "Progressed child merges, retested parents and updated affected Jest/coverage checks.",
+        },
+      ],
+    },
   },
   {
     role: "Freelance Full-Stack Developer",
@@ -909,5 +1064,29 @@ export const projects: PortfolioProject[] = [
     productUrl:
       "https://apps.shopify.com/groovepacker-lite?st_source=autocomplete&surface_detail=autocomplete_apps",
     productLinkLabel: "View Shopify App Store listing",
+    context:
+      "GP-Lite / Barcode Buddy supports Shopify picking, packing, barcode scanning, and product-label printing. The existing application was embedded-only, and the feature work needed mobile camera scanning and standalone workflows alongside that experience. I completed the described work as a freelance full-stack developer, contributing across React and Ruby on Rails.",
+    implementation: {
+      title: "Embedded and standalone workflows",
+      description:
+        "Completed feature work spanning React, Rails and Shopify integrations.",
+      steps: [
+        {
+          title: "Camera scanning",
+          description:
+            "iOS/Android camera selection, zoom, torch and permission handling.",
+        },
+        {
+          title: "Shopify data",
+          description:
+            "GraphQL product, variant, inventory-location and metafield integrations.",
+        },
+        {
+          title: "Print & rescan",
+          description:
+            "Configurable labels, barcode/PDF generation, scan tags and rescan improvements.",
+        },
+      ],
+    },
   },
 ];

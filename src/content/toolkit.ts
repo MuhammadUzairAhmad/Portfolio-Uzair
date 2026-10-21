@@ -13,15 +13,15 @@ export const toolkitHighlights = [
     title: "Backend & data",
     description:
       "APIs, authentication, and the data models behind useful products.",
-    skills: ["Node.js", "NestJS", "MongoDB", "PostgreSQL"],
-    project: "skillmatch",
+    skills: ["Next.js", "MongoDB", "NextAuth"],
+    project: "gaming-platform",
   },
   {
     id: "mobile",
     title: "Mobile",
     description:
       "Shared product thinking across web and cross-platform mobile apps.",
-    skills: ["React Native", "Expo", "Capacitor", "i18next"],
+    skills: ["React Native", "Expo", "Redux Toolkit", "i18n"],
     project: "get-foodies",
   },
   {
@@ -29,7 +29,7 @@ export const toolkitHighlights = [
     title: "Integrations",
     description:
       "Connecting business services, documents, and everyday workflows.",
-    skills: ["Clerk", "REST APIs", "Plaid", "jsPDF"],
+    skills: ["REST APIs", "TanStack Query", "jsPDF"],
     project: "bitlux",
   },
 ];

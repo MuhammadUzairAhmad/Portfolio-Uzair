@@ -4,12 +4,13 @@ export const profile = {
   name: "Muhammad Uzair Ahmad",
   shortName: "Uzair",
   role: "Software Engineer · MERN & Next.js",
+  heroRole: "Software Engineer · Web & Mobile",
   location: "Faisalabad, Pakistan",
   timeZone: "UTC+05:00",
   heroProjectSlug: "bitlux",
   headline: ["Good ideas.", "Carefully built."],
   introduction:
-    "I’m a software engineer with 3+ years of experience building web and mobile products, from thoughtful interfaces to the systems behind them.",
+    "I build and improve React/Next.js products—from dashboards and API integrations to full-stack features and mobile workflows—with 3+ years of team and client experience.",
   about:
     "I’m Muhammad Uzair Ahmad, a software engineer based in Faisalabad, Pakistan. I have 3+ years of experience with the MERN stack, Next.js, NestJS, and full-stack feature delivery. My work spans responsive interfaces, APIs, React Native apps, and selected Web3 integrations.",
   philosophy: "I care about how it looks. And how it works.",

@@ -46,8 +46,15 @@ export type PortfolioProject = {
   platform: string;
   status: "Public link" | "Private project" | "Preview";
   stack: string[];
+  keyTechnologies?: string[];
   scope: string[];
   overview: string;
+  context?: string;
+  implementation?: {
+    title: string;
+    description: string;
+    steps: { title: string; description: string }[];
+  };
   contributions: { title: string; description: string }[];
   problem: Narrative;
   solution: Narrative;

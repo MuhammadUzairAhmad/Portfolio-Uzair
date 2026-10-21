@@ -11,6 +11,7 @@ import { GridBackground } from "@/components/ui/grid-background";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/brand-icons";
 import { Container } from "@/components/layout/container";
 import { PageIntro } from "@/components/layout/page-intro";
+import { ContactPaths } from "@/components/contact/contact-paths";
 import { CopyEmail } from "@/components/contact/copy-email";
 import { ButtonLink } from "@/components/ui/button";
 import { profile } from "@/content/profile";
@@ -27,14 +28,9 @@ export default function ContactPage() {
         <GridBackground size="large" glow />
         <PageIntro
           eyebrow="Contact"
-          title={
-            <>
-              What are you
-              <br />
-              working on?
-            </>
-          }
-          description="I’m always open to interesting projects, collaborations or just a conversation about ideas, products and technology."
+          title="Let’s talk."
+          subtitle="Your next project. Or your next teammate."
+          description="I work with product teams and direct clients on web and mobile applications. Share a role, a new build, or an existing product that needs improvement."
           note={
             <>
               Ideas,
@@ -47,6 +43,7 @@ export default function ContactPage() {
         />
       </div>
       <Container className="pb-8">
+        <ContactPaths />
         <section
           className="rounded-xl border border-border bg-surface/70 p-5 sm:p-7"
           aria-label="Contact details"

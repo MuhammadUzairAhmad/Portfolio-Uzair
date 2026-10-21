@@ -37,15 +37,15 @@ export function ContactCta() {
       <Container className="flex flex-col justify-between gap-5 py-12 sm:flex-row sm:items-center">
         <div>
           <Eyebrow>Get in touch</Eyebrow>
-          <h2 className="mt-1.5">Have something in mind?</h2>
+          <h2 className="mt-1.5">A project in mind? A role on your team?</h2>
           <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
-            I’m always open to discussing new projects, interesting ideas or
-            opportunities to be part of your vision.
+            Explore my experience for your team, or tell me about a product you
+            want to build or improve.
           </p>
         </div>
         <div className="flex flex-col items-start gap-5 sm:items-end">
           <ButtonLink href="/contact">
-            Let’s talk
+            Get in touch
             <ArrowRight size={15} aria-hidden />
           </ButtonLink>
           <SocialLinks />
@@ -63,10 +63,8 @@ export async function Footer() {
           UZAIR<span className="text-primary">.</span>
         </Link>
         <p className="text-[10px] text-muted-foreground">
-          {contentSettings.demoMode && (
-            <span className="mr-3">Preview · Demo copy labeled</span>
-          )}
-          © {new Date().getFullYear()} {profile.name}
+          {contentSettings.demoMode && <span className="mr-3">Preview</span>}©{" "}
+          {new Date().getFullYear()} {profile.name}
         </p>
       </Container>
     </footer>

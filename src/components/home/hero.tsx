@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { GridBackground } from "@/components/ui/grid-background";
 import { preload } from "react-dom";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight, MapPin, FileText } from "lucide-react";
 import { Container, Eyebrow } from "@/components/layout/container";
 import { ButtonLink } from "@/components/ui/button";
 import { DevicePreview } from "@/components/projects/device-preview";
@@ -15,10 +15,10 @@ export function Hero() {
       <GridBackground size="small" />
       <Container className="grid items-center gap-5 border-b border-border py-10 md:grid-cols-[1.06fr_1fr] md:gap-4 md:py-12 lg:py-14">
         <div className="relative z-10">
-          <Eyebrow className="max-w-64 leading-relaxed text-foreground">
+          <Eyebrow className="max-w-sm leading-relaxed text-foreground">
             {profile.name}
             <br />
-            {profile.role}
+            <span className="tracking-[.08em]">{profile.heroRole}</span>
           </Eyebrow>
           <h1 className="mt-4">
             {profile.headline[0]}
@@ -39,7 +39,19 @@ export function Hero() {
               Let’s talk
             </ButtonLink>
           </div>
-          <p className="mt-6 flex items-center gap-2 text-xs text-muted-foreground">
+          <a
+            href={profile.resume.href}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-primary underline underline-offset-4"
+          >
+            <FileText size={16} aria-hidden />
+            View résumé{" "}
+            <span className="text-xs font-normal text-muted-foreground">
+              PDF
+            </span>
+          </a>
+          <p className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
             <MapPin
               size={15}
               className="fill-primary text-primary"

@@ -180,3 +180,36 @@ test("external walkthroughs stay distinct from product links and local media", (
     /Keller Williams website/,
   );
 });
+
+test("Gaming Platform remains an explicit full-stack example with documented ownership", () => {
+  const gaming = getProject("gaming-platform")!;
+  assert.equal(gaming.role, "Full-Stack Developer");
+  assert.deepEqual(gaming.keyTechnologies, ["Next.js", "MongoDB", "NextAuth"]);
+  assert.match(gaming.cardSubtitle ?? "", /Frontend \+ backend/);
+  assert.ok(gaming.implementation);
+  assert.match(
+    gaming.implementation.description,
+    /client supplied the smart contract/,
+  );
+  assert.ok(
+    gaming.stack.includes("MongoDB") && gaming.stack.includes("NextAuth"),
+  );
+  assert.equal(
+    toolkitHighlights.find((item) => item.id === "backend")?.project,
+    gaming.slug,
+  );
+});
+
+test("contribution maps contain useful descriptions without replacing real media", () => {
+  for (const project of projects) {
+    if (!project.implementation) continue;
+    assert.ok(
+      project.implementation.title && project.implementation.description,
+    );
+    assert.ok(project.implementation.steps.length >= 3);
+    for (const step of project.implementation.steps)
+      assert.ok(step.title && step.description);
+  }
+  assert.equal(getProject("bitlux")?.media?.length, 4);
+  assert.equal(getProject("linxx")?.media?.length, 7);
+});

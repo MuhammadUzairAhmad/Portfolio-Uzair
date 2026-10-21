@@ -48,14 +48,24 @@ export default function WorkPage() {
               .filter((p) => p.featured)
               .map((p, i) => ({
                 slug: p.slug,
-                tags: tags(p.category),
+                tags: [
+                  ...tags(p.category),
+                  ...(p.role.toLowerCase().includes("full-stack")
+                    ? ["Full-stack"]
+                    : []),
+                ],
                 content: <ProjectCard project={p} archive index={i} />,
               }))}
             other={projects
               .filter((p) => !p.featured)
               .map((p, i) => ({
                 slug: p.slug,
-                tags: tags(p.category),
+                tags: [
+                  ...tags(p.category),
+                  ...(p.role.toLowerCase().includes("full-stack")
+                    ? ["Full-stack"]
+                    : []),
+                ],
                 content: (
                   <Link
                     href={projectHref(p)}
@@ -68,7 +78,7 @@ export default function WorkPage() {
                     <div className="min-w-0 flex-1">
                       <h3 className="text-sm sm:text-base">{p.name}</h3>
                       <p className="mt-0.5 text-xs text-muted-foreground">
-                        {p.subtitle}
+                        {p.cardSubtitle ?? p.subtitle}
                       </p>
                     </div>
                     <span className="hidden text-xs sm:block">

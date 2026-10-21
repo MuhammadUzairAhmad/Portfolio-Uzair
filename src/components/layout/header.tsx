@@ -1,9 +1,10 @@
 "use client";
 import { useRef, useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { FileText, Menu, X } from "lucide-react";
 import { Container } from "./container";
 import { ThemeToggle } from "@/components/theme/toggle";
+import { profile } from "@/content/profile";
 const links = [
   { href: "/#services", label: "Services" },
   { href: "/work", label: "Work" },
@@ -51,6 +52,15 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2 sm:gap-3">
+          <a
+            href={profile.resume.href}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden min-h-11 items-center gap-2 rounded-md border border-border px-3 text-xs font-medium hover:bg-surface sm:inline-flex"
+          >
+            <FileText size={14} aria-hidden />
+            Résumé
+          </a>
           <ThemeToggle />
           <button
             ref={trigger}
@@ -82,6 +92,16 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href={profile.resume.href}
+              target="_blank"
+              rel="noreferrer"
+              onClick={close}
+              className="inline-flex min-h-11 items-center gap-2 py-4 text-sm font-medium text-primary"
+            >
+              <FileText size={16} aria-hidden />
+              View résumé (PDF)
+            </a>
           </Container>
         </nav>
       )}

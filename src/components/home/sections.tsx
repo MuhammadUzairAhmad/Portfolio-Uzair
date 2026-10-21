@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight, Monitor, Database, Smartphone } from "lucide-react";
 import { GridBackground } from "@/components/ui/grid-background";
 import { Container, Eyebrow } from "@/components/layout/container";
@@ -9,6 +10,7 @@ import { services, approach } from "@/content/services";
 import { projects } from "@/content/projects";
 import { tools } from "@/content/tools";
 import { ExperienceList } from "@/components/experience/experience-list";
+import { FullStackSpotlight } from "./full-stack-spotlight";
 import { profile } from "@/content/profile";
 const icons = [Monitor, Database, Smartphone];
 export function Services() {
@@ -36,17 +38,19 @@ export function Services() {
                 />
                 <h3 className="text-lg">{service.title}</h3>
                 <p className="mt-2 min-h-12 text-sm leading-relaxed text-muted-foreground">
-                  {service.id === "web"
-                    ? "Modern, responsive web apps using React and Next.js."
-                    : service.id === "systems"
-                      ? "Scalable backend systems with Node.js and NestJS."
-                      : "Cross-platform mobile apps with React Native and Expo."}
+                  {service.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {service.skills.slice(0, 2).map((skill) => (
+                  {service.skills.map((skill) => (
                     <Badge key={skill}>{skill}</Badge>
                   ))}
                 </div>
+                <Link
+                  href={`/work/${service.project}`}
+                  className="mt-4 inline-flex min-h-11 items-center gap-2 text-xs font-medium text-primary"
+                >
+                  See related work <ArrowRight size={13} aria-hidden />
+                </Link>
               </article>
             );
           })}
@@ -76,6 +80,7 @@ export function SelectedWork() {
               />
             ))}
         </div>
+        <FullStackSpotlight />
       </Container>
     </section>
   );
