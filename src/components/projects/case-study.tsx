@@ -120,6 +120,11 @@ export function CaseStudy({
               <br />—
             </p>
           )}
+          {project.involvement && (
+            <div className="mt-4">
+              <Badge>{project.involvement}</Badge>
+            </div>
+          )}
           {project.projectStatus && (
             <div className="mt-4">
               <Badge>{project.projectStatus}</Badge>

@@ -213,3 +213,34 @@ test("contribution maps contain useful descriptions without replacing real media
   assert.equal(getProject("bitlux")?.media?.length, 4);
   assert.equal(getProject("linxx")?.media?.length, 7);
 });
+
+test("MERN full-stack positioning and project boundaries match owner clarification", () => {
+  assert.equal(profile.heroProjectSlug, "skillmatch");
+  assert.match(profile.heroRole, /Full-Stack Developer.*MERN.*Next.js/);
+  assert.equal(
+    getProject("skillmatch")?.involvement,
+    "Contributed from day one",
+  );
+  assert.equal(getProject("skillmatch")?.projectStatus, undefined);
+  for (const slug of [
+    "bitlux",
+    "linxx",
+    "skillmatch",
+    "gaming-platform",
+    "get-foodies",
+    "shopify-app",
+  ])
+    assert.equal(getProject(slug)?.developmentScope, "Full-stack", slug);
+  for (const slug of [
+    "hestiya",
+    "keller-williams",
+    "development-solutions-group",
+    "onyx",
+  ])
+    assert.equal(
+      getProject(slug)?.developmentScope,
+      "Frontend & integrations",
+      slug,
+    );
+  assert.equal(getProject("onyx")?.role, "Frontend Developer");
+});

@@ -44,6 +44,8 @@ for (const route of routes) {
   if (route === "/") {
     assert.match(html, /id="skills"/);
     assert.match(html, /Full-stack spotlight/);
+    assert.match(html, /Full-Stack Developer/);
+    assert.match(html, /SkillMatch responsive device previews/);
     assert.match(html, /Gaming Platform/);
     assert.match(html, /Frontend &amp; backend development/);
     assert.match(html, /uzair-mern-stack-resume.pdf/);
@@ -100,6 +102,10 @@ for (const route of routes) {
     for (const recording of project.walkthroughs ?? []) {
       assert.match(html, /<button[^>]*type="button"/);
       assert.ok(html.includes(recording.label));
+    }
+    if (project.slug === "skillmatch") {
+      assert.match(html, /Contributed from day one/);
+      assert.doesNotMatch(html, /Ongoing product/);
     }
     if (project.implementation) assert.match(html, /Contribution map/);
     assert.doesNotMatch(html, /<iframe\b/); // Loom loads only after viewer interaction.

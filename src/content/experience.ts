@@ -1,6 +1,7 @@
 export type ExperienceEntry = {
   company: string;
   role: string;
+  focus?: string;
   startDate: string;
   endDate?: string;
   location: string;
@@ -19,6 +20,7 @@ export type ExperienceEntry = {
 export const experience: ExperienceEntry[] = [
   {
     company: "Sofrix",
+    focus: "Full-stack contributions",
     role: "Software Engineer",
     startDate: "2025-07",
     endDate: "2026-06",
@@ -28,19 +30,19 @@ export const experience: ExperienceEntry[] = [
       {
         title: "Get Foodies",
         description:
-          "Built the iOS and Android app from scratch with React Native, Expo, Redux Toolkit, and multilingual support.",
+          "Built the iOS and Android app with React Native and Expo, contributed backend/API work, and connected multilingual mobile flows.",
         project: "get-foodies",
       },
       {
         title: "Linxx",
         description:
-          "Integrated APIs, updated interfaces, fixed bugs, and worked on mobile deployment through Capacitor.",
+          "Contributed frontend and backend/API work, integrated flows, fixed bugs, and supported mobile deployment through Capacitor.",
         project: "linxx",
       },
       {
         title: "Bitlux",
         description:
-          "Investigated rendering/performance issues, added TanStack Query caching, refined Figma interfaces, and integrated APIs and jsPDF ticket generation.",
+          "Contributed frontend and backend/API work, investigated rendering issues, added TanStack Query caching, and integrated ticket PDF generation.",
         project: "bitlux",
       },
       {
@@ -68,6 +70,7 @@ export const experience: ExperienceEntry[] = [
   },
   {
     company: "Weiblocks",
+    focus: "Full-stack contributions",
     role: "Software Engineer",
     startDate: "2025-01",
     endDate: "2025-06",
@@ -138,6 +141,7 @@ export const experience: ExperienceEntry[] = [
   },
   {
     company: "Netixsol",
+    focus: "Full-stack contributions",
     role: "MERN Stack Developer",
     startDate: "2023-06",
     endDate: "2024-02",
@@ -147,7 +151,7 @@ export const experience: ExperienceEntry[] = [
       {
         title: "SkillMatch",
         description:
-          "Created responsive interfaces and contributed to candidate, recruiter, and administrative dashboards.",
+          "Contributed to SkillMatch from day one, building responsive candidate, recruiter and admin interfaces alongside backend API work under senior guidance.",
         project: "skillmatch",
       },
       {
@@ -178,6 +182,7 @@ export const experience: ExperienceEntry[] = [
   },
   {
     company: "SJ Empowers",
+    focus: "Full-stack contributions",
     role: "Frontend Developer Intern",
     startDate: "2022-12",
     endDate: "2023-05",

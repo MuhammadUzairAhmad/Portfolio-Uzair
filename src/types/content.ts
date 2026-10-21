@@ -42,6 +42,8 @@ export type PortfolioProject = {
   featured?: boolean;
   media?: ProjectMedia[];
   role: string;
+  developmentScope?: "Full-stack" | "Frontend & integrations";
+  involvement?: string;
   team: string;
   platform: string;
   status: "Public link" | "Private project" | "Preview";

@@ -12,7 +12,7 @@ export const services = [
     id: "systems",
     title: "Full-stack systems",
     description:
-      "The APIs, data, and integrations that turn a polished interface into a working product.",
+      "Frontend applications, backend APIs, authentication, and data—connected into a working product.",
     skills: ["Next.js", "MongoDB", "NextAuth"],
     project: "gaming-platform",
   },

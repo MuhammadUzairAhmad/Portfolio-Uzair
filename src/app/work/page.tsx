@@ -50,7 +50,7 @@ export default function WorkPage() {
                 slug: p.slug,
                 tags: [
                   ...tags(p.category),
-                  ...(p.role.toLowerCase().includes("full-stack")
+                  ...(p.developmentScope === "Full-stack"
                     ? ["Full-stack"]
                     : []),
                 ],
@@ -62,7 +62,7 @@ export default function WorkPage() {
                 slug: p.slug,
                 tags: [
                   ...tags(p.category),
-                  ...(p.role.toLowerCase().includes("full-stack")
+                  ...(p.developmentScope === "Full-stack"
                     ? ["Full-stack"]
                     : []),
                 ],

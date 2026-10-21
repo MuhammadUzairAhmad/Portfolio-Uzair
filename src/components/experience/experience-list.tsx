@@ -90,6 +90,9 @@ export function ExperienceList({ detailed = false }: { detailed?: boolean }) {
             <div className="min-w-0">
               <h3 className="text-base">{item.company}</h3>
               <p className="mt-1 text-xs text-muted-foreground">{item.role}</p>
+              {item.focus && (
+                <p className="mt-1 text-xs text-primary">{item.focus}</p>
+              )}
               <EmploymentDates item={item} className="mt-1.5 sm:hidden" />
             </div>
             <EmploymentDates item={item} className="hidden sm:inline-flex" />
@@ -115,6 +118,9 @@ export function ExperienceList({ detailed = false }: { detailed?: boolean }) {
                 <p className="mt-1 text-xs font-medium sm:text-sm">
                   {item.role}
                 </p>
+                {item.focus && (
+                  <p className="mt-1 text-xs text-primary">{item.focus}</p>
+                )}
                 <p className="mt-1 flex items-center gap-1.5 text-[11px] text-muted-foreground">
                   <MapPin size={11} className="shrink-0" aria-hidden />
                   {item.location}

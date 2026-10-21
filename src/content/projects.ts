@@ -1,5 +1,5 @@
 import type { PortfolioProject } from "../types/content.ts";
-// Facts: owner handoff; contribution maps summarize documented scope, not measured outcomes.
+// Owner clarifications: full-stack positioning, SkillMatch from day one, and Onyx integration-only.
 export const projects: PortfolioProject[] = [
   {
     slug: "bitlux",
@@ -8,14 +8,14 @@ export const projects: PortfolioProject[] = [
     category: "Web platforms",
     subtitle: "Private jet booking & operations",
     summary:
-      "A private aviation platform for booking and ticketing operations. I improved existing screens, fixed rendering issues, introduced API caching, and built ticket PDFs to support the team’s day-to-day workflows.",
+      "A private aviation platform for booking and ticketing operations. I contributed across the frontend and backend, improving rendering, API handling and caching, updating interfaces, and generating ticket PDFs.",
     image: {
       src: "/images/projects/bitlux-screen.webp",
       width: 1169,
       height: 832,
     },
     featured: true,
-    role: "Software Engineer",
+    role: "Full-Stack Developer",
     team: "Sofrix",
     platform: "Web",
     status: "Public link",
@@ -34,9 +34,10 @@ export const projects: PortfolioProject[] = [
       "Figma UI updates, reusable components & validation",
       "Backend API integrations",
       "Dynamic ticket PDFs with jsPDF",
+      "Backend & API contributions",
     ],
     overview:
-      "Bitlux supports the work behind private-jet bookings, bringing trip requests, operational screens, and ticket documents into a web application. I contributed to an existing product where performance issues, inconsistent data rendering, and changing interface designs needed attention alongside new feature work.\n\nMy responsibility was to investigate those problems and improve the affected interfaces and integrations. I introduced TanStack Query for API requests and caching, added validation and toast feedback, updated screens to new Figma designs, and refactored components. I also integrated backend APIs and generated dynamic ticket PDFs with jsPDF. The work resolved identified issues and improved the maintainability of the application; the product itself continues to evolve.",
+      "Bitlux supports the work behind private-jet bookings, bringing trip requests, operational screens, and ticket documents into a web application. I contributed to an existing product where performance issues, inconsistent data rendering, and changing interface designs needed attention alongside new feature work.\n\nMy responsibility was to investigate those problems and improve the affected interfaces and integrations. I introduced TanStack Query for API requests and caching, added validation and toast feedback, updated screens to new Figma designs, and refactored components. I also integrated backend APIs and generated dynamic ticket PDFs with jsPDF. The work resolved identified issues and improved the maintainability of the application; the product itself continues to evolve.\n\nMy scope also included backend/API contributions within the existing application.",
     contributions: [
       {
         title: "Performance & data",
@@ -52,6 +53,11 @@ export const projects: PortfolioProject[] = [
         title: "Integrations & documents",
         description:
           "Integrated backend APIs and generated dynamic ticket PDFs using jsPDF.",
+      },
+      {
+        title: "Backend & API contributions",
+        description:
+          "Contributed to backend/API work alongside frontend features, integrations and maintenance in the existing application.",
       },
     ],
     problem: {
@@ -123,7 +129,7 @@ export const projects: PortfolioProject[] = [
     projectStatus: "Ongoing product",
     productUrl: "https://bitlux-ops.vercel.app/",
     context:
-      "Bitlux supports the work behind private-jet bookings, bringing trip requests, operational screens, and ticket documents into a web application. I contributed to an existing product where performance issues, inconsistent data rendering, and changing interface designs needed attention alongside new feature work.",
+      "Bitlux supports private-jet bookings, operational requests and ticket documents. I worked across frontend and backend contributions within the existing product, alongside rendering fixes, updated interfaces and API integrations.",
     implementation: {
       title: "Improving the booking workflow",
       description: "The areas I changed within the existing application.",
@@ -142,8 +148,14 @@ export const projects: PortfolioProject[] = [
           description:
             "Integrated backend APIs and generated dynamic ticket PDFs with jsPDF.",
         },
+        {
+          title: "Backend contributions",
+          description:
+            "Worked on backend/API functionality alongside the frontend and existing integrations.",
+        },
       ],
     },
+    developmentScope: "Full-stack",
   },
   {
     slug: "linxx",
@@ -153,14 +165,14 @@ export const projects: PortfolioProject[] = [
     category: "Web & mobile",
     subtitle: "An ambassador marketplace, across screens",
     summary:
-      "A job and service marketplace across web and mobile. I connected backend services to the interface, tested complete user journeys, and resolved application and Capacitor mobile issues across its marketplace workflows.",
+      "A job and service marketplace across web and mobile. I contributed to frontend and backend/API work, connected user flows, and resolved application and Capacitor mobile issues.",
     image: {
       src: "/images/projects/linxx-screen.webp",
       width: 1440,
       height: 798,
     },
     featured: true,
-    role: "Software Engineer · Web & mobile",
+    role: "Full-Stack Developer",
     team: "Sofrix",
     platform: "Web + mobile",
     status: "Private project",
@@ -180,9 +192,10 @@ export const projects: PortfolioProject[] = [
       "Approval/decline workflows",
       "GPS discovery & Plaid integration",
       "Capacitor mobile fixes & deployment support",
+      "Backend & API contributions",
     ],
     overview:
-      "Linxx connects marketplace listings with ambassador and shopper workflows across web and mobile. Its features include job discovery, GPS-related functionality, approvals, and a Plaid integration. My work focused on connecting these interfaces to backend services and making the affected user journeys work from beginning to end.\n\nI integrated APIs, updated screens, investigated bugs, and tested the connected flows. On mobile, I worked through issues specific to the Capacitor integration while supporting deployment. My contributions also included approval and decline flows, GPS features, and Plaid integration. After the changes, I verified the affected workflows across web and mobile. The ongoing product provided practical experience improving connected features across two delivery environments.",
+      "Linxx connects marketplace listings with ambassador and shopper workflows across web and mobile. Its features include job discovery, GPS-related functionality, approvals, and a Plaid integration. My work focused on connecting these interfaces to backend services and making the affected user journeys work from beginning to end.\n\nI integrated APIs, updated screens, investigated bugs, and tested the connected flows. On mobile, I worked through issues specific to the Capacitor integration while supporting deployment. My contributions also included approval and decline flows, GPS features, and Plaid integration. After the changes, I verified the affected workflows across web and mobile. The ongoing product provided practical experience improving connected features across two delivery environments.\n\nMy responsibilities also included backend/API work, in addition to frontend integration and mobile debugging.",
     contributions: [
       {
         title: "Connected workflows",
@@ -198,6 +211,11 @@ export const projects: PortfolioProject[] = [
         title: "Marketplace integrations",
         description:
           "Contributed approval/decline flows, GPS features, Plaid integration, and mobile deployment support.",
+      },
+      {
+        title: "Backend & API work",
+        description:
+          "Contributed backend/API work alongside frontend integrations and improvements to connected application flows.",
       },
     ],
     problem: {
@@ -299,7 +317,7 @@ export const projects: PortfolioProject[] = [
       },
     ],
     context:
-      "Linxx connects marketplace listings with ambassador and shopper workflows across web and mobile. Its features include job discovery, GPS-related functionality, approvals, and a Plaid integration. My work focused on connecting these interfaces to backend services and making the affected user journeys work from beginning to end.",
+      "Linxx connects marketplace listings with ambassador and shopper workflows across web and mobile, including discovery, approvals, GPS-related features and Plaid integration. My contributions spanned the frontend, backend/API work, and verification of affected user journeys.",
     implementation: {
       title: "Connected across web and mobile",
       description:
@@ -320,8 +338,14 @@ export const projects: PortfolioProject[] = [
           description:
             "Tested affected end-to-end journeys across web and mobile.",
         },
+        {
+          title: "Backend contributions",
+          description:
+            "Contributed to backend/API functionality as part of connected web and mobile feature work.",
+        },
       ],
     },
+    developmentScope: "Full-stack",
   },
   {
     slug: "skillmatch",
@@ -331,14 +355,14 @@ export const projects: PortfolioProject[] = [
     category: "Web platforms",
     subtitle: "Connecting candidates and recruiters",
     summary:
-      "A recruitment and assessment platform for candidates and hiring teams. I delivered responsive screens, dashboards, validation, and API integrations, and contributed backend APIs with senior developer guidance.",
+      "A recruitment and assessment product I contributed to from day one. I built frontend screens, dashboards, validation and reusable components, integrated APIs, and created backend APIs under senior developer guidance.",
     image: {
       src: "/images/projects/skillmatch.webp",
       width: 1440,
       height: 811,
     },
     featured: true,
-    role: "Full-stack contributor",
+    role: "Full-Stack Developer",
     team: "Netixsol",
     platform: "Web",
     status: "Public link",
@@ -360,7 +384,7 @@ export const projects: PortfolioProject[] = [
       "Backend APIs under senior guidance",
     ],
     overview:
-      "SkillMatch brings candidate profiles, job workflows, assessments, and recruitment dashboards into one platform. Candidates and hiring teams need connected interfaces to move between account details, opportunities, and administrative tasks. I worked within the development team to build the screens and integrations behind those experiences.\n\nMy contributions included responsive UI, dashboards, form validation, shared components, and backend API integration. I used Redux Toolkit, Tailwind CSS, and TanStack Query as part of frontend delivery, and also created APIs under senior guidance. This was my first professional project, with responsibilities spanning substantial frontend implementation and supported backend contributions. I delivered these application features as part of the wider team.",
+      "SkillMatch brings candidate profiles, job workflows, assessments, and recruitment dashboards into one platform. Candidates and hiring teams need connected interfaces to move between account details, opportunities, and administrative tasks. I contributed from day one, working within the development team on frontend features, integrations and backend APIs.\n\nMy contributions included responsive UI, dashboards, form validation, shared components, and backend API integration. I used Redux Toolkit, Tailwind CSS, and TanStack Query as part of frontend delivery, and also created APIs under senior guidance. This was my first professional project, with responsibilities spanning substantial frontend implementation and supported backend contributions. I delivered these application features as part of the wider team.",
     contributions: [
       {
         title: "Frontend delivery",
@@ -406,11 +430,11 @@ export const projects: PortfolioProject[] = [
     },
     productUrl: "https://www.skillmatch.tech/",
     context:
-      "SkillMatch brings candidate profiles, job workflows, assessments, and recruitment dashboards into one platform. Candidates and hiring teams need connected interfaces to move between account details, opportunities, and administrative tasks. I worked within the development team to build the screens and integrations behind those experiences.",
+      "SkillMatch brings candidate profiles, jobs, assessments and recruitment dashboards into one product. I contributed from day one, working across frontend features and senior-guided backend API development as part of the team.",
     implementation: {
       title: "Building connected recruitment features",
       description:
-        "Frontend delivery and senior-guided backend contributions within the team.",
+        "Contributed from day one across frontend delivery and senior-guided backend API development.",
       steps: [
         {
           title: "Screens & forms",
@@ -429,6 +453,8 @@ export const projects: PortfolioProject[] = [
         },
       ],
     },
+    developmentScope: "Full-stack",
+    involvement: "Contributed from day one",
   },
   {
     slug: "hestiya",
@@ -524,6 +550,7 @@ export const projects: PortfolioProject[] = [
     ],
     context:
       "Hestiya Marketplace is a Web3 carbon-credit platform for discovering credits, trading, managing holdings, and retirement. The project needed a frontend that brought together conventional account and marketplace features with wallet connections and blockchain transactions. I owned the React frontend implementation, starting from supplied Figma designs.",
+    developmentScope: "Frontend & integrations",
   },
   {
     slug: "gaming-platform",
@@ -649,6 +676,7 @@ export const projects: PortfolioProject[] = [
       ],
     },
     cardSubtitle: "Full-stack application · Frontend + backend",
+    developmentScope: "Full-stack",
   },
   {
     slug: "development-solutions-group",
@@ -701,9 +729,10 @@ export const projects: PortfolioProject[] = [
     productUrl: "https://development-solution-group.vercel.app/",
     context:
       "Development Solutions Group needed a company website that followed the client’s requested design and presented its business and projects. The scope was focused: responsive Home, About, Projects, and Contact interfaces with a consistent presentation across screen sizes.",
+    developmentScope: "Frontend & integrations",
   },
   {
-    role: "Software Engineer",
+    role: "Full-Stack Developer · Mobile & APIs",
     team: "Sofrix",
     platform: "iOS + Android",
     status: "Private project",
@@ -713,13 +742,14 @@ export const projects: PortfolioProject[] = [
       "Redux Toolkit & backend API integration",
       "Multilingual interfaces & location features",
       "Banners & file-based routing",
+      "Backend & API contributions",
     ],
     slug: "get-foodies",
     name: "Get Foodies",
     category: "Mobile apps",
     subtitle: "A food delivery app for iOS and Android",
     summary:
-      "An iOS and Android food application built from Figma designs. I delivered mobile screens and API-connected onboarding, OTP verification, profile completion, multilingual interfaces, and location-related features using React Native and Expo.",
+      "An iOS and Android food application built from Figma designs. I built the mobile interface, contributed backend/API work, and connected onboarding, OTP verification, profile completion, multilingual and location-related features.",
     stack: [
       "React Native",
       "Expo",
@@ -728,7 +758,7 @@ export const projects: PortfolioProject[] = [
       "File-based routing",
     ],
     overview:
-      "Get Foodies is a company food application for iOS and Android, with onboarding, multilingual interfaces, and location-related features. The project started with Figma designs that needed to become a mobile interface connected to backend services. I built the application UI from scratch using React Native and Expo.\n\nMy work covered registration, OTP verification, profile completion, banner interfaces, Redux Toolkit state, and API integrations. I also implemented multilingual support, location-related features, and file-based routing. The delivery connected the described mobile interfaces and flows across iOS and Android. This was also my first React Native/Expo project, providing practical experience with mobile application structure and lifecycle behavior.",
+      "Get Foodies is a company food application for iOS and Android, with onboarding, multilingual interfaces, and location-related features. The project started with Figma designs that needed to become a mobile interface connected to backend services. I built the application UI from scratch using React Native and Expo.\n\nMy work covered registration, OTP verification, profile completion, banner interfaces, Redux Toolkit state, and API integrations. I also implemented multilingual support, location-related features, and file-based routing. The delivery connected the described mobile interfaces and flows across iOS and Android. This was also my first React Native/Expo project, providing practical experience with mobile application structure and lifecycle behavior.\n\nAlongside the mobile interface and API integrations, I also contributed backend/API work.",
     contributions: [
       {
         title: "Mobile UI from Figma",
@@ -744,6 +774,11 @@ export const projects: PortfolioProject[] = [
         title: "State, language & location",
         description:
           "Implemented Redux Toolkit state, multilingual interfaces, location-related features, and file-based routing.",
+      },
+      {
+        title: "Backend & API contributions",
+        description:
+          "Contributed to backend/API work alongside the mobile interfaces and API integrations.",
       },
     ],
     decisions: [
@@ -781,7 +816,8 @@ export const projects: PortfolioProject[] = [
       },
     ],
     context:
-      "Get Foodies is a company food application for iOS and Android, with onboarding, multilingual interfaces, and location-related features. The project started with Figma designs that needed to become a mobile interface connected to backend services. I built the application UI from scratch using React Native and Expo.",
+      "Get Foodies is a company food application for iOS and Android. I built the mobile UI from Figma with React Native and Expo, contributed backend/API work, and connected the application’s onboarding and other user flows.",
+    developmentScope: "Full-stack",
   },
   {
     role: "Frontend Developer",
@@ -872,6 +908,7 @@ export const projects: PortfolioProject[] = [
         },
       ],
     },
+    developmentScope: "Frontend & integrations",
   },
   {
     role: "Junior Software Engineer",
@@ -983,6 +1020,7 @@ export const projects: PortfolioProject[] = [
         },
       ],
     },
+    developmentScope: "Frontend & integrations",
   },
   {
     role: "Freelance Full-Stack Developer",
@@ -1088,5 +1126,6 @@ export const projects: PortfolioProject[] = [
         },
       ],
     },
+    developmentScope: "Full-stack",
   },
 ];
