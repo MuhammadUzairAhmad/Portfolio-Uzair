@@ -52,3 +52,8 @@ The changes are local; no remote, push, or deployment was added.
 
 - `067ff6c` — expand all ten main project introductions and overviews for clients, recruiters and engineers; save a readable copy document and content review.
 - Follow-up interaction phase adds native image/Loom lightboxes, keyboard/focus behavior, direct persistent light/dark switching, validation and updated screenshots.
+
+### Benchmark improvements — 22 October 2026
+
+- Implementation phase: résumé and contact paths, stronger full-stack visibility, verified tool snapshots, shorter case studies and owner-grounded contribution maps.
+- Documentation phase: editing guidance, remaining source-material needs, verification results and visual previews.

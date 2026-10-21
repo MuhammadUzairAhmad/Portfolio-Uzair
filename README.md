@@ -25,14 +25,16 @@ npm run start -- --hostname 127.0.0.1 --port 4337
 ## Included
 
 - Homepage: hero, services, selected projects, practical skill highlights, tools, work experience, process, about, and contact.
-- Work archive and ten project case-study routes.
-- Tools archive and three individual tool stories.
+- Work archive with a Full-stack filter and ten project case-study routes.
+- Tools archive and three verified tool snapshots while full stories are pending.
 - Eleven original Bitlux/Linxx screenshots in lazy-loaded galleries, five labeled external Loom walkthroughs, and optional native video support.
 - About with a grouped development toolkit, contact, custom 404, social sharing image, favicon, robots, and sitemap.
 - Shared experience timeline with real logos, roles/dates, and expanded contribution cards on About.
 - Small, medium, and large static CSS grids adapted to both themes.
 - One-click theme toggle, on-page image/video lightboxes, keyboard-friendly mobile navigation, copy-email feedback, and real contact links.
-- Typed editable data, labeled demo narratives, and the updated two-page résumé PDF.
+- Direct résumé access, separate hiring/project enquiry paths, and the updated two-page résumé PDF.
+- A Gaming Platform full-stack spotlight and seven factual contribution maps.
+- Typed editable data with deferred narratives withheld from public tool snapshots.
 - Shared button variants, cards, badges, tables, containers, and case-study components.
 
 Static server rendering is enforced by the current Next.js `ensureStatic` configuration. Client components are limited to themes, navigation, project filtering, email copying, and media viewers. Loom iframes mount only when the visitor opens a recording. Fonts are hosted locally, image assets are optimized with reserved layout space, and this project has no Three.js dependency. Global CSS contains shared foundations; page and component styles use Tailwind utilities.

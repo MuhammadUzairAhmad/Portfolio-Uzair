@@ -1,4 +1,4 @@
-# Remaining content — 21 October 2026
+# Remaining content — 22 October 2026
 
 The owner’s `portfolio-content-additions.md` has been applied. All ten company/client case studies now have substantive supported narratives. Bitlux, Linxx, and SkillMatch remain featured in that order. Welcome to Food has been removed, including its generated route. Résumé dates and downloadable PDF remain unchanged.
 
@@ -12,7 +12,7 @@ Only the three deliberately deferred tool records still have draft fields:
 | GlobePick | Original brief, implementation/printing or data decisions, outcome/learning, and real UI media. Optional public URL.                |
 | Blogsite  | Actual stack/libraries, shipped pages, brief, outcomes/learning, and real UI media. Optional public URL.                            |
 
-Their existing verified descriptions and decorative artwork are preserved. Further plans are not treated as shipped features. Run `npm run content:checklist` for current field counts.
+Their public pages now show verified project snapshots only; draft instructions, unconfirmed decisions, and unfinished outcomes/lessons are not rendered. Internal draft flags remain in the source and publication checks. Their existing verified descriptions and decorative artwork are preserved. Further plans are not treated as shipped features. Run `npm run content:checklist` for current field counts.
 
 ## Media and external access
 
@@ -30,3 +30,7 @@ Team sizes, project dates, repositories, measured results, certification credent
 ## Before launch
 
 Complete the three deferred tool stories, choose the actual deployment URL, review canonical metadata/sitemap/robots, check external links and playback, and run build/content checks. Preview/noindex remains enabled; nothing has been published or pushed.
+
+## Evidence still useful after the review improvements
+
+Seven contribution maps now summarize documented work, and Gaming Platform has a dedicated full-stack spotlight. These explain scope but are not substitutes for real code samples, measured results, annotated before/after captures, approved testimonials, or recording captions. Add those only when available and shareable. Current availability and the deployment domain still require owner confirmation before publication; no new claim was invented.

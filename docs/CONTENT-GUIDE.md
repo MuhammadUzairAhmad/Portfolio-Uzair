@@ -145,3 +145,13 @@ The recording button opens an on-page native dialog. Its Loom iframe mounts only
 `docs/PROJECT-COPY.md` contains the audience-focused project summaries, overviews, and outcomes. Lead with product context and delivered work, keep implementation choices deeper in the case study, and place learning after contribution. Preserve the owner handoff for facts and contribution boundaries.
 
 The header theme control is a light/dark button. New visitors start in light mode; explicit choices persist through next-themes. There is no system dropdown.
+
+## Contribution maps, hiring paths, and deferred tools
+
+`context` is the concise product-context paragraph shown in the case-study Overview. `overview` retains the fuller source narrative. Optional `implementation` contains a title, description and `steps` array, each with `title` and `description`. These are explanatory contribution maps based on confirmed work, not measured results, code samples or screenshots. For projects without real imagery, the map provides an intentional hero presentation; existing screenshots remain unchanged. The implementation section lists technologies in full rather than treating three stack initials as an architecture diagram.
+
+Gaming Platform remains a full-stack project. Its homepage spotlight and Full-stack archive filter make the frontend/backend responsibility explicit. The featured trio and their order remain unchanged. The client supplied the smart contract.
+
+Hero role/copy lives in `profile.ts`, and résumé links use its existing PDF path. Service copy is read from `services.ts`; evidence links point to existing projects. Contact paths in `contact-paths.tsx` provide separate role/project email subjects and résumé/calendar actions. These are compose links; they do not send messages automatically. No current employer, availability or response-time guarantee has been added.
+
+Tools with remaining narrative draft flags use `ToolSnapshot`, showing only the verified summary, overview, scope and contributions. Draft problems/decisions/outcomes/lessons are not rendered. Their original content and flags remain in `tools.ts` for later editing and still protect publication. The Blogsite snapshot does not present unconfirmed libraries as its stack.
