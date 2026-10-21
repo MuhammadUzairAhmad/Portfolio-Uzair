@@ -155,3 +155,7 @@ Gaming Platform remains a full-stack project. Its homepage spotlight and Full-st
 Hero role/copy lives in `profile.ts`, and résumé links use its existing PDF path. Service copy is read from `services.ts`; evidence links point to existing projects. Contact paths in `contact-paths.tsx` provide separate role/project email subjects and résumé/calendar actions. These are compose links; they do not send messages automatically. No current employer, availability or response-time guarantee has been added.
 
 Tools with remaining narrative draft flags use `ToolSnapshot`, showing only the verified summary, overview, scope and contributions. Draft problems/decisions/outcomes/lessons are not rendered. Their original content and flags remain in `tools.ts` for later editing and still protect publication. The Blogsite snapshot does not present unconfirmed libraries as its stack.
+
+## Explicit scope and involvement
+
+`profile.heroProjectSlug` selects SkillMatch independently of featured-project order. `developmentScope` explicitly controls Full-stack archive filtering; do not infer backend ownership from role text or API integration alone. `involvement` supplies SkillMatch’s “Contributed from day one” badge independently of optional product status. Employment `focus` is a secondary description; preserve official résumé `role` and date fields. See the latest clarification in `CONTENT-SOURCES.md`.

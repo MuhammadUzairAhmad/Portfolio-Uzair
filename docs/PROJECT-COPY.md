@@ -1,18 +1,20 @@
 # Project copy — 22 October 2026
 
-Edited for clients, hiring teams, and engineering reviewers. Facts remain grounded in the owner handoff; no new metrics, seniority, dates, or ownership claims.
+Edited for clients, hiring teams, and engineering reviewers. Includes the owner’s latest full-stack and day-one SkillMatch clarifications. No new metrics, dates, endpoints, or frameworks are invented.
 
 ## Bitlux
 
 **Card / introduction**
 
-A private aviation platform for booking and ticketing operations. I improved existing screens, fixed rendering issues, introduced API caching, and built ticket PDFs to support the team’s day-to-day workflows.
+A private aviation platform for booking and ticketing operations. I contributed across the frontend and backend, improving rendering, API handling and caching, updating interfaces, and generating ticket PDFs.
 
 **Overview**
 
 Bitlux supports the work behind private-jet bookings, bringing trip requests, operational screens, and ticket documents into a web application. I contributed to an existing product where performance issues, inconsistent data rendering, and changing interface designs needed attention alongside new feature work.
 
 My responsibility was to investigate those problems and improve the affected interfaces and integrations. I introduced TanStack Query for API requests and caching, added validation and toast feedback, updated screens to new Figma designs, and refactored components. I also integrated backend APIs and generated dynamic ticket PDFs with jsPDF. The work resolved identified issues and improved the maintainability of the application; the product itself continues to evolve.
+
+My scope also included backend/API contributions within the existing application.
 
 **Outcome**
 
@@ -22,13 +24,15 @@ Resolved the identified rendering and performance issues, aligned affected scree
 
 **Card / introduction**
 
-A job and service marketplace across web and mobile. I connected backend services to the interface, tested complete user journeys, and resolved application and Capacitor mobile issues across its marketplace workflows.
+A job and service marketplace across web and mobile. I contributed to frontend and backend/API work, connected user flows, and resolved application and Capacitor mobile issues.
 
 **Overview**
 
 Linxx connects marketplace listings with ambassador and shopper workflows across web and mobile. Its features include job discovery, GPS-related functionality, approvals, and a Plaid integration. My work focused on connecting these interfaces to backend services and making the affected user journeys work from beginning to end.
 
 I integrated APIs, updated screens, investigated bugs, and tested the connected flows. On mobile, I worked through issues specific to the Capacitor integration while supporting deployment. My contributions also included approval and decline flows, GPS features, and Plaid integration. After the changes, I verified the affected workflows across web and mobile. The ongoing product provided practical experience improving connected features across two delivery environments.
+
+My responsibilities also included backend/API work, in addition to frontend integration and mobile debugging.
 
 **Outcome**
 
@@ -38,11 +42,11 @@ Connected frontend screens to the required backend services, resolved identified
 
 **Card / introduction**
 
-A recruitment and assessment platform for candidates and hiring teams. I delivered responsive screens, dashboards, validation, and API integrations, and contributed backend APIs with senior developer guidance.
+A recruitment and assessment product I contributed to from day one. I built frontend screens, dashboards, validation and reusable components, integrated APIs, and created backend APIs under senior developer guidance.
 
 **Overview**
 
-SkillMatch brings candidate profiles, job workflows, assessments, and recruitment dashboards into one platform. Candidates and hiring teams need connected interfaces to move between account details, opportunities, and administrative tasks. I worked within the development team to build the screens and integrations behind those experiences.
+SkillMatch brings candidate profiles, job workflows, assessments, and recruitment dashboards into one platform. Candidates and hiring teams need connected interfaces to move between account details, opportunities, and administrative tasks. I contributed from day one, working within the development team on frontend features, integrations and backend APIs.
 
 My contributions included responsive UI, dashboards, form validation, shared components, and backend API integration. I used Redux Toolkit, Tailwind CSS, and TanStack Query as part of frontend delivery, and also created APIs under senior guidance. This was my first professional project, with responsibilities spanning substantial frontend implementation and supported backend contributions. I delivered these application features as part of the wider team.
 
@@ -102,13 +106,15 @@ Delivered the requested company presentation through responsive Home, About, Pro
 
 **Card / introduction**
 
-An iOS and Android food application built from Figma designs. I delivered mobile screens and API-connected onboarding, OTP verification, profile completion, multilingual interfaces, and location-related features using React Native and Expo.
+An iOS and Android food application built from Figma designs. I built the mobile interface, contributed backend/API work, and connected onboarding, OTP verification, profile completion, multilingual and location-related features.
 
 **Overview**
 
 Get Foodies is a company food application for iOS and Android, with onboarding, multilingual interfaces, and location-related features. The project started with Figma designs that needed to become a mobile interface connected to backend services. I built the application UI from scratch using React Native and Expo.
 
 My work covered registration, OTP verification, profile completion, banner interfaces, Redux Toolkit state, and API integrations. I also implemented multilingual support, location-related features, and file-based routing. The delivery connected the described mobile interfaces and flows across iOS and Android. This was also my first React Native/Expo project, providing practical experience with mobile application structure and lifecycle behavior.
+
+Alongside the mobile interface and API integrations, I also contributed backend/API work.
 
 **Outcome**
 

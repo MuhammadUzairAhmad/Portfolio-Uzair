@@ -13,3 +13,9 @@ Important contribution boundaries: SkillMatch included senior-guided backend wor
 Qualitative outcomes and learning points come from the owner. No numeric performance/adoption metrics, testimonials, repository links, new employment dates, or screenshots were invented. Optional absent lessons and decisions are omitted cleanly; only deferred tools retain draft flags.
 
 Product URLs are owner-supplied references, not proof of personal ownership of every feature or of current uptime. Keller Williams is explicitly labeled as the product/company website and Shopify as an App Store listing. Loom links are external recordings, not live demos or local MP4s.
+
+## Latest owner clarifications — 22 October 2026
+
+These override earlier scope descriptions: position the portfolio as Full-Stack Developer (MERN & Next.js). SkillMatch is the homepage hero and includes contribution from day one; it is not labeled ongoing. Bitlux, Linxx and Get Foodies also included backend/API contributions, alongside already documented full-stack work on Gaming Platform, Shopify and SkillMatch. Exact backend endpoints and implementation details for the newly clarified work are not supplied, so the copy stays general.
+
+Development Solutions Group, Keller Williams and Hestiya retain frontend/integration scope. The owner separately confirmed Onyx involved only existing API and Socket.io integration, with no custom backend. Official employment titles and dates remain as the résumé records them; separate focus labels describe full-stack contributions. Deferred tools remain deferred.

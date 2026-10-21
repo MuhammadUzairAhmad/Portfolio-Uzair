@@ -134,3 +134,11 @@ Validation passed: ESLint, route type generation and TypeScript, production buil
 Browser checks: homepage spotlight navigates to Gaming Platform; the Full-stack archive filter displays SkillMatch, Gaming Platform and Shopify. Header résumé is visible at desktop size; the mobile menu and hero expose the PDF. Contact paths have distinct compose subjects. Home, Contact and case-study pages fit 320px without document overflow in the inspected light/dark views; a 1280px desktop layout was inspected. Gaming displays Full-Stack Developer and the backend/authentication stack. Blogsite renders only its snapshot, with no draft technical story or unconfirmed stack. Linxx’s image viewer still opens, closes with Escape, and restores focus. No browser warnings/errors were captured. Temporary viewport overrides were reset and the preview was restored to dark mode.
 
 Previews: [full-stack spotlight, light](previews/full-stack-spotlight-light.jpg), [full-stack spotlight, dark](previews/full-stack-spotlight-dark.jpg), [Gaming contribution map](previews/gaming-contribution-map.jpg).
+
+## MERN/Next.js positioning and owner scope corrections — 22 October 2026
+
+Homepage role and introduction now explicitly lead with Full-Stack Developer, MERN and Next.js; SkillMatch replaces Bitlux in the hero. The featured order stays Bitlux, Linxx, SkillMatch. SkillMatch states contribution from day one, without an ongoing product label. Six projects have explicit full-stack scope; Onyx and the three confirmed frontend exceptions remain outside that filter. Employment titles and dates stay unchanged, with separate contribution-focus labels.
+
+Validation passed: 19 content/media/publication tests, ESLint, route type generation/TypeScript, production build, diff whitespace checks, and HTTP smoke checks across all 18 portfolio pages plus four expected 404s and source assets/preview metadata. Browser verification confirmed the SkillMatch hero navigates to its case study and shows the day-one badge, the Full-stack filter includes exactly six projects, and homepage layouts have no document overflow at 1280px and 320px. Both themes fit the 320px viewport. Temporary viewport overrides were reset and dark mode restored.
+
+Preview: [MERN/Next.js hero with SkillMatch](previews/mern-skillmatch-hero.jpg). No remote, push or deployment was added.

@@ -57,3 +57,8 @@ The changes are local; no remote, push, or deployment was added.
 
 - Implementation phase: résumé and contact paths, stronger full-stack visibility, verified tool snapshots, shorter case studies and owner-grounded contribution maps.
 - Documentation phase: editing guidance, remaining source-material needs, verification results and visual previews.
+
+### MERN/Next.js positioning — 22 October 2026
+
+- Implementation phase: full-stack hero identity, SkillMatch hero/day-one involvement, explicit project-scope filtering, clarified backend contributions and separate employment-focus labels, with regression coverage.
+- Documentation phase: latest owner-source precedence, updated reviewable project copy, optional backend evidence gaps and verified desktop/mobile preview. Local commits only.

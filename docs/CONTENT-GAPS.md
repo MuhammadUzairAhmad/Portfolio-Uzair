@@ -34,3 +34,7 @@ Complete the three deferred tool stories, choose the actual deployment URL, revi
 ## Evidence still useful after the review improvements
 
 Seven contribution maps now summarize documented work, and Gaming Platform has a dedicated full-stack spotlight. These explain scope but are not substitutes for real code samples, measured results, annotated before/after captures, approved testimonials, or recording captions. Add those only when available and shareable. Current availability and the deployment domain still require owner confirmation before publication; no new claim was invented.
+
+## Optional backend detail follow-up — 22 October 2026
+
+Full-stack contributions are now confirmed for Bitlux, Linxx and Get Foodies. Specific backend features/endpoints, whether each was created or improved, and a concrete problem/solution example would strengthen engineering evidence. No unsupported backend framework, endpoint, metric or ownership claim has been added. Onyx remains integration-only.
