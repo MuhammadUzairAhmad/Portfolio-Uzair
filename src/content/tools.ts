@@ -1,5 +1,5 @@
 import type { PortfolioProject } from "../types/content.ts";
-// EDIT HERE: tool details. No live URLs are invented for unreleased/private tools.
+// Verified against build chats, READMEs and implementation; live URLs remain owner-supplied.
 export const tools: PortfolioProject[] = [
   {
     slug: "typespark",
@@ -7,63 +7,80 @@ export const tools: PortfolioProject[] = [
     category: "Tools",
     subtitle: "Make it your type",
     summary:
-      "Text styling, glitch experiments, and signatures—all in the browser.",
+      "A browser-based creative toolkit for styled text, glitch effects and signatures. I built the interfaces, text-processing logic and local PNG/GIF export workflows with Next.js and React.",
     illustration: "type",
-    role: "Development",
+    role: "Frontend Developer",
     team: "Client tool",
     platform: "Web",
     status: "Preview",
-    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    scope: ["Text generator", "Glitch Studio", "Signature export"],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Canvas API",
+      "Web Workers",
+      "gifenc",
+    ],
+    scope: [
+      "Unicode text styles & copy tools",
+      "Glitch presets & animated GIF export",
+      "Typed/drawn signatures & PNG export",
+      "Browser-saved preferences",
+    ],
     overview:
-      "A browser-based text styling application with Unicode styles, a Glitch Studio, and a signature generator. Transformation and image exports happen locally in the browser.",
+      "TypeSpark brings text styling, glitch effects and signature creation into a browser-based toolkit. Users can transform and copy text, adjust glitch presets, or create a typed or drawn signature and export the result. Text processing and image generation run locally, without an account, database or application backend.\n\nI built the responsive tool workspaces, shared controls and processing/export flows using Next.js, React, TypeScript and Tailwind CSS. The work also covered licensed local fonts, recoverable browser preferences, server-rendered explanatory content and automated checks.",
     contributions: [
       {
-        title: "Text tools",
-        description: "Built text transformation and copy interactions.",
+        title: "Text styling & editing",
+        description:
+          "Built Unicode transformations, searchable styles, selected-text styling, comparison and copy flows, including manual-copy fallback and handling for unsupported characters.",
       },
       {
-        title: "Creative workflows",
+        title: "Glitch & signature exports",
         description:
-          "Implemented glitch styling and signature-generation experiences.",
+          "Implemented stable seeded glitch output and local animated GIF export with a Web Worker. Built typed/drawn signatures with licensed local fonts, appearance controls and PNG export.",
       },
       {
-        title: "Local export",
+        title: "Reusable UI & verification",
         description:
-          "Worked on browser-based export flows and responsive controls.",
+          "Created shared responsive controls, browser-saved preferences and server-rendered content. Used transformation, storage, font and browser checks to verify the implementation.",
       },
     ],
     problem: {
-      text: "Focused creative tools should let people try ideas without making them learn a complicated editor. Replace this draft with the original client requirements and constraints.",
-      demo: true,
+      text: "Bring focused text, glitch and signature workflows into a coherent browser interface, with local processing and understandable copy/export controls.",
     },
     solution: {
-      text: "Keep input, preview, and actions close together; give each tool focused controls and understandable export feedback.",
-      demo: true,
+      text: "Combined shared React workspaces with pure text-processing functions, browser-side rendering and export utilities, while keeping explanatory content server-rendered.",
     },
     decisions: [
       {
         topic: "Local processing",
-        choice: "Transform text and create exports in the browser",
-        reason: "Support immediate feedback without an application backend.",
-        demo: false,
+        choice: "Transform text and render exports in the browser",
+        reason:
+          "Keep user text local and avoid an application backend for these tools.",
       },
       {
-        topic: "Controls",
-        choice: "Use focused editors for different output types",
-        reason: "Keep text, glitch, and signature interactions clear.",
-        demo: true,
+        topic: "Animated export",
+        choice: "Encode GIFs in a bundled Web Worker",
+        reason:
+          "Move encoding off the main thread and support progress, cancellation and cleanup.",
+      },
+      {
+        topic: "Signature fonts",
+        choice: "Bundle licensed fonts with coverage checks",
+        reason:
+          "Render signatures with actual fonts and retain the required license notices.",
       },
     ],
     results: [
       {
-        text: "A text generator, Glitch Studio, and signature generator with local copying and export features.",
+        text: "Implemented three connected creative tools with copy interactions, animated GIF and PNG export, saved preferences and responsive layouts. Automated and browser checks are documented in the project; public launch and deployed performance are separate checks.",
       },
     ],
-    lessons: {
-      text: "Add a verified lesson about Unicode compatibility, font rendering, or export behavior.",
-      demo: true,
-    },
+    stackVerified: true,
+    developmentWorkflow:
+      "I used Codex-assisted planning, implementation and review to speed up development and iteration. I reviewed the changes and checked the resulting behavior with automated tests and browser verification.",
   },
   {
     slug: "globepick",
@@ -71,68 +88,80 @@ export const tools: PortfolioProject[] = [
     category: "Tools",
     subtitle: "A little curiosity. A whole world.",
     summary:
-      "Discover places, practice capitals, and create geography learning activities.",
+      "A geography toolkit for exploring countries, capitals and cities, practicing quizzes and creating printable activities. I built the generators, local saved state, sharing and worksheet flows with Next.js and React.",
     illustration: "globe",
-    role: "Development",
+    role: "Frontend Developer",
     team: "Client tool",
     platform: "Web",
     status: "Preview",
-    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Web Crypto API",
+      "localStorage",
+    ],
     scope: [
-      "Country & city generators",
-      "Capital quizzes",
-      "Printable worksheets",
+      "Country, capital & city generators",
+      "Filters, unique batches & no-repeat pools",
+      "Local history, favorites & shareable results",
+      "Capital quizzes & printable worksheets",
     ],
     overview:
-      "A frontend geography learning application with country, capital, and city generators, filters, quizzes, browser-saved history and favorites, shareable results, and printable activities.",
+      "GlobePick connects geography discovery with learning activities. Users can generate countries, capitals or cities, narrow the pool with filters, save places, share results and practice capital quizzes. Country-project assignments can also become printable A4 or US Letter worksheets.\n\nI built the frontend with Next.js, React, TypeScript and Tailwind CSS. The implementation uses bundled geography data, validated browser storage and shareable replay links, with no account system, custom backend or runtime geography service. Server-rendered introductions and content pages support discovery, while city data loads on demand in the homepage spinner.",
     contributions: [
       {
-        title: "Generator experiences",
-        description: "Built filtering and repeat-prevention flows.",
+        title: "Generators & selection logic",
+        description:
+          "Built country, capital and city generators with inclusion/exclusion filters, unique batches, capacity handling and separate no-repeat pools. Connected the homepage spinner to the existing generator state.",
       },
       {
-        title: "Saved places",
+        title: "Persistence & sharing",
         description:
-          "Implemented local history, favorites, and shareable results.",
+          "Implemented browser-saved settings, history and favorites, with validation and recovery for storage failures. Added validated share links that replay results without consuming the recipient’s selection pool.",
       },
       {
-        title: "Learning activities",
+        title: "Learning, content & quality",
         description:
-          "Created quizzes and print-friendly worksheets with server-rendered introductions.",
+          "Created capital quizzes, country-project assignments, printable worksheets and starter packs. Added server-rendered content, source/licensing information, data validators and tests for selection, persistence and sharing.",
       },
     ],
     problem: {
-      text: "Geography tools need to balance playful exploration with predictable controls and useful learning material. Replace this draft with the actual product brief.",
-      demo: true,
+      text: "Connect random place discovery with useful filters, saved results and learning activities without requiring accounts or a live geography service.",
     },
     solution: {
-      text: "Connect focused generator tools with optional learning activities, while keeping saved state local and printable content simple.",
-      demo: true,
+      text: "Used bundled data and a shared selection engine, validated local persistence and replay links, and print layouts built from the same assignment data shown in the preview.",
     },
     decisions: [
       {
         topic: "Data availability",
-        choice: "Use bundled geography data",
+        choice:
+          "Bundle geography data and load homepage city records on demand",
         reason:
-          "Keep core generation independent of a runtime geography service.",
-        demo: false,
+          "Avoid a runtime geography service while keeping the larger city dataset out of the initial homepage tool.",
       },
       {
-        topic: "Print output",
-        choice: "Offer print-friendly worksheets",
-        reason: "Make activities useful beyond the screen.",
-        demo: false,
+        topic: "Selection & persistence",
+        choice: "Separate mode-specific pools and validate browser state",
+        reason:
+          "Keep country, capital and city behavior independent and recover from invalid or unavailable saved data.",
+      },
+      {
+        topic: "Worksheet output",
+        choice: "Use the same assignment objects for preview and print",
+        reason:
+          "Keep printable activities aligned with the selected countries and questions.",
       },
     ],
     results: [
       {
-        text: "Country, capital, and city discovery tools with quizzes, saved places, shareable results, and worksheets.",
+        text: "Delivered an integrated geography toolkit spanning discovery, saved places, shareable results and printable learning activities. Added checks for data integrity, selection, persistence and sharing, alongside production-route and browser verification.",
       },
     ],
-    lessons: {
-      text: "Add a real example covering data quality, random selection, persistence, or print behavior.",
-      demo: true,
-    },
+    stackVerified: true,
+    developmentWorkflow:
+      "I used Codex-assisted planning, implementation and review to speed up development and iteration. I reviewed the changes and checked the resulting behavior with automated tests and browser verification.",
   },
   {
     slug: "blogsite",
@@ -193,5 +222,6 @@ export const tools: PortfolioProject[] = [
       text: "Add an actual lesson about content hierarchy, responsive layouts, or maintaining consistency across page types.",
       demo: true,
     },
+    stackVerified: false,
   },
 ];

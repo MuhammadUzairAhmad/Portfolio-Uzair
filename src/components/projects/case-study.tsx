@@ -79,8 +79,7 @@ export function CaseStudy({
 }) {
   const isTool = project.category === "Tools";
   const icons = [Code2, ShieldCheck, Lightbulb];
-  if (isTool && demoFields(project) > 0)
-    return <ToolSnapshot project={project} next={next} />;
+  if (isTool) return <ToolSnapshot project={project} next={next} />;
   return (
     <main id="main-content">
       <Container className="pt-7">

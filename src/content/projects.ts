@@ -18,7 +18,7 @@ export const projects: PortfolioProject[] = [
     role: "Full-Stack Developer",
     team: "Sofrix",
     platform: "Web",
-    status: "Public link",
+    status: "Private project",
     stack: [
       "Next.js",
       "TypeScript",
@@ -127,7 +127,6 @@ export const projects: PortfolioProject[] = [
       text: "Gained experience improving an existing application by investigating behavior, introducing caching, and refactoring code alongside ongoing feature work.",
     },
     projectStatus: "Ongoing product",
-    productUrl: "https://bitlux-ops.vercel.app/",
     context:
       "Bitlux supports private-jet bookings, operational requests and ticket documents. I worked across frontend and backend contributions within the existing product, alongside rendering fixes, updated interfaces and API integrations.",
     implementation: {
@@ -394,7 +393,7 @@ export const projects: PortfolioProject[] = [
       {
         title: "State & integrations",
         description:
-          "Integrated APIs and worked with Redux Toolkit, Tailwind CSS, and TanStack Query.",
+          "Implemented authentication, integrated APIs, and worked with Redux Toolkit, Tailwind CSS, and TanStack Query.",
       },
       {
         title: "Backend contribution",
@@ -753,6 +752,8 @@ export const projects: PortfolioProject[] = [
     stack: [
       "React Native",
       "Expo",
+      "Node.js",
+      "Express",
       "Redux Toolkit",
       "i18n",
       "File-based routing",

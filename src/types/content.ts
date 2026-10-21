@@ -48,6 +48,8 @@ export type PortfolioProject = {
   platform: string;
   status: "Public link" | "Private project" | "Preview";
   stack: string[];
+  stackVerified?: boolean;
+  developmentWorkflow?: string;
   keyTechnologies?: string[];
   scope: string[];
   overview: string;

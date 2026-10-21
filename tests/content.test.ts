@@ -149,7 +149,8 @@ test("owner handoff completes commercial narratives and keeps deferred tools pen
   );
   for (const project of projects)
     assert.equal(demoFields(project), 0, project.name);
-  for (const tool of tools) assert.ok(demoFields(tool) > 0, tool.name);
+  for (const tool of tools)
+    assert.equal(demoFields(tool), tool.slug === "blogsite" ? 5 : 0, tool.name);
   const onyx = getProject("onyx")!;
   assert.equal(onyx.status, "Private project");
   assert.equal(onyx.productUrl, undefined);
@@ -243,4 +244,26 @@ test("MERN full-stack positioning and project boundaries match owner clarificati
       slug,
     );
   assert.equal(getProject("onyx")?.role, "Frontend Developer");
+});
+
+test("tool build evidence completes two stories without mandatory lessons or live links", () => {
+  assert.equal(getProject("bitlux")?.productUrl, undefined);
+  assert.equal(getProject("bitlux")?.media?.length, 4);
+  assert.ok(getProject("get-foodies")?.stack.includes("Node.js"));
+  assert.ok(getProject("get-foodies")?.stack.includes("Express"));
+  assert.ok(
+    getProject("skillmatch")?.contributions.some((item) =>
+      /authentication/i.test(item.description),
+    ),
+  );
+  for (const slug of ["typespark", "globepick"]) {
+    const tool = getTool(slug)!;
+    assert.equal(demoFields(tool), 0);
+    assert.equal(tool.stackVerified, true);
+    assert.equal(tool.lessons, undefined);
+    assert.equal(tool.productUrl, undefined);
+    assert.match(tool.developmentWorkflow ?? "", /Codex/);
+    assert.doesNotMatch(tool.developmentWorkflow ?? "", /\d+%/);
+  }
+  assert.equal(getTool("blogsite")?.stackVerified, false);
 });

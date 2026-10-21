@@ -69,6 +69,16 @@ for (const route of routes) {
     );
     assert.doesNotMatch(html, /Scrollable technical decisions/);
   }
+  if (route === "/tools/typespark" || route === "/tools/globepick") {
+    assert.match(html, /Tech stack/);
+    assert.match(html, /Codex-assisted/);
+    assert.match(html, /Decisions that mattered/);
+    assert.doesNotMatch(html, /Lessons learned/);
+  }
+  if (route === "/tools/blogsite") assert.doesNotMatch(html, /Tech stack/);
+  if (route === "/work/bitlux")
+    assert.doesNotMatch(html, /bitlux-ops.vercel.app/);
+  if (route === "/work/get-foodies") assert.match(html, /Express/);
   if (route === "/about") {
     assert.match(html, /id="toolkit"/);
     assert.match(html, /Jul 2025/);

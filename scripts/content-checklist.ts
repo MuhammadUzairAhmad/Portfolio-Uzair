@@ -15,7 +15,7 @@ for (const item of experience)
     `${item.datesDemo ? "[ ]" : "[x]"} ${item.company}: employment dates`,
   );
 console.log(
-  `${profile.resume.demo ? "[ ]" : "[x]"} Résumé download is current`,
+  `${profile.resume.demo ? "[ ]" : "[x]"} Real résumé configured (document wording needs separate review)`,
 );
 
 console.log(
