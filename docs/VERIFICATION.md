@@ -98,3 +98,15 @@ Focused previews: [homepage experience](previews/experience-home-dark.jpg), [exp
 Work, Tools, and About now opt into the shared small-grid layer through `PageIntro`, at 70% opacity. The decoration stays inside the introductory section, leaving the project/tool collections and About content surfaces clean. Contact keeps its existing separate large grid. No dependencies or client logic were added.
 
 Lint, type checks, all twelve tests, production build, and the nineteen-page smoke check passed. Browser checks inspected Work in dark mode, Tools in light mode, and About at 320px with no horizontal overflow. No console warnings/errors were observed; the viewport override was reset. Focused previews: [Work](previews/intro-work-dark.jpg), [Tools](previews/intro-tools-light.jpg), [mobile About](previews/intro-about-mobile-light.jpg).
+
+## Owner content handoff — 21 October 2026
+
+Applied the latest `portfolio-content-additions.md` to ten commercial/company case studies. All ten now have zero draft narrative fields; only TypeSpark (4), GlobePick (3), and Blogsite (5) remain deferred. Main featured order, résumé bytes, five employment records/dates, and eleven screenshot records are preserved. Welcome to Food is absent from the collection and its URL returns HTTP 404.
+
+Added separate product references and five external Loom walkthroughs, with distinct Linxx web/mobile labels. No iframe, autoplay, remote video download, invented thumbnail/captions/transcript, or local video entry was added. Browser checks loaded all five supplied Loom pages and observed active playback. Hestiya, Gaming, and Get Foodies video elements reported readyState 4 and elapsed playback; both Linxx pages showed advancing player times. Recordings were paused and the temporary external tab closed afterward. Product-site uptime was not comprehensively verified; recheck at launch.
+
+Final validation: production build, TypeScript, ESLint, Prettier, 14 content/publication tests, content checklist, and diff whitespace checks pass. HTTP smoke checks pass all 18 portfolio pages, four missing/removed route 404s, local assets, five Loom hrefs/labels, product link labels, and preview SEO. Noindex, disallow-all robots and an empty preview sitemap remain intact.
+
+Browser checks: Linxx recording cards and gallery jump work; mobile/dark/light views at 320px have no document overflow. Shopify’s longer title wraps at 320px. Development Solutions Group omits its absent decision table and lesson, displaying only the supplied outcome. Onyx exposes no unavailable recording/gallery/product actions. About shows all five experience disclosures open, Keller Williams updates, original dates, and completed Shopify recent-work copy. No console errors/warnings were captured on the portfolio tab. Temporary viewport overrides were reset.
+
+Previews: [dark recording actions](previews/content-walkthroughs-dark.jpg), [320px recording cards](previews/content-walkthroughs-mobile.jpg), [light recording actions](previews/content-walkthroughs-light.jpg). This section supersedes older statements above that no recordings were supplied or that 19 project pages remain.

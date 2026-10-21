@@ -1,15 +1,15 @@
 # Content sources and precedence
 
-Updated on 20 October 2026 from `Uzair-MERN-Stack-Resume.pdf` in this repository (two pages, dated October 2026). Its unchanged bytes are copied to `public/documents/uzair-mern-stack-resume.pdf` for the download. The obsolete generated demo download was removed.
+Updated 21 October 2026.
 
-The updated résumé takes precedence over `../portfolio/about-me.md` and `../portfolio/src/data/index.ts` for employment dates, role titles, the LinkedIn URL, and project links. The older portfolio supplements project descriptions, product scope, skills, and existing media. Website availability is separate from ownership/contribution evidence; URLs supplied by the owner are not proof of uptime.
+1. `portfolio-content-additions.md` is the latest owner-approved source for ten company/client project narratives, contribution boundaries, supplied product URLs and five Loom walkthroughs. It supersedes older descriptions. Welcome to Food is removed. The three tool/blog records are explicitly deferred.
+2. `Uzair-MERN-Stack-Resume.pdf` remains authoritative for personal/contact details and employment dates. Its unchanged public copy is `public/documents/uzair-mern-stack-resume.pdf`.
+3. The old portfolio supplies supplemental historical details and real media. Existing device mockups and all eleven original Bitlux/Linxx screenshot records are preserved.
 
-- Profile: Faisalabad, Pakistan; Software Engineer, MERN/Next.js; 3+ years; updated LinkedIn; English/Urdu; education and GPA; three listed certifications.
-- Employment: SJ Empowers Dec 2022–May 2023; Netixsol Jun 2023–Feb 2024; Strategist HUB Mar–Dec 2024; Weiblocks Jan–Jun 2025; Sofrix Jul 2025–Jun 2026. The older conflicting dates were replaced.
-- Existing case studies: refined role/contribution wording, résumé stacks, Bitlux public preview, and Hestiya’s résumé preview URL. Personal contributions are distinguished from the product’s broader capabilities.
-- Added project records: Get Foodies, Onyx, real-estate microfrontend work, Shopify app, and Welcome to Food demo. Missing screenshots do not become generated product UI; a simple typographic cover is used.
-- Skills added from the résumé: Context API, Swagger UI, Plaid, jsPDF, Tiptap, VS Code/Cursor, and Shopify/Rails work, with Rails explicitly described as current learning.
+Employment remains SJ Empowers Dec 2022–May 2023; Netixsol Jun 2023–Feb 2024; Strategist HUB Mar–Dec 2024; Weiblocks Jan–Jun 2025; Sofrix Jul 2025–Jun 2026. Ongoing product status does not imply continuing employment. Shopify is completed freelance feature work; the historical Sofrix Shopify highlight was removed to avoid attributing the later engagement to that employment period.
 
-The résumé puts ongoing Shopify work under a Sofrix role ending June 2026, and uses “currently” in the historical Strategist HUB entry. The website uses dated historical wording for Strategist HUB and does not invent a current employer. Current Shopify employment/client context should be clarified later.
+Important contribution boundaries: SkillMatch included senior-guided backend work; Hestiya is frontend ownership with another developer’s Python APIs; Gaming Platform includes frontend/backend ownership with a client-supplied contract; Onyx integrates desktop APIs and a frontend Socket.io listener with no custom backend; Keller Williams is junior work shadowing the CTO, using existing translation tooling and shared-package architecture.
 
-Only source-supported solution and implementation statements had their draft flag removed. Unprovided original briefs, exact architectural reasoning, lessons, and outcome metrics remain visibly marked as draft/demo content. Generic anonymous quotes in the old portfolio were not introduced as verified testimonials.
+Qualitative outcomes and learning points come from the owner. No numeric performance/adoption metrics, testimonials, repository links, new employment dates, or screenshots were invented. Optional absent lessons and decisions are omitted cleanly; only deferred tools retain draft flags.
+
+Product URLs are owner-supplied references, not proof of personal ownership of every feature or of current uptime. Keller Williams is explicitly labeled as the product/company website and Shopify as an App Store listing. Loom links are external recordings, not live demos or local MP4s.

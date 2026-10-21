@@ -42,3 +42,8 @@ The original résumé is tracked as a source and its unchanged public download r
 The changes are local; no remote, push, or deployment was added.
 
 - `feat: add subtle grids to page introductions` — apply the small static grid to Work, Tools, and About intros and verify theme/mobile layouts. Local commit only.
+
+### Detailed owner content — 21 October 2026
+
+- `e82d959` — apply ten owner-supplied case studies, correct ownership and completed/ongoing product context, add five labeled external Loom walkthroughs, preserve screenshot galleries, remove Welcome to Food, and adapt optional result/decision content.
+- Follow-up documentation commit records the reduced remaining-content list, source precedence, editing fields, browser previews, and final production verification. No remote or publication was added.

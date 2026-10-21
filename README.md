@@ -27,7 +27,7 @@ npm run start -- --hostname 127.0.0.1 --port 4337
 - Homepage: hero, services, selected projects, practical skill highlights, tools, work experience, process, about, and contact.
 - Work archive and eleven project case-study routes.
 - Tools archive and three individual tool stories.
-- Eleven original Bitlux/Linxx screenshots in lazy-loaded galleries, full-size links, and optional native video support.
+- Eleven original Bitlux/Linxx screenshots in lazy-loaded galleries, five labeled external Loom walkthroughs, and optional native video support.
 - About with a grouped development toolkit, contact, custom 404, social sharing image, favicon, robots, and sitemap.
 - Shared experience timeline with real logos, roles/dates, and expanded contribution cards on About.
 - Small, medium, and large static CSS grids adapted to both themes.

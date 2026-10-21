@@ -2,16 +2,16 @@
 
 All personal and project data lives in `src/content/`. You can update these TypeScript objects without editing the layouts. TypeScript and the tests catch missing required fields and broken local asset references.
 
-| File                        | What to change                                                                                                                   |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `src/content/profile.ts`    | Profile, featured project slug, biography, contact/social links, résumé, education, current focus, languages, and certifications |
-| `src/content/projects.ts`   | All eleven project records, case-study copy, stacks, contributions, screenshots, live links                                      |
-| `src/content/tools.ts`      | TypeSpark, GlobePick, Blogsite, cover styles and tool stories                                                                    |
-| `src/content/experience.ts` | Companies, roles, YYYY-MM start/end dates, contribution bullets, project links, skill badges, and logo assets                    |
-| `src/content/services.ts`   | Services, related work, skill groups, and process steps                                                                          |
-| `src/content/toolkit.ts`    | Homepage skill highlights, project evidence links, and grouped libraries on About                                                |
-| `src/content/tool-art.ts`   | Decorative tool artwork paths and image dimensions                                                                               |
-| `src/app/globals.css`       | Shared light/dark theme tokens, typography, container, accessibility base                                                        |
+| File                        | What to change                                                                                                                 |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `src/content/profile.ts`    | Profile, featured project slug, biography, contact/social links, résumé, education, recent work, languages, and certifications |
+| `src/content/projects.ts`   | All ten project records, case-study copy, stacks, contributions, screenshots, product URLs and external walkthroughs           |
+| `src/content/tools.ts`      | TypeSpark, GlobePick, Blogsite, cover styles and tool stories                                                                  |
+| `src/content/experience.ts` | Companies, roles, YYYY-MM start/end dates, contribution bullets, project links, skill badges, and logo assets                  |
+| `src/content/services.ts`   | Services, related work, skill groups, and process steps                                                                        |
+| `src/content/toolkit.ts`    | Homepage skill highlights, project evidence links, and grouped libraries on About                                              |
+| `src/content/tool-art.ts`   | Decorative tool artwork paths and image dimensions                                                                             |
+| `src/app/globals.css`       | Shared light/dark theme tokens, typography, container, accessibility base                                                      |
 
 Component/page-specific styling stays in Tailwind class names. UI labels and editorial section titles live in their components; actual portfolio facts live in the data above.
 
@@ -27,9 +27,9 @@ The October 2026 résumé is now the source for profile details, employment date
 4. The real résumé is already linked. For a future replacement, update the PDF in `public/documents/` and the path in `profile.ts`; keep `profile.resume.demo` as `false`.
 5. After review, set `contentSettings.demoMode` to `false` to remove the footer preview label.
 
-Project cards use `cardSubtitle` when provided, otherwise `subtitle`. The homepage timeline intentionally shows companies and roles; confirmed dates remain in the expandable About experience rows.
+Project cards use `cardSubtitle` when provided, otherwise `subtitle`. The homepage timeline shows company, role, and start/end dates; About expands the same records into contribution bullets and skill badges.
 
-A case study contains `overview`, `role`, `team`, `platform`, `scope`, `stack`, `contributions`, `problem`, `solution`, `decisions`, `results`, and `lessons`. A narrative is `{ text: "Your copy", demo: false }`. A decision is `{ topic, choice, reason, demo }`.
+A case study contains `overview`, `role`, `team`, `platform`, `scope`, `stack`, `contributions`, `problem`, `solution`, `decisions`, `results`, and optional `lessons`. Use an empty `decisions` array for projects without a separate technical choice table. Omit `lessons` when none is supplied; the Results section adapts without filler. A narrative is `{ text: "Your copy", demo: false }`. A decision is `{ topic, choice, reason, demo }`.
 
 Use specific, truthful outcomes. A shipped feature, a resolved workflow, or a lesson is useful even when you have no measured percentage. Add metrics or testimonials only when you can substantiate them and have permission to share them. Check client permission before publishing private project screenshots.
 
@@ -91,9 +91,9 @@ For video, place an MP4 or WebM in `public/videos/`, and add the following objec
 }
 ```
 
-The gallery reserves image space, lazy-loads screenshots, and opens the full-size asset on selection. Videos use native controls, inline playback, and `preload="none"`; there is no autoplay. Add captions/transcripts when a recording has speech or meaningful audio. No project video files were found in the old portfolio during this migration, so the live data has no video entries yet. Actual video playback should be checked after adding the real file.
+The gallery reserves image space, lazy-loads screenshots, and opens the full-size asset on selection. Videos use native controls, inline playback, and `preload="none"`; there is no autoplay. Add captions/transcripts when a recording has speech or meaningful audio. There are no local video entries currently. Five owner-supplied Loom recordings are separate external links, so they do not require local files or invented thumbnails. Actual playback/access should be checked in the publication environment.
 
-A supplied `liveUrl` shows an external project button. Without it, no demo link is invented; the case study and any gallery remain usable. Projects without a screenshot use a typographic cover. Add `image` when a real screen is available, and the cover switches automatically. A recorded URL does not guarantee that a third-party deployment is still accessible.
+A supplied `productUrl` shows an external project button; `productLinkLabel` provides an accurate label, such as an App Store listing or company website. Without it, no demo link is invented; the case study and any gallery remain usable. Projects without a screenshot use a typographic cover. Add `image` when a real screen is available, and the cover switches automatically. A recorded URL does not guarantee that a third-party deployment is still accessible.
 
 ## Local checks
 
@@ -127,3 +127,15 @@ Edit `startDate` and `endDate` using `YYYY-MM`. Date labels are derived automati
 `src/components/ui/grid-background.tsx` provides three static CSS grid sizes: `small` (24px), `medium` (48px), and `large` (96px). The homepage hero uses small; the homepage approach section uses medium; shared contact calls to action and the Contact intro use large. Optional glow and crosshair markers are static. The component is decorative, ignores pointer events, and has no client state, animation loop, image request, or added library. Keep section wrappers positioned and isolated when reusing it. All component styling remains in Tailwind utilities; no new global component styles were added.
 
 Page introductions can opt into the faint small grid with the `grid` prop on `PageIntro`. Work, Tools, and About use it at 70% of the standard grid layer opacity. It is confined to each introduction; their content sections keep clean backgrounds. Contact retains its separate large-grid introduction.
+
+## External walkthrough links and status
+
+Use a separate typed array for hosted recordings:
+
+```ts
+walkthroughs: [
+  { label: "Web walkthrough", url: "https://www.loom.com/share/RECORDING_ID", provider: "Loom" },
+],
+```
+
+The UI links directly to the recording in a new tab and identifies Loom. It does not embed, download, autoplay, or fabricate a thumbnail. Keep web/mobile recordings separately labeled. Optional `projectStatus` is `Ongoing product` or `Completed feature work`; this is independent of employment dates and `status` access classification. Keep preview/noindex until launch review.
