@@ -82,3 +82,8 @@ The changes are local; no remote, push, or deployment was added.
 
 - Content/UI phase: shared implementation/contribution/decision/evidence components, concise per-project detail copy, content-driven navigation, fewer forced sections, lead Get Foodies recording and preserved media/ownership.
 - Documentation phase: current public copy, field guidance, source boundaries, regression/browser verification and previews. Local only.
+
+### Merge contribution and implementation — 22 October 2026
+
+- One checklist per detail page, compact standalone tech stack, optional verified Shopify challenge, and preserved source-specific feature details. Removed replaced checklist/map UI modules.
+- Updated rendered-copy/editing guides, smoke assertions, responsive observations and screenshots. Local implementation and documentation commits only.

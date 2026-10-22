@@ -188,3 +188,15 @@ After the latest content corrections, the five affected commercial pages were ch
 Previews: [shared Hestiya checklist](previews/project-checklist-hestiya-dark.jpg), [shared tool checklist](previews/tool-checklist-typespark-dark.jpg), [Shopify camera decision](previews/shopify-camera-decision.jpg), [updated Foodies web/mobile story](previews/get-foodies-web-mobile-updated.jpg). Structured observations are in docs/audit/detail-checklist-browser-results.json and docs/audit/owner-corrections-browser-results.json.
 
 Blogsite remains the only incomplete tool story (five draft fields); its unconfirmed stack remains hidden and the site stays noindex. Résumé/GitHub updates remain owner-deferred. Local commits only, with no push or deployment.
+
+## One contribution checklist per project — 22 October 2026
+
+Merged the repeated My role & contributions and Implementation sections into My contribution on all 13 details. The shared checklist uses concise responsibility headings and descriptions, preserving unique confirmed feature details. Verified stack badges have their own section; Blogsite’s unverified stack remains hidden. Replaced checklist/map UI components were removed. Original scope and workflow source fields remain available for reference but are not rendered.
+
+Only Shopify highlights a Key challenge & solution using its verified iframe-permission story. Its duplicate camera decision was removed; other optional engineering choices remain expandable. Existing project metadata, ownership, images, video viewers and preview publication safeguards are retained.
+
+Validation: all 21 content/media/publication tests pass, as do ESLint, route types/TypeScript, production build, repository formatting, diff whitespace and production HTTP smoke across 18 pages plus four expected 404s and assets. An initial unit assertion and Tools smoke assertion still referenced the previous section/title; both were updated to the approved layout and the checks rerun.
+
+Browser: all 13 detail pages checked at 320px dark, 320px light and 1280px dark (39 observations). Each has exactly one contribution checklist, no former Implementation section and no document overflow. All mobile in-page targets resolve; only Shopify has the highlighted challenge. Clicked contribution/challenge navigation reaches its section. No browser warnings/errors were captured. Temporary viewport overrides were reset. Viewer behavior was not retested because its implementation/media were unchanged.
+
+Previews: [merged Hestiya contribution](previews/merged-contribution-hestiya.jpg), [Shopify challenge](previews/merged-shopify-challenge.jpg). Observations: docs/audit/merged-detail-browser-results.json. Local phase commits only.
