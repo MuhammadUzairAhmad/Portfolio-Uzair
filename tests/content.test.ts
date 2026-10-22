@@ -58,7 +58,17 @@ test("local assets exist and featured cards have visuals", () => {
     assert.ok(existsSync(join(process.cwd(), "public/images/projects", file)));
 });
 test("services point at existing evidence and featured work is intentional", () => {
-  for (const service of services) assert.ok(getProject(service.project));
+  for (const service of services) {
+    assert.equal(service.href, "/work");
+    assert.ok(service.deliverables.length > 0);
+  }
+  assert.deepEqual(profile.homeFeaturedProjectSlugs, [
+    "skillmatch",
+    "hestiya",
+    "bitlux",
+  ]);
+  for (const slug of profile.homeFeaturedProjectSlugs)
+    assert.ok(getProject(slug)?.image);
   assert.equal(projects.filter((item) => item.featured).length, 3);
 });
 test("every type of illustrative narrative is counted", () => {
@@ -195,10 +205,7 @@ test("Gaming Platform remains an explicit full-stack example with documented own
   assert.ok(
     gaming.stack.includes("MongoDB") && gaming.stack.includes("NextAuth"),
   );
-  assert.equal(
-    toolkitHighlights.find((item) => item.id === "backend")?.project,
-    gaming.slug,
-  );
+  assert.ok(!profile.homeFeaturedProjectSlugs.includes(gaming.slug));
 });
 
 test("contribution maps contain useful descriptions without replacing real media", () => {

@@ -1,11 +1,5 @@
 import Link from "next/link";
-import {
-  Monitor,
-  Database,
-  Smartphone,
-  Plug,
-  ArrowUpRight,
-} from "lucide-react";
+import { Monitor, Database, Layers, Plug, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { Badge } from "@/components/ui/badge";
@@ -14,7 +8,7 @@ import { getProject } from "@/lib/content";
 const icons = {
   frontend: Monitor,
   backend: Database,
-  mobile: Smartphone,
+  data: Layers,
   integrations: Plug,
 };
 export function SkillsSection() {
@@ -28,8 +22,8 @@ export function SkillsSection() {
           action="Full libraries & tools"
         />
         <p className="-mt-2 mb-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
-          Each capability links to a project where I used it. Explore the work
-          behind the stack.
+          From the interface to the backend and the services around it. Explore
+          related projects for examples of my contributions.
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {toolkitHighlights.map((item) => {

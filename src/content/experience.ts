@@ -1,7 +1,6 @@
 export type ExperienceEntry = {
   company: string;
   role: string;
-  focus?: string;
   startDate: string;
   endDate?: string;
   location: string;
@@ -20,7 +19,6 @@ export type ExperienceEntry = {
 export const experience: ExperienceEntry[] = [
   {
     company: "Sofrix",
-    focus: "Full-stack contributions",
     role: "Software Engineer",
     startDate: "2025-07",
     endDate: "2026-06",
@@ -70,7 +68,6 @@ export const experience: ExperienceEntry[] = [
   },
   {
     company: "Weiblocks",
-    focus: "Full-stack contributions",
     role: "Software Engineer",
     startDate: "2025-01",
     endDate: "2025-06",
@@ -141,7 +138,6 @@ export const experience: ExperienceEntry[] = [
   },
   {
     company: "Netixsol",
-    focus: "Full-stack contributions",
     role: "MERN Stack Developer",
     startDate: "2023-06",
     endDate: "2024-02",
@@ -182,7 +178,6 @@ export const experience: ExperienceEntry[] = [
   },
   {
     company: "SJ Empowers",
-    focus: "Full-stack contributions",
     role: "Frontend Developer Intern",
     startDate: "2022-12",
     endDate: "2023-05",

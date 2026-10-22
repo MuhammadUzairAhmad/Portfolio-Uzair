@@ -43,11 +43,26 @@ for (const route of routes) {
   }
   if (route === "/") {
     assert.match(html, /id="skills"/);
-    assert.match(html, /Full-stack spotlight/);
+    assert.doesNotMatch(
+      html,
+      /Full-stack spotlight|Gaming Platform|Full-stack contributions/,
+    );
     assert.match(html, /Full-Stack Developer/);
     assert.match(html, /SkillMatch responsive device previews/);
-    assert.match(html, /Gaming Platform/);
-    assert.match(html, /Frontend &amp; backend development/);
+    const featuredSection = html.slice(
+      html.indexOf("Featured projects"),
+      html.indexOf("Where I’ve worked"),
+    );
+    const featuredLinks = [
+      ...featuredSection.matchAll(/href="(\/work\/[^"#]+)"/g),
+    ].map((match) => match[1]);
+    assert.deepEqual(
+      featuredLinks,
+      profile.homeFeaturedProjectSlugs.map((slug) => `/work/${slug}`),
+    );
+    assert.match(html, /Build the MVP/);
+    assert.match(html, /Improve &amp; scale/);
+    assert.equal((html.match(/>View all work/g) ?? []).length, services.length);
     assert.match(html, /uzair-mern-stack-resume.pdf/);
     for (const service of services)
       assert.ok(
@@ -82,6 +97,7 @@ for (const route of routes) {
   if (route === "/about") {
     assert.match(html, /id="toolkit"/);
     assert.match(html, /Jul 2025/);
+    assert.doesNotMatch(html, /Full-stack contributions/);
     assert.equal(
       (html.match(/<details[^>]*\bopen(?:[ >="\'])/g) ?? []).length,
       experience.length,

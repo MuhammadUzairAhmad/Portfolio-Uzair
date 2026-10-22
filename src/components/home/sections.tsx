@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Monitor, Database, Smartphone } from "lucide-react";
+import { ArrowRight, Monitor, Database, Smartphone, Check } from "lucide-react";
 import { GridBackground } from "@/components/ui/grid-background";
 import { Container, Eyebrow } from "@/components/layout/container";
 import { SectionHeading } from "@/components/layout/section-heading";
@@ -7,10 +7,9 @@ import { ProjectCard } from "@/components/projects/project-card";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
 import { services, approach } from "@/content/services";
-import { projects } from "@/content/projects";
+import { getProject } from "@/lib/content";
 import { tools } from "@/content/tools";
 import { ExperienceList } from "@/components/experience/experience-list";
-import { FullStackSpotlight } from "./full-stack-spotlight";
 import { profile } from "@/content/profile";
 const icons = [Monitor, Database, Smartphone];
 export function Services() {
@@ -20,7 +19,7 @@ export function Services() {
         <SectionHeading
           eyebrow="How I can help"
           title="Services"
-          description="Turning ideas into scalable digital products."
+          description="New builds, focused MVPs and improvements to existing products."
         />
         <div className="grid gap-4 sm:grid-cols-3">
           {services.map((service, i) => {
@@ -28,7 +27,7 @@ export function Services() {
             return (
               <article
                 key={service.id}
-                className="rounded-xl border border-border bg-background/40 p-5 sm:p-6"
+                className="flex flex-col rounded-xl border border-border bg-background/40 p-5 sm:p-6"
               >
                 <Icon
                   size={30}
@@ -40,16 +39,28 @@ export function Services() {
                 <p className="mt-2 min-h-12 text-sm leading-relaxed text-muted-foreground">
                   {service.description}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
+                  {service.deliverables.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check
+                        size={14}
+                        className="mt-1 shrink-0 text-primary"
+                        aria-hidden
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto flex flex-wrap gap-2 pt-5">
                   {service.skills.map((skill) => (
                     <Badge key={skill}>{skill}</Badge>
                   ))}
                 </div>
                 <Link
-                  href={`/work/${service.project}`}
+                  href={service.href}
                   className="mt-4 inline-flex min-h-11 items-center gap-2 text-xs font-medium text-primary"
                 >
-                  See related work <ArrowRight size={13} aria-hidden />
+                  View all work <ArrowRight size={13} aria-hidden />
                 </Link>
               </article>
             );
@@ -70,17 +81,17 @@ export function SelectedWork() {
           action="View all projects"
         />
         <div className="grid gap-4 md:grid-cols-2">
-          {projects
-            .filter((project) => project.featured)
-            .map((project, i) => (
+          {profile.homeFeaturedProjectSlugs.map((slug, i) => {
+            const project = getProject(slug);
+            return project ? (
               <ProjectCard
                 key={project.slug}
                 project={project}
                 featured={i === 0}
               />
-            ))}
+            ) : null;
+          })}
         </div>
-        <FullStackSpotlight />
       </Container>
     </section>
   );
@@ -125,7 +136,11 @@ export function ApproachSection({
 }) {
   const content = (
     <>
-      <SectionHeading eyebrow="My approach" title="From idea to impact" />
+      <SectionHeading
+        eyebrow="My approach"
+        title="From idea to impact"
+        description="Start with a useful first version. Improve it as the product grows."
+      />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {approach.map((step, i) => (
           <article key={step.title} className="flex gap-3">

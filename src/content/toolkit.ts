@@ -2,35 +2,41 @@
 export const toolkitHighlights = [
   {
     id: "frontend",
-    title: "Frontend",
+    title: "Frontend & mobile",
     description:
-      "Reusable interfaces, clear data flows, and responsive product experiences.",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    project: "skillmatch",
-  },
-  {
-    id: "backend",
-    title: "Backend & data",
-    description:
-      "APIs, authentication, and the data models behind useful products.",
-    skills: ["Next.js", "MongoDB", "NextAuth"],
-    project: "gaming-platform",
-  },
-  {
-    id: "mobile",
-    title: "Mobile",
-    description:
-      "Shared product thinking across web and cross-platform mobile apps.",
-    skills: ["React Native", "Expo", "Redux Toolkit", "i18n"],
+      "Responsive web interfaces and cross-platform mobile apps, with reusable components and clear user flows.",
+    skills: [
+      "React",
+      "Next.js",
+      "React Native (Expo)",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
     project: "get-foodies",
   },
   {
-    id: "integrations",
-    title: "Integrations",
+    id: "backend",
+    title: "Backend & authentication",
     description:
-      "Connecting business services, documents, and everyday workflows.",
-    skills: ["REST APIs", "TanStack Query", "jsPDF"],
+      "Create and improve APIs, application logic and authentication that connect the product behind the interface.",
+    skills: ["Node.js", "Express.js", "NestJS", "Passport.js", "JWT"],
+    project: "skillmatch",
+  },
+  {
+    id: "data",
+    title: "Data & state",
+    description:
+      "Work with application data, shared state, API fetching and caching to keep connected screens consistent.",
+    skills: ["MongoDB", "PostgreSQL", "Redux Toolkit", "TanStack Query"],
     project: "bitlux",
+  },
+  {
+    id: "integrations",
+    title: "APIs & integrations",
+    description:
+      "Connect REST and third-party APIs, payment and wallet services, and document-generation workflows.",
+    skills: ["REST APIs", "Third-party APIs", "GraphQL", "Web3", "jsPDF"],
+    project: "hestiya",
   },
 ];
 export const toolkitGroups = [

@@ -4,47 +4,62 @@ export const services = [
     id: "web",
     title: "Web applications",
     description:
-      "Clear, responsive experiences—from a focused website to a connected product dashboard.",
+      "Responsive websites and product interfaces that turn designs into clear, usable experiences.",
+    deliverables: [
+      "Websites, dashboards & admin interfaces",
+      "Reusable components, forms & validation",
+      "Responsive layouts & frontend improvements",
+    ],
     skills: ["React", "Next.js", "TypeScript"],
-    project: "skillmatch",
+    href: "/work",
   },
   {
     id: "systems",
-    title: "Full-stack systems",
+    title: "Full-stack development",
     description:
-      "Frontend applications, backend APIs, authentication, and data—connected into a working product.",
-    skills: ["Next.js", "MongoDB", "NextAuth"],
-    project: "gaming-platform",
+      "A connected product across frontend, backend and data—from a focused MVP to improvements in an existing application.",
+    deliverables: [
+      "Frontend features & backend APIs",
+      "Authentication, databases & business logic",
+      "Third-party services & connected workflows",
+    ],
+    skills: ["Node.js", "Express.js", "NestJS", "MongoDB"],
+    href: "/work",
   },
   {
     id: "mobile",
-    title: "Mobile experiences",
+    title: "Mobile applications",
     description:
-      "Useful cross-platform products that feel at home on the devices people use every day.",
+      "Cross-platform iOS and Android experiences, connected to the services and workflows behind your product.",
+    deliverables: [
+      "React Native & Expo applications",
+      "API-connected onboarding & user flows",
+      "Localization, mobile fixes & deployment support",
+    ],
     skills: ["React Native", "Expo", "Capacitor"],
-    project: "linxx",
+    href: "/work",
   },
 ];
 export const approach = [
   {
-    title: "Understand",
+    title: "Understand & scope",
     description:
-      "Learn about the people, the problem, and what success should look like.",
+      "Clarify your users, the problem and the essential workflows. Agree on a focused first release.",
   },
   {
-    title: "Shape",
+    title: "Build the MVP",
     description:
-      "Map the flows, clarify constraints, and choose a practical technical direction.",
+      "Connect the interface, backend APIs, data and authentication needed for a usable first version.",
   },
   {
-    title: "Build",
+    title: "Test & launch",
     description:
-      "Develop in focused pieces, share progress, and keep feedback close.",
+      "Check complete user journeys, gather feedback, refine the details and prepare the release.",
   },
   {
-    title: "Refine & ship",
+    title: "Improve & scale",
     description:
-      "Test real workflows, polish the details, and make the handoff clear.",
+      "Use feedback and actual needs to prioritize features, improve performance and evolve the architecture.",
   },
 ];
 export const capabilities = [

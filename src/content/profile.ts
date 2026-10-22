@@ -8,6 +8,7 @@ export const profile = {
   location: "Faisalabad, Pakistan",
   timeZone: "UTC+05:00",
   heroProjectSlug: "skillmatch",
+  homeFeaturedProjectSlugs: ["skillmatch", "hestiya", "bitlux"],
   headline: ["Good ideas.", "Carefully built."],
   introduction:
     "I’m a Full-Stack Developer specializing in MERN and Next.js. I build web applications across the frontend and backend, with 3+ years of team and client experience.",
