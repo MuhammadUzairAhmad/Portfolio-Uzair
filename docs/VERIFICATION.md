@@ -234,3 +234,13 @@ Passed: 23 existing tests, ESLint, route types/TypeScript, production build, for
 Browser: the four missing-image covers fit 320px dark, including Shopify’s full name, without document overflow or cover text clipping. Get Foodies also fits 320px light. At 1280px, the centered cover was visually checked, and Watch walkthrough scrolled to its single recording inside #evidence. The supplied video viewer was unchanged; playback was not repeated. Temporary viewport reset; tab retained on Get Foodies.
 
 Previews: [name cover](previews/get-foodies-uniform-cover.jpg), [standard evidence section](previews/get-foodies-standard-evidence.jpg). Structured mobile observations: docs/audit/uniform-cover-browser-results.json. Local commits only.
+
+## Original illustrations on cards, real images on details — 22 October 2026
+
+Restored the original type/globe/blog artwork on cards and next-item previews. TextGenerators.net and GlobePick retain their current names, live links and actual screenshots on the detail pages. The Daily Mind remains a personal full-stack Work project; its archive entry now uses an illustrated card, with its original blog artwork. Detail image/media records are unchanged and ready to receive owner-prepared device mockups later.
+
+Passed: ESLint, route types/TypeScript, production build, formatting/diff whitespace and HTTP smoke across 18 pages, expected 404s, assets and legacy redirects. Smoke asserts original artwork on Home/Tools and the blog Work card, with raw screenshots absent from those collection views. Existing detail/media checks pass. No new unit tests were added for this reversible visual adjustment.
+
+Browser: desktop Tools and Work use the correct illustrated assets; all three details retain their live screenshots. Home, Tools, Work and the three detail pages fit 320px dark; the three collections also fit 320px light (nine structured mobile observations). No overflow or captured console warnings/errors. Tools desktop screenshot visually inspected; temporary viewport reset, retained tab on Tools. The previous browser session was unavailable; a fresh verification tab was created in the available in-app browser.
+
+Preview: [original tool artwork restored](previews/restored-tool-card-art.jpg). Observations: docs/audit/restored-card-art-browser-results.json. Local commits only.

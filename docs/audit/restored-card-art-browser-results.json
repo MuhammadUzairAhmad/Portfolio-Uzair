@@ -1,0 +1,85 @@
+[
+  {
+    "images": [
+      "/_next/image?url=%2Fimages%2Fcompanies%2Fsofrix.webp&w=3840&q=75",
+      "/_next/image?url=%2Fimages%2Fcompanies%2Fweiblocks.webp&w=3840&q=75",
+      "/_next/image?url=%2Fimages%2Fcompanies%2Fstrategist-hub.webp&w=3840&q=75",
+      "/_next/image?url=%2Fimages%2Fcompanies%2Fnetixsol.webp&w=3840&q=75",
+      "/_next/image?url=%2Fimages%2Ftools%2Ftypespark-preview-v2.webp&w=3840&q=75",
+      "/_next/image?url=%2Fimages%2Ftools%2Fglobepick-preview-v2.webp&w=3840&q=75"
+    ],
+    "overflow": false,
+    "path": "/",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "images": [
+      "/_next/image?url=%2Fimages%2Ftools%2Ftypespark-preview-v2.webp&w=3840&q=75",
+      "/_next/image?url=%2Fimages%2Ftools%2Fglobepick-preview-v2.webp&w=3840&q=75"
+    ],
+    "overflow": false,
+    "path": "/tools",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "images": [
+      "/_next/image?url=%2Fimages%2Ftools%2Fblogsite-preview-v2.webp&w=3840&q=75"
+    ],
+    "overflow": false,
+    "path": "/work",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "images": [
+      "/_next/image?url=%2Fimages%2Ftools%2Ftextgenerators-live.webp&w=3840&q=75",
+      "/_next/image?url=%2Fimages%2Ftools%2Ftextgenerators-live.webp&w=3840&q=75",
+      "/_next/image?url=%2Fimages%2Ftools%2Fglobepick-preview-v2.webp&w=3840&q=75"
+    ],
+    "overflow": false,
+    "path": "/tools/textgenerators",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "images": [
+      "/_next/image?url=%2Fimages%2Ftools%2Fglobepick-live.webp&w=3840&q=75",
+      "/_next/image?url=%2Fimages%2Ftools%2Fglobepick-live.webp&w=3840&q=75",
+      "/_next/image?url=%2Fimages%2Ftools%2Ftypespark-preview-v2.webp&w=3840&q=75"
+    ],
+    "overflow": false,
+    "path": "/tools/globepick",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "images": [
+      "/_next/image?url=%2Fimages%2Fprojects%2Fthe-daily-mind-live.webp&w=3840&q=75",
+      "/_next/image?url=%2Fimages%2Fprojects%2Fthe-daily-mind-live.webp&w=3840&q=75"
+    ],
+    "overflow": false,
+    "path": "/work/the-daily-mind",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/tools",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/work",
+    "theme": "light",
+    "width": 320
+  }
+]

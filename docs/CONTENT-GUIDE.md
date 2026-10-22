@@ -5,7 +5,7 @@ All personal and project data lives in `src/content/`. You can update these Type
 | File                        | What to change                                                                                                                 |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `src/content/profile.ts`    | Profile, featured project slug, biography, contact/social links, résumé, education, recent work, languages, and certifications |
-| `src/content/projects.ts`   | All ten project records, case-study copy, stacks, contributions, screenshots, product URLs and external walkthroughs           |
+| `src/content/projects.ts`   | All eleven project records, case-study copy, stacks, contributions, screenshots, product URLs and external walkthroughs        |
 | `src/content/tools.ts`      | TextGenerators.net, GlobePick, live links, screenshots and tool stories                                                        |
 | `src/content/experience.ts` | Companies, roles, YYYY-MM start/end dates, contribution bullets, project links, skill badges, and logo assets                  |
 | `src/content/services.ts`   | Services, related work, skill groups, and process steps                                                                        |
@@ -53,7 +53,7 @@ image: {
 
 `image` is the plain screenshot fallback. The original six projects also have a `mockup` path for the existing device artwork. The device presentation uses SVG clip paths around that artwork, preserving the original screen pixels while matching the reference background. These existing mockups share a 1640 × 924 composition (the optimized exports retain those proportions). If you add an unrelated screenshot or montage, remove `mockup` and use the `image` object; the component will display the plain image correctly. Only set `mockup` for artwork matching the existing device template.
 
-Dimensions reserve the correct space while the image loads. Keep product screenshots readable and preserve their proportions. The plain screenshot fallback uses `next/image` for appropriately sized variants. Existing device presentations use the pre-optimized WebP montage inside a responsive SVG, and the hero montage is preloaded. Tool covers use real product screenshots when image is supplied. Otherwise they fall back to decorative static illustrations, which are not screenshot evidence. Set `illustration` to `type`, `globe`, or `blog`. Their optimized transparent WebP files live in `public/images/tools/`; change paths and dimensions in `src/content/tool-art.ts` to replace them. They use responsive `next/image` delivery. Generation prompts are recorded in `docs/TOOL-ART-PROMPTS.md`.
+Dimensions reserve the correct space while the image loads. Keep product screenshots readable and preserve their proportions. The plain screenshot fallback uses `next/image` for appropriately sized variants. Existing device presentations use the pre-optimized WebP montage inside a responsive SVG, and the hero montage is preloaded. Tool and illustrated project cards use the original decorative artwork. Detail heroes use the real image field when supplied; artwork and screenshot evidence are separate. Set `illustration` to `type`, `globe`, or `blog`. Their optimized transparent WebP files live in `public/images/tools/`; change paths and dimensions in `src/content/tool-art.ts` to replace them. They use responsive `next/image` delivery. Generation prompts are recorded in `docs/TOOL-ART-PROMPTS.md`.
 
 ## Update libraries and skills
 
@@ -148,7 +148,7 @@ The header theme control is a light/dark button. New visitors start in light mod
 
 ## Contribution maps, hiring paths, and deferred tools
 
-`context` is the concise product-context paragraph shown in the case-study Overview. `overview` retains the fuller source narrative. Optional `implementation` contains a title, description and `steps` array, each with `title` and `description`. These are explanatory contribution maps based on confirmed work, not measured results, code samples or screenshots. For projects without real imagery, the map provides an intentional hero presentation; existing screenshots remain unchanged. The implementation section lists technologies in full rather than treating three stack initials as an architecture diagram.
+`context` is the concise product-context paragraph shown in the case-study Overview. `overview` retains the fuller source narrative. Optional `implementation` contains a title, description and `steps` array, each with `title` and `description`. These are explanatory contribution maps based on confirmed work, not measured results, code samples or screenshots. The implementation map field is historical source data and is not rendered. Missing images use the centered-name cover; technologies are shown in the separate Tech stack section.
 
 Gaming Platform remains a full-stack project. Its homepage spotlight and Full-stack archive filter make the frontend/backend responsibility explicit. The featured trio and their order remain unchanged. The client supplied the smart contract.
 
@@ -190,6 +190,6 @@ Edit ownership.label and ownership.summary for the short My involvement note abo
 
 ### Current names, locations and media
 
-TextGenerators.net is /tools/textgenerators; GlobePick remains /tools/globepick. Their image fields select real screenshots in Home cards, the tool archive and detail heroes; media supplies the on-page viewers. Decorative toolArtwork remains a fallback only. ToolsSection uses two columns for the two tools.
+TextGenerators.net is /tools/textgenerators; GlobePick remains /tools/globepick. Their illustration fields select the original artwork on Home, archive and next-item cards; image fields select real screenshots on detail heroes, and media supplies the on-page viewers. The Daily Mind uses illustration: blog for its Work/next-project cards while remaining a Web platforms personal project with a real screenshot on its detail. ToolsSection uses two columns for the two tools.
 
 The Daily Mind is /work/the-daily-mind, team Personal project, full-stack scope. Its published preview and homepage media are owner supplied. Edit its entry in projects.ts. Do not restore Blogsite as a duplicate tool. next.config.ts retains permanent redirects for both legacy paths. Source deletion is recorded internally for Get Foodies; its public walkthrough remains available without requiring a repository.

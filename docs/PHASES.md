@@ -101,3 +101,7 @@ The changes are local; no remote, push, or deployment was added.
 ### Uniform case-study covers and evidence — 22 October 2026
 
 Restore full-name typographic covers for projects without images and remove the special video-first detail layout. All commercial walkthroughs render in the standard evidence section; the top jump button remains.
+
+### Restore illustrated card artwork — 22 October 2026
+
+Use original type/globe/blog artwork on cards and next-item previews, keeping screenshots on detail pages. The Daily Mind remains a personal Work project; its archive card now shows the original blog illustration. Future device mockups can replace detail image/mockup fields independently.
