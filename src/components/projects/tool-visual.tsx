@@ -1,18 +1,21 @@
 import Image from "next/image";
 import { cn } from "@/lib/cn";
+import type { PortfolioProject } from "@/types/content";
 import { toolArtwork } from "@/content/tool-art";
 export function ToolVisual({
   kind,
+  image,
   className,
   detailed = false,
   eager = false,
 }: {
   kind?: "type" | "globe" | "blog";
+  image?: PortfolioProject["image"];
   className?: string;
   detailed?: boolean;
   eager?: boolean;
 }) {
-  const artwork = toolArtwork[kind ?? "blog"];
+  const artwork = image ?? toolArtwork[kind ?? "blog"];
   return (
     <div
       aria-hidden="true"
@@ -33,7 +36,10 @@ export function ToolVisual({
             ? "(min-width:1280px) 520px, (min-width:768px) 45vw, 90vw"
             : "(min-width:1024px) 320px, (min-width:640px) 30vw, 90vw"
         }
-        className="relative h-full w-full object-contain transition-transform duration-300 motion-safe:group-hover:scale-[1.035]"
+        className={cn(
+          "relative h-full w-full object-contain transition-transform duration-300 motion-safe:group-hover:scale-[1.035]",
+          image && "rounded-lg border border-border",
+        )}
       />
     </div>
   );

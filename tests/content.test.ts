@@ -146,8 +146,8 @@ test("employment dates, company assets, and contribution links are valid", () =>
   }
 });
 
-test("owner handoff completes commercial narratives and keeps deferred tools pending", () => {
-  assert.equal(projects.length, 10);
+test("owner handoff completes project and tool narratives", () => {
+  assert.equal(projects.length, 11);
   assert.equal(getProject("welcome-to-food"), undefined);
   assert.deepEqual(
     projects.filter((p) => p.featured).map((p) => p.slug),
@@ -155,8 +155,7 @@ test("owner handoff completes commercial narratives and keeps deferred tools pen
   );
   for (const project of projects)
     assert.equal(demoFields(project), 0, project.name);
-  for (const tool of tools)
-    assert.equal(demoFields(tool), tool.slug === "blogsite" ? 5 : 0, tool.name);
+  for (const tool of tools) assert.equal(demoFields(tool), 0, tool.name);
   const onyx = getProject("onyx")!;
   assert.equal(onyx.status, "Private project");
   assert.equal(onyx.productUrl, undefined);
@@ -249,7 +248,7 @@ test("MERN full-stack positioning and project boundaries match owner clarificati
   assert.equal(getProject("onyx")?.role, "Frontend Developer");
 });
 
-test("tool build evidence completes two stories without mandatory lessons or live links", () => {
+test("published tools retain verified stories and Codex workflow", () => {
   assert.equal(getProject("bitlux")?.productUrl, undefined);
   assert.equal(getProject("bitlux")?.media?.length, 4);
   assert.ok(getProject("get-foodies")?.stack.includes("Node.js"));
@@ -259,16 +258,16 @@ test("tool build evidence completes two stories without mandatory lessons or liv
       /authentication/i.test(item.description),
     ),
   );
-  for (const slug of ["typespark", "globepick"]) {
+  for (const slug of ["textgenerators", "globepick"]) {
     const tool = getTool(slug)!;
     assert.equal(demoFields(tool), 0);
     assert.equal(tool.stackVerified, true);
     assert.equal(tool.lessons, undefined);
-    assert.equal(tool.productUrl, undefined);
+    assert.ok(tool.productUrl?.startsWith("https://"));
     assert.match(tool.developmentWorkflow ?? "", /Codex/);
     assert.doesNotMatch(tool.developmentWorkflow ?? "", /\d+%/);
   }
-  assert.equal(getTool("blogsite")?.stackVerified, false);
+  assert.equal(getTool("blogsite"), undefined);
 });
 
 test("project roles, Foodies web work and Shopify camera workaround preserve confirmed boundaries", () => {
@@ -336,8 +335,28 @@ test("ownership distinguishes team contributions and supplied work from personal
     getProject("shopify-app")!.ownership!.summary,
     /existing client application/,
   );
-  assert.match(
-    getTool("blogsite")!.ownership!.summary,
-    /reading and browsing interfaces/,
+  assert.equal(getProject("the-daily-mind")!.team, "Personal project");
+});
+
+test("personal publishing project and renamed live tools preserve evidence", () => {
+  assert.equal(tools.length, 2);
+  const blog = getProject("the-daily-mind")!;
+  assert.equal(blog.developmentScope, "Full-stack");
+  assert.equal(blog.role, "Full-Stack Developer");
+  for (const tech of ["Next.js", "NestJS", "MongoDB", "Tiptap", "Cloudinary"])
+    assert.ok(blog.stack.includes(tech));
+  assert.equal(blog.productUrl, "https://the-daily-mind.vercel.app/");
+  assert.equal(getTool("textgenerators")?.name, "TextGenerators.net");
+  assert.equal(
+    getTool("textgenerators")?.productUrl,
+    "https://textgenerators.net/",
   );
+  assert.equal(
+    getTool("globepick")?.productUrl,
+    "https://globe-pick-countries-tool.vercel.app/",
+  );
+  for (const item of [blog, ...tools])
+    assert.equal(item.media?.[0].kind, "image");
+  assert.match(getProject("get-foodies")!.walkthroughs![0].url, /loom.com/);
+  assert.equal(demoFields(blog), 0);
 });

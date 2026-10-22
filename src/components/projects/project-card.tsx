@@ -139,6 +139,7 @@ export function ToolCard({
         </div>
         <ToolVisual
           kind={project.illustration}
+          image={project.image}
           detailed={archive}
           eager={archive && index === 0}
           className={archive ? "h-56" : "my-auto h-36 sm:h-40"}
@@ -163,7 +164,11 @@ export function NextProjectCard({ project }: { project: PortfolioProject }) {
     >
       <div className="h-28 overflow-hidden">
         {project.illustration ? (
-          <ToolVisual kind={project.illustration} className="h-28" />
+          <ToolVisual
+            kind={project.illustration}
+            image={project.image}
+            className="h-28"
+          />
         ) : (
           <DevicePreview project={project} />
         )}

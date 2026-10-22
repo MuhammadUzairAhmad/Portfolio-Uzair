@@ -87,13 +87,13 @@ for (const route of routes) {
     assert.match(html, /aria-label="My contributions"/);
     assert.match(html, /aria-label="My involvement"/);
   }
-  if (route === "/tools/typespark" || route === "/tools/globepick") {
+  if (route === "/tools/textgenerators" || route === "/tools/globepick") {
     assert.match(html, /Tech stack/);
     assert.match(html, /Codex-assisted/);
     assert.match(html, /Why these choices/);
     assert.doesNotMatch(html, /Lessons learned/);
   }
-  if (route === "/tools/blogsite") assert.doesNotMatch(html, /Tech stack/);
+
   if (route === "/work/bitlux")
     assert.doesNotMatch(html, /bitlux-ops.vercel.app/);
   if (route === "/work/get-foodies") assert.match(html, /Express/);
@@ -216,3 +216,16 @@ for (const path of [
 console.log(
   "PASS preview metadata, sitemap, résumé, social preview, and all source images",
 );
+
+for (const [legacy, destination] of [
+  ["/tools/typespark", "/tools/textgenerators"],
+  ["/tools/blogsite", "/work/the-daily-mind"],
+]) {
+  const response = await fetch(origin + legacy, { redirect: "manual" });
+  assert.equal(response.status, 308, legacy);
+  assert.equal(
+    new URL(response.headers.get("location")!, origin).pathname,
+    destination,
+  );
+  console.log(`PASS redirect ${legacy} → ${destination}`);
+}

@@ -1,9 +1,9 @@
 import type { PortfolioProject } from "../types/content.ts";
-// Verified build evidence; Blogsite remains deferred and live URLs remain owner-supplied.
+// Verified build stories with owner-supplied live links and real UI captures.
 export const tools: PortfolioProject[] = [
   {
-    slug: "typespark",
-    name: "TypeSpark",
+    slug: "textgenerators",
+    name: "TextGenerators.net",
     category: "Tools",
     subtitle: "Make it your type",
     summary:
@@ -12,7 +12,7 @@ export const tools: PortfolioProject[] = [
     role: "Frontend Developer",
     team: "Client tool",
     platform: "Web",
-    status: "Preview",
+    status: "Public link",
     stack: [
       "Next.js",
       "React",
@@ -31,12 +31,28 @@ export const tools: PortfolioProject[] = [
       "Saved preferences & responsive controls",
     ],
     overview:
-      "TypeSpark combines text styling, glitch effects and signature creation in one browser toolkit.\n\nProcessing runs locally, with no account or application backend. Shared controls, licensed local fonts and recoverable preferences support the three tools.",
+      "TextGenerators.net combines text styling, glitch effects and signature creation in one browser toolkit.\n\nProcessing runs locally, with no account or application backend. Shared controls, licensed local fonts and recoverable preferences support the three tools.",
     ownership: {
       label: "Client tool · Frontend implementation",
       summary:
         "Built the connected browser tool experience: interfaces, transformation logic, local exports and verification. Processing runs in the browser, so this project did not require an application backend.",
     },
+    productUrl: "https://textgenerators.net/",
+    image: {
+      src: "/images/tools/textgenerators-live.webp",
+      width: 1280,
+      height: 720,
+    },
+    media: [
+      {
+        kind: "image",
+        src: "/images/tools/textgenerators-live.webp",
+        width: 1280,
+        height: 720,
+        alt: "TextGenerators.net public homepage interface",
+        caption: "Public homepage captured from the live site, October 2026.",
+      },
+    ],
     contributions: [
       {
         title: "Text styling & editing",
@@ -102,7 +118,7 @@ export const tools: PortfolioProject[] = [
     role: "Frontend Developer",
     team: "Client tool",
     platform: "Web",
-    status: "Preview",
+    status: "Public link",
     stack: [
       "Next.js",
       "React",
@@ -126,6 +142,22 @@ export const tools: PortfolioProject[] = [
       summary:
         "Built the geography generators, local saved state, sharing and learning workflows. The tool uses bundled data and browser storage without an application backend.",
     },
+    productUrl: "https://globe-pick-countries-tool.vercel.app/",
+    image: {
+      src: "/images/tools/globepick-live.webp",
+      width: 1280,
+      height: 720,
+    },
+    media: [
+      {
+        kind: "image",
+        src: "/images/tools/globepick-live.webp",
+        width: 1280,
+        height: 720,
+        alt: "GlobePick public homepage interface",
+        caption: "Public homepage captured from the live site, October 2026.",
+      },
+    ],
     contributions: [
       {
         title: "Generators & selection logic",
@@ -174,78 +206,5 @@ export const tools: PortfolioProject[] = [
       "I used Codex-assisted planning, implementation and review to iterate faster, with automated tests and browser verification.",
     detailSummary:
       "Geography discovery, quizzes and printable country activities.",
-  },
-  {
-    slug: "blogsite",
-    name: "Blogsite",
-    category: "Tools",
-    subtitle: "Stories worth reading",
-    summary:
-      "A considered reading and browsing experience across a multi-page blog.",
-    illustration: "blog",
-    role: "Frontend development",
-    team: "Client tool",
-    platform: "Web",
-    status: "Preview",
-    stack: ["Responsive UI", "Content layouts", "Design systems"],
-    scope: [
-      "Article reading layouts",
-      "Listing & category pages",
-      "Search-page layouts",
-      "Author-page layouts",
-      "Responsive typography & spacing",
-    ],
-    overview:
-      "A blog frontend with article, listing, category, search, and author-page layouts. The related project notes focus on consistent containers, typography, spacing, and themes.",
-    ownership: {
-      label: "Frontend layouts",
-      summary:
-        "Built article, browsing and author-page layouts with shared responsive styling. My contribution focused on the blog’s reading and browsing interfaces.",
-    },
-    contributions: [
-      {
-        title: "Browsing layouts",
-        description:
-          "Created listing, category, search and author-page layouts for browsing content.",
-      },
-      {
-        title: "Article reading",
-        description:
-          "Built readable article layouts with responsive widths and typography.",
-      },
-      {
-        title: "Shared presentation",
-        description:
-          "Applied consistent containers, spacing, themes and color rules across the pages.",
-      },
-    ],
-    problem: {
-      text: "A publishing site can feel inconsistent when pages use different widths and spacing. This draft reflects the layout discussion; replace it with the actual project brief.",
-      demo: true,
-    },
-    solution: {
-      text: "Use one shared design language while giving articles a narrower reading column than browsing pages.",
-      demo: true,
-    },
-    decisions: [
-      {
-        topic: "Reading width",
-        choice: "Separate article and listing composition",
-        reason:
-          "Support comfortable reading without limiting browsing layouts.",
-        demo: true,
-      },
-    ],
-    results: [
-      {
-        text: "Add the confirmed shipped pages, stack, and outcomes. The framework and public URL remain to be verified.",
-        demo: true,
-      },
-    ],
-    lessons: {
-      text: "Add an actual lesson about content hierarchy, responsive layouts, or maintaining consistency across page types.",
-      demo: true,
-    },
-    stackVerified: false,
   },
 ];

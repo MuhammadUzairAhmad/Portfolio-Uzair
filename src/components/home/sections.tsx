@@ -101,7 +101,7 @@ export function ToolsSection() {
           title="Tools & smaller products"
           description="Client projects and useful tools I’ve built along the way."
         />
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           {tools.map((tool) => (
             <ProjectCard key={tool.slug} project={tool} />
           ))}

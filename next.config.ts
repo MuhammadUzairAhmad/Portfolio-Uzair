@@ -1,7 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/tools/typespark",
+        destination: "/tools/textgenerators",
+        permanent: true,
+      },
+      {
+        source: "/tools/blogsite",
+        destination: "/work/the-daily-mind",
+        permanent: true,
+      },
+    ];
+  },
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {

@@ -50,9 +50,11 @@ export function ToolSnapshot({
           <span>{project.name}</span>
         </nav>
         <div className="mt-7 grid items-center gap-8 md:grid-cols-2">
-          <div>
+          <div className="min-w-0">
             <Eyebrow>Project snapshot</Eyebrow>
-            <h1 className="mt-3 text-4xl sm:text-6xl">{project.name}</h1>
+            <h1 className="mt-3 break-words text-4xl sm:text-5xl lg:text-6xl">
+              {project.name}
+            </h1>
             <p className="mt-4 text-lg font-semibold text-primary">
               {project.subtitle}
             </p>
@@ -66,12 +68,14 @@ export function ToolSnapshot({
                 rel="noreferrer"
                 className="mt-5"
               >
-                Open project <ArrowRight size={15} aria-hidden />
+                {project.productLinkLabel ?? "Open project"}{" "}
+                <ArrowRight size={15} aria-hidden />
               </ButtonLink>
             )}
           </div>
           <ToolVisual
             kind={project.illustration}
+            image={project.image}
             detailed
             eager
             className="h-60 sm:h-72"
