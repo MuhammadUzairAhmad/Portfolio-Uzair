@@ -97,6 +97,11 @@ for (const route of routes) {
       `${route}: hero matches card artwork`,
     );
     assert.match(html, /Project snapshot/);
+    assert.match(html, /Visit live site/);
+    assert.doesNotMatch(
+      html,
+      /id="evidence"|id="[^"]+-gallery"|Screenshots &amp; walkthroughs|View image:/,
+    );
     assert.doesNotMatch(
       html,
       /Replace this draft|Add a verified lesson|framework and public URL remain to be verified|Illustrative details/,

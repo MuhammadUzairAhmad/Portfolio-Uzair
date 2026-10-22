@@ -355,8 +355,11 @@ test("personal publishing project and renamed live tools preserve evidence", () 
     getTool("globepick")?.productUrl,
     "https://globe-pick-countries-tool.vercel.app/",
   );
-  for (const item of [blog, ...tools])
-    assert.equal(item.media?.[0].kind, "image");
+  for (const item of tools) {
+    assert.equal(item.media, undefined);
+    assert.equal(item.image, undefined);
+    assert.ok(item.productUrl);
+  }
   assert.match(getProject("get-foodies")!.walkthroughs![0].url, /loom.com/);
   assert.equal(demoFields(blog), 0);
 });

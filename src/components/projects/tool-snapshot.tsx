@@ -68,7 +68,7 @@ export function ToolSnapshot({
                 rel="noreferrer"
                 className="mt-5"
               >
-                {project.productLinkLabel ?? "Open project"}{" "}
+                {project.productLinkLabel ?? "Visit live site"}{" "}
                 <ArrowRight size={15} aria-hidden />
               </ButtonLink>
             )}
@@ -107,11 +107,12 @@ export function ToolSnapshot({
             <ProjectStack stack={project.stack} />
           </ToolSection>
         )}
-        {(!!project.media?.length || !!project.walkthroughs?.length) && (
-          <ToolSection id="evidence" title="Screenshots & walkthroughs">
-            <ProjectEvidence project={project} />
-          </ToolSection>
-        )}
+        {!project.productUrl &&
+          (!!project.media?.length || !!project.walkthroughs?.length) && (
+            <ToolSection id="evidence" title="Screenshots & walkthroughs">
+              <ProjectEvidence project={project} />
+            </ToolSection>
+          )}
         {project.decisions.some((d) => !d.demo) && (
           <ToolSection id="decisions" title="Key decisions">
             <ProjectDecisions decisions={project.decisions} />

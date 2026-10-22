@@ -38,21 +38,7 @@ export const tools: PortfolioProject[] = [
         "Built the connected browser tool experience: interfaces, transformation logic, local exports and verification. Processing runs in the browser, so this project did not require an application backend.",
     },
     productUrl: "https://textgenerators.net/",
-    image: {
-      src: "/images/tools/textgenerators-live.webp",
-      width: 1280,
-      height: 720,
-    },
-    media: [
-      {
-        kind: "image",
-        src: "/images/tools/textgenerators-live.webp",
-        width: 1280,
-        height: 720,
-        alt: "TextGenerators.net public homepage interface",
-        caption: "Public homepage captured from the live site, October 2026.",
-      },
-    ],
+
     contributions: [
       {
         title: "Text styling & editing",
@@ -143,21 +129,7 @@ export const tools: PortfolioProject[] = [
         "Built the geography generators, local saved state, sharing and learning workflows. The tool uses bundled data and browser storage without an application backend.",
     },
     productUrl: "https://globe-pick-countries-tool.vercel.app/",
-    image: {
-      src: "/images/tools/globepick-live.webp",
-      width: 1280,
-      height: 720,
-    },
-    media: [
-      {
-        kind: "image",
-        src: "/images/tools/globepick-live.webp",
-        width: 1280,
-        height: 720,
-        alt: "GlobePick public homepage interface",
-        caption: "Public homepage captured from the live site, October 2026.",
-      },
-    ],
+
     contributions: [
       {
         title: "Generators & selection logic",
@@ -228,23 +200,8 @@ export const tools: PortfolioProject[] = [
     platform: "Web",
     status: "Public link",
     productUrl: "https://the-daily-mind.vercel.app/",
-    productLinkLabel: "Open project preview",
-    image: {
-      src: "/images/projects/the-daily-mind-live.webp",
-      width: 1280,
-      height: 720,
-    },
-    media: [
-      {
-        kind: "image",
-        src: "/images/projects/the-daily-mind-live.webp",
-        width: 1280,
-        height: 720,
-        alt: "The Daily Mind public homepage with featured articles and categories",
-        caption:
-          "The Daily Mind public homepage, captured from the live preview in October 2026.",
-      },
-    ],
+    productLinkLabel: "Visit live site",
+
     stack: [
       "Next.js",
       "React",
