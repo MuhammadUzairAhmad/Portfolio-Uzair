@@ -38,6 +38,8 @@ export const profile = {
     "Completed Shopify GP-Lite feature work across React and Ruby on Rails, combining embedded and standalone workflows, mobile camera scanning, product labels, and Shopify GraphQL integrations.",
   languages: ["English", "Urdu"],
   certifications: [
+    "AI Fluency: Framework & Foundations",
+    "Claude Code in Action",
     "Jira Fundamentals Badge",
     "Introduction to Front-End Development — Meta",
     "MERN Stack — The Skills Pvt. Ltd",
