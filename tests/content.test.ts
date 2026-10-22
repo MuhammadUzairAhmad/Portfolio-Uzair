@@ -1,5 +1,5 @@
 import { experience } from "../src/content/experience.ts";
-import { toolkitHighlights, toolkitGroups } from "../src/content/toolkit.ts";
+import { toolkitGroups } from "../src/content/toolkit.ts";
 import { toolArtwork } from "../src/content/tool-art.ts";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -60,7 +60,7 @@ test("local assets exist and featured cards have visuals", () => {
 test("services point at existing evidence and featured work is intentional", () => {
   for (const service of services) {
     assert.equal(service.href, "/work");
-    assert.ok(service.deliverables.length > 0);
+    assert.ok(service.description && service.skills.length > 0);
   }
   assert.deepEqual(profile.homeFeaturedProjectSlugs, [
     "skillmatch",
@@ -101,10 +101,6 @@ test("tool illustrations exist and toolkit examples resolve to real projects", (
   for (const group of toolkitGroups) {
     assert.ok(group.rows.length > 0);
     for (const row of group.rows) assert.ok(row.label && row.items.length > 0);
-  }
-  for (const item of toolkitHighlights) {
-    assert.ok(getProject(item.project));
-    assert.ok(item.skills.length > 0);
   }
 });
 

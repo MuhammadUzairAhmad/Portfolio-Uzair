@@ -4,12 +4,7 @@ export const services = [
     id: "web",
     title: "Web applications",
     description:
-      "Responsive websites and product interfaces that turn designs into clear, usable experiences.",
-    deliverables: [
-      "Websites, dashboards & admin interfaces",
-      "Reusable components, forms & validation",
-      "Responsive layouts & frontend improvements",
-    ],
+      "Responsive websites, dashboards and reusable interfaces built with React and Next.js.",
     skills: ["React", "Next.js", "TypeScript"],
     href: "/work",
   },
@@ -17,25 +12,15 @@ export const services = [
     id: "systems",
     title: "Full-stack development",
     description:
-      "A connected product across frontend, backend and data—from a focused MVP to improvements in an existing application.",
-    deliverables: [
-      "Frontend features & backend APIs",
-      "Authentication, databases & business logic",
-      "Third-party services & connected workflows",
-    ],
-    skills: ["Node.js", "Express.js", "NestJS", "MongoDB"],
+      "Connected frontend, APIs, authentication and data—from MVPs to existing-product improvements.",
+    skills: ["Node.js", "Express.js", "MongoDB"],
     href: "/work",
   },
   {
     id: "mobile",
     title: "Mobile applications",
     description:
-      "Cross-platform iOS and Android experiences, connected to the services and workflows behind your product.",
-    deliverables: [
-      "React Native & Expo applications",
-      "API-connected onboarding & user flows",
-      "Localization, mobile fixes & deployment support",
-    ],
+      "Cross-platform iOS and Android apps with React Native and Expo, connected to your APIs.",
     skills: ["React Native", "Expo", "Capacitor"],
     href: "/work",
   },

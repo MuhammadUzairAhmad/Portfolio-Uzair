@@ -1,4 +1,3 @@
-import { SkillsSection } from "@/components/home/skills-section";
 import { Hero } from "@/components/home/hero";
 import {
   Services,
@@ -16,7 +15,6 @@ export default function Home() {
       <Services />
       <SelectedWork />
       <ExperienceSection />
-      <SkillsSection />
       <ToolsSection />
       <ApproachSection />
       <AboutTeaser />

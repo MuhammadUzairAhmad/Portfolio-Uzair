@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Monitor, Database, Smartphone, Check } from "lucide-react";
+import { ArrowRight, Monitor, Database, Smartphone } from "lucide-react";
 import { GridBackground } from "@/components/ui/grid-background";
 import { Container, Eyebrow } from "@/components/layout/container";
 import { SectionHeading } from "@/components/layout/section-heading";
@@ -39,18 +39,6 @@ export function Services() {
                 <p className="mt-2 min-h-12 text-sm leading-relaxed text-muted-foreground">
                   {service.description}
                 </p>
-                <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
-                  {service.deliverables.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <Check
-                        size={14}
-                        className="mt-1 shrink-0 text-primary"
-                        aria-hidden
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
                 <div className="mt-auto flex flex-wrap gap-2 pt-5">
                   {service.skills.map((skill) => (
                     <Badge key={skill}>{skill}</Badge>
@@ -65,6 +53,14 @@ export function Services() {
               </article>
             );
           })}
+        </div>
+        <div className="mt-4 flex justify-end">
+          <Link
+            href="/about#toolkit"
+            className="inline-flex min-h-11 items-center gap-2 text-xs font-medium text-primary"
+          >
+            Explore my skills & tools <ArrowRight size={13} aria-hidden />
+          </Link>
         </div>
       </Container>
     </section>

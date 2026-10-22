@@ -42,7 +42,8 @@ for (const route of routes) {
     }
   }
   if (route === "/") {
-    assert.match(html, /id="skills"/);
+    assert.doesNotMatch(html, /id="skills"|What I bring/);
+    assert.match(html, /Explore my skills &amp; tools/);
     assert.doesNotMatch(
       html,
       /Full-stack spotlight|Gaming Platform|Full-stack contributions/,
@@ -96,6 +97,7 @@ for (const route of routes) {
   if (route === "/work/get-foodies") assert.match(html, /Express/);
   if (route === "/about") {
     assert.match(html, /id="toolkit"/);
+    assert.match(html, /What I bring/);
     assert.match(html, /Jul 2025/);
     assert.doesNotMatch(html, /Full-stack contributions/);
     assert.equal(
