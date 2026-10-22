@@ -38,6 +38,11 @@ export const projects: PortfolioProject[] = [
     ],
     overview:
       "Bitlux supports the work behind private-jet bookings, bringing trip requests, operational screens, and ticket documents into a web application. I contributed to an existing product where performance issues, inconsistent data rendering, and changing interface designs needed attention alongside new feature work.\n\nMy responsibility was to investigate those problems and improve the affected interfaces and integrations. I introduced TanStack Query for API requests and caching, added validation and toast feedback, updated screens to new Figma designs, and refactored components. I also integrated backend APIs and generated dynamic ticket PDFs with jsPDF. The work resolved identified issues and improved the maintainability of the application; the product itself continues to evolve.\n\nMy scope also included backend/API contributions within the existing application.",
+    ownership: {
+      label: "Existing product · Team contribution",
+      summary:
+        "Contributed to an existing Sofrix product through assigned improvements and feature work across the frontend and backend/APIs. The work shown here is my contribution within the wider product team.",
+    },
     contributions: [
       {
         title: "Rendering & data handling",
@@ -158,6 +163,11 @@ export const projects: PortfolioProject[] = [
     ],
     overview:
       "Linxx connects marketplace listings with ambassador and shopper workflows across web and mobile. Its features include job discovery, GPS-related functionality, approvals, and a Plaid integration. My work focused on connecting these interfaces to backend services and making the affected user journeys work from beginning to end.\n\nI integrated APIs, updated screens, investigated bugs, and tested the connected flows. On mobile, I worked through issues specific to the Capacitor integration while supporting deployment. My contributions also included approval and decline flows, GPS features, and Plaid integration. After the changes, I verified the affected workflows across web and mobile. The ongoing product provided practical experience improving connected features across two delivery environments.\n\nMy responsibilities also included backend/API work, in addition to frontend integration and mobile debugging.",
+    ownership: {
+      label: "Web & mobile · Team contribution",
+      summary:
+        "Worked within the Sofrix team on an existing marketplace across web, mobile and backend/API flows. My scope included feature updates, integration work, debugging and support for the Capacitor mobile delivery.",
+    },
     contributions: [
       {
         title: "Marketplace features & APIs",
@@ -304,11 +314,16 @@ export const projects: PortfolioProject[] = [
     ],
     overview:
       "SkillMatch brings candidate profiles, job workflows, assessments, and recruitment dashboards into one platform. Candidates and hiring teams need connected interfaces to move between account details, opportunities, and administrative tasks. I contributed from day one, working within the development team on frontend features, integrations and backend APIs.\n\nMy contributions included responsive UI, dashboards, form validation, shared components, and backend API integration. I used Redux Toolkit, Tailwind CSS, and TanStack Query as part of frontend delivery, and also created APIs under senior guidance. This was my first professional project, with responsibilities spanning substantial frontend implementation and supported backend contributions. I delivered these application features as part of the wider team.",
+    ownership: {
+      label: "From day one · Team contribution",
+      summary:
+        "Contributed from the start as part of the Netixsol development team. My work covered frontend delivery, authentication and API integration, alongside backend API creation under senior developer guidance.",
+    },
     contributions: [
       {
         title: "Screens & shared components",
         description:
-          "Contributed from day one, building responsive candidate, recruiter and admin interfaces with form validation and reusable components.",
+          "Built responsive candidate, recruiter and admin interfaces with form validation and reusable components.",
       },
       {
         title: "Authentication & connected state",
@@ -377,11 +392,16 @@ export const projects: PortfolioProject[] = [
     ],
     overview:
       "Hestiya Marketplace is a Web3 carbon-credit platform for discovering credits, trading, managing holdings, and retirement. The project needed a frontend that brought together conventional account and marketplace features with wallet connections and blockchain transactions. I owned the React frontend implementation, starting from supplied Figma designs.\n\nI collaborated with the developer building the Python backend to understand its APIs and connect the interface. I integrated Clerk sign-in and sign-up, worked on wallet and smart-contract interactions with Wagmi and Reown AppKit, and delivered listing filters, cart interactions, P2P transactions, holdings, retirement, OTP verification, and PDF receipts. This connected the marketplace experience to its supporting services while keeping backend authorship with the other developer.",
+    ownership: {
+      label: "Project scope · Frontend delivery",
+      summary:
+        "My company role covered full-stack work; on Hestiya, I was responsible for the frontend and its integrations. I worked from supplied Figma designs and collaborated with another engineer who built the Python backend.",
+    },
     contributions: [
       {
         title: "Marketplace frontend",
         description:
-          "Built responsive React screens from Figma, including listing filters, cart, P2P transactions and holdings. My project responsibility was frontend development.",
+          "Built responsive React screens from Figma, including listing filters, cart, P2P transactions and holdings.",
       },
       {
         title: "Accounts & API integration",
@@ -467,6 +487,11 @@ export const projects: PortfolioProject[] = [
     ],
     overview:
       "The client began with a frontend demo created in v0. To become a working product, it needed application data, authentication, wallet connections, gameplay, and the user and administrative workflows behind referrals and credits. I converted that starting point into a Next.js application and built both frontend and backend functionality.\n\nI implemented Google and email/password sign-in with NextAuth, MongoDB-backed application data, wallet integration, and the spin-wheel experience. The work also covered referral validation and rewards, bonuses, credit claims, account histories, and administrative controls for users, transfers, claims, referral percentages, prizes, and free-spin timing. I integrated a smart contract supplied by the client. The delivery turned a visual demo into connected full-stack functionality.",
+    ownership: {
+      label: "Client demo → Full-stack delivery",
+      summary:
+        "Started from the client’s v0 frontend demo and built the connected application’s frontend, backend and data workflows. The client supplied the smart contract; my responsibility was integrating it into the product.",
+    },
     contributions: [
       {
         title: "Full-stack delivery",
@@ -553,11 +578,16 @@ export const projects: PortfolioProject[] = [
     ],
     overview:
       "Development Solutions Group needed a company website that followed the client’s requested design and presented its business and projects. The scope was focused: responsive Home, About, Projects, and Contact interfaces with a consistent presentation across screen sizes.\n\nI built the frontend using React 19, TypeScript, and Tailwind CSS, following the supplied direction. For the contact interface, I used Formik and Yup to implement form validation. The delivery provided the requested company presentation and contact experience. The delivered pages covered the client’s requested company presentation and contact interface.",
+    ownership: {
+      label: "Project scope · Frontend delivery",
+      summary:
+        "My company role covered full-stack work; this project focused on frontend delivery. I built the company website from the client’s requested design and implemented the contact-form interface and validation.",
+    },
     contributions: [
       {
         title: "Company pages",
         description:
-          "Built responsive Home, About, Projects and Contact pages from the client’s design with React, TypeScript and Tailwind CSS. My project responsibility was frontend development.",
+          "Built responsive Home, About, Projects and Contact pages from the client’s design with React, TypeScript and Tailwind CSS.",
       },
       {
         title: "Contact experience",
@@ -615,6 +645,11 @@ export const projects: PortfolioProject[] = [
     ],
     overview:
       "Get Foodies is a food application with web, iOS and Android experiences. It includes product listings, dynamic banners, discounts, account and theme settings, plus mobile onboarding, multilingual interfaces and location-related features.\n\nI built mobile interfaces from Figma with React Native and Expo, connected registration, OTP verification and profile completion, and implemented Redux Toolkit state and file-based routing. I also built web application UI and backend features for product listings, dynamic banners, discounts, account settings and theme settings using the project's Node.js/Express backend.",
+    ownership: {
+      label: "Web & mobile · Full-stack contribution",
+      summary:
+        "Worked at Sofrix on mobile interfaces from supplied Figma designs, plus web UI and backend features. My contribution spanned the customer-facing screens and the product, promotion and settings services described below.",
+    },
     contributions: [
       {
         title: "Mobile interfaces",
@@ -681,6 +716,11 @@ export const projects: PortfolioProject[] = [
     stack: ["Onyx Thrive / desktop APIs", "Socket.io frontend listener"],
     overview:
       "Onyx desktop printing software connects to physical printers, accepts PDF jobs and copy quantities, and reports job and printer states. The client wanted different users to operate the workflow through a browser from different locations, rather than relying on a single computer’s interface. My role was to build and integrate the web frontend around the existing desktop application.\n\nWeb actions used the desktop application’s APIs, and a frontend Socket.io listener received updates for ready, queued, printing, failed, and printed jobs, plus online or offline printer status. The existing desktop software remained responsible for execution; I did not build a custom backend or Socket.io server. Work was carried out on the client’s laptop through remote/proxy access, so this is a private case study without public media.",
+    ownership: {
+      label: "Existing system · Frontend integration",
+      summary:
+        "My scope was the browser interface, existing API integration and a frontend Socket.io listener. The existing desktop application and its APIs handled print execution; I did not create or modify the backend APIs.",
+    },
     contributions: [
       {
         title: "Browser-based printing",
@@ -762,11 +802,16 @@ export const projects: PortfolioProject[] = [
     ],
     overview:
       "Keller Williams’ public real-estate platform helps people explore homes to buy or rent and connect with local agents. Its wider technology ecosystem supports agents and customer relationships across the property journey.\n\nAt Strategist HUB, I contributed as a Junior Software Engineer shadowing the CTO across more than 27 connected React/Next.js repositories, including applications and shared packages. I worked on assigned bugs, i18next translation workflows supporting up to 22 languages, dependent repository changes, Jest tests and CI coverage checks.",
+    ownership: {
+      label: "Existing platform · Junior team contribution",
+      summary:
+        "Worked as a Junior Software Engineer at Strategist HUB while shadowing the CTO. I handled assigned bug and translation tickets within the existing multi-repository platform and followed the team’s review, merge and testing workflows.",
+    },
     contributions: [
       {
         title: "Ticket investigation",
         description:
-          "As a Junior Software Engineer at Strategist HUB shadowing the CTO, traced bugs through 27+ connected React/Next.js repositories and shared packages.",
+          "Traced assigned bugs through 27+ connected React/Next.js repositories and shared packages.",
       },
       {
         title: "Translation updates",
@@ -851,6 +896,11 @@ export const projects: PortfolioProject[] = [
     ],
     overview:
       "GP-Lite / Barcode Buddy supports Shopify picking, packing, barcode scanning, and product-label printing. The existing application was embedded-only. Its iframe restricted the media permissions needed for camera scanning in this implementation. I added a button opening the application outside the iframe so users could grant camera access and scan successfully while retaining embedded workflows. I completed the described work as a freelance full-stack developer, contributing across React and Ruby on Rails.\n\nI implemented iOS and Android camera scanning with camera selection, zoom, torch controls, and permission handling. I also worked on configurable label sizes, product selection and quantities, Save/Cancel layout editing, barcode and PDF generation, and long-text handling. Shopify GraphQL integration covered product, variant, inventory-location, and metafield data, including missing-location fixes. The completed work preserved embedded use while adding standalone workflows and improving printing and scanning features.",
+    ownership: {
+      label: "Existing app · Freelance feature delivery",
+      summary:
+        "Completed scoped feature work across React and Ruby on Rails in an existing client application. My responsibility was extending scanning, labels and Shopify-data workflows while preserving the embedded app experience.",
+    },
     contributions: [
       {
         title: "Mobile camera scanning",

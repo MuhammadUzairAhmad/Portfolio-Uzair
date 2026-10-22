@@ -32,6 +32,11 @@ export const tools: PortfolioProject[] = [
     ],
     overview:
       "TypeSpark combines text styling, glitch effects and signature creation in one browser toolkit.\n\nProcessing runs locally, with no account or application backend. Shared controls, licensed local fonts and recoverable preferences support the three tools.",
+    ownership: {
+      label: "Client tool · Frontend implementation",
+      summary:
+        "Built the connected browser tool experience: interfaces, transformation logic, local exports and verification. Processing runs in the browser, so this project did not require an application backend.",
+    },
     contributions: [
       {
         title: "Text styling & editing",
@@ -116,6 +121,11 @@ export const tools: PortfolioProject[] = [
     ],
     overview:
       "GlobePick helps users discover countries, capitals and cities, save and share results, and create learning activities.\n\nThe frontend uses bundled geography data and validated local state, without accounts or a runtime geography service. Explanatory content is server-rendered, and the homepage loads city records on demand.",
+    ownership: {
+      label: "Client tool · Frontend implementation",
+      summary:
+        "Built the geography generators, local saved state, sharing and learning workflows. The tool uses bundled data and browser storage without an application backend.",
+    },
     contributions: [
       {
         title: "Generators & selection logic",
@@ -187,6 +197,11 @@ export const tools: PortfolioProject[] = [
     ],
     overview:
       "A blog frontend with article, listing, category, search, and author-page layouts. The related project notes focus on consistent containers, typography, spacing, and themes.",
+    ownership: {
+      label: "Frontend layouts",
+      summary:
+        "Built article, browsing and author-page layouts with shared responsive styling. My contribution focused on the blog’s reading and browsing interfaces.",
+    },
     contributions: [
       {
         title: "Browsing layouts",

@@ -60,6 +60,7 @@ export type PortfolioProject = {
     description: string;
     steps: { title: string; description: string }[];
   };
+  ownership?: { label: string; summary: string };
   contributions: { title: string; description: string }[];
   highlightChallenge?: boolean;
   problem: Narrative;

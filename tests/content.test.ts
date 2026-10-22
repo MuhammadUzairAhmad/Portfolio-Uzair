@@ -308,3 +308,36 @@ test("project roles, Foodies web work and Shopify camera workaround preserve con
   assert.doesNotMatch(kw.context!, /I worked|I built|shadowing/);
   assert.match(kw.contributions[0].description, /27\+/);
 });
+
+test("ownership distinguishes team contributions and supplied work from personal delivery", () => {
+  for (const project of [...projects, ...tools])
+    assert.ok(project.ownership?.summary);
+  assert.match(
+    getProject("skillmatch")!.ownership!.summary,
+    /senior developer guidance/,
+  );
+  assert.match(
+    getProject("hestiya")!.ownership!.summary,
+    /another engineer who built the Python backend/,
+  );
+  assert.match(
+    getProject("gaming-platform")!.ownership!.summary,
+    /client supplied the smart contract/,
+  );
+  assert.match(
+    getProject("onyx")!.ownership!.summary,
+    /did not create or modify the backend APIs/,
+  );
+  assert.match(
+    getProject("keller-williams")!.ownership!.summary,
+    /Junior Software Engineer.*shadowing the CTO/,
+  );
+  assert.match(
+    getProject("shopify-app")!.ownership!.summary,
+    /existing client application/,
+  );
+  assert.match(
+    getTool("blogsite")!.ownership!.summary,
+    /reading and browsing interfaces/,
+  );
+});

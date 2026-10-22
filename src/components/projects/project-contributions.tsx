@@ -8,6 +8,19 @@ export function ProjectContributions({
 }) {
   return (
     <div>
+      {project.ownership && (
+        <div
+          aria-label="My involvement"
+          className="mb-5 border-l-2 border-primary pl-4"
+        >
+          <p className="text-xs font-medium text-primary">
+            {project.ownership.label}
+          </p>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            {project.ownership.summary}
+          </p>
+        </div>
+      )}
       <ul aria-label="My contributions" className="grid gap-3 sm:grid-cols-2">
         {project.contributions.map((item) => (
           <li

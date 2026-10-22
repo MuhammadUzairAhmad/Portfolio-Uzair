@@ -85,6 +85,7 @@ for (const route of routes) {
     );
     assert.doesNotMatch(html, /Scrollable technical decisions/);
     assert.match(html, /aria-label="My contributions"/);
+    assert.match(html, /aria-label="My involvement"/);
   }
   if (route === "/tools/typespark" || route === "/tools/globepick") {
     assert.match(html, /Tech stack/);
@@ -137,6 +138,7 @@ for (const route of routes) {
       assert.doesNotMatch(html, /Ongoing product/);
     }
     assert.match(html, /aria-label="My contributions"/);
+    assert.match(html, /aria-label="My involvement"/);
     assert.match(html, /id="contributions"/);
     assert.doesNotMatch(
       html,
