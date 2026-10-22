@@ -58,12 +58,12 @@ export function ContactPaths() {
             Discuss a project <ArrowRight size={14} aria-hidden />
           </ButtonLink>
           <ButtonLink
-            href={profile.calendar}
+            href={profile.whatsapp}
             variant="outline"
             target="_blank"
             rel="noreferrer"
           >
-            Book a call
+            Chat on WhatsApp
           </ButtonLink>
         </div>
       </article>

@@ -20,7 +20,7 @@ export const profile = {
   email: "uzairsb321@gmail.com",
   github: "https://github.com/MuhammadUzairAhmad",
   linkedin: "https://www.linkedin.com/in/muhammad-uzair-ahmad-dev/",
-  calendar: "https://calendly.com/uzairsb321/30min",
+  whatsapp: "https://wa.me/923236639090",
   resume: {
     href: "/documents/uzair-mern-stack-resume.pdf",
     label: "View résumé",
