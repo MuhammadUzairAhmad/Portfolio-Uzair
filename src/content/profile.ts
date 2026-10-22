@@ -21,6 +21,8 @@ export const profile = {
   github: "https://github.com/MuhammadUzairAhmad",
   linkedin: "https://www.linkedin.com/in/muhammad-uzair-ahmad-dev/",
   whatsapp: "https://wa.me/923236639090",
+  availability: "Open to full-time roles and freelance projects",
+  responseTime: "Usually within 1–2 business days",
   resume: {
     href: "/documents/uzair-mern-stack-resume.pdf",
     label: "View résumé",

@@ -1,6 +1,10 @@
 import { ArrowRight, Mail, MapPin } from "lucide-react";
 import { GridBackground } from "@/components/ui/grid-background";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/brand-icons";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  WhatsappIcon,
+} from "@/components/ui/brand-icons";
 import { Container } from "@/components/layout/container";
 import { PageIntro } from "@/components/layout/page-intro";
 import { ContactPaths } from "@/components/contact/contact-paths";
@@ -44,7 +48,9 @@ export default function ContactPage() {
               <Mail size={36} strokeWidth={1.5} aria-hidden />
             </div>
             <div className="min-w-0">
-              <p className="text-sm font-medium text-primary">Get in touch</p>
+              <h2 className="text-sm font-medium text-primary">
+                Start a conversation
+              </h2>
               <a
                 href={`mailto:${profile.email}`}
                 className="mt-1 block break-all text-xl font-semibold tracking-tight sm:text-4xl"
@@ -52,6 +58,18 @@ export default function ContactPage() {
                 {profile.email}
               </a>
             </div>
+          </div>
+          <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs leading-relaxed">
+            <p className="inline-flex items-center gap-2 text-foreground">
+              <span
+                className="size-1.5 shrink-0 rounded-full bg-primary"
+                aria-hidden
+              />
+              {profile.availability}
+            </p>
+            <p className="text-muted-foreground">
+              Replies: {profile.responseTime}
+            </p>
           </div>
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             <ButtonLink href={`mailto:${profile.email}`}>
@@ -64,6 +82,7 @@ export default function ContactPage() {
               target="_blank"
               rel="noreferrer"
             >
+              <WhatsappIcon size={18} />
               Chat on WhatsApp
               <ArrowRight size={16} aria-hidden />
             </ButtonLink>

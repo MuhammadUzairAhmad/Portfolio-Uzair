@@ -27,3 +27,23 @@ export function LinkedinIcon({ size = 16, className }: IconProps) {
     </svg>
   );
 }
+
+export function WhatsappIcon({ size = 16, className }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.3-4.8A8.5 8.5 0 1 1 20.5 11.7Z" />
+      <path d="m8.1 7.5 1.2-.1 1.2 2.7-.9 1.1a7.1 7.1 0 0 0 3.2 3.1l1-1 2.7 1.3-.1 1.3c-.1 1-1.2 1.5-2.1 1.3-3.9-.9-6.9-3.9-7.6-7.5-.2-1 .4-2 1.4-2.2Z" />
+    </svg>
+  );
+}
