@@ -126,19 +126,30 @@ export const toolkitGroups = [
   {
     id: "quality",
     title: "Testing & quality",
-    description: "Checks that help keep changes dependable.",
+    description:
+      "Maintainable code, practical solutions and dependable behavior.",
     rows: [
       {
-        label: "Testing",
+        label: "Maintainability",
+        items: ["Clear naming, focused functions and reusable components"],
+      },
+      {
+        label: "Simple solutions",
+        items: [
+          "Build what is needed; avoid overengineering and premature abstractions",
+        ],
+      },
+      {
+        label: "Verification",
+        items: ["Test important behavior and check complete user journeys"],
+      },
+      {
+        label: "Testing tools",
         items: ["Jest", "React Testing Library"],
       },
       {
-        label: "Code quality",
-        items: ["ESLint", "Prettier"],
-      },
-      {
-        label: "Type safety",
-        items: ["TypeScript"],
+        label: "Supporting tools",
+        items: ["TypeScript", "ESLint", "Prettier"],
       },
     ],
   },
