@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowRight, PlayCircle } from "lucide-react";
 import type { PortfolioProject } from "@/types/content";
+import { cn } from "@/lib/cn";
 import { Container, Eyebrow } from "@/components/layout/container";
 import { ContactCta } from "@/components/layout/footer";
 import { Badge } from "@/components/ui/badge";
@@ -29,13 +30,13 @@ function StorySection({
   return (
     <section
       id={id}
-      className="grid scroll-mt-6 grid-cols-[35px_1fr] gap-3 border-t border-border py-6 sm:grid-cols-[52px_1fr] sm:gap-5"
+      className="grid scroll-mt-6 grid-cols-[35px_1fr] gap-x-3 gap-y-4 border-t border-border py-6 sm:grid-cols-[52px_1fr] sm:gap-x-5"
     >
       <span className="font-serif text-3xl leading-tight text-primary sm:text-4xl">
         {number}
       </span>
-      <div className="min-w-0">
-        <h2 className="mb-4 text-xl sm:text-2xl">{title}</h2>
+      <h2 className="self-center text-xl sm:text-2xl">{title}</h2>
+      <div className="col-span-2 min-w-0 sm:col-span-1 sm:col-start-2">
         {children}
       </div>
     </section>
@@ -116,7 +117,7 @@ export function CaseStudy({
             </div>
           )}
         </div>
-        <dl className="mt-6 grid grid-cols-2 gap-5 rounded-xl bg-surface px-5 py-5 sm:grid-cols-4 sm:gap-0">
+        <dl className="mt-6 grid divide-y divide-border rounded-xl bg-surface px-5 py-5 sm:grid-cols-3 sm:divide-y-0 xl:grid-cols-4">
           {[
             { label: "Role", value: project.role },
             { label: "Team", value: project.team },
@@ -130,10 +131,14 @@ export function CaseStudy({
           ].map((item) => (
             <div
               key={item.label}
-              className="sm:border-r sm:border-border sm:px-5 sm:first:pl-0 sm:last:border-0"
+              className={cn(
+                "grid grid-cols-[80px_minmax(0,1fr)] items-baseline gap-3 py-3 first:pt-0 sm:block sm:border-r sm:border-border sm:px-5 sm:py-0 sm:first:pl-0",
+                item.label === "Platform" && "pb-0 sm:border-r-0 xl:border-r",
+                item.label === "Stack" && "hidden sm:hidden xl:block xl:border-r-0",
+              )}
             >
               <dt className="text-xs font-semibold">{item.label}</dt>
-              <dd className="mt-1.5 text-sm text-muted-foreground">
+              <dd className="text-sm text-muted-foreground sm:mt-1.5">
                 {item.value}
               </dd>
             </div>
