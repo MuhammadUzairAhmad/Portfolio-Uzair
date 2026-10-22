@@ -79,10 +79,10 @@ for (const route of routes) {
       assert.ok(html.includes(artwork), `${route}: illustrated tool card`);
     assert.doesNotMatch(html, /textgenerators-live.webp|globepick-live.webp/);
   }
-  if (route === "/work") {
+  if (route === "/work")
+    assert.doesNotMatch(html, /the-daily-mind|The Daily Mind/);
+  if (route === "/" || route === "/tools")
     assert.ok(html.includes("blogsite-preview-v2.webp"));
-    assert.doesNotMatch(html, /the-daily-mind-live.webp/);
-  }
   if (route === "/contact") {
     assert.match(html, /Hiring for your team/);
     assert.match(html, /Building or improving a product/);
@@ -244,7 +244,8 @@ console.log(
 
 for (const [legacy, destination] of [
   ["/tools/typespark", "/tools/textgenerators"],
-  ["/tools/blogsite", "/work/the-daily-mind"],
+  ["/tools/blogsite", "/tools/the-daily-mind"],
+  ["/work/the-daily-mind", "/tools/the-daily-mind"],
 ]) {
   const response = await fetch(origin + legacy, { redirect: "manual" });
   assert.equal(response.status, 308, legacy);

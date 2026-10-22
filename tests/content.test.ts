@@ -147,7 +147,7 @@ test("employment dates, company assets, and contribution links are valid", () =>
 });
 
 test("owner handoff completes project and tool narratives", () => {
-  assert.equal(projects.length, 11);
+  assert.equal(projects.length, 10);
   assert.equal(getProject("welcome-to-food"), undefined);
   assert.deepEqual(
     projects.filter((p) => p.featured).map((p) => p.slug),
@@ -335,12 +335,12 @@ test("ownership distinguishes team contributions and supplied work from personal
     getProject("shopify-app")!.ownership!.summary,
     /existing client application/,
   );
-  assert.equal(getProject("the-daily-mind")!.team, "Personal project");
+  assert.equal(getTool("the-daily-mind")!.team, "Personal project");
 });
 
 test("personal publishing project and renamed live tools preserve evidence", () => {
-  assert.equal(tools.length, 2);
-  const blog = getProject("the-daily-mind")!;
+  assert.equal(tools.length, 3);
+  const blog = getTool("the-daily-mind")!;
   assert.equal(blog.developmentScope, "Full-stack");
   assert.equal(blog.role, "Full-Stack Developer");
   for (const tech of ["Next.js", "NestJS", "MongoDB", "Tiptap", "Cloudinary"])

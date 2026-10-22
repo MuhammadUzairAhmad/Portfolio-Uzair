@@ -4,13 +4,18 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/work/the-daily-mind",
+        destination: "/tools/the-daily-mind",
+        permanent: true,
+      },
+      {
         source: "/tools/typespark",
         destination: "/tools/textgenerators",
         permanent: true,
       },
       {
         source: "/tools/blogsite",
-        destination: "/work/the-daily-mind",
+        destination: "/tools/the-daily-mind",
         permanent: true,
       },
     ];

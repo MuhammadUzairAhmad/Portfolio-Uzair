@@ -143,14 +143,14 @@ export function ToolSnapshot({
           </ToolSection>
         )}
         <section className="border-t border-border py-7">
-          <h2 className="mb-4 text-xl">Next tool</h2>
+          <h2 className="mb-4 text-xl">Next project</h2>
           <NextProjectCard project={next} />
         </section>
         <Link
           href="/tools"
           className="inline-flex min-h-11 items-center gap-3 text-sm font-medium text-primary"
         >
-          All tools <ArrowRight size={15} aria-hidden />
+          All projects & tools <ArrowRight size={15} aria-hidden />
         </Link>
       </Container>
       <ContactCta />

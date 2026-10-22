@@ -117,7 +117,7 @@ export function ToolCard({
               {String((index ?? 0) + 1).padStart(2, "0")}
             </span>
           )}
-          <h3 className={cn("text-xl", archive && "text-3xl")}>
+          <h3 className={cn("break-words text-xl", archive && "text-3xl")}>
             {project.name}
           </h3>
           <p className="mt-1 text-xs leading-relaxed text-muted-foreground">

@@ -207,4 +207,115 @@ export const tools: PortfolioProject[] = [
     detailSummary:
       "Geography discovery, quizzes and printable country activities.",
   },
+  {
+    slug: "the-daily-mind",
+    name: "The Daily Mind",
+    illustration: "blog",
+    category: "Tools",
+    subtitle: "Personal full-stack blog & publishing platform",
+    summary:
+      "My personal publishing platform with a Next.js reading experience and a NestJS/MongoDB backend for content management, authentication, permissions and publishing workflows.",
+    detailSummary:
+      "A public reading experience backed by an administrative workspace for creating, organizing and publishing content.",
+    role: "Full-Stack Developer",
+    developmentScope: "Full-stack",
+    team: "Personal project",
+    platform: "Web",
+    status: "Public link",
+    productUrl: "https://the-daily-mind.vercel.app/",
+    productLinkLabel: "Open project preview",
+    image: {
+      src: "/images/projects/the-daily-mind-live.webp",
+      width: 1280,
+      height: 720,
+    },
+    media: [
+      {
+        kind: "image",
+        src: "/images/projects/the-daily-mind-live.webp",
+        width: 1280,
+        height: 720,
+        alt: "The Daily Mind public homepage with featured articles and categories",
+        caption:
+          "The Daily Mind public homepage, captured from the live preview in October 2026.",
+      },
+    ],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "NestJS",
+      "MongoDB",
+      "Mongoose",
+      "Tailwind CSS",
+      "TanStack Query",
+      "Tiptap",
+      "Cloudinary",
+      "JWT",
+    ],
+    scope: [
+      "Public reading, categories & search",
+      "Rich-text content management",
+      "Draft, published & scheduled articles",
+      "Authentication & permission-controlled administration",
+      "Cloudinary image uploads",
+      "SEO metadata & content settings",
+    ],
+    overview:
+      "The Daily Mind is a personal blog and publishing platform. Readers can browse articles, explore categories and search for content, while an administrative workspace supports writing, organizing and publishing posts.",
+    context:
+      "The Daily Mind is my personal blog and publishing platform. It combines a public reading experience with an administrative workspace for creating, organizing and publishing content.",
+    ownership: {
+      label: "Personal project · Full-stack implementation",
+      summary:
+        "I built the frontend and backend, connecting the public reading experience with content management, authentication, permissions and publishing workflows. This project demonstrates my work across the interface, APIs and MongoDB data models.",
+    },
+    contributions: [
+      {
+        title: "Reading & discovery",
+        description:
+          "Built responsive article pages, category browsing and search, connecting the public Next.js interface to backend content APIs.",
+      },
+      {
+        title: "Editor & publishing",
+        description:
+          "Implemented the Tiptap editing experience and backend workflows for drafts, published and scheduled articles, with category organization and SEO metadata.",
+      },
+      {
+        title: "Authentication & permissions",
+        description:
+          "Built login, session-refresh and permission-controlled administration, including separate content creation, editing and publishing permissions.",
+      },
+      {
+        title: "Media & application data",
+        description:
+          "Connected Cloudinary image uploads and MongoDB/Mongoose data models for articles, categories, users and application settings.",
+      },
+    ],
+    problem: {
+      text: "Connect a public blog with an administration workflow that can manage articles, publishing status, access permissions and media from one application.",
+    },
+    solution: {
+      text: "Built a Next.js frontend and a NestJS/MongoDB API, with shared publishing data, permission-controlled administration, rich-text content and image-upload workflows.",
+    },
+    decisions: [
+      {
+        topic: "Publishing workflow",
+        choice: "Separate drafts, scheduled posts and published articles",
+        reason:
+          "Support content preparation and publication while public queries select the appropriate published content.",
+      },
+      {
+        topic: "Administration access",
+        choice: "JWT authentication and permission checks on admin APIs",
+        reason:
+          "Apply separate permissions for reading, creating, updating, publishing and deleting content.",
+      },
+    ],
+    results: [
+      {
+        text: "Built a connected reading and content-management application, with frontend, backend and publishing capabilities available to demonstrate through the project preview.",
+      },
+    ],
+  },
 ];

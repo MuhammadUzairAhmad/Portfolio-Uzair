@@ -5,8 +5,8 @@ import { ContactCta } from "@/components/layout/footer";
 import { tools } from "@/content/tools";
 import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata(
-  "Tools & experiments",
-  "Small tools. Useful possibilities.",
+  "Personal projects & tools",
+  "Personal projects. Useful tools.",
   "/tools",
 );
 export default function ToolsPage() {
@@ -17,12 +17,12 @@ export default function ToolsPage() {
         eyebrow="Tools"
         title={
           <>
-            Small tools.
+            Personal projects.
             <br />
-            <span className="text-primary">Useful possibilities.</span>
+            <span className="text-primary">Useful tools.</span>
           </>
         }
-        description="A collection of small products and experiments built to explore ideas, solve specific problems and learn new things."
+        description="Personal applications and client tools I’ve built to solve useful problems—from full-stack publishing to creative and geography tools."
         note={
           <>
             Ideas

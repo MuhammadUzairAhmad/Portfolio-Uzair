@@ -97,11 +97,11 @@ export function ToolsSection() {
     <section>
       <Container className="border-b border-border pb-7 pt-2">
         <SectionHeading
-          eyebrow="Tools & smaller products"
-          title="Tools & smaller products"
-          description="Client projects and useful tools I’ve built along the way."
+          eyebrow="Personal projects & tools"
+          title="Personal projects & tools"
+          description="Personal projects and useful client tools I’ve built along the way."
         />
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-3">
           {tools.map((tool) => (
             <ProjectCard key={tool.slug} project={tool} />
           ))}
