@@ -24,7 +24,7 @@ export function buttonClasses({
   className,
 }: StyleProps = {}) {
   return cn(
-    "inline-flex shrink-0 items-center justify-center rounded-md border font-medium transition-[background-color,opacity,transform] duration-150 motion-safe:hover:-translate-y-0.5 disabled:pointer-events-none disabled:opacity-45",
+    "inline-flex shrink-0 items-center justify-center rounded-md border font-medium transition-[background-color,opacity,transform] duration-200 motion-safe:hover:-translate-y-0.5 motion-safe:active:translate-y-0 [&_.lucide-arrow-right]:transition-transform [&_.lucide-arrow-right]:duration-200 motion-safe:hover:[&_.lucide-arrow-right]:translate-x-0.5 disabled:pointer-events-none disabled:opacity-45",
     variants[variant],
     sizes[size],
     className,

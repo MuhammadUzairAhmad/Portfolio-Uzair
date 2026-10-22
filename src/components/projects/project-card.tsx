@@ -28,7 +28,7 @@ export function ProjectCard({
   return (
     <article
       className={cn(
-        "group relative isolate overflow-hidden rounded-xl border border-border/65",
+        "group relative isolate overflow-hidden rounded-xl border border-border/65 transition-[border-color,transform] duration-200 hover:border-primary/50 focus-within:border-primary/50 motion-safe:hover:-translate-y-0.5 motion-safe:focus-within:-translate-y-0.5",
         tones[project.slug as keyof typeof tones] ?? "bg-surface",
         featured && "md:col-span-2",
       )}
@@ -65,7 +65,11 @@ export function ProjectCard({
           </div>
           <span className="mt-4 inline-flex items-center gap-3 text-xs font-medium text-primary">
             Read case study
-            <ArrowRight size={13} aria-hidden />
+            <ArrowRight
+              size={13}
+              className="transition-transform duration-200 motion-safe:group-hover:translate-x-1 motion-safe:group-focus-within:translate-x-1"
+              aria-hidden
+            />
           </span>
         </div>
         <div className="relative flex min-w-0 items-center">
@@ -95,7 +99,7 @@ export function ToolCard({
   return (
     <article
       className={cn(
-        "group overflow-hidden rounded-xl border border-border",
+        "group overflow-hidden rounded-xl border border-border transition-[border-color,transform] duration-200 hover:border-primary/50 focus-within:border-primary/50 motion-safe:hover:-translate-y-0.5 motion-safe:focus-within:-translate-y-0.5",
         project.illustration === "type"
           ? "bg-[#f8f3f4] dark:bg-[#18141f]"
           : project.illustration === "globe"
@@ -133,7 +137,11 @@ export function ToolCard({
           {archive && (
             <span className="mt-5 inline-flex items-center gap-3 text-sm font-medium text-primary">
               Explore project
-              <ArrowRight size={14} aria-hidden />
+              <ArrowRight
+                size={14}
+                className="transition-transform duration-200 motion-safe:group-hover:translate-x-1 motion-safe:group-focus-within:translate-x-1"
+                aria-hidden
+              />
             </span>
           )}
         </div>
@@ -146,7 +154,11 @@ export function ToolCard({
         {!archive && (
           <span className="mt-2 inline-flex items-center gap-3 text-xs font-medium text-primary">
             Explore project
-            <ArrowRight size={13} aria-hidden />
+            <ArrowRight
+              size={13}
+              className="transition-transform duration-200 motion-safe:group-hover:translate-x-1 motion-safe:group-focus-within:translate-x-1"
+              aria-hidden
+            />
           </span>
         )}
       </Link>
@@ -159,7 +171,7 @@ export function NextProjectCard({ project }: { project: PortfolioProject }) {
     <Link
       href={projectHref(project)}
       prefetch
-      className="grid items-center gap-4 rounded-xl border border-border bg-surface p-4 sm:grid-cols-[160px_1fr_auto]"
+      className="group grid items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-[border-color,transform] duration-200 hover:border-primary/50 focus-visible:border-primary/50 motion-safe:hover:-translate-y-0.5 sm:grid-cols-[160px_1fr_auto]"
     >
       <div className="h-28 overflow-hidden">
         {project.illustration ? (
@@ -179,7 +191,11 @@ export function NextProjectCard({ project }: { project: PortfolioProject }) {
       </div>
       <span className="flex items-center gap-3 text-xs font-medium text-primary">
         View case study
-        <ArrowRight size={14} aria-hidden />
+        <ArrowRight
+          size={14}
+          className="transition-transform duration-200 motion-safe:group-hover:translate-x-1 motion-safe:group-focus-within:translate-x-1"
+          aria-hidden
+        />
       </span>
     </Link>
   );

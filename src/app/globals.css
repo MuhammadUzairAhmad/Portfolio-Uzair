@@ -113,3 +113,14 @@
     width: min(100% - 5rem, 70rem);
   }
 }
+
+@keyframes theme-icon-in {
+  from {
+    opacity: 0;
+    transform: rotate(-45deg) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
