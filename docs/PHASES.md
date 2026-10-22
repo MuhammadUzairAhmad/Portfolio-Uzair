@@ -117,3 +117,7 @@ Curate eight strong decisions on five projects; remove redundant technology desc
 ### Match Tools detail and card artwork — 22 October 2026
 
 Use each entry’s original illustration on both the main card and detail hero. Keep real screenshots in the existing evidence gallery. No project content, category or URL changes.
+
+### Live Tools without media sections — 22 October 2026
+
+Remove screenshot records from the three live Tools stories, retain illustrations and clear Visit live site actions, and suppress media sections for Tools entries with a live URL. Company-project evidence remains unchanged.

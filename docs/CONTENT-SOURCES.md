@@ -78,3 +78,7 @@ Owner requested The Daily Mind in the Tools collection alongside personal applic
 ## Selective key decisions — 22 October 2026
 
 Owner requested only strong choices useful to clients and engineers. See DECISION-REVIEW.md for the complete keep/rewrite/remove record. Rationale stays within existing owner-confirmed Bitlux problem/solution, Gaming referral validation inspected in supplied source, verified TextGenerators/GlobePick build records, and inspected Daily Mind public/admin publishing and permission flows. Eight cards remain across five projects. Generic PDF/auth/library cards were removed from the rendered decision lists while features/stack remain. Shopify camera reasoning remains in its distinct challenge section. No unsupported alternative evaluation, security audit, measured outcome or team architecture authorship is claimed.
+
+## Live Tools demonstrated through their URLs — 22 October 2026
+
+Owner prefers direct live-site access instead of screenshot/media sections for Tools. Removed image/media records from the three current Tools entries, kept original illustrations and live URLs, and labelled primary actions Visit live site. ToolSnapshot suppresses evidence when productUrl exists; future private entries may still supply media. Existing public UI capture files remain archived but are not referenced by Tools content. Company-project screenshots and walkthroughs are unchanged.

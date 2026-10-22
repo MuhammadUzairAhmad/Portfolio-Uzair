@@ -1,6 +1,6 @@
 # Current tool stories — 22 October 2026
 
-TextGenerators.net and GlobePick are verified client-tool build stories with owner-supplied live URLs and real public UI screenshots. The Daily Mind is a personal full-stack publishing project in this collection.
+TextGenerators.net and GlobePick are verified client-tool build stories with owner-supplied live URLs and original illustrated covers. The Daily Mind is a personal full-stack publishing project in this collection.
 
 ## TextGenerators.net
 

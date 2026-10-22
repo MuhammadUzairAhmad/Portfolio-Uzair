@@ -274,3 +274,11 @@ Removed the real-image override from the Tools detail hero. TextGenerators.net, 
 Production build, full formatting/diff whitespace and HTTP smoke passed across all 18 pages, assets, expected 404s and legacy redirects. Tools smoke now checks the first hero image against its matching illustration. Browser inspection confirmed the correct artwork and distinct gallery screenshot on all three detail pages, with no document overflow at the normal viewport. No new unit tests or broader responsive runs were needed for this image-source-only adjustment.
 
 Preview: [matching detail artwork](previews/tool-detail-matching-card-art.jpg). Local commits only.
+
+## Live-link-only Tools details — 22 October 2026
+
+The three Tools details keep their illustrated heroes and now direct visitors through Visit live site, with no screenshot or media section. Their source image/media records were removed; archived public capture assets were retained. Evidence remains available to future private entries without a productUrl. Company project media is unchanged.
+
+Passed: 24 tests, production build (including TypeScript), repository formatting/diff whitespace and HTTP smoke across 18 pages plus expected 404s/assets/redirects. Unit content assertions now require live Tools links without media/image records; route assertions require direct live actions and no gallery/evidence markup.
+
+Browser: TextGenerators.net, GlobePick and The Daily Mind show the correct live href and no #evidence/gallery; no document overflow at the normal viewport. Illustration source remained unchanged. External navigation and company media playback were not repeated because their URLs/components were unchanged. Preview: [live-site action](previews/tool-live-link-only.jpg). Local commits only.
