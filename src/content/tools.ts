@@ -78,22 +78,22 @@ export const tools: PortfolioProject[] = [
     },
     decisions: [
       {
-        topic: "Local processing",
-        choice: "Transform text and render exports in the browser",
+        topic: "Keep creative work in the browser",
+        context:
+          "The tools transform user text and generate downloadable images and animations.",
+        choice:
+          "Process text, signatures and exports locally without an application backend.",
         reason:
-          "Keep user text local and avoid an application backend for these tools.",
+          "These workflows can run without an account or sending the entered text to an application server.",
       },
       {
-        topic: "Animated export",
-        choice: "Encode GIFs in a bundled Web Worker",
+        topic: "Keep GIF export off the main interface thread",
+        context:
+          "Animated exports require encoding work while the user is working with the tool.",
+        choice:
+          "Encode GIFs in a Web Worker with progress, cancellation and cleanup.",
         reason:
-          "Move encoding off the main thread and support progress, cancellation and cleanup.",
-      },
-      {
-        topic: "Signature fonts",
-        choice: "Bundle licensed fonts with coverage checks",
-        reason:
-          "Render signatures with actual fonts and retain the required license notices.",
+          "Separate export work from the interface and let the user cancel an export rather than wait for it to finish.",
       },
     ],
     results: [
@@ -183,17 +183,22 @@ export const tools: PortfolioProject[] = [
     },
     decisions: [
       {
-        topic: "Data availability",
+        topic: "Avoid a runtime geography dependency",
+        context:
+          "The generators need country and city data; the city dataset is larger than the homepage needs initially.",
         choice:
-          "Bundle geography data and load homepage city records on demand",
+          "Bundle geography data and load homepage city records on demand.",
         reason:
-          "Avoid a runtime geography service while keeping the larger city dataset out of the initial homepage tool.",
+          "Generate results without a runtime geography service and keep the larger city dataset out of the initial homepage tool.",
       },
       {
-        topic: "Worksheet output",
-        choice: "Use the same assignment objects for preview and print",
+        topic: "Keep worksheet previews and printouts aligned",
+        context:
+          "Learners need the printed activity to match the countries and questions they selected.",
+        choice:
+          "Build the on-screen preview and printed worksheet from the same assignment objects.",
         reason:
-          "Keep printable activities aligned with the selected countries and questions.",
+          "Use one source for both outputs so the print layout reflects the selected activity.",
       },
     ],
     results: [
@@ -300,16 +305,22 @@ export const tools: PortfolioProject[] = [
     },
     decisions: [
       {
-        topic: "Publishing workflow",
-        choice: "Separate drafts, scheduled posts and published articles",
+        topic: "Separate content preparation from public reading",
+        context:
+          "Editors need to prepare articles before readers can see them.",
+        choice:
+          "Represent draft, scheduled and published states separately, and filter public content accordingly.",
         reason:
-          "Support content preparation and publication while public queries select the appropriate published content.",
+          "Support editorial preparation and scheduled publication while keeping draft content out of public article queries.",
       },
       {
-        topic: "Administration access",
-        choice: "JWT authentication and permission checks on admin APIs",
+        topic: "Control what each administrator can change",
+        context:
+          "Reading, editing and publishing content are different administrative responsibilities.",
+        choice:
+          "Check permissions for each admin API action alongside authentication.",
         reason:
-          "Apply separate permissions for reading, creating, updating, publishing and deleting content.",
+          "Apply access rules to creating, updating, publishing and deleting content rather than treating every signed-in administrator as having the same permissions.",
       },
     ],
     results: [

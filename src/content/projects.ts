@@ -69,15 +69,12 @@ export const projects: PortfolioProject[] = [
     },
     decisions: [
       {
-        topic: "API handling",
-        choice: "Introduce TanStack Query requests and caching",
+        topic: "Consistent data on operational screens",
+        context:
+          "Existing screens had inconsistent API handling and data-rendering issues.",
+        choice: "Use TanStack Query for requests and cached server data.",
         reason:
-          "Address inconsistent API handling and improve affected data-rendering behavior.",
-      },
-      {
-        topic: "Documents",
-        choice: "Generate ticket PDFs using jsPDF",
-        reason: "Build dynamic documents from ticket information.",
+          "Give affected screens a shared approach to fetching and reusing data while improving their rendering behavior.",
       },
     ],
     results: [
@@ -421,18 +418,7 @@ export const projects: PortfolioProject[] = [
     solution: {
       text: "Converted the designs into React interfaces and integrated the Python backend, Clerk authentication, and Web3 connections using Wagmi and Reown AppKit.",
     },
-    decisions: [
-      {
-        topic: "Accounts",
-        choice: "Integrate Clerk sign-in/sign-up",
-        reason: "Connect authentication to the marketplace frontend.",
-      },
-      {
-        topic: "Web3 connections",
-        choice: "Wagmi and Reown AppKit",
-        reason: "Connect wallets and smart-contract transaction flows.",
-      },
-    ],
+    decisions: [],
     results: [
       {
         text: "Delivered a connected marketplace frontend spanning discovery, account access, transactions, holdings and carbon-credit retirement.",
@@ -523,15 +509,13 @@ export const projects: PortfolioProject[] = [
     },
     decisions: [
       {
-        topic: "Application structure",
-        choice: "Next.js frontend and backend with MongoDB",
+        topic: "Validate referrals before recording them",
+        context:
+          "Referral flows needed clear rules about who could refer whom.",
+        choice:
+          "Check the referral code, existing referrer and self-referral before saving the relationship.",
         reason:
-          "Turn the client’s frontend demo into a connected full-stack application.",
-      },
-      {
-        topic: "Authentication",
-        choice: "NextAuth Google OAuth and credentials",
-        reason: "Support Google and email/password sign-in.",
+          "Reject invalid or repeated referral relationships before they become part of the rewards workflow.",
       },
     ],
     results: [
@@ -936,18 +920,7 @@ export const projects: PortfolioProject[] = [
     solution: {
       text: "Kept the embedded app and added an in-app button that opened the application in a standalone browser context. Users could grant camera access there and complete barcode scanning successfully. This combined approach preserved embedded workflows without converting the entire app to standalone mode.",
     },
-    decisions: [
-      {
-        topic: "Label generation",
-        choice: "JsBarcode, WickedPDF and PDF-merging tools",
-        reason: "Generate barcodes and printable product labels.",
-      },
-      {
-        topic: "Shopify data",
-        choice: "GraphQL product, variant, location and metafield integration",
-        reason: "Support labels and handle missing inventory-location data.",
-      },
-    ],
+    decisions: [],
     projectStatus: "Completed feature work",
     productUrl:
       "https://apps.shopify.com/groovepacker-lite?st_source=autocomplete&surface_detail=autocomplete_apps",

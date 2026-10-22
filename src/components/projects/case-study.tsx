@@ -66,9 +66,7 @@ export function CaseStudy({
     ...(hasEvidence
       ? [{ id: "evidence", label: "Screenshots & walkthroughs" }]
       : []),
-    ...(hasDecisions
-      ? [{ id: "decisions", label: "Technical decisions" }]
-      : []),
+    ...(hasDecisions ? [{ id: "decisions", label: "Key decisions" }] : []),
     { id: "outcomes", label: "Outcome" },
   ];
   return (

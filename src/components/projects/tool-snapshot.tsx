@@ -114,7 +114,7 @@ export function ToolSnapshot({
           </ToolSection>
         )}
         {project.decisions.some((d) => !d.demo) && (
-          <ToolSection id="decisions" title="Technical decisions">
+          <ToolSection id="decisions" title="Key decisions">
             <ProjectDecisions decisions={project.decisions} />
           </ToolSection>
         )}

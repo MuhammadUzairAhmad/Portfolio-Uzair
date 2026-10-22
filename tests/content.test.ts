@@ -360,3 +360,34 @@ test("personal publishing project and renamed live tools preserve evidence", () 
   assert.match(getProject("get-foodies")!.walkthroughs![0].url, /loom.com/);
   assert.equal(demoFields(blog), 0);
 });
+
+test("key decisions are selective and preserve the distinct Shopify challenge", () => {
+  const selected = all.filter((item) => item.decisions.length);
+  assert.deepEqual(
+    selected.map((item) => item.slug),
+    [
+      "bitlux",
+      "gaming-platform",
+      "textgenerators",
+      "globepick",
+      "the-daily-mind",
+    ],
+  );
+  for (const item of selected) {
+    assert.ok(item.decisions.length <= 2);
+    for (const decision of item.decisions)
+      assert.ok(
+        decision.context &&
+          decision.choice &&
+          decision.reason &&
+          !decision.demo,
+      );
+  }
+  assert.equal(getProject("hestiya")!.decisions.length, 0);
+  assert.equal(getProject("shopify-app")!.decisions.length, 0);
+  assert.equal(getProject("shopify-app")!.highlightChallenge, true);
+  assert.match(
+    getProject("gaming-platform")!.decisions[0].choice,
+    /existing referrer and self-referral/,
+  );
+});

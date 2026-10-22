@@ -1,6 +1,7 @@
 export type Narrative = { text: string; demo?: boolean };
 export type Decision = {
   topic: string;
+  context?: string;
   choice: string;
   reason: string;
   demo?: boolean;

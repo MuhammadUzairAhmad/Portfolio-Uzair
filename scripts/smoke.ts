@@ -102,7 +102,7 @@ for (const route of routes) {
   if (route === "/tools/textgenerators" || route === "/tools/globepick") {
     assert.match(html, /Tech stack/);
     assert.match(html, /Codex-assisted/);
-    assert.match(html, /Why these choices/);
+    assert.match(html, /Why it matters/);
     assert.doesNotMatch(html, /Lessons learned/);
   }
 
@@ -176,6 +176,11 @@ for (const route of routes) {
       assert.match(html, /The challenge/);
       assert.match(html, /My solution/);
     } else assert.doesNotMatch(html, /id="challenge"|href="#challenge"/);
+    if (project.decisions.some((item) => !item.demo)) {
+      assert.match(html, /aria-label="Key decisions"/);
+      assert.match(html, /Why it matters/);
+      assert.doesNotMatch(html, /Why these choices/);
+    }
     if (!project.decisions.some((item) => !item.demo)) {
       assert.doesNotMatch(html, /id="decisions"|href="#decisions"/);
     }
