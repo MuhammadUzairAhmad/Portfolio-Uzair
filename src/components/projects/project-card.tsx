@@ -53,17 +53,15 @@ export function ProjectCard({
           <p className="mt-1 text-xs font-medium leading-relaxed sm:max-w-xs sm:text-sm">
             {project.cardSubtitle ?? project.subtitle}
           </p>
-          {wide && (
-            <p className="mt-3 text-xs leading-relaxed text-muted-foreground sm:max-w-xs sm:text-sm">
-              {project.summary}
-            </p>
-          )}
-          <div className="mt-auto flex flex-wrap gap-1.5 pt-5">
+          <p className="mt-3 text-xs leading-relaxed text-muted-foreground sm:max-w-xs sm:text-sm">
+            {project.summary}
+          </p>
+          <div className="mt-auto hidden flex-wrap gap-1.5 pt-5 sm:flex">
             {project.stack.slice(0, 3).map((tech) => (
               <Badge key={tech}>{tech}</Badge>
             ))}
           </div>
-          <span className="mt-4 inline-flex items-center gap-3 text-xs font-medium text-primary">
+          <span className="mt-4 hidden items-center gap-3 text-xs font-medium text-primary sm:inline-flex">
             Read case study
             <ArrowRight
               size={13}
@@ -83,6 +81,14 @@ export function ProjectCard({
             )}
           />
         </div>
+        <span className="inline-flex items-center gap-3 text-xs font-medium text-primary sm:hidden">
+          Read case study
+          <ArrowRight
+            size={13}
+            className="transition-transform duration-200 motion-safe:group-hover:translate-x-1"
+            aria-hidden
+          />
+        </span>
       </Link>
     </article>
   );
@@ -177,7 +183,7 @@ export function NextProjectCard({ project }: { project: PortfolioProject }) {
       <div className="order-1 sm:order-none">
         <h3 className="text-xl">{project.name}</h3>
         <p className="mt-1 text-xs text-muted-foreground">{project.subtitle}</p>
-        <div className="mt-3 flex flex-wrap gap-2">
+        <div className="mt-3 hidden flex-wrap gap-2 sm:flex">
           {project.stack.slice(0, 3).map((tech) => (
             <Badge key={tech}>{tech}</Badge>
           ))}
