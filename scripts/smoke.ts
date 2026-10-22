@@ -133,6 +133,19 @@ for (const route of routes) {
       assert.match(html, /<button[^>]*type="button"/);
       assert.ok(html.includes(recording.label));
     }
+    if (project.category !== "Tools") {
+      assert.match(html, /data-project-cover="(?:image|placeholder)"/);
+      if (!project.image && !project.mockup)
+        assert.match(html, /data-project-cover="placeholder"/);
+      for (const recording of project.walkthroughs ?? []) {
+        assert.ok(recording.url);
+        assert.ok(
+          html.indexOf('id="evidence"') <
+            html.indexOf(`id="${project.slug}-walkthroughs"`),
+          `${route}: walkthrough belongs in evidence`,
+        );
+      }
+    }
     if (project.slug === "skillmatch") {
       assert.match(html, /Contributed from day one/);
       assert.doesNotMatch(html, /Ongoing product/);

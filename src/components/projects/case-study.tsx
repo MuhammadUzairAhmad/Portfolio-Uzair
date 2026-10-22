@@ -12,7 +12,6 @@ import { ProjectChallenge } from "./project-challenge";
 import { ProjectContributions } from "./project-contributions";
 import { ProjectDecisions } from "./project-decisions";
 import { ProjectEvidence } from "./project-evidence";
-import { ProjectWalkthroughs } from "./project-walkthroughs";
 import { ToolSnapshot } from "./tool-snapshot";
 import { NextProjectCard } from "./project-card";
 
@@ -53,10 +52,7 @@ export function CaseStudy({
   if (project.category === "Tools")
     return <ToolSnapshot project={project} next={next} />;
   const hasVisual = !!(project.image || project.mockup);
-  const leadWithVideo = !hasVisual && !!project.walkthroughs?.length;
-  const hasEvidence =
-    !!project.media?.length ||
-    (!leadWithVideo && !!project.walkthroughs?.length);
+  const hasEvidence = !!project.media?.length || !!project.walkthroughs?.length;
   const hasDecisions = project.decisions.some((item) => !item.demo);
   const sections = [
     { id: "overview", label: "Overview" },
@@ -145,15 +141,27 @@ export function CaseStudy({
             </div>
           ))}
         </dl>
-        {hasVisual && (
-          <div className="relative mt-5 flex aspect-[1.8] items-center justify-center overflow-hidden rounded-xl bg-[#faf5e9] sm:aspect-[2.15] dark:bg-[#121d17]">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#d5c59935,transparent_75%)] dark:bg-[radial-gradient(ellipse_at_center,#a7d54040,transparent_68%)]" />
+        <div
+          data-project-cover={hasVisual ? "image" : "placeholder"}
+          className="relative mt-5 flex aspect-[1.8] items-center justify-center overflow-hidden rounded-xl bg-[#faf5e9] sm:aspect-[2.15] dark:bg-[#121d17]"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#d5c59935,transparent_75%)] dark:bg-[radial-gradient(ellipse_at_center,#a7d54040,transparent_68%)]" />
+          {hasVisual ? (
             <DevicePreview
               project={project}
               className="relative h-[94%] w-[94%]"
             />
-          </div>
-        )}
+          ) : (
+            <div
+              aria-hidden="true"
+              className="relative flex h-full w-full items-center justify-center px-6 text-center"
+            >
+              <span className="max-w-3xl font-serif text-3xl text-primary sm:text-5xl lg:text-6xl">
+                {project.name}
+              </span>
+            </div>
+          )}
+        </div>
         <div className="mt-4 flex flex-wrap items-center justify-end gap-3">
           {!project.productUrl && project.status === "Private project" && (
             <p className="mr-auto text-xs text-muted-foreground">
@@ -192,14 +200,6 @@ export function CaseStudy({
             </ButtonLink>
           )}
         </div>
-        {leadWithVideo && (
-          <div className="mb-6">
-            <ProjectWalkthroughs
-              id={`${project.slug}-walkthroughs`}
-              recordings={project.walkthroughs!}
-            />
-          </div>
-        )}
         <div className="mt-6 grid items-start gap-6 lg:grid-cols-[220px_1fr] lg:gap-10">
           <aside className="border-border lg:sticky lg:top-5 lg:border-r lg:pr-6">
             <nav
