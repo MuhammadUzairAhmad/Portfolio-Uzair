@@ -200,3 +200,13 @@ Validation: all 21 content/media/publication tests pass, as do ESLint, route typ
 Browser: all 13 detail pages checked at 320px dark, 320px light and 1280px dark (39 observations). Each has exactly one contribution checklist, no former Implementation section and no document overflow. All mobile in-page targets resolve; only Shopify has the highlighted challenge. Clicked contribution/challenge navigation reaches its section. No browser warnings/errors were captured. Temporary viewport overrides were reset. Viewer behavior was not retested because its implementation/media were unchanged.
 
 Previews: [merged Hestiya contribution](previews/merged-contribution-hestiya.jpg), [Shopify challenge](previews/merged-shopify-challenge.jpg). Observations: docs/audit/merged-detail-browser-results.json. Local phase commits only.
+
+## Project ownership and collaboration introductions — 22 October 2026
+
+All 13 project/tool pages now introduce My contribution with a short My involvement note. It explains the delivery context and personal scope, including team contributions, existing products, client-supplied designs/demo/contract, frontend-only project responsibility, integration-only APIs and senior guidance. Repeated ownership wording was removed from relevant checklist bullets. No new authorship exclusivity, leadership, team-size or business-impact claim was added. Blogsite’s public introduction remains limited to verified layouts; incomplete editorial details stay in internal documentation.
+
+Validation passed: 22 tests including attribution-boundary coverage, ESLint, route types/TypeScript, final production build, full formatting, diff whitespace and production HTTP smoke across 18 pages plus four expected 404s/assets/preview protections. Every detail route includes an involvement note and one contribution checklist. Existing media and publication boundaries remain unchanged.
+
+Browser: 13 detail pages checked at 320px in both themes, plus SkillMatch, Hestiya and TypeSpark at 1280px dark (29 observations). All involvement notes render, every page retains exactly one checklist and none has document overflow. Hestiya’s clicked contribution link reaches the updated presentation. No captured browser warnings/errors. Temporary viewport overrides reset. Media playback was not repeated for this content-only addition.
+
+Preview: [Hestiya ownership and contribution](previews/project-ownership-hestiya.jpg). Observations: docs/audit/project-ownership-browser-results.json. Local phase commits only.

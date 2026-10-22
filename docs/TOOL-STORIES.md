@@ -16,6 +16,10 @@ Processing runs locally, with no account or application backend. Shared controls
 
 ### My contribution
 
+**Client tool · Frontend implementation**
+
+Built the connected browser tool experience: interfaces, transformation logic, local exports and verification. Processing runs in the browser, so this project did not require an application backend.
+
 - **Text styling & editing:** Built Unicode transformations, searchable styles, selected-text styling, comparison and copy flows, including manual-copy fallback and handling for unsupported characters.
 - **Glitch & signature exports:** Implemented stable seeded glitch output and local animated GIF export with a Web Worker. Built typed/drawn signatures with licensed local fonts, appearance controls and PNG export.
 - **Reusable UI & verification:** Created shared responsive controls, browser-saved preferences and server-rendered content. Used transformation, storage, font and browser checks to verify the implementation.
@@ -50,6 +54,10 @@ The frontend uses bundled geography data and validated local state, without acco
 
 ### My contribution
 
+**Client tool · Frontend implementation**
+
+Built the geography generators, local saved state, sharing and learning workflows. The tool uses bundled data and browser storage without an application backend.
+
 - **Generators & selection logic:** Built country, capital and city generators with inclusion/exclusion filters, unique batches, capacity handling and separate no-repeat pools. Connected the homepage spinner to the existing generator state.
 - **Persistence & sharing:** Implemented browser-saved settings, history and favorites, with validation and recovery for storage failures. Added validated share links that replay results without consuming the recipient’s selection pool.
 - **Learning, content & quality:** Created capital quizzes, country-project assignments, printable worksheets and starter packs. Added server-rendered content, source/licensing information, data validators and tests for selection, persistence and sharing.
@@ -80,6 +88,10 @@ Delivered connected geography discovery, saved places, sharing, quizzes and prin
 A blog frontend with article, listing, category, search, and author-page layouts. The related project notes focus on consistent containers, typography, spacing, and themes.
 
 ### My contribution
+
+**Frontend layouts**
+
+Built article, browsing and author-page layouts with shared responsive styling. My contribution focused on the blog’s reading and browsing interfaces.
 
 - **Browsing layouts:** Created listing, category, search and author-page layouts for browsing content.
 - **Article reading:** Built readable article layouts with responsive widths and typography.

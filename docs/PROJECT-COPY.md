@@ -14,6 +14,10 @@ Bitlux is a private-jet booking and operations platform. It brings booking reque
 
 ### My contribution
 
+**Existing product · Team contribution**
+
+Contributed to an existing Sofrix product through assigned improvements and feature work across the frontend and backend/APIs. The work shown here is my contribution within the wider product team.
+
 - **Rendering & data handling:** Investigated rendering and performance issues and introduced TanStack Query for API requests and server-data caching.
 - **Interface improvements:** Updated screens from Figma, added validation and toast feedback, and refactored reusable components.
 - **APIs & ticket documents:** Contributed backend/API work, integrated services and generated dynamic ticket PDFs with jsPDF.
@@ -43,6 +47,10 @@ Linxx is an ambassador marketplace spanning web and mobile. It connects marketpl
 
 ### My contribution
 
+**Web & mobile · Team contribution**
+
+Worked within the Sofrix team on an existing marketplace across web, mobile and backend/API flows. My scope included feature updates, integration work, debugging and support for the Capacitor mobile delivery.
+
 - **Marketplace features & APIs:** Contributed frontend and backend/API work for marketplace listings, approval/decline workflows, GPS discovery and Plaid integration.
 - **Mobile fixes & delivery:** Investigated Capacitor-specific issues, fixed mobile behavior and supported deployment.
 - **End-to-end verification:** Tested affected web and mobile journeys to verify the connected flows.
@@ -67,7 +75,11 @@ SkillMatch is a recruitment and assessment product for candidates, recruiters an
 
 ### My contribution
 
-- **Screens & shared components:** Contributed from day one, building responsive candidate, recruiter and admin interfaces with form validation and reusable components.
+**From day one · Team contribution**
+
+Contributed from the start as part of the Netixsol development team. My work covered frontend delivery, authentication and API integration, alongside backend API creation under senior developer guidance.
+
+- **Screens & shared components:** Built responsive candidate, recruiter and admin interfaces with form validation and reusable components.
 - **Authentication & connected state:** Implemented authentication, integrated APIs and worked with Redux Toolkit and TanStack Query.
 - **Backend APIs:** Created APIs under senior developer guidance alongside frontend delivery.
 
@@ -91,7 +103,11 @@ Hestiya is a Web3 carbon-credit marketplace for discovering and trading credits,
 
 ### My contribution
 
-- **Marketplace frontend:** Built responsive React screens from Figma, including listing filters, cart, P2P transactions and holdings. My project responsibility was frontend development.
+**Project scope · Frontend delivery**
+
+My company role covered full-stack work; on Hestiya, I was responsible for the frontend and its integrations. I worked from supplied Figma designs and collaborated with another engineer who built the Python backend.
+
+- **Marketplace frontend:** Built responsive React screens from Figma, including listing filters, cart, P2P transactions and holdings.
 - **Accounts & API integration:** Integrated Clerk sign-in, sign-up and OTP, and worked with the backend developer to connect their existing Python APIs.
 - **Wallets & credit workflows:** Connected wallets and smart-contract interactions with Wagmi and Reown AppKit, including carbon-credit retirement and PDF transaction receipts.
 
@@ -119,6 +135,10 @@ Delivered a connected marketplace frontend spanning discovery, account access, t
 A wallet-connected gaming product with spin-wheel gameplay, referrals, bonuses and credit claims. Users can manage their accounts and rewards, while administrators manage users, claims and reward settings.
 
 ### My contribution
+
+**Client demo → Full-stack delivery**
+
+Started from the client’s v0 frontend demo and built the connected application’s frontend, backend and data workflows. The client supplied the smart contract; my responsibility was integrating it into the product.
 
 - **Full-stack delivery:** Turned the client’s v0 demo into a connected Next.js frontend and backend with MongoDB application data.
 - **Accounts & gameplay:** Implemented Google and email/password sign-in, wallet connectivity and spin-wheel gameplay. Integrated the client-provided smart contract.
@@ -150,7 +170,11 @@ Development Solutions Group’s company website presents its business and projec
 
 ### My contribution
 
-- **Company pages:** Built responsive Home, About, Projects and Contact pages from the client’s design with React, TypeScript and Tailwind CSS. My project responsibility was frontend development.
+**Project scope · Frontend delivery**
+
+My company role covered full-stack work; this project focused on frontend delivery. I built the company website from the client’s requested design and implemented the contact-form interface and validation.
+
+- **Company pages:** Built responsive Home, About, Projects and Contact pages from the client’s design with React, TypeScript and Tailwind CSS.
 - **Contact experience:** Implemented contact-form validation with Formik and Yup, alongside consistent spacing and presentation across screen sizes.
 
 ### Tech stack
@@ -172,6 +196,10 @@ Delivered the requested company website with responsive page layouts and a valid
 Get Foodies is a food application for web, iOS and Android. It combines product listings, dynamic banners and discounts with account and theme settings; its mobile experience also includes onboarding, multilingual interfaces and location-related features.
 
 ### My contribution
+
+**Web & mobile · Full-stack contribution**
+
+Worked at Sofrix on mobile interfaces from supplied Figma designs, plus web UI and backend features. My contribution spanned the customer-facing screens and the product, promotion and settings services described below.
 
 - **Mobile interfaces:** Built iOS and Android screens from Figma and connected registration, OTP verification, profile completion and banner interfaces.
 - **Web UI & backend features:** Built web application interfaces and backend features for product listings, dynamic banners, discounts, account settings and theme settings.
@@ -199,6 +227,10 @@ The client wanted users in different locations to operate printing workflows thr
 
 ### My contribution
 
+**Existing system · Frontend integration**
+
+My scope was the browser interface, existing API integration and a frontend Socket.io listener. The existing desktop application and its APIs handled print execution; I did not create or modify the backend APIs.
+
 - **Browser-based printing:** Built web controls that used existing desktop APIs to submit PDF print jobs and copy quantities. The desktop application handled printer execution.
 - **Live job & printer status:** Integrated a frontend Socket.io listener for ready, queued, printing, failed and printed states, plus printer online/offline updates.
 
@@ -222,7 +254,11 @@ Keller Williams’ public real-estate platform helps people explore homes to buy
 
 ### My contribution
 
-- **Ticket investigation:** As a Junior Software Engineer at Strategist HUB shadowing the CTO, traced bugs through 27+ connected React/Next.js repositories and shared packages.
+**Existing platform · Junior team contribution**
+
+Worked as a Junior Software Engineer at Strategist HUB while shadowing the CTO. I handled assigned bug and translation tickets within the existing multi-repository platform and followed the team’s review, merge and testing workflows.
+
+- **Ticket investigation:** Traced assigned bugs through 27+ connected React/Next.js repositories and shared packages.
 - **Translation updates:** Added i18next key/value pairs for translation workflows supporting up to 22 languages and incorporated generated translation pull requests from the team’s existing tooling.
 - **Dependent changes & tests:** Coordinated child-repository merges, retested parent applications and updated affected Jest tests and CI coverage checks.
 
@@ -245,6 +281,10 @@ Resolved assigned bugs and translation tickets, verified dependent applications 
 GP-Lite / Barcode Buddy helps Shopify merchants with picking, packing, barcode scanning and product-label printing. It connects product and inventory information to scanning and printable-label workflows.
 
 ### My contribution
+
+**Existing app · Freelance feature delivery**
+
+Completed scoped feature work across React and Ruby on Rails in an existing client application. My responsibility was extending scanning, labels and Shopify-data workflows while preserving the embedded app experience.
 
 - **Mobile camera scanning:** Implemented iOS/Android camera scanning with camera selection, zoom, torch controls and permission handling.
 - **Combined app experience:** Added a button to open scanning in a standalone browser context while preserving the existing embedded Shopify experience.

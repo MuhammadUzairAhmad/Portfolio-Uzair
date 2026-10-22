@@ -1,0 +1,234 @@
+[
+  {
+    "checklists": 1,
+    "involvement": "Existing product · Team contributionContributed to an existing Sofrix product through assigned improvements and feature work across the frontend and backend/APIs. The work shown here is my contribution within the wider product team.",
+    "overflow": false,
+    "path": "/work/bitlux",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Web & mobile · Team contributionWorked within the Sofrix team on an existing marketplace across web, mobile and backend/API flows. My scope included feature updates, integration work, debugging and support for the Capacitor mobile delivery.",
+    "overflow": false,
+    "path": "/work/linxx",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "From day one · Team contributionContributed from the start as part of the Netixsol development team. My work covered frontend delivery, authentication and API integration, alongside backend API creation under senior developer guidance.",
+    "overflow": false,
+    "path": "/work/skillmatch",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Project scope · Frontend deliveryMy company role covered full-stack work; on Hestiya, I was responsible for the frontend and its integrations. I worked from supplied Figma designs and collaborated with another engineer who built the Python backend.",
+    "overflow": false,
+    "path": "/work/hestiya",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Client demo → Full-stack deliveryStarted from the client’s v0 frontend demo and built the connected application’s frontend, backend and data workflows. The client supplied the smart contract; my responsibility was integrating it into the product.",
+    "overflow": false,
+    "path": "/work/gaming-platform",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Project scope · Frontend deliveryMy company role covered full-stack work; this project focused on frontend delivery. I built the company website from the client’s requested design and implemented the contact-form interface and validation.",
+    "overflow": false,
+    "path": "/work/development-solutions-group",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Web & mobile · Full-stack contributionWorked at Sofrix on mobile interfaces from supplied Figma designs, plus web UI and backend features. My contribution spanned the customer-facing screens and the product, promotion and settings services described below.",
+    "overflow": false,
+    "path": "/work/get-foodies",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Existing system · Frontend integrationMy scope was the browser interface, existing API integration and a frontend Socket.io listener. The existing desktop application and its APIs handled print execution; I did not create or modify the backend APIs.",
+    "overflow": false,
+    "path": "/work/onyx",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Existing platform · Junior team contributionWorked as a Junior Software Engineer at Strategist HUB while shadowing the CTO. I handled assigned bug and translation tickets within the existing multi-repository platform and followed the team’s review, merge and testing workflows.",
+    "overflow": false,
+    "path": "/work/keller-williams",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Existing app · Freelance feature deliveryCompleted scoped feature work across React and Ruby on Rails in an existing client application. My responsibility was extending scanning, labels and Shopify-data workflows while preserving the embedded app experience.",
+    "overflow": false,
+    "path": "/work/shopify-app",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Client tool · Frontend implementationBuilt the connected browser tool experience: interfaces, transformation logic, local exports and verification. Processing runs in the browser, so this project did not require an application backend.",
+    "overflow": false,
+    "path": "/tools/typespark",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Client tool · Frontend implementationBuilt the geography generators, local saved state, sharing and learning workflows. The tool uses bundled data and browser storage without an application backend.",
+    "overflow": false,
+    "path": "/tools/globepick",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Frontend layoutsBuilt article, browsing and author-page layouts with shared responsive styling. My contribution focused on the blog’s reading and browsing interfaces.",
+    "overflow": false,
+    "path": "/tools/blogsite",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Existing product · Team contributionContributed to an existing Sofrix product through assigned improvements and feature work across the frontend and backend/APIs. The work shown here is my contribution within the wider product team.",
+    "overflow": false,
+    "path": "/work/bitlux",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Web & mobile · Team contributionWorked within the Sofrix team on an existing marketplace across web, mobile and backend/API flows. My scope included feature updates, integration work, debugging and support for the Capacitor mobile delivery.",
+    "overflow": false,
+    "path": "/work/linxx",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "From day one · Team contributionContributed from the start as part of the Netixsol development team. My work covered frontend delivery, authentication and API integration, alongside backend API creation under senior developer guidance.",
+    "overflow": false,
+    "path": "/work/skillmatch",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Project scope · Frontend deliveryMy company role covered full-stack work; on Hestiya, I was responsible for the frontend and its integrations. I worked from supplied Figma designs and collaborated with another engineer who built the Python backend.",
+    "overflow": false,
+    "path": "/work/hestiya",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Client demo → Full-stack deliveryStarted from the client’s v0 frontend demo and built the connected application’s frontend, backend and data workflows. The client supplied the smart contract; my responsibility was integrating it into the product.",
+    "overflow": false,
+    "path": "/work/gaming-platform",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Project scope · Frontend deliveryMy company role covered full-stack work; this project focused on frontend delivery. I built the company website from the client’s requested design and implemented the contact-form interface and validation.",
+    "overflow": false,
+    "path": "/work/development-solutions-group",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Web & mobile · Full-stack contributionWorked at Sofrix on mobile interfaces from supplied Figma designs, plus web UI and backend features. My contribution spanned the customer-facing screens and the product, promotion and settings services described below.",
+    "overflow": false,
+    "path": "/work/get-foodies",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Existing system · Frontend integrationMy scope was the browser interface, existing API integration and a frontend Socket.io listener. The existing desktop application and its APIs handled print execution; I did not create or modify the backend APIs.",
+    "overflow": false,
+    "path": "/work/onyx",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Existing platform · Junior team contributionWorked as a Junior Software Engineer at Strategist HUB while shadowing the CTO. I handled assigned bug and translation tickets within the existing multi-repository platform and followed the team’s review, merge and testing workflows.",
+    "overflow": false,
+    "path": "/work/keller-williams",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Existing app · Freelance feature deliveryCompleted scoped feature work across React and Ruby on Rails in an existing client application. My responsibility was extending scanning, labels and Shopify-data workflows while preserving the embedded app experience.",
+    "overflow": false,
+    "path": "/work/shopify-app",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Client tool · Frontend implementationBuilt the connected browser tool experience: interfaces, transformation logic, local exports and verification. Processing runs in the browser, so this project did not require an application backend.",
+    "overflow": false,
+    "path": "/tools/typespark",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Client tool · Frontend implementationBuilt the geography generators, local saved state, sharing and learning workflows. The tool uses bundled data and browser storage without an application backend.",
+    "overflow": false,
+    "path": "/tools/globepick",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "Frontend layoutsBuilt article, browsing and author-page layouts with shared responsive styling. My contribution focused on the blog’s reading and browsing interfaces.",
+    "overflow": false,
+    "path": "/tools/blogsite",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "checklists": 1,
+    "involvement": "From day one · Team contributionContributed from the start as part of the Netixsol development team. My work covered frontend delivery, authentication and API integration, alongside backend API creation under senior developer guidance.",
+    "overflow": false,
+    "path": "/work/skillmatch",
+    "theme": "dark",
+    "width": 1280
+  },
+  {
+    "checklists": 1,
+    "involvement": "Project scope · Frontend deliveryMy company role covered full-stack work; on Hestiya, I was responsible for the frontend and its integrations. I worked from supplied Figma designs and collaborated with another engineer who built the Python backend.",
+    "overflow": false,
+    "path": "/work/hestiya",
+    "theme": "dark",
+    "width": 1280
+  },
+  {
+    "checklists": 1,
+    "involvement": "Client tool · Frontend implementationBuilt the connected browser tool experience: interfaces, transformation logic, local exports and verification. Processing runs in the browser, so this project did not require an application backend.",
+    "overflow": false,
+    "path": "/tools/typespark",
+    "theme": "dark",
+    "width": 1280
+  }
+]

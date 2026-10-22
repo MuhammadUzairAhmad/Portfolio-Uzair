@@ -87,3 +87,8 @@ The changes are local; no remote, push, or deployment was added.
 
 - One checklist per detail page, compact standalone tech stack, optional verified Shopify challenge, and preserved source-specific feature details. Removed replaced checklist/map UI modules.
 - Updated rendered-copy/editing guides, smoke assertions, responsive observations and screenshots. Local implementation and documentation commits only.
+
+### Project involvement and attribution — 22 October 2026
+
+- Add concise ownership/collaboration context above each existing checklist, reducing repeated role wording in the bullets.
+- Verify all detail introductions and documented scope boundaries; update copy/editing guidance and capture actual browser previews. Local commits only.
