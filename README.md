@@ -65,6 +65,16 @@ npm run build
 npm run test:smoke
 ```
 
+Run the browser regression suite against a fresh production build:
+
+```sh
+npx playwright install chromium
+npm run build
+npm run test:e2e
+```
+
+The suite starts its own server on port 4338, so the preview on 4337 can stay open. It covers clipboard success/denial/unavailability, menu dismissal, filtering, lightbox focus, theme persistence, reduced motion and all 18 routes at phone, tablet and desktop widths. Loom playback is stubbed to keep the test independent of the external service. On CI, install browser system dependencies with `npx playwright install --with-deps chromium`.
+
 See [`docs/VERIFICATION.md`](docs/VERIFICATION.md) for recorded results and limitations, [`docs/ASSETS.md`](docs/ASSETS.md) for image provenance, and [`docs/PHASES.md`](docs/PHASES.md) for commit phases.
 
 ## Git history

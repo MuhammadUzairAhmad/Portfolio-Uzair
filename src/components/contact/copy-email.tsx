@@ -30,12 +30,18 @@ export function CopyEmail({
         ) : (
           <Copy size={14} aria-hidden />
         )}
-        {status === "copied" ? "Email copied" : "Copy email"}
+        {status === "copied"
+          ? "Email copied"
+          : status === "failed"
+            ? "Try copying again"
+            : "Copy email"}
       </Button>
       <p
         role="status"
         className={
-          fullWidth ? "sr-only" : "mt-2 min-h-5 text-xs text-muted-foreground"
+          fullWidth && status !== "failed"
+            ? "sr-only"
+            : "mt-2 min-h-5 text-xs leading-relaxed text-muted-foreground"
         }
       >
         {status === "copied"

@@ -134,7 +134,8 @@ export function CaseStudy({
               className={cn(
                 "grid grid-cols-[80px_minmax(0,1fr)] items-baseline gap-3 py-3 first:pt-0 sm:block sm:border-r sm:border-border sm:px-5 sm:py-0 sm:first:pl-0",
                 item.label === "Platform" && "pb-0 sm:border-r-0 xl:border-r",
-                item.label === "Stack" && "hidden sm:hidden xl:block xl:border-r-0",
+                item.label === "Stack" &&
+                  "hidden sm:hidden xl:block xl:border-r-0",
               )}
             >
               <dt className="text-xs font-semibold">{item.label}</dt>
