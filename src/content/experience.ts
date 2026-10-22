@@ -28,7 +28,7 @@ export const experience: ExperienceEntry[] = [
       {
         title: "Get Foodies",
         description:
-          "Built the iOS and Android app with React Native and Expo, contributed backend/API work, and connected multilingual mobile flows.",
+          "Built React Native/Expo mobile interfaces plus web UI and backend features for product listings, dynamic banners, discounts, account and theme settings.",
         project: "get-foodies",
       },
       {

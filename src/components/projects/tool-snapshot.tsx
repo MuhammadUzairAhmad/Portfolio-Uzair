@@ -1,15 +1,33 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { PortfolioProject } from "@/types/content";
 import { Container, Eyebrow } from "@/components/layout/container";
 import { ContactCta } from "@/components/layout/footer";
-import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
 import { ToolVisual } from "./tool-visual";
 import { NextProjectCard } from "./project-card";
-import { ProjectGallery } from "./project-gallery";
-import { ProjectWalkthroughs } from "./project-walkthroughs";
+import { ImplementationChecklist } from "./implementation-checklist";
+import { ProjectContributions } from "./project-contributions";
+import { ProjectDecisions } from "./project-decisions";
+import { ProjectEvidence } from "./project-evidence";
 
+function ToolSection({
+  id,
+  title,
+  children,
+}: {
+  id: string;
+  title: string;
+  children: ReactNode;
+}) {
+  return (
+    <section id={id} className="scroll-mt-6 border-t border-border py-7">
+      <h2 className="mb-5 text-2xl">{title}</h2>
+      {children}
+    </section>
+  );
+}
 export function ToolSnapshot({
   project,
   next,
@@ -17,8 +35,7 @@ export function ToolSnapshot({
   project: PortfolioProject;
   next: PortfolioProject;
 }) {
-  const decisions = project.decisions.filter((item) => !item.demo);
-  const results = project.results.filter((item) => !item.demo);
+  const results = project.results.filter((r) => !r.demo);
   return (
     <main id="main-content">
       <Container className="py-8">
@@ -40,13 +57,8 @@ export function ToolSnapshot({
               {project.subtitle}
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
-              {project.summary}
+              {project.detailSummary ?? project.summary}
             </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {project.scope.map((item) => (
-                <Badge key={item}>{item}</Badge>
-              ))}
-            </div>
             {project.productUrl && (
               <ButtonLink
                 href={project.productUrl}
@@ -65,7 +77,7 @@ export function ToolSnapshot({
             className="h-60 sm:h-72"
           />
         </div>
-        <dl className="mt-7 grid gap-4 rounded-xl border border-border bg-surface/50 p-5 sm:grid-cols-3">
+        <dl className="mb-7 mt-7 grid gap-4 rounded-xl border border-border bg-surface/50 p-5 sm:grid-cols-3">
           {[
             { label: "Role", value: project.role },
             { label: "Project", value: project.team },
@@ -77,101 +89,53 @@ export function ToolSnapshot({
             </div>
           ))}
         </dl>
-        <section className="mt-8 border-t border-border py-7">
-          <h2 className="text-2xl">Overview</h2>
-          <div className="mt-4 max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
-            {project.overview.split("\n\n").map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+        <ToolSection id="overview" title="Overview">
+          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+            {project.overview.split("\n\n").map((p) => (
+              <p key={p}>{p}</p>
             ))}
           </div>
-        </section>
-        <section className="border-t border-border py-7">
-          <h2 className="text-2xl">My role & contributions</h2>
-          <ul className="mt-5 grid gap-4 md:grid-cols-3">
-            {project.contributions.map((item) => (
-              <li
-                key={item.title}
-                className="rounded-xl border border-border p-5"
-              >
-                <h3 className="text-base">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {item.description}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </section>
-        {project.stackVerified !== false && (
-          <section className="border-t border-border py-7">
-            <h2 className="text-2xl">Tech stack</h2>
-            <div
-              aria-label="Project technologies"
-              className="mt-5 flex flex-wrap gap-2"
-            >
-              {project.stack.map((tech) => (
-                <Badge key={tech}>{tech}</Badge>
-              ))}
-            </div>
-          </section>
+        </ToolSection>
+        <ToolSection id="contributions" title="My role & contributions">
+          <ProjectContributions project={project} />
+        </ToolSection>
+        <ToolSection id="implementation" title="Implementation">
+          <ImplementationChecklist project={project} />
+        </ToolSection>
+        {(!!project.media?.length || !!project.walkthroughs?.length) && (
+          <ToolSection id="evidence" title="Screenshots & walkthroughs">
+            <ProjectEvidence project={project} />
+          </ToolSection>
         )}
-        {decisions.length > 0 && (
-          <section className="border-t border-border py-7">
-            <h2 className="text-2xl">Decisions that mattered</h2>
-            <ul className="mt-5 grid gap-4 md:grid-cols-3">
-              {decisions.map((item) => (
-                <li key={item.topic} className="rounded-xl bg-surface p-5">
-                  <p className="text-xs font-medium text-primary">
-                    {item.topic}
-                  </p>
-                  <h3 className="mt-3 text-base">{item.choice}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {item.reason}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-        {project.developmentWorkflow && (
-          <section className="border-t border-border py-7">
-            <h2 className="text-2xl">Development workflow</h2>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-              {project.developmentWorkflow}
-            </p>
-          </section>
+        {project.decisions.some((d) => !d.demo) && (
+          <ToolSection id="decisions" title="Technical decisions">
+            <ProjectDecisions decisions={project.decisions} />
+          </ToolSection>
         )}
         {results.length > 0 && (
-          <section className="border-t border-border py-7">
-            <h2 className="text-2xl">What I delivered</h2>
-            {results.map((item) => (
-              <p
-                key={item.text}
-                className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground"
-              >
-                {item.text}
-              </p>
-            ))}
-          </section>
+          <ToolSection id="outcomes" title="Outcome">
+            <div className="rounded-xl bg-surface p-5">
+              {results.map((r) => (
+                <p
+                  key={r.text}
+                  className="max-w-3xl text-base leading-relaxed text-muted-foreground"
+                >
+                  {r.text}
+                </p>
+              ))}
+              {project.lessons && !project.lessons.demo && (
+                <details className="mt-4 border-t border-border pt-4">
+                  <summary className="cursor-pointer text-sm">
+                    Lessons learned
+                  </summary>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {project.lessons.text}
+                  </p>
+                </details>
+              )}
+            </div>
+          </ToolSection>
         )}
-        {project.lessons && !project.lessons.demo && (
-          <section className="border-t border-border py-7">
-            <h2 className="text-2xl">Lessons learned</h2>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-              {project.lessons.text}
-            </p>
-          </section>
-        )}
-        {!!project.walkthroughs?.length && (
-          <ProjectWalkthroughs
-            id={`${project.slug}-walkthroughs`}
-            recordings={project.walkthroughs}
-          />
-        )}
-        <ProjectGallery
-          id={`${project.slug}-gallery`}
-          projectName={project.name}
-          media={project.media}
-        />
         <section className="border-t border-border py-7">
           <h2 className="mb-4 text-xl">Next tool</h2>
           <NextProjectCard project={next} />

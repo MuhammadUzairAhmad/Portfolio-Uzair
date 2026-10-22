@@ -84,11 +84,12 @@ for (const route of routes) {
       /Replace this draft|Add a verified lesson|framework and public URL remain to be verified|Illustrative details/,
     );
     assert.doesNotMatch(html, /Scrollable technical decisions/);
+    assert.match(html, /aria-label="Implemented features"/);
   }
   if (route === "/tools/typespark" || route === "/tools/globepick") {
     assert.match(html, /Tech stack/);
     assert.match(html, /Codex-assisted/);
-    assert.match(html, /Decisions that mattered/);
+    assert.match(html, /Why these choices/);
     assert.doesNotMatch(html, /Lessons learned/);
   }
   if (route === "/tools/blogsite") assert.doesNotMatch(html, /Tech stack/);
@@ -135,7 +136,18 @@ for (const route of routes) {
       assert.match(html, /Contributed from day one/);
       assert.doesNotMatch(html, /Ongoing product/);
     }
-    if (project.implementation) assert.match(html, /Contribution map/);
+    if (project.implementation) assert.match(html, /Workflow/);
+    assert.match(html, /aria-label="Implemented features"/);
+    assert.match(html, /id="implementation"/);
+    assert.doesNotMatch(html, /href="#challenge"/);
+    if (!project.decisions.some((item) => !item.demo)) {
+      assert.doesNotMatch(html, /id="decisions"|href="#decisions"/);
+    }
+    for (const [, fragment] of html.matchAll(/href="#([^"]+)"/g))
+      assert.ok(
+        html.includes(`id="${fragment}"`),
+        `${route}: missing ${fragment}`,
+      );
     assert.doesNotMatch(html, /<iframe\b/); // Loom loads only after viewer interaction.
     if (!project.decisions.length)
       assert.doesNotMatch(html, /Scrollable technical decisions/);

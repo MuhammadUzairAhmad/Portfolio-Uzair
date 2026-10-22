@@ -37,6 +37,7 @@ export type PortfolioProject = {
   subtitle: string;
   cardSubtitle?: string;
   summary: string;
+  detailSummary?: string;
   mockup?: string;
   image?: { src: string; width: number; height: number };
   featured?: boolean;

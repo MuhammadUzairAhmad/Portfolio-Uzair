@@ -10,7 +10,7 @@ export function ImplementationMap({
   return (
     <figure className="rounded-xl border border-border bg-surface/60 p-5 sm:p-6">
       <figcaption>
-        <Eyebrow className="text-primary">Contribution map</Eyebrow>
+        <Eyebrow className="text-primary">Workflow</Eyebrow>
         <p className="mt-2 text-lg font-semibold">{map.title}</p>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
           {map.description}

@@ -1,5 +1,5 @@
 import type { PortfolioProject } from "../types/content.ts";
-// Verified against build chats, READMEs and implementation; live URLs remain owner-supplied.
+// Verified build evidence; Blogsite remains deferred and live URLs remain owner-supplied.
 export const tools: PortfolioProject[] = [
   {
     slug: "typespark",
@@ -23,13 +23,15 @@ export const tools: PortfolioProject[] = [
       "gifenc",
     ],
     scope: [
-      "Unicode text styles & copy tools",
-      "Glitch presets & animated GIF export",
+      "Unicode styles & selected-text editing",
+      "Search, comparisons & copy fallback",
+      "Seeded glitch presets & controls",
+      "Animated GIF export in a Web Worker",
       "Typed/drawn signatures & PNG export",
-      "Browser-saved preferences",
+      "Saved preferences & responsive controls",
     ],
     overview:
-      "TypeSpark brings text styling, glitch effects and signature creation into a browser-based toolkit. Users can transform and copy text, adjust glitch presets, or create a typed or drawn signature and export the result. Text processing and image generation run locally, without an account, database or application backend.\n\nI built the responsive tool workspaces, shared controls and processing/export flows using Next.js, React, TypeScript and Tailwind CSS. The work also covered licensed local fonts, recoverable browser preferences, server-rendered explanatory content and automated checks.",
+      "TypeSpark combines text styling, glitch effects and signature creation in one browser toolkit. I built the responsive workspaces, text-processing logic and copy/export flows with Next.js and React.\n\nProcessing runs locally, with no account or application backend. Shared controls, licensed local fonts and recoverable preferences support the three tools.",
     contributions: [
       {
         title: "Text styling & editing",
@@ -75,12 +77,14 @@ export const tools: PortfolioProject[] = [
     ],
     results: [
       {
-        text: "Implemented three connected creative tools with copy interactions, animated GIF and PNG export, saved preferences and responsive layouts. Automated and browser checks are documented in the project; public launch and deployed performance are separate checks.",
+        text: "Delivered three connected creative tools with local processing, copying, PNG/GIF export and saved preferences.",
       },
     ],
     stackVerified: true,
     developmentWorkflow:
-      "I used Codex-assisted planning, implementation and review to speed up development and iteration. I reviewed the changes and checked the resulting behavior with automated tests and browser verification.",
+      "I used Codex-assisted planning, implementation and review to iterate faster, with automated tests and browser verification.",
+    detailSummary:
+      "Local text styling, glitch effects and signature tools for the browser.",
   },
   {
     slug: "globepick",
@@ -105,11 +109,13 @@ export const tools: PortfolioProject[] = [
     scope: [
       "Country, capital & city generators",
       "Filters, unique batches & no-repeat pools",
-      "Local history, favorites & shareable results",
-      "Capital quizzes & printable worksheets",
+      "Local history, favorites & settings",
+      "Validated shareable result replays",
+      "Capital guess/reveal quizzes",
+      "Country worksheets & starter packs",
     ],
     overview:
-      "GlobePick connects geography discovery with learning activities. Users can generate countries, capitals or cities, narrow the pool with filters, save places, share results and practice capital quizzes. Country-project assignments can also become printable A4 or US Letter worksheets.\n\nI built the frontend with Next.js, React, TypeScript and Tailwind CSS. The implementation uses bundled geography data, validated browser storage and shareable replay links, with no account system, custom backend or runtime geography service. Server-rendered introductions and content pages support discovery, while city data loads on demand in the homepage spinner.",
+      "GlobePick helps users discover countries, capitals and cities, save and share results, and create learning activities. I built its generators, persistence, sharing and worksheet flows with Next.js and React.\n\nThe frontend uses bundled geography data and validated local state, without accounts or a runtime geography service. Explanatory content is server-rendered, and the homepage loads city records on demand.",
     contributions: [
       {
         title: "Generators & selection logic",
@@ -142,12 +148,6 @@ export const tools: PortfolioProject[] = [
           "Avoid a runtime geography service while keeping the larger city dataset out of the initial homepage tool.",
       },
       {
-        topic: "Selection & persistence",
-        choice: "Separate mode-specific pools and validate browser state",
-        reason:
-          "Keep country, capital and city behavior independent and recover from invalid or unavailable saved data.",
-      },
-      {
         topic: "Worksheet output",
         choice: "Use the same assignment objects for preview and print",
         reason:
@@ -156,12 +156,14 @@ export const tools: PortfolioProject[] = [
     ],
     results: [
       {
-        text: "Delivered an integrated geography toolkit spanning discovery, saved places, shareable results and printable learning activities. Added checks for data integrity, selection, persistence and sharing, alongside production-route and browser verification.",
+        text: "Delivered connected geography discovery, saved places, sharing, quizzes and printable learning activities, with checks for data integrity and application behavior.",
       },
     ],
     stackVerified: true,
     developmentWorkflow:
-      "I used Codex-assisted planning, implementation and review to speed up development and iteration. I reviewed the changes and checked the resulting behavior with automated tests and browser verification.",
+      "I used Codex-assisted planning, implementation and review to iterate faster, with automated tests and browser verification.",
+    detailSummary:
+      "Geography discovery, quizzes and printable country activities.",
   },
   {
     slug: "blogsite",
@@ -176,7 +178,13 @@ export const tools: PortfolioProject[] = [
     platform: "Web",
     status: "Preview",
     stack: ["Responsive UI", "Content layouts", "Design systems"],
-    scope: ["Articles & categories", "Search layouts", "Author pages"],
+    scope: [
+      "Article reading layouts",
+      "Listing & category pages",
+      "Search-page layouts",
+      "Author-page layouts",
+      "Responsive typography & spacing",
+    ],
     overview:
       "A blog frontend with article, listing, category, search, and author-page layouts. The related project notes focus on consistent containers, typography, spacing, and themes.",
     contributions: [

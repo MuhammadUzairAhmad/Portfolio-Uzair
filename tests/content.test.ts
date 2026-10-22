@@ -193,10 +193,10 @@ test("Gaming Platform remains an explicit full-stack example with documented own
   assert.equal(gaming.role, "Full-Stack Developer");
   assert.deepEqual(gaming.keyTechnologies, ["Next.js", "MongoDB", "NextAuth"]);
   assert.match(gaming.cardSubtitle ?? "", /Frontend \+ backend/);
-  assert.ok(gaming.implementation);
-  assert.match(
-    gaming.implementation.description,
-    /client supplied the smart contract/,
+  assert.ok(
+    gaming.contributions.some((item) =>
+      /client-provided smart contract/.test(item.description),
+    ),
   );
   assert.ok(
     gaming.stack.includes("MongoDB") && gaming.stack.includes("NextAuth"),
@@ -269,4 +269,45 @@ test("tool build evidence completes two stories without mandatory lessons or liv
     assert.doesNotMatch(tool.developmentWorkflow ?? "", /\d+%/);
   }
   assert.equal(getTool("blogsite")?.stackVerified, false);
+});
+
+test("project roles, Foodies web work and Shopify camera workaround preserve confirmed boundaries", () => {
+  for (const slug of ["hestiya", "development-solutions-group"]) {
+    assert.equal(getProject(slug)?.role, "Frontend Developer");
+    assert.equal(getProject(slug)?.developmentScope, "Frontend & integrations");
+  }
+  const foodies = getProject("get-foodies")!;
+  assert.equal(foodies.category, "Web & mobile");
+  assert.equal(foodies.platform, "Web + iOS + Android");
+  const work = foodies.contributions.map((item) => item.description).join(" ");
+  for (const feature of [
+    "web application",
+    "backend",
+    "product listings",
+    "dynamic banners",
+    "discounts",
+    "account settings",
+    "theme settings",
+  ])
+    assert.ok(work.includes(feature), feature);
+  const shopify = getProject("shopify-app")!;
+  const modes = shopify.contributions.find(
+    (item) => item.title === "Application modes",
+  )!;
+  for (const detail of [
+    "iframe",
+    "permissions",
+    "button",
+    "standalone browser",
+    "embedded experience",
+  ])
+    assert.ok(modes.description.includes(detail), detail);
+  assert.match(
+    shopify.decisions[0].reason,
+    /without converting the entire app/,
+  );
+  const kw = getProject("keller-williams")!;
+  assert.match(kw.context!, /homes to buy or rent/);
+  assert.doesNotMatch(kw.context!, /I worked|I built|shadowing/);
+  assert.match(kw.contributions[0].description, /27\+/);
 });
