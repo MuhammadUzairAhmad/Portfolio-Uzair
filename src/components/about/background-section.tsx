@@ -5,8 +5,8 @@ import { profile } from "@/content/profile";
 export function BackgroundSection() {
   return (
     <section aria-label="Background and recent work">
-      <Container className="grid items-start gap-4 border-t border-border py-7 md:grid-cols-2">
-        <article className="rounded-xl border border-border bg-surface/40 p-5 sm:p-6">
+      <Container className="grid gap-4 border-t border-border py-7 md:grid-cols-2">
+        <article className="flex flex-col rounded-xl border border-border bg-surface/40 p-5 sm:p-6">
           <Eyebrow>Recent work</Eyebrow>
           <h2 className="mt-3 text-xl">Shopify workflows, connected.</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -15,7 +15,7 @@ export function BackgroundSection() {
           <Link
             href="/work/shopify-app"
             prefetch
-            className="mt-5 inline-flex items-center gap-3 text-xs font-medium text-primary"
+            className="mt-auto inline-flex items-center gap-3 self-start pt-5 text-xs font-medium text-primary"
           >
             About the project <ArrowUpRight size={14} aria-hidden />
           </Link>
