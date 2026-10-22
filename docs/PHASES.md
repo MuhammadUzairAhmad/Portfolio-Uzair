@@ -97,3 +97,7 @@ The changes are local; no remote, push, or deployment was added.
 
 - Move Blogsite to The Daily Mind under Projects; complete the verified personal frontend/backend story. Rename TypeSpark, add three live/preview URLs, real UI screenshots and legacy redirects. Preserve Get Foodies video evidence and attribution boundaries in the supplied company code.
 - Update source/gap/copy guides, route/publication tests, responsive verification and screenshots. Local commits only; no deployment or change to supplied repositories.
+
+### Uniform case-study covers and evidence — 22 October 2026
+
+Restore full-name typographic covers for projects without images and remove the special video-first detail layout. All commercial walkthroughs render in the standard evidence section; the top jump button remains.

@@ -224,3 +224,13 @@ Browser verification: Home, Work, Tools, both tool details, The Daily Mind and G
 The Daily Mind and TextGenerators.net screenshot lightboxes open/close, including Escape on the blog viewer. Get Foodies opens the correct non-autoplay Loom embed and removes it on close. Full recording playback and the supplied blog admin runtime were not exercised. No portfolio console errors captured; Loom emitted one opaque third-party warning. Temporary viewport overrides reset, temporary public-site tab closed, and the portfolio tab remains on The Daily Mind.
 
 Previews: [personal publishing project](previews/daily-mind-project-preview.jpg), [published tools](previews/published-tools-preview.jpg). Observations: docs/audit/published-project-migration-results.json. No supplied application was modified or executed, and no credentials/source files were copied. Local commits only; no push or deployment.
+
+## Consistent project cover and walkthrough placement — 22 October 2026
+
+Removed the special video-first case-study path. Every commercial detail keeps the cover above the content: an existing real image/mockup, or a typographic placeholder with the complete project name centered. Get Foodies now presents its walkthrough only in Screenshots & walkthroughs, with a top jump action matching the other projects. Missing-image Onyx, KW and Shopify use the same typographic fallback. No screenshots or product UI were invented.
+
+Passed: 23 existing tests, ESLint, route types/TypeScript, production build, formatting/diff whitespace and HTTP smoke across all 18 pages plus expected 404s/assets/redirects. Smoke additionally checks cover markers and standard evidence placement for every commercial walkthrough.
+
+Browser: the four missing-image covers fit 320px dark, including Shopify’s full name, without document overflow or cover text clipping. Get Foodies also fits 320px light. At 1280px, the centered cover was visually checked, and Watch walkthrough scrolled to its single recording inside #evidence. The supplied video viewer was unchanged; playback was not repeated. Temporary viewport reset; tab retained on Get Foodies.
+
+Previews: [name cover](previews/get-foodies-uniform-cover.jpg), [standard evidence section](previews/get-foodies-standard-evidence.jpg). Structured mobile observations: docs/audit/uniform-cover-browser-results.json. Local commits only.

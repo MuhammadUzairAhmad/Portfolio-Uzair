@@ -1,0 +1,35 @@
+[
+  {
+    "cover": "placeholder",
+    "name": "Get Foodies",
+    "nameFits": true,
+    "overflow": false,
+    "path": "/work/get-foodies",
+    "walkthroughInEvidence": "get-foodies-walkthroughs",
+    "width": 320
+  },
+  {
+    "cover": "placeholder",
+    "name": "Onyx",
+    "nameFits": true,
+    "overflow": false,
+    "path": "/work/onyx",
+    "width": 320
+  },
+  {
+    "cover": "placeholder",
+    "name": "Keller Williams",
+    "nameFits": true,
+    "overflow": false,
+    "path": "/work/keller-williams",
+    "width": 320
+  },
+  {
+    "cover": "placeholder",
+    "name": "Shopify GP-Lite / Barcode Buddy",
+    "nameFits": true,
+    "overflow": false,
+    "path": "/work/shopify-app",
+    "width": 320
+  }
+]

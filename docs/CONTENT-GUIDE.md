@@ -6,7 +6,7 @@ All personal and project data lives in `src/content/`. You can update these Type
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `src/content/profile.ts`    | Profile, featured project slug, biography, contact/social links, résumé, education, recent work, languages, and certifications |
 | `src/content/projects.ts`   | All ten project records, case-study copy, stacks, contributions, screenshots, product URLs and external walkthroughs           |
-| `src/content/tools.ts`      | TypeSpark, GlobePick, Blogsite, cover styles and tool stories                                                                  |
+| `src/content/tools.ts`      | TextGenerators.net, GlobePick, live links, screenshots and tool stories                                                        |
 | `src/content/experience.ts` | Companies, roles, YYYY-MM start/end dates, contribution bullets, project links, skill badges, and logo assets                  |
 | `src/content/services.ts`   | Services, related work, skill groups, and process steps                                                                        |
 | `src/content/toolkit.ts`    | Homepage skill highlights, project evidence links, and grouped libraries on About                                              |
@@ -53,7 +53,7 @@ image: {
 
 `image` is the plain screenshot fallback. The original six projects also have a `mockup` path for the existing device artwork. The device presentation uses SVG clip paths around that artwork, preserving the original screen pixels while matching the reference background. These existing mockups share a 1640 × 924 composition (the optimized exports retain those proportions). If you add an unrelated screenshot or montage, remove `mockup` and use the `image` object; the component will display the plain image correctly. Only set `mockup` for artwork matching the existing device template.
 
-Dimensions reserve the correct space while the image loads. Keep product screenshots readable and preserve their proportions. The plain screenshot fallback uses `next/image` for appropriately sized variants. Existing device presentations use the pre-optimized WebP montage inside a responsive SVG, and the hero montage is preloaded. Tool covers are decorative static illustrations, not actual product screenshots. Set `illustration` to `type`, `globe`, or `blog`. Their optimized transparent WebP files live in `public/images/tools/`; change paths and dimensions in `src/content/tool-art.ts` to replace them. They use responsive `next/image` delivery. Generation prompts are recorded in `docs/TOOL-ART-PROMPTS.md`.
+Dimensions reserve the correct space while the image loads. Keep product screenshots readable and preserve their proportions. The plain screenshot fallback uses `next/image` for appropriately sized variants. Existing device presentations use the pre-optimized WebP montage inside a responsive SVG, and the hero montage is preloaded. Tool covers use real product screenshots when image is supplied. Otherwise they fall back to decorative static illustrations, which are not screenshot evidence. Set `illustration` to `type`, `globe`, or `blog`. Their optimized transparent WebP files live in `public/images/tools/`; change paths and dimensions in `src/content/tool-art.ts` to replace them. They use responsive `next/image` delivery. Generation prompts are recorded in `docs/TOOL-ART-PROMPTS.md`.
 
 ## Update libraries and skills
 
@@ -93,7 +93,7 @@ For video, place an MP4 or WebM in `public/videos/`, and add the following objec
 
 The gallery reserves image space, lazy-loads screenshots, and opens an on-page viewer on selection. Videos use native controls, inline playback, and `preload="none"`; there is no autoplay. Add captions/transcripts when a recording has speech or meaningful audio. There are no local video entries currently. Five owner-supplied Loom recordings open as on-demand embedded players in the same viewer, so they do not require local files or invented thumbnails. Actual playback/access should be checked in the publication environment.
 
-A supplied `productUrl` shows an external project button; `productLinkLabel` provides an accurate label, such as an App Store listing or company website. Without it, no demo link is invented; the case study and any gallery remain usable. Projects without a screenshot use a typographic cover. Add `image` when a real screen is available, and the cover switches automatically. A recorded URL does not guarantee that a third-party deployment is still accessible.
+A supplied `productUrl` shows an external project button; `productLinkLabel` provides an accurate label, such as an App Store listing or company website. Without it, no demo link is invented; the case study and any gallery remain usable. All commercial detail pages keep the same cover position. Projects without an image or mockup use a typographic cover with the full project name centered. Walkthroughs always stay inside Screenshots & walkthroughs; the top Watch walkthrough button links to that section. Add `image` when a real screen is available, and the cover switches automatically. A recorded URL does not guarantee that a third-party deployment is still accessible.
 
 ## Local checks
 
