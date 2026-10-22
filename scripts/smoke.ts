@@ -90,6 +90,12 @@ for (const route of routes) {
     assert.match(html, /subject=Project%20enquiry/);
   }
   if (route.startsWith("/tools/")) {
+    const tool = tools.find((item) => route === `/tools/${item.slug}`)!;
+    const hero = html.match(/<img\b[^>]*src="([^"]+)"/)?.[1] ?? "";
+    assert.ok(
+      hero.includes(encodeURIComponent(toolArtwork[tool.illustration!].src)),
+      `${route}: hero matches card artwork`,
+    );
     assert.match(html, /Project snapshot/);
     assert.doesNotMatch(
       html,

@@ -75,7 +75,6 @@ export function ToolSnapshot({
           </div>
           <ToolVisual
             kind={project.illustration}
-            image={project.image}
             detailed
             eager
             className="h-60 sm:h-72"
