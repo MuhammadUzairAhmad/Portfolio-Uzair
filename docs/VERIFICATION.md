@@ -266,3 +266,11 @@ Passed: 24 tests including selective decision coverage and Shopify challenge ret
 Browser: five retained sections plus Hestiya/Shopify checked at 320px dark, then the five retained sections at 320px light and 1280px dark (17 observations). Counts are 1/1/2/2/2 as intended, cards are not inside closed disclosures, and there is no document overflow. Hestiya and Shopify have no decision heading/anchor; Shopify still has its challenge. Bitlux’s sidebar link reaches its full-width card. Bitlux and Daily Mind desktop presentation visually inspected. No captured browser warnings/errors. Temporary viewport reset. Existing media unchanged and not replayed.
 
 Previews: [Bitlux](previews/key-decisions-bitlux.jpg), [Daily Mind](previews/key-decisions-daily-mind.jpg). Observations: docs/audit/key-decisions-browser-results.json. Local phase commits only.
+
+## Tools detail heroes match card illustrations — 22 October 2026
+
+Removed the real-image override from the Tools detail hero. TextGenerators.net, GlobePick and The Daily Mind now use the same original type/globe/blog artwork as their main cards. Real screenshots remain in the evidence galleries; records, URLs, ownership, decisions and other project covers are unchanged.
+
+Production build, full formatting/diff whitespace and HTTP smoke passed across all 18 pages, assets, expected 404s and legacy redirects. Tools smoke now checks the first hero image against its matching illustration. Browser inspection confirmed the correct artwork and distinct gallery screenshot on all three detail pages, with no document overflow at the normal viewport. No new unit tests or broader responsive runs were needed for this image-source-only adjustment.
+
+Preview: [matching detail artwork](previews/tool-detail-matching-card-art.jpg). Local commits only.

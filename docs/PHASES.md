@@ -113,3 +113,7 @@ Move The Daily Mind to Tools, update collection/Home wording and restore three c
 ### Selective, readable key decisions — 22 October 2026
 
 Curate eight strong decisions on five projects; remove redundant technology descriptions. Replace collapsed technical-choice lists with visible context/approach/relevance cards. Preserve the separate Shopify challenge and omit empty sections. Record the per-project review, rendered copy and verification locally.
+
+### Match Tools detail and card artwork — 22 October 2026
+
+Use each entry’s original illustration on both the main card and detail hero. Keep real screenshots in the existing evidence gallery. No project content, category or URL changes.
