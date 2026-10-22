@@ -187,3 +187,9 @@ Commercial section navigation follows the rendered sections: Overview, My contri
 ### Project ownership and collaboration
 
 Edit ownership.label and ownership.summary for the short My involvement note above the contribution checklist. Explain project stage, your responsibility and supplied/team work in two or three sentences. Full-stack employment does not establish full-stack scope on every project. Avoid sole-owner, lead, architect, team-size or quantified-impact claims without evidence. Keep concrete features in contributions instead of repeating the list in ownership. Missing editorial data stays in internal guides; the public Blogsite note includes verified frontend work only.
+
+### Current names, locations and media
+
+TextGenerators.net is /tools/textgenerators; GlobePick remains /tools/globepick. Their image fields select real screenshots in Home cards, the tool archive and detail heroes; media supplies the on-page viewers. Decorative toolArtwork remains a fallback only. ToolsSection uses two columns for the two tools.
+
+The Daily Mind is /work/the-daily-mind, team Personal project, full-stack scope. Its published preview and homepage media are owner supplied. Edit its entry in projects.ts. Do not restore Blogsite as a duplicate tool. next.config.ts retains permanent redirects for both legacy paths. Source deletion is recorded internally for Get Foodies; its public walkthrough remains available without requiring a repository.

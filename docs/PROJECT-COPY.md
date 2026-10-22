@@ -12,6 +12,8 @@ Overview describes the product; My contribution is the single checklist of deliv
 
 Bitlux is a private-jet booking and operations platform. It brings booking requests, quote management, operational workflows and ticket documents into a connected experience.
 
+The application uses Next.js server routes with Prisma and PostgreSQL for filtered booking requests, quote records and the data used in document workflows.
+
 ### My contribution
 
 **Existing product · Team contribution**
@@ -24,7 +26,7 @@ Contributed to an existing Sofrix product through assigned improvements and feat
 
 ### Tech stack
 
-Next.js · TypeScript · Tailwind CSS · TanStack Query · Redux Toolkit · PostgreSQL · jsPDF
+Next.js · TypeScript · Tailwind CSS · TanStack Query · Redux Toolkit · PostgreSQL · Prisma · jsPDF
 
 ### Optional technical decisions
 
@@ -51,7 +53,7 @@ Linxx is an ambassador marketplace spanning web and mobile. It connects marketpl
 
 Worked within the Sofrix team on an existing marketplace across web, mobile and backend/API flows. My scope included feature updates, integration work, debugging and support for the Capacitor mobile delivery.
 
-- **Marketplace features & APIs:** Contributed frontend and backend/API work for marketplace listings, approval/decline workflows, GPS discovery and Plaid integration.
+- **Marketplace features & APIs:** Contributed frontend and backend/API work, and connected marketplace listings, applicant approval/decline actions, GPS discovery and Plaid-related payment flows.
 - **Mobile fixes & delivery:** Investigated Capacitor-specific issues, fixed mobile behavior and supported deployment.
 - **End-to-end verification:** Tested affected web and mobile journeys to verify the connected flows.
 
@@ -108,7 +110,7 @@ Hestiya is a Web3 carbon-credit marketplace for discovering and trading credits,
 My company role covered full-stack work; on Hestiya, I was responsible for the frontend and its integrations. I worked from supplied Figma designs and collaborated with another engineer who built the Python backend.
 
 - **Marketplace frontend:** Built responsive React screens from Figma, including listing filters, cart, P2P transactions and holdings.
-- **Accounts & API integration:** Integrated Clerk sign-in, sign-up and OTP, and worked with the backend developer to connect their existing Python APIs.
+- **Accounts & API integration:** Integrated Clerk sign-in, sign-up and OTP, then connected the marketplace frontend to the other developer’s existing Python APIs.
 - **Wallets & credit workflows:** Connected wallets and smart-contract interactions with Wagmi and Reown AppKit, including carbon-credit retirement and PDF transaction receipts.
 
 ### Tech stack
@@ -142,7 +144,7 @@ Started from the client’s v0 frontend demo and built the connected application
 
 - **Full-stack delivery:** Turned the client’s v0 demo into a connected Next.js frontend and backend with MongoDB application data.
 - **Accounts & gameplay:** Implemented Google and email/password sign-in, wallet connectivity and spin-wheel gameplay. Integrated the client-provided smart contract.
-- **Referrals & rewards:** Built referral validation, bonuses, credit claims and user reward histories.
+- **Referrals & rewards:** Built referral checks for invalid codes, self-referrals and users who already have a referrer, alongside bonuses, credit claims and user reward histories.
 - **Administration:** Added user editing and account controls, claim/transfer approvals, and settings for referral percentages, prizes and free-spin timing.
 
 ### Tech stack
@@ -309,3 +311,37 @@ Ruby on Rails · React · Shopify GraphQL API · JsBarcode · WickedPDF · PDF-m
 ### Outcome
 
 Enabled successful camera scanning in a standalone browser context while preserving the embedded app, and completed the described label-printing and Shopify-data improvements.
+
+## The Daily Mind
+
+**Introduction:** A public reading experience backed by an administrative workspace for creating, organizing and publishing content.
+
+**Role:** Full-Stack Developer
+
+### Overview
+
+The Daily Mind is my personal blog and publishing platform. It combines a public reading experience with an administrative workspace for creating, organizing and publishing content.
+
+### My contribution
+
+**Personal project · Full-stack implementation**
+
+I built the frontend and backend, connecting the public reading experience with content management, authentication, permissions and publishing workflows. This project demonstrates my work across the interface, APIs and MongoDB data models.
+
+- **Reading & discovery:** Built responsive article pages, category browsing and search, connecting the public Next.js interface to backend content APIs.
+- **Editor & publishing:** Implemented the Tiptap editing experience and backend workflows for drafts, published and scheduled articles, with category organization and SEO metadata.
+- **Authentication & permissions:** Built login, session-refresh and permission-controlled administration, including separate content creation, editing and publishing permissions.
+- **Media & application data:** Connected Cloudinary image uploads and MongoDB/Mongoose data models for articles, categories, users and application settings.
+
+### Tech stack
+
+Next.js · React · TypeScript · NestJS · MongoDB · Mongoose · Tailwind CSS · TanStack Query · Tiptap · Cloudinary · JWT
+
+### Optional technical decisions
+
+- **Publishing workflow:** Separate drafts, scheduled posts and published articles. Support content preparation and publication while public queries select the appropriate published content.
+- **Administration access:** JWT authentication and permission checks on admin APIs. Apply separate permissions for reading, creating, updating, publishing and deleting content.
+
+### Outcome
+
+Built a connected reading and content-management application, with frontend, backend and publishing capabilities available to demonstrate through the project preview.

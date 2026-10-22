@@ -1,8 +1,8 @@
 # Current tool stories — 22 October 2026
 
-TypeSpark and GlobePick are verified build-chat stories. Blogsite remains incomplete with its unconfirmed stack/outcomes hidden. Tools share the same contribution checklist and separate stack as commercial projects.
+TextGenerators.net and GlobePick are verified client-tool build stories with owner-supplied live URLs and real public UI screenshots. The Daily Mind is now a personal full-stack project in PROJECT-COPY.md.
 
-## TypeSpark
+## TextGenerators.net
 
 **Introduction:** Local text styling, glitch effects and signature tools for the browser.
 
@@ -10,7 +10,7 @@ TypeSpark and GlobePick are verified build-chat stories. Blogsite remains incomp
 
 ### Overview
 
-TypeSpark combines text styling, glitch effects and signature creation in one browser toolkit.
+TextGenerators.net combines text styling, glitch effects and signature creation in one browser toolkit.
 
 Processing runs locally, with no account or application backend. Shared controls, licensed local fonts and recoverable preferences support the three tools.
 
@@ -76,23 +76,3 @@ Next.js · React · TypeScript · Tailwind CSS · Web Crypto API · localStorage
 ### Outcome
 
 Delivered connected geography discovery, saved places, sharing, quizzes and printable learning activities, with checks for data integrity and application behavior.
-
-## Blogsite
-
-**Introduction:** A considered reading and browsing experience across a multi-page blog.
-
-**Role:** Frontend development
-
-### Overview
-
-A blog frontend with article, listing, category, search, and author-page layouts. The related project notes focus on consistent containers, typography, spacing, and themes.
-
-### My contribution
-
-**Frontend layouts**
-
-Built article, browsing and author-page layouts with shared responsive styling. My contribution focused on the blog’s reading and browsing interfaces.
-
-- **Browsing layouts:** Created listing, category, search and author-page layouts for browsing content.
-- **Article reading:** Built readable article layouts with responsive widths and typography.
-- **Shared presentation:** Applied consistent containers, spacing, themes and color rules across the pages.

@@ -92,3 +92,8 @@ The changes are local; no remote, push, or deployment was added.
 
 - Add concise ownership/collaboration context above each existing checklist, reducing repeated role wording in the bullets.
 - Verify all detail introductions and documented scope boundaries; update copy/editing guidance and capture actual browser previews. Local commits only.
+
+### Published tools and personal full-stack blog — 22 October 2026
+
+- Move Blogsite to The Daily Mind under Projects; complete the verified personal frontend/backend story. Rename TypeSpark, add three live/preview URLs, real UI screenshots and legacy redirects. Preserve Get Foodies video evidence and attribution boundaries in the supplied company code.
+- Update source/gap/copy guides, route/publication tests, responsive verification and screenshots. Local commits only; no deployment or change to supplied repositories.
