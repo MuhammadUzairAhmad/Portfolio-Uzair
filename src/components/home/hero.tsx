@@ -9,7 +9,8 @@ import { profile } from "@/content/profile";
 import { getProject, projectHref } from "@/lib/content";
 export function Hero() {
   const project = getProject(profile.heroProjectSlug);
-  if (project?.mockup) preload(project.mockup, { as: "image" });
+  if (project?.mockup)
+    preload(project.mockup, { as: "image", media: "(min-width: 768px)" });
   return (
     <section className="relative isolate">
       <GridBackground size="small" />
@@ -64,7 +65,7 @@ export function Hero() {
           <Link
             href={projectHref(project)}
             prefetch
-            className="relative isolate block aspect-[1.04] overflow-hidden rounded-3xl bg-[radial-gradient(ellipse_at_60%_50%,#f0e5cd85,transparent_75%)] dark:bg-[radial-gradient(ellipse_at_45%_55%,#b6cf5240,transparent_70%)]"
+            className="relative isolate hidden aspect-[1.04] md:block overflow-hidden rounded-3xl bg-[radial-gradient(ellipse_at_60%_50%,#f0e5cd85,transparent_75%)] dark:bg-[radial-gradient(ellipse_at_45%_55%,#b6cf5240,transparent_70%)]"
           >
             <div className="absolute right-7 top-6 z-10 flex items-center gap-4">
               <ArrowRight size={16} className="text-primary" aria-hidden />
