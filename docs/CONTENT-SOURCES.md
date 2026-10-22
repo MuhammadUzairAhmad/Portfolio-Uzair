@@ -74,3 +74,7 @@ All three owner-supplied URLs loaded in the browser: https://textgenerators.net/
 ## Personal projects grouped with tools — 22 October 2026
 
 Owner requested The Daily Mind in the Tools collection alongside personal applications and client tools. The record moves from projects.ts to tools.ts with category Tools as its collection classification, while Full-Stack Developer, Personal project, backend/frontend scope, real screenshots, live preview and original blog artwork remain unchanged. Home restores three illustrated cards. Canonical detail path is /tools/the-daily-mind; /work/the-daily-mind and /tools/blogsite redirect directly there. No duplicate record or employment attribution is introduced.
+
+## Selective key decisions — 22 October 2026
+
+Owner requested only strong choices useful to clients and engineers. See DECISION-REVIEW.md for the complete keep/rewrite/remove record. Rationale stays within existing owner-confirmed Bitlux problem/solution, Gaming referral validation inspected in supplied source, verified TextGenerators/GlobePick build records, and inspected Daily Mind public/admin publishing and permission flows. Eight cards remain across five projects. Generic PDF/auth/library cards were removed from the rendered decision lists while features/stack remain. Shopify camera reasoning remains in its distinct challenge section. No unsupported alternative evaluation, security audit, measured outcome or team architecture authorship is claimed.

@@ -254,3 +254,15 @@ Passed: 23 tests, ESLint, route types/TypeScript, production build, full formatt
 Browser: clicked the blog card to its new detail and confirmed Full-Stack Developer / Personal project metadata and real screenshots. Home, Tools and the moved detail fit 320px, 640px and 1280px dark, plus 320px light (12 recorded observations), without document overflow. No captured browser warnings/errors. The three-card homepage and three-entry illustrated collection were visually inspected. Temporary viewport override reset; retained preview on Tools. Media viewer internals and source applications were unchanged.
 
 Previews: [three homepage cards](previews/personal-projects-tools-home.jpg), [personal projects/tool collection](previews/personal-projects-tools-collection.jpg). Observations: docs/audit/personal-tools-move-results.json. Local phase commits only.
+
+## Selective key decisions — 22 October 2026
+
+Curated fifteen former decision records across seven projects into eight stronger cards across five projects. Seven existing ideas were rewritten around need, approach and practical value, Gaming’s two generic cards were replaced with one verified referral-rules example, and redundant library/feature descriptions were removed. DECISION-REVIEW.md records the complete per-project keep/rewrite/remove list. Shopify’s separate camera challenge remains; no duplicated decision is added there. Other projects retain no forced decision section.
+
+ProjectDecisions now renders visible cards under Key decisions, with no extra disclosure click. One card fills the available width; pairs use two desktop columns and stack on mobile. Cards retain the existing server-rendered pattern. Empty arrays remove headings/sidebar links. Context fields explain actual constraints; no alternative evaluation, metric or leadership claim was invented.
+
+Passed: 24 tests including selective decision coverage and Shopify challenge retention, ESLint, route types/TypeScript, production build, full formatting/diff whitespace and production smoke across all 18 pages plus expected 404s/assets/three legacy redirects. Smoke checks visible card markup, no old disclosure label, and absence of empty sections/anchors.
+
+Browser: five retained sections plus Hestiya/Shopify checked at 320px dark, then the five retained sections at 320px light and 1280px dark (17 observations). Counts are 1/1/2/2/2 as intended, cards are not inside closed disclosures, and there is no document overflow. Hestiya and Shopify have no decision heading/anchor; Shopify still has its challenge. Bitlux’s sidebar link reaches its full-width card. Bitlux and Daily Mind desktop presentation visually inspected. No captured browser warnings/errors. Temporary viewport reset. Existing media unchanged and not replayed.
+
+Previews: [Bitlux](previews/key-decisions-bitlux.jpg), [Daily Mind](previews/key-decisions-daily-mind.jpg). Observations: docs/audit/key-decisions-browser-results.json. Local phase commits only.

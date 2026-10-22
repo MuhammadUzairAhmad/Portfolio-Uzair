@@ -1,0 +1,142 @@
+[
+  {
+    "cards": 1,
+    "challenge": false,
+    "closedDisclosure": false,
+    "decisionAnchor": true,
+    "overflow": false,
+    "path": "/work/bitlux",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "cards": 1,
+    "challenge": false,
+    "closedDisclosure": false,
+    "decisionAnchor": true,
+    "overflow": false,
+    "path": "/work/gaming-platform",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "cards": 2,
+    "challenge": false,
+    "closedDisclosure": false,
+    "decisionAnchor": false,
+    "overflow": false,
+    "path": "/tools/textgenerators",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "cards": 2,
+    "challenge": false,
+    "closedDisclosure": false,
+    "decisionAnchor": false,
+    "overflow": false,
+    "path": "/tools/globepick",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "cards": 2,
+    "challenge": false,
+    "closedDisclosure": false,
+    "decisionAnchor": false,
+    "overflow": false,
+    "path": "/tools/the-daily-mind",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "cards": 0,
+    "challenge": false,
+    "closedDisclosure": false,
+    "decisionAnchor": false,
+    "overflow": false,
+    "path": "/work/hestiya",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "cards": 0,
+    "challenge": true,
+    "closedDisclosure": false,
+    "decisionAnchor": false,
+    "overflow": false,
+    "path": "/work/shopify-app",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "cards": 1,
+    "overflow": false,
+    "path": "/work/bitlux",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "cards": 1,
+    "overflow": false,
+    "path": "/work/gaming-platform",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "cards": 2,
+    "overflow": false,
+    "path": "/tools/textgenerators",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "cards": 2,
+    "overflow": false,
+    "path": "/tools/globepick",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "cards": 2,
+    "overflow": false,
+    "path": "/tools/the-daily-mind",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "cards": 1,
+    "overflow": false,
+    "path": "/work/bitlux",
+    "theme": "dark",
+    "width": 1280
+  },
+  {
+    "cards": 1,
+    "overflow": false,
+    "path": "/work/gaming-platform",
+    "theme": "dark",
+    "width": 1280
+  },
+  {
+    "cards": 2,
+    "overflow": false,
+    "path": "/tools/textgenerators",
+    "theme": "dark",
+    "width": 1280
+  },
+  {
+    "cards": 2,
+    "overflow": false,
+    "path": "/tools/globepick",
+    "theme": "dark",
+    "width": 1280
+  },
+  {
+    "cards": 2,
+    "overflow": false,
+    "path": "/tools/the-daily-mind",
+    "theme": "dark",
+    "width": 1280
+  }
+]

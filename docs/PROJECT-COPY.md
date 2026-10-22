@@ -28,10 +28,9 @@ Contributed to an existing Sofrix product through assigned improvements and feat
 
 Next.js · TypeScript · Tailwind CSS · TanStack Query · Redux Toolkit · PostgreSQL · Prisma · jsPDF
 
-### Optional technical decisions
+### Key decisions
 
-- **API handling:** Introduce TanStack Query requests and caching. Address inconsistent API handling and improve affected data-rendering behavior.
-- **Documents:** Generate ticket PDFs using jsPDF. Build dynamic documents from ticket information.
+- **Consistent data on operational screens:** Existing screens had inconsistent API handling and data-rendering issues. Use TanStack Query for requests and cached server data. Give affected screens a shared approach to fetching and reusing data while improving their rendering behavior.
 
 ### Outcome
 
@@ -117,11 +116,6 @@ My company role covered full-stack work; on Hestiya, I was responsible for the f
 
 React · Tailwind CSS · Material UI · Clerk · Wagmi · Reown AppKit · Web3
 
-### Optional technical decisions
-
-- **Accounts:** Integrate Clerk sign-in/sign-up. Connect authentication to the marketplace frontend.
-- **Web3 connections:** Wagmi and Reown AppKit. Connect wallets and smart-contract transaction flows.
-
 ### Outcome
 
 Delivered a connected marketplace frontend spanning discovery, account access, transactions, holdings and carbon-credit retirement.
@@ -151,10 +145,9 @@ Started from the client’s v0 frontend demo and built the connected application
 
 Next.js · TypeScript · Tailwind CSS · MongoDB · NextAuth · Web3
 
-### Optional technical decisions
+### Key decisions
 
-- **Application structure:** Next.js frontend and backend with MongoDB. Turn the client’s frontend demo into a connected full-stack application.
-- **Authentication:** NextAuth Google OAuth and credentials. Support Google and email/password sign-in.
+- **Validate referrals before recording them:** Referral flows needed clear rules about who could refer whom. Check the referral code, existing referrer and self-referral before saving the relationship. Reject invalid or repeated referral relationships before they become part of the rewards workflow.
 
 ### Outcome
 
@@ -302,11 +295,6 @@ Completed scoped feature work across React and Ruby on Rails in an existing clie
 ### Tech stack
 
 Ruby on Rails · React · Shopify GraphQL API · JsBarcode · WickedPDF · PDF-merging tools
-
-### Optional technical decisions
-
-- **Label generation:** JsBarcode, WickedPDF and PDF-merging tools. Generate barcodes and printable product labels.
-- **Shopify data:** GraphQL product, variant, location and metafield integration. Support labels and handle missing inventory-location data.
 
 ### Outcome
 

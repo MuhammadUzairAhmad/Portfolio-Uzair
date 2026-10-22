@@ -30,11 +30,10 @@ Next.js · React · TypeScript · Tailwind CSS · Canvas API · Web Workers · g
 
 **Development workflow:** I used Codex-assisted planning, implementation and review to iterate faster, with automated tests and browser verification.
 
-### Optional technical decisions
+### Key decisions
 
-- **Local processing:** Transform text and render exports in the browser. Keep user text local and avoid an application backend for these tools.
-- **Animated export:** Encode GIFs in a bundled Web Worker. Move encoding off the main thread and support progress, cancellation and cleanup.
-- **Signature fonts:** Bundle licensed fonts with coverage checks. Render signatures with actual fonts and retain the required license notices.
+- **Keep creative work in the browser:** The tools transform user text and generate downloadable images and animations. Process text, signatures and exports locally without an application backend. These workflows can run without an account or sending the entered text to an application server.
+- **Keep GIF export off the main interface thread:** Animated exports require encoding work while the user is working with the tool. Encode GIFs in a Web Worker with progress, cancellation and cleanup. Separate export work from the interface and let the user cancel an export rather than wait for it to finish.
 
 ### Outcome
 
@@ -68,10 +67,10 @@ Next.js · React · TypeScript · Tailwind CSS · Web Crypto API · localStorage
 
 **Development workflow:** I used Codex-assisted planning, implementation and review to iterate faster, with automated tests and browser verification.
 
-### Optional technical decisions
+### Key decisions
 
-- **Data availability:** Bundle geography data and load homepage city records on demand. Avoid a runtime geography service while keeping the larger city dataset out of the initial homepage tool.
-- **Worksheet output:** Use the same assignment objects for preview and print. Keep printable activities aligned with the selected countries and questions.
+- **Avoid a runtime geography dependency:** The generators need country and city data; the city dataset is larger than the homepage needs initially. Bundle geography data and load homepage city records on demand. Generate results without a runtime geography service and keep the larger city dataset out of the initial homepage tool.
+- **Keep worksheet previews and printouts aligned:** Learners need the printed activity to match the countries and questions they selected. Build the on-screen preview and printed worksheet from the same assignment objects. Use one source for both outputs so the print layout reflects the selected activity.
 
 ### Outcome
 
@@ -102,10 +101,10 @@ I built the frontend and backend, connecting the public reading experience with 
 
 Next.js · React · TypeScript · NestJS · MongoDB · Mongoose · Tailwind CSS · TanStack Query · Tiptap · Cloudinary · JWT
 
-### Optional technical decisions
+### Key decisions
 
-- **Publishing workflow:** Separate drafts, scheduled posts and published articles. Support content preparation and publication while public queries select the appropriate published content.
-- **Administration access:** JWT authentication and permission checks on admin APIs. Apply separate permissions for reading, creating, updating, publishing and deleting content.
+- **Separate content preparation from public reading:** Editors need to prepare articles before readers can see them. Represent draft, scheduled and published states separately, and filter public content accordingly. Support editorial preparation and scheduled publication while keeping draft content out of public article queries.
+- **Control what each administrator can change:** Reading, editing and publishing content are different administrative responsibilities. Check permissions for each admin API action alongside authentication. Apply access rules to creating, updating, publishing and deleting content rather than treating every signed-in administrator as having the same permissions.
 
 ### Outcome
 

@@ -109,3 +109,7 @@ Use original type/globe/blog artwork on cards and next-item previews, keeping sc
 ### Group personal projects and tools — 22 October 2026
 
 Move The Daily Mind to Tools, update collection/Home wording and restore three cards. Preserve full-stack personal ownership, original card artwork, detail screenshots and legacy redirects.
+
+### Selective, readable key decisions — 22 October 2026
+
+Curate eight strong decisions on five projects; remove redundant technology descriptions. Replace collapsed technical-choice lists with visible context/approach/relevance cards. Preserve the separate Shopify challenge and omit empty sections. Record the per-project review, rendered copy and verification locally.
