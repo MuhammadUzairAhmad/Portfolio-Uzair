@@ -110,12 +110,10 @@ export function ExperienceList({ detailed = false }: { detailed?: boolean }) {
               <div className="min-w-0">
                 <div className="flex flex-wrap items-center justify-between gap-x-5 gap-y-1">
                   <h3 className="text-lg sm:text-xl">{item.company}</h3>
-                  <EmploymentDates item={item} />
+                  <EmploymentDates item={item} className="text-xs" />
                 </div>
-                <p className="mt-1 text-xs font-medium sm:text-sm">
-                  {item.role}
-                </p>
-                <p className="mt-1 flex items-center gap-1.5 text-[11px] text-muted-foreground">
+                <p className="mt-1 text-sm font-medium">{item.role}</p>
+                <p className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
                   <MapPin size={11} className="shrink-0" aria-hidden />
                   {item.location}
                 </p>
@@ -131,7 +129,7 @@ export function ExperienceList({ detailed = false }: { detailed?: boolean }) {
                 {item.highlights.map((point) => (
                   <li
                     key={point.title}
-                    className="relative pl-4 text-xs leading-relaxed text-muted-foreground before:absolute before:left-0 before:top-2 before:size-1 before:rounded-full before:bg-primary"
+                    className="relative pl-4 text-sm leading-relaxed text-muted-foreground before:absolute before:left-0 before:top-2 before:size-1 before:rounded-full before:bg-primary"
                   >
                     {point.project ? (
                       <Link

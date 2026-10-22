@@ -11,7 +11,7 @@ export function PageIntro({
 }: {
   eyebrow: string;
   title: ReactNode;
-  description: string;
+  description: string | readonly string[];
   subtitle?: string;
   note?: ReactNode;
   grid?: boolean;
@@ -25,9 +25,13 @@ export function PageIntro({
           {title}
         </h1>
         {subtitle && <p className="mt-2 text-lg font-medium">{subtitle}</p>}
-        <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
-          {description}
-        </p>
+        <div className="mt-5 max-w-xl space-y-3 text-sm leading-relaxed text-muted-foreground">
+          {(typeof description === "string" ? [description] : description).map(
+            (paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ),
+          )}
+        </div>
         {note && (
           <div
             aria-hidden="true"

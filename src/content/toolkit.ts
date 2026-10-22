@@ -34,7 +34,11 @@ export const toolkitGroups = [
     rows: [
       {
         label: "Runtime",
-        items: ["Node.js", "Express", "NestJS"],
+        items: ["Node.js"],
+      },
+      {
+        label: "Backend frameworks",
+        items: ["Express.js", "NestJS", "Ruby on Rails"],
       },
       {
         label: "APIs",
@@ -83,12 +87,8 @@ export const toolkitGroups = [
         items: ["React Native", "Expo", "Capacitor"],
       },
       {
-        label: "State",
-        items: ["Redux Toolkit"],
-      },
-      {
         label: "Localization",
-        items: ["i18n", "i18next"],
+        items: ["i18next"],
       },
     ],
   },
@@ -117,6 +117,10 @@ export const toolkitGroups = [
         label: "Editors",
         items: ["VS Code", "Cursor"],
       },
+      {
+        label: "AI-assisted workflow",
+        items: ["Codex-assisted planning, implementation and review"],
+      },
     ],
   },
   {
@@ -140,13 +144,17 @@ export const toolkitGroups = [
   },
   {
     id: "integrations",
-    title: "Integrations & commerce",
+    title: "Integrations & product libraries",
     description:
       "Tools connected to product workflows, documents, and commerce.",
     rows: [
       {
-        label: "Product integrations",
-        items: ["Plaid API", "jsPDF", "Tiptap", "i18next"],
+        label: "External services",
+        items: ["Plaid API", "Shopify GraphQL API"],
+      },
+      {
+        label: "Documents & editing",
+        items: ["jsPDF", "Tiptap"],
       },
       {
         label: "Web3",
@@ -154,7 +162,7 @@ export const toolkitGroups = [
       },
       {
         label: "Commerce experience",
-        items: ["Ruby on Rails", "Shopify embedded & standalone apps"],
+        items: ["Shopify embedded & standalone apps"],
       },
     ],
   },

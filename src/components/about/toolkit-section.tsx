@@ -45,19 +45,19 @@ export function ToolkitSection() {
                   />
                   <h3 className="text-lg">{group.title}</h3>
                 </div>
-                <p className="mb-5 mt-2 text-xs text-muted-foreground">
+                <p className="mb-5 mt-2 text-sm leading-relaxed text-muted-foreground">
                   {group.description}
                 </p>
                 <dl>
                   {group.rows.map((row) => (
                     <div
                       key={row.label}
-                      className="grid gap-1.5 border-t border-border py-3 sm:grid-cols-[130px_1fr] sm:gap-4"
+                      className="grid gap-1.5 border-t border-border py-3 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] sm:gap-4"
                     >
-                      <dt className="text-[11px] font-medium text-muted-foreground">
+                      <dt className="text-sm leading-relaxed font-medium text-muted-foreground">
                         {row.label}
                       </dt>
-                      <dd className="text-xs leading-relaxed">
+                      <dd className="text-sm leading-relaxed">
                         {row.items.join(" · ")}
                       </dd>
                     </div>

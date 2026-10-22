@@ -13,7 +13,7 @@ import { capabilities, approach } from "@/content/services";
 import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata(
   "About",
-  "Curious by nature. Practical by approach.",
+  "Meet Muhammad Uzair Ahmad, a MERN and Next.js full-stack developer with 3+ years of experience. Explore his projects, skills and work experience.",
   "/about",
 );
 const icons = [Monitor, Database, Link2, Smartphone];
@@ -31,7 +31,7 @@ export default function AboutPage() {
               <span className="text-primary">Practical by approach.</span>
             </>
           }
-          description={profile.about}
+          description={[profile.about, profile.aboutDetails]}
           note={
             <>
               Build
@@ -71,7 +71,7 @@ export default function AboutPage() {
                     aria-hidden
                   />
                   <h2 className="text-lg">{item.title}</h2>
-                  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     {item.description}
                   </p>
                 </article>
@@ -95,7 +95,7 @@ export default function AboutPage() {
         <Container className="py-7">
           <div className="mb-5 flex justify-between">
             <Eyebrow>How I work</Eyebrow>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-sm text-muted-foreground">
               From idea to impact.
             </p>
           </div>
@@ -106,7 +106,7 @@ export default function AboutPage() {
                   0{i + 1}
                 </span>
                 <h2 className="mt-4 text-base">{item.title}</h2>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {item.description}
                 </p>
               </article>
@@ -116,10 +116,10 @@ export default function AboutPage() {
             <div>
               <Eyebrow>Education</Eyebrow>
               <p className="mt-2 text-sm">{profile.education.qualification}</p>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 {profile.education.institution} · {profile.education.period}
               </p>
-              <p className="mt-1 text-xs text-muted-foreground">
+              <p className="mt-1 text-sm text-muted-foreground">
                 GPA {profile.education.gpa}
               </p>
             </div>

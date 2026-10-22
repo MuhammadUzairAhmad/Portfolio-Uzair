@@ -23,12 +23,12 @@ export function BackgroundSection() {
         <article className="rounded-xl border border-border p-5 sm:p-6">
           <Eyebrow>Learning & communication</Eyebrow>
           <h2 className="mt-3 text-xl">Certifications & languages</h2>
-          <ul className="mt-3 space-y-2 text-xs leading-relaxed text-muted-foreground">
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
             {profile.certifications.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <p className="mt-4 border-t border-border pt-3 text-xs">
+          <p className="mt-4 border-t border-border pt-3 text-sm">
             <span className="text-muted-foreground">Languages </span>
             {profile.languages.join(" · ")}
           </p>

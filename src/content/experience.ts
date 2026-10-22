@@ -34,13 +34,13 @@ export const experience: ExperienceEntry[] = [
       {
         title: "Linxx",
         description:
-          "Contributed frontend and backend/API work, integrated flows, fixed bugs, and supported mobile deployment through Capacitor.",
+          "Built and improved frontend and backend/API features, fixed workflow bugs, and supported mobile deployment through Capacitor.",
         project: "linxx",
       },
       {
         title: "Bitlux",
         description:
-          "Contributed frontend and backend/API work, investigated rendering issues, added TanStack Query caching, and integrated ticket PDF generation.",
+          "Worked across frontend and backend/API features, resolved rendering issues, added TanStack Query caching, and generated ticket PDFs with jsPDF.",
         project: "bitlux",
       },
       {
@@ -147,18 +147,13 @@ export const experience: ExperienceEntry[] = [
       {
         title: "SkillMatch",
         description:
-          "Contributed to SkillMatch from day one, building responsive candidate, recruiter and admin interfaces alongside backend API work under senior guidance.",
+          "Contributed from day one, building responsive candidate, recruiter and admin interfaces with Next.js.",
         project: "skillmatch",
       },
       {
         title: "Authentication & APIs",
         description:
-          "Worked on authentication and API integrations, and created backend APIs under senior developer guidance.",
-      },
-      {
-        title: "Full-stack delivery",
-        description:
-          "Collaborated on frontend and backend features using Next.js, NestJS, and MongoDB.",
+          "Implemented authentication and API integrations, and created NestJS APIs backed by MongoDB under senior developer guidance.",
       },
     ],
     skills: [
