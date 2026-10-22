@@ -1,6 +1,6 @@
 # Current tool stories — 22 October 2026
 
-TextGenerators.net and GlobePick are verified client-tool build stories with owner-supplied live URLs and real public UI screenshots. The Daily Mind is now a personal full-stack project in PROJECT-COPY.md.
+TextGenerators.net and GlobePick are verified client-tool build stories with owner-supplied live URLs and real public UI screenshots. The Daily Mind is a personal full-stack publishing project in this collection.
 
 ## TextGenerators.net
 
@@ -76,3 +76,37 @@ Next.js · React · TypeScript · Tailwind CSS · Web Crypto API · localStorage
 ### Outcome
 
 Delivered connected geography discovery, saved places, sharing, quizzes and printable learning activities, with checks for data integrity and application behavior.
+
+## The Daily Mind
+
+**Introduction:** A public reading experience backed by an administrative workspace for creating, organizing and publishing content.
+
+**Role:** Full-Stack Developer
+
+### Overview
+
+The Daily Mind is a personal blog and publishing platform. Readers can browse articles, explore categories and search for content, while an administrative workspace supports writing, organizing and publishing posts.
+
+### My contribution
+
+**Personal project · Full-stack implementation**
+
+I built the frontend and backend, connecting the public reading experience with content management, authentication, permissions and publishing workflows. This project demonstrates my work across the interface, APIs and MongoDB data models.
+
+- **Reading & discovery:** Built responsive article pages, category browsing and search, connecting the public Next.js interface to backend content APIs.
+- **Editor & publishing:** Implemented the Tiptap editing experience and backend workflows for drafts, published and scheduled articles, with category organization and SEO metadata.
+- **Authentication & permissions:** Built login, session-refresh and permission-controlled administration, including separate content creation, editing and publishing permissions.
+- **Media & application data:** Connected Cloudinary image uploads and MongoDB/Mongoose data models for articles, categories, users and application settings.
+
+### Tech stack
+
+Next.js · React · TypeScript · NestJS · MongoDB · Mongoose · Tailwind CSS · TanStack Query · Tiptap · Cloudinary · JWT
+
+### Optional technical decisions
+
+- **Publishing workflow:** Separate drafts, scheduled posts and published articles. Support content preparation and publication while public queries select the appropriate published content.
+- **Administration access:** JWT authentication and permission checks on admin APIs. Apply separate permissions for reading, creating, updating, publishing and deleting content.
+
+### Outcome
+
+Built a connected reading and content-management application, with frontend, backend and publishing capabilities available to demonstrate through the project preview.

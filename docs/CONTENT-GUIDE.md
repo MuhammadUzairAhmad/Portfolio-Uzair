@@ -5,8 +5,8 @@ All personal and project data lives in `src/content/`. You can update these Type
 | File                        | What to change                                                                                                                 |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `src/content/profile.ts`    | Profile, featured project slug, biography, contact/social links, résumé, education, recent work, languages, and certifications |
-| `src/content/projects.ts`   | All eleven project records, case-study copy, stacks, contributions, screenshots, product URLs and external walkthroughs        |
-| `src/content/tools.ts`      | TextGenerators.net, GlobePick, live links, screenshots and tool stories                                                        |
+| `src/content/projects.ts`   | All ten project records, case-study copy, stacks, contributions, screenshots, product URLs and external walkthroughs           |
+| `src/content/tools.ts`      | TextGenerators.net, GlobePick, The Daily Mind, personal/tool stories, live links and screenshots                               |
 | `src/content/experience.ts` | Companies, roles, YYYY-MM start/end dates, contribution bullets, project links, skill badges, and logo assets                  |
 | `src/content/services.ts`   | Services, related work, skill groups, and process steps                                                                        |
 | `src/content/toolkit.ts`    | Homepage skill highlights, project evidence links, and grouped libraries on About                                              |
@@ -190,6 +190,6 @@ Edit ownership.label and ownership.summary for the short My involvement note abo
 
 ### Current names, locations and media
 
-TextGenerators.net is /tools/textgenerators; GlobePick remains /tools/globepick. Their illustration fields select the original artwork on Home, archive and next-item cards; image fields select real screenshots on detail heroes, and media supplies the on-page viewers. The Daily Mind uses illustration: blog for its Work/next-project cards while remaining a Web platforms personal project with a real screenshot on its detail. ToolsSection uses two columns for the two tools.
+TextGenerators.net is /tools/textgenerators; GlobePick remains /tools/globepick. Their illustration fields select the original artwork on Home, archive and next-item cards; image fields select real screenshots on detail heroes, and media supplies the on-page viewers. The Daily Mind uses illustration: blog for its collection/next-project cards while remaining a personal full-stack project with a real screenshot on its detail. ToolsSection uses three columns for the three entries.
 
-The Daily Mind is /work/the-daily-mind, team Personal project, full-stack scope. Its published preview and homepage media are owner supplied. Edit its entry in projects.ts. Do not restore Blogsite as a duplicate tool. next.config.ts retains permanent redirects for both legacy paths. Source deletion is recorded internally for Get Foodies; its public walkthrough remains available without requiring a repository.
+The Daily Mind is /tools/the-daily-mind, team Personal project, full-stack scope. Its published preview and homepage media are owner supplied. Edit its entry in tools.ts. Tools groups personal applications and client tools; this does not imply frontend-only scope. Do not restore Blogsite as a duplicate entry. next.config.ts retains permanent redirects for both legacy paths. Source deletion is recorded internally for Get Foodies; its public walkthrough remains available without requiring a repository.

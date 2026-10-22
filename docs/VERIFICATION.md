@@ -244,3 +244,13 @@ Passed: ESLint, route types/TypeScript, production build, formatting/diff whites
 Browser: desktop Tools and Work use the correct illustrated assets; all three details retain their live screenshots. Home, Tools, Work and the three detail pages fit 320px dark; the three collections also fit 320px light (nine structured mobile observations). No overflow or captured console warnings/errors. Tools desktop screenshot visually inspected; temporary viewport reset, retained tab on Tools. The previous browser session was unavailable; a fresh verification tab was created in the available in-app browser.
 
 Preview: [original tool artwork restored](previews/restored-tool-card-art.jpg). Observations: docs/audit/restored-card-art-browser-results.json. Local commits only.
+
+## Personal blog grouped in Tools — 22 October 2026
+
+Moved The Daily Mind from Work to /tools/the-daily-mind with the owner’s requested personal-project/tool grouping. Category Tools controls collection/layout only; Full-Stack Developer, Personal project, frontend/backend story, stack, preview URL, original card artwork and real detail screenshots are retained. Home returns to three illustrated cards. Collection and Home copy now explain personal applications and client tools. The former /work/the-daily-mind and /tools/blogsite URLs redirect directly to the new route, alongside the existing TypeSpark redirect.
+
+Passed: 23 tests, ESLint, route types/TypeScript, production build, full formatting and diff whitespace. Production smoke covers 18 pages, four expected 404s, assets/preview safeguards and three permanent redirects. It asserts the blog is absent from Work and its original artwork appears in Home/Tools.
+
+Browser: clicked the blog card to its new detail and confirmed Full-Stack Developer / Personal project metadata and real screenshots. Home, Tools and the moved detail fit 320px, 640px and 1280px dark, plus 320px light (12 recorded observations), without document overflow. No captured browser warnings/errors. The three-card homepage and three-entry illustrated collection were visually inspected. Temporary viewport override reset; retained preview on Tools. Media viewer internals and source applications were unchanged.
+
+Previews: [three homepage cards](previews/personal-projects-tools-home.jpg), [personal projects/tool collection](previews/personal-projects-tools-collection.jpg). Observations: docs/audit/personal-tools-move-results.json. Local phase commits only.

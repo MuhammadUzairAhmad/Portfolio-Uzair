@@ -70,3 +70,7 @@ The owner authorized read-only inspection of /media/uzairahmad/HHD1/Sofrix, /med
 - Get Foodies: the owner confirms accidental source deletion and the existing walkthrough as available evidence. Retain confirmed contributions; do not imply a fresh code review or invent a repository.
 
 All three owner-supplied URLs loaded in the browser: https://textgenerators.net/, https://globe-pick-countries-tool.vercel.app/ and https://the-daily-mind.vercel.app/. Web text extraction was unavailable, so native browser snapshots were used. Public homepage captures were taken at the normal 1280×720 viewport and optimized to WebP with the installed sharp library. They are real UI captures, not mockups. No hidden/admin content or authentication was accessed.
+
+## Personal projects grouped with tools — 22 October 2026
+
+Owner requested The Daily Mind in the Tools collection alongside personal applications and client tools. The record moves from projects.ts to tools.ts with category Tools as its collection classification, while Full-Stack Developer, Personal project, backend/frontend scope, real screenshots, live preview and original blog artwork remain unchanged. Home restores three illustrated cards. Canonical detail path is /tools/the-daily-mind; /work/the-daily-mind and /tools/blogsite redirect directly there. No duplicate record or employment attribution is introduced.

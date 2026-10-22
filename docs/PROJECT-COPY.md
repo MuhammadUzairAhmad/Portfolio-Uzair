@@ -311,37 +311,3 @@ Ruby on Rails · React · Shopify GraphQL API · JsBarcode · WickedPDF · PDF-m
 ### Outcome
 
 Enabled successful camera scanning in a standalone browser context while preserving the embedded app, and completed the described label-printing and Shopify-data improvements.
-
-## The Daily Mind
-
-**Introduction:** A public reading experience backed by an administrative workspace for creating, organizing and publishing content.
-
-**Role:** Full-Stack Developer
-
-### Overview
-
-The Daily Mind is my personal blog and publishing platform. It combines a public reading experience with an administrative workspace for creating, organizing and publishing content.
-
-### My contribution
-
-**Personal project · Full-stack implementation**
-
-I built the frontend and backend, connecting the public reading experience with content management, authentication, permissions and publishing workflows. This project demonstrates my work across the interface, APIs and MongoDB data models.
-
-- **Reading & discovery:** Built responsive article pages, category browsing and search, connecting the public Next.js interface to backend content APIs.
-- **Editor & publishing:** Implemented the Tiptap editing experience and backend workflows for drafts, published and scheduled articles, with category organization and SEO metadata.
-- **Authentication & permissions:** Built login, session-refresh and permission-controlled administration, including separate content creation, editing and publishing permissions.
-- **Media & application data:** Connected Cloudinary image uploads and MongoDB/Mongoose data models for articles, categories, users and application settings.
-
-### Tech stack
-
-Next.js · React · TypeScript · NestJS · MongoDB · Mongoose · Tailwind CSS · TanStack Query · Tiptap · Cloudinary · JWT
-
-### Optional technical decisions
-
-- **Publishing workflow:** Separate drafts, scheduled posts and published articles. Support content preparation and publication while public queries select the appropriate published content.
-- **Administration access:** JWT authentication and permission checks on admin APIs. Apply separate permissions for reading, creating, updating, publishing and deleting content.
-
-### Outcome
-
-Built a connected reading and content-management application, with frontend, backend and publishing capabilities available to demonstrate through the project preview.

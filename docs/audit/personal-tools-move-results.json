@@ -1,0 +1,74 @@
+[
+  {
+    "overflow": false,
+    "path": "/",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/tools",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/tools/the-daily-mind",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/",
+    "theme": "dark",
+    "width": 640
+  },
+  {
+    "overflow": false,
+    "path": "/tools",
+    "theme": "dark",
+    "width": 640
+  },
+  {
+    "overflow": false,
+    "path": "/tools/the-daily-mind",
+    "theme": "dark",
+    "width": 640
+  },
+  {
+    "overflow": false,
+    "path": "/",
+    "theme": "dark",
+    "width": 1280
+  },
+  {
+    "overflow": false,
+    "path": "/tools",
+    "theme": "dark",
+    "width": 1280
+  },
+  {
+    "overflow": false,
+    "path": "/tools/the-daily-mind",
+    "theme": "dark",
+    "width": 1280
+  },
+  {
+    "overflow": false,
+    "path": "/",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/tools",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/tools/the-daily-mind",
+    "theme": "light",
+    "width": 320
+  }
+]

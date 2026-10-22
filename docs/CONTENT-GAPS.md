@@ -1,6 +1,6 @@
 # Remaining content — 22 October 2026
 
-All 11 projects and two tools have verified written narratives with zero draft fields. The Daily Mind replaces Blogsite as a personal full-stack project. TypeSpark is now TextGenerators.net. Existing project ownership distinctions remain intact.
+All 10 work projects and three personal/tool entries have verified written narratives with zero draft fields. The Daily Mind replaces Blogsite as a personal full-stack project in the Tools collection. TypeSpark is now TextGenerators.net. Existing project ownership distinctions remain intact.
 
 ## Confirmed evidence
 
@@ -18,4 +18,4 @@ All 11 projects and two tools have verified written narratives with zero draft f
 
 ## Before launch
 
-Preview/demoMode remains enabled and the portfolio stays noindex. Choose the portfolio deployment domain and review canonical metadata, sitemap and robots before publication. Résumé and GitHub updates remain owner-deferred. These changes are local only. Old routes /tools/typespark and /tools/blogsite redirect permanently to /tools/textgenerators and /work/the-daily-mind.
+Preview/demoMode remains enabled and the portfolio stays noindex. Choose the portfolio deployment domain and review canonical metadata, sitemap and robots before publication. Résumé and GitHub updates remain owner-deferred. These changes are local only. Old routes /tools/typespark and /tools/blogsite redirect permanently to /tools/textgenerators and /tools/the-daily-mind. The former /work/the-daily-mind URL also redirects directly to /tools/the-daily-mind.

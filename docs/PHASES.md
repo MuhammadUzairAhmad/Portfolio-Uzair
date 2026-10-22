@@ -105,3 +105,7 @@ Restore full-name typographic covers for projects without images and remove the 
 ### Restore illustrated card artwork — 22 October 2026
 
 Use original type/globe/blog artwork on cards and next-item previews, keeping screenshots on detail pages. The Daily Mind remains a personal Work project; its archive card now shows the original blog illustration. Future device mockups can replace detail image/mockup fields independently.
+
+### Group personal projects and tools — 22 October 2026
+
+Move The Daily Mind to Tools, update collection/Home wording and restore three cards. Preserve full-stack personal ownership, original card artwork, detail screenshots and legacy redirects.
