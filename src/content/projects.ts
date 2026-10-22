@@ -961,6 +961,7 @@ export const projects: PortfolioProject[] = [
   {
     slug: "the-daily-mind",
     name: "The Daily Mind",
+    illustration: "blog",
     category: "Web platforms",
     subtitle: "Personal full-stack blog & publishing platform",
     summary:

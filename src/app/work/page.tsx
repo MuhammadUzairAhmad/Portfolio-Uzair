@@ -66,7 +66,9 @@ export default function WorkPage() {
                     ? ["Full-stack"]
                     : []),
                 ],
-                content: (
+                content: p.illustration ? (
+                  <ProjectCard project={p} archive index={i + 3} />
+                ) : (
                   <Link
                     href={projectHref(p)}
                     prefetch

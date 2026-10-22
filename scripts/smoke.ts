@@ -71,6 +71,18 @@ for (const route of routes) {
         service.title,
       );
   }
+  if (route === "/" || route === "/tools") {
+    for (const artwork of [
+      "typespark-preview-v2.webp",
+      "globepick-preview-v2.webp",
+    ])
+      assert.ok(html.includes(artwork), `${route}: illustrated tool card`);
+    assert.doesNotMatch(html, /textgenerators-live.webp|globepick-live.webp/);
+  }
+  if (route === "/work") {
+    assert.ok(html.includes("blogsite-preview-v2.webp"));
+    assert.doesNotMatch(html, /the-daily-mind-live.webp/);
+  }
   if (route === "/contact") {
     assert.match(html, /Hiring for your team/);
     assert.match(html, /Building or improving a product/);
