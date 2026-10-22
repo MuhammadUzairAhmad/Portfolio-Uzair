@@ -1,0 +1,368 @@
+{
+  "mobileDark": [
+    {
+      "path": "/work/bitlux",
+      "checklist": 6,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Screenshots & walkthroughs",
+        "Technical decisions",
+        "Outcome",
+        "Next project",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/linxx",
+      "checklist": 6,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Screenshots & walkthroughs",
+        "Outcome",
+        "Next project",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/skillmatch",
+      "checklist": 6,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Outcome",
+        "Next project",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/hestiya",
+      "checklist": 6,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Screenshots & walkthroughs",
+        "Technical decisions",
+        "Outcome",
+        "Next project",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/gaming-platform",
+      "checklist": 6,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Screenshots & walkthroughs",
+        "Technical decisions",
+        "Outcome",
+        "Next project",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/development-solutions-group",
+      "checklist": 3,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Outcome",
+        "Next project",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/get-foodies",
+      "checklist": 6,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Outcome",
+        "Next project",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/onyx",
+      "checklist": 6,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Outcome",
+        "Next project",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/keller-williams",
+      "checklist": 5,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Outcome",
+        "Next project",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/shopify-app",
+      "checklist": 7,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Technical decisions",
+        "Outcome",
+        "Next project",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/tools/typespark",
+      "checklist": 6,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Technical decisions",
+        "Outcome",
+        "Next tool",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/tools/globepick",
+      "checklist": 6,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Technical decisions",
+        "Outcome",
+        "Next tool",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/tools/blogsite",
+      "checklist": 5,
+      "deadLinks": [],
+      "headings": [
+        "Overview",
+        "My role & contributions",
+        "Implementation",
+        "Next tool",
+        "A project in mind? A role on your team?"
+      ],
+      "implementationMaps": 0,
+      "viewport": 320,
+      "width": 305
+    }
+  ],
+  "mobileLight": [
+    {
+      "path": "/work/bitlux",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/linxx",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/skillmatch",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/hestiya",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/gaming-platform",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/development-solutions-group",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/get-foodies",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/onyx",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/keller-williams",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/work/shopify-app",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/tools/typespark",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/tools/globepick",
+      "viewport": 320,
+      "width": 305
+    },
+    {
+      "path": "/tools/blogsite",
+      "viewport": 320,
+      "width": 305
+    }
+  ],
+  "desktopDark": [
+    {
+      "path": "/work/bitlux",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/work/linxx",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/work/skillmatch",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/work/hestiya",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/work/gaming-platform",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/work/development-solutions-group",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/work/get-foodies",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/work/onyx",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/work/keller-williams",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/work/shopify-app",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/tools/typespark",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/tools/globepick",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    },
+    {
+      "path": "/tools/blogsite",
+      "brokenImages": [],
+      "viewport": 1280,
+      "width": 1265
+    }
+  ]
+}

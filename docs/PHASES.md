@@ -77,3 +77,8 @@ The changes are local; no remote, push, or deployment was added.
 
 - Implementation: retire duplicate Home skills section, shorten Services to three compact cards, link the detailed About toolkit, preserve project selections and approach, and update existing smoke assertions.
 - Documentation: source precedence, editing guidance, responsive verification and current preview. Local commits only.
+
+### Consistent project-detail checklists — 22 October 2026
+
+- Content/UI phase: shared implementation/contribution/decision/evidence components, concise per-project detail copy, content-driven navigation, fewer forced sections, lead Get Foodies recording and preserved media/ownership.
+- Documentation phase: current public copy, field guidance, source boundaries, regression/browser verification and previews. Local only.

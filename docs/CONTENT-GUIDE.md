@@ -175,3 +175,11 @@ Employment focus labels were retired; titles/dates and factual highlights remain
 ## Current compact Home layout
 
 Home uses Services as its single capability overview: one short description, three technology badges and a /work link per card. Detailed skills/capabilities live on About; Services links to /about#toolkit. The former Home SkillsSection/toolkitHighlights and deliverable lists have been removed. Edit detailed toolkitGroups in toolkit.ts and About capabilities in services.ts. Keep homepage featured selection and the MVP process independent of this simplification.
+
+## Current project-detail layout
+
+ImplementationChecklist is the shared two-column (single-column mobile) feature list and verified-stack rendering for all projects/tools. Edit scope to update it. ProjectContributions renders the common role rows and optional one-sentence developmentWorkflow. ProjectDecisions renders only confirmed choices in an optional native disclosure. ProjectEvidence reuses the existing media viewers.
+
+Commercial section navigation follows the rendered section array: Overview, Contributions, Implementation, optional Evidence/Decisions, Outcome. Empty optional sections create neither headings nor dead links. No separate Problem or forced Solution section is rendered; context supplies the concise product situation, and the original problem/solution/overview fields remain source data. Add a non-demo lessons record only when useful; otherwise omit it.
+
+implementation now holds optional explanatory workflows for Onyx and Keller Williams only, displayed beneath contributions. It never changes the Implementation checklist layout. Absent project images create no initials-only hero; a video-only project leads with its recording. detailSummary controls the short detail introduction independently of summary on cards.

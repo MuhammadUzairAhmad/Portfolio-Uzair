@@ -1,0 +1,85 @@
+[
+  {
+    "features": 6,
+    "overflow": false,
+    "overview": "01OverviewHestiya is a Web3 carbon-credit marketplace for discovering and trading credits, managing holdings and retiring credits. Its user experience connects account access and marketplace workflows with wallets and blockchain transactions.",
+    "path": "/work/hestiya",
+    "role": "RoleFrontend DeveloperTeamWeiblocksPlatformWebStackReact · Tailwind CSS · Material UI",
+    "width": 320
+  },
+  {
+    "features": 3,
+    "overflow": false,
+    "overview": "01OverviewDevelopment Solutions Group’s company website presents its business and projects through Home, About and Projects pages, with a Contact interface for enquiries.",
+    "path": "/work/development-solutions-group",
+    "role": "RoleFrontend DeveloperTeamSofrixPlatformWebStackReact 19 · TypeScript · Tailwind CSS",
+    "width": 320
+  },
+  {
+    "features": 7,
+    "overflow": false,
+    "overview": "01OverviewGet Foodies is a food application for web, iOS and Android. It combines product listings, dynamic banners and discounts with account and theme settings; its mobile experience also includes onboarding, multilingual interfaces and location-related features.",
+    "path": "/work/get-foodies",
+    "role": "RoleFull-Stack Developer · Web & MobileTeamSofrixPlatformWeb + iOS + AndroidStackReact Native · Expo · Node.js",
+    "width": 320
+  },
+  {
+    "features": 5,
+    "overflow": false,
+    "overview": "01OverviewKeller Williams’ public real-estate platform helps people explore homes to buy or rent and connect with local agents. Its wider technology ecosystem supports agents and customer relationships across the property journey.",
+    "path": "/work/keller-williams",
+    "role": "RoleJunior Software EngineerTeamStrategist HUBPlatformWebStackReact.js · Next.js · i18next",
+    "width": 320
+  },
+  {
+    "features": 7,
+    "overflow": false,
+    "overview": "01OverviewGP-Lite / Barcode Buddy helps Shopify merchants with picking, packing, barcode scanning and product-label printing. It connects product and inventory information to scanning and printable-label workflows.",
+    "path": "/work/shopify-app",
+    "role": "RoleFreelance Full-Stack DeveloperTeamClient projectPlatformWebStackRuby on Rails · React · Shopify GraphQL API",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/work/get-foodies",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/work/keller-williams",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/work/shopify-app",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "path": "/work/hestiya",
+    "width": 1280
+  },
+  {
+    "overflow": false,
+    "path": "/work/development-solutions-group",
+    "width": 1280
+  },
+  {
+    "overflow": false,
+    "path": "/work/get-foodies",
+    "width": 1280
+  },
+  {
+    "overflow": false,
+    "path": "/work/keller-williams",
+    "width": 1280
+  },
+  {
+    "overflow": false,
+    "path": "/work/shopify-app",
+    "width": 1280
+  }
+]

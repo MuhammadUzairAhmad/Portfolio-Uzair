@@ -1,169 +1,333 @@
-# Project copy — 22 October 2026
+# Current detail-page copy — 22 October 2026
 
-Edited for clients, hiring teams, and engineering reviewers. Includes the owner’s latest full-stack and day-one SkillMatch clarifications. No new metrics, dates, endpoints, or frameworks are invented.
+The public detail copy below is concise and based on confirmed contributions. Home/archive summaries remain separate. Original extended narratives and owner handoff remain source material.
 
 ## Bitlux
 
-**Card / introduction**
+**Introduction:** Private-jet booking and ticketing operations.
 
-A private aviation platform for booking and ticketing operations. I contributed across the frontend and backend, improving rendering, API handling and caching, updating interfaces, and generating ticket PDFs.
+**Role:** Full-Stack Developer
 
-**Overview**
+### Overview
 
-Bitlux supports the work behind private-jet bookings, bringing trip requests, operational screens, and ticket documents into a web application. I contributed to an existing product where performance issues, inconsistent data rendering, and changing interface designs needed attention alongside new feature work.
+Bitlux is a private-jet booking and operations platform. It brings booking requests, quote management, operational workflows and ticket documents into a connected experience.
 
-My responsibility was to investigate those problems and improve the affected interfaces and integrations. I introduced TanStack Query for API requests and caching, added validation and toast feedback, updated screens to new Figma designs, and refactored components. I also integrated backend APIs and generated dynamic ticket PDFs with jsPDF. The work resolved identified issues and improved the maintainability of the application; the product itself continues to evolve.
+### Contributions
 
-My scope also included backend/API contributions within the existing application.
+- **Rendering & data handling:** Investigated rendering and performance issues and introduced TanStack Query for API requests and server-data caching.
+- **Interface improvements:** Updated screens from Figma, added validation and toast feedback, and refactored reusable components.
+- **APIs & ticket documents:** Contributed backend/API work, integrated services and generated dynamic ticket PDFs with jsPDF.
 
-**Outcome**
+### Implementation
 
-Resolved the identified rendering and performance issues, aligned affected screens with updated designs, and improved API handling and validation. Dynamic ticket PDFs and reusable components supported the existing booking and operations workflows.
+- Rendering & performance fixes
+- API requests & caching
+- Figma interface updates
+- Reusable components & validation
+- Backend/API contributions
+- Dynamic ticket PDFs
+
+**Stack:** Next.js · TypeScript · Tailwind CSS · TanStack Query · Redux Toolkit · PostgreSQL · jsPDF
+
+### Optional technical decisions
+
+- **API handling:** Introduce TanStack Query requests and caching. Address inconsistent API handling and improve affected data-rendering behavior.
+- **Documents:** Generate ticket PDFs using jsPDF. Build dynamic documents from ticket information.
+
+### Outcome
+
+Resolved identified rendering issues, improved API handling and validation, and delivered updated interfaces and dynamic ticket documents.
 
 ## Linxx
 
-**Card / introduction**
+**Introduction:** A marketplace connecting listings, ambassadors and shoppers across web and mobile.
 
-A job and service marketplace across web and mobile. I contributed to frontend and backend/API work, connected user flows, and resolved application and Capacitor mobile issues.
+**Role:** Full-Stack Developer
 
-**Overview**
+### Overview
 
-Linxx connects marketplace listings with ambassador and shopper workflows across web and mobile. Its features include job discovery, GPS-related functionality, approvals, and a Plaid integration. My work focused on connecting these interfaces to backend services and making the affected user journeys work from beginning to end.
+Linxx is an ambassador marketplace spanning web and mobile. It connects marketplace listings and discovery with the approval workflows used to manage brand ambassador programs.
 
-I integrated APIs, updated screens, investigated bugs, and tested the connected flows. On mobile, I worked through issues specific to the Capacitor integration while supporting deployment. My contributions also included approval and decline flows, GPS features, and Plaid integration. After the changes, I verified the affected workflows across web and mobile. The ongoing product provided practical experience improving connected features across two delivery environments.
+### Contributions
 
-My responsibilities also included backend/API work, in addition to frontend integration and mobile debugging.
+- **Connected application flows:** Contributed frontend and backend/API work, integrated services and updated marketplace interfaces.
+- **Mobile debugging:** Investigated Capacitor-specific issues, fixed affected mobile behavior and supported deployment.
+- **Marketplace verification:** Worked on approvals, GPS-related features and Plaid integration, then tested affected end-to-end journeys.
 
-**Outcome**
+### Implementation
 
-Connected frontend screens to the required backend services, resolved identified web and mobile issues, and verified the affected end-to-end flows. This included marketplace interactions and fixes to the Capacitor mobile experience.
+- Marketplace listings & user flows
+- Backend/API work & integrations
+- Approval & decline workflows
+- GPS discovery & Plaid integration
+- Capacitor fixes & deployment support
+- Web/mobile flow verification
+
+**Stack:** Next.js · TypeScript · Tailwind CSS · TanStack Query · Redux Toolkit · PostgreSQL · Capacitor · Plaid
+
+### Outcome
+
+Connected and verified affected marketplace journeys, resolved web/mobile issues and supported the Capacitor mobile delivery.
 
 ## SkillMatch
 
-**Card / introduction**
+**Introduction:** A recruitment and assessment product connecting candidates and hiring teams.
 
-A recruitment and assessment product I contributed to from day one. I built frontend screens, dashboards, validation and reusable components, integrated APIs, and created backend APIs under senior developer guidance.
+**Role:** Full-Stack Developer
 
-**Overview**
+### Overview
 
-SkillMatch brings candidate profiles, job workflows, assessments, and recruitment dashboards into one platform. Candidates and hiring teams need connected interfaces to move between account details, opportunities, and administrative tasks. I contributed from day one, working within the development team on frontend features, integrations and backend APIs.
+SkillMatch is a recruitment and assessment product for candidates, recruiters and administrators. It brings profiles, job workflows, assessments and recruitment dashboards together to support the hiring process.
 
-My contributions included responsive UI, dashboards, form validation, shared components, and backend API integration. I used Redux Toolkit, Tailwind CSS, and TanStack Query as part of frontend delivery, and also created APIs under senior guidance. This was my first professional project, with responsibilities spanning substantial frontend implementation and supported backend contributions. I delivered these application features as part of the wider team.
+### Contributions
 
-**Outcome**
+- **Screens & shared components:** Contributed from day one, building responsive candidate, recruiter and admin interfaces with form validation and reusable components.
+- **Authentication & connected state:** Implemented authentication, integrated APIs and worked with Redux Toolkit and TanStack Query.
+- **Backend APIs:** Created APIs under senior developer guidance alongside frontend delivery.
 
-Delivered responsive screens and dashboard features, connected them to backend services, and contributed APIs under senior guidance. The work supported candidate, recruiter, and administrative workflows as part of the wider team.
+### Implementation
+
+- Candidate, recruiter & admin dashboards
+- Reusable components & form validation
+- Authentication implementation
+- Backend API integration
+- Redux Toolkit & TanStack Query
+- Senior-guided backend API creation
+
+**Stack:** Next.js · NestJS · MongoDB · Redux Toolkit · TanStack Query · Tailwind CSS · Material UI · Passport-JWT · Swagger
+
+### Outcome
+
+Delivered connected screens, dashboard features and authentication, and contributed backend APIs as part of the wider team.
 
 ## Hestiya Marketplace
 
-**Card / introduction**
+**Introduction:** A carbon-credit marketplace for discovery, trading, holdings and retirement.
 
-A carbon-credit marketplace with trading, holdings, and retirement workflows. I built its frontend from Figma and connected authentication, another developer’s backend APIs, wallets, and smart-contract interactions.
+**Role:** Frontend Developer
 
-**Overview**
+### Overview
 
-Hestiya Marketplace is a Web3 carbon-credit platform for discovering credits, trading, managing holdings, and retirement. The project needed a frontend that brought together conventional account and marketplace features with wallet connections and blockchain transactions. I owned the React frontend implementation, starting from supplied Figma designs.
+Hestiya is a Web3 carbon-credit marketplace for discovering and trading credits, managing holdings and retiring credits. Its user experience connects account access and marketplace workflows with wallets and blockchain transactions.
 
-I collaborated with the developer building the Python backend to understand its APIs and connect the interface. I integrated Clerk sign-in and sign-up, worked on wallet and smart-contract interactions with Wagmi and Reown AppKit, and delivered listing filters, cart interactions, P2P transactions, holdings, retirement, OTP verification, and PDF receipts. This connected the marketplace experience to its supporting services while keeping backend authorship with the other developer.
+### Contributions
 
-**Outcome**
+- **Marketplace frontend:** My role on this project was frontend development within a full-stack company position. Built responsive React screens for discovery, cart, transactions and holdings from Figma.
+- **Accounts & service integration:** Integrated Clerk authentication and coordinated directly with the backend developer to connect existing Python APIs.
+- **Wallet & transaction interfaces:** Connected wallets and smart-contract interactions using Wagmi and Reown AppKit, alongside retirement and receipt workflows.
 
-Delivered the marketplace frontend and connected discovery, authentication, transactions, holdings, and retirement workflows to backend and Web3 services. Users could move through these capabilities in the implemented interface.
+### Implementation
+
+- Figma-to-React frontend
+- Clerk sign-in, sign-up & OTP
+- Existing Python API integration
+- Listing filters, cart & P2P transactions
+- Wallets, holdings & credit retirement
+- PDF transaction receipts
+
+**Stack:** React · Tailwind CSS · Material UI · Clerk · Wagmi · Reown AppKit · Web3
+
+### Optional technical decisions
+
+- **Accounts:** Integrate Clerk sign-in/sign-up. Connect authentication to the marketplace frontend.
+- **Web3 connections:** Wagmi and Reown AppKit. Connect wallets and smart-contract transaction flows.
+
+### Outcome
+
+Delivered a connected marketplace frontend spanning discovery, account access, transactions, holdings and carbon-credit retirement.
 
 ## Gaming Platform
 
-**Card / introduction**
+**Introduction:** A wallet-connected gaming application with user and admin workflows.
 
-A wallet-connected gaming product developed from a client’s v0 demo. I built frontend and backend features covering sign-in, gameplay, referrals, credits, and administrative workflows, and integrated the client-provided smart contract.
+**Role:** Full-Stack Developer
 
-**Overview**
+### Overview
 
-The client began with a frontend demo created in v0. To become a working product, it needed application data, authentication, wallet connections, gameplay, and the user and administrative workflows behind referrals and credits. I converted that starting point into a Next.js application and built both frontend and backend functionality.
+A wallet-connected gaming product with spin-wheel gameplay, referrals, bonuses and credit claims. Users can manage their accounts and rewards, while administrators manage users, claims and reward settings.
 
-I implemented Google and email/password sign-in with NextAuth, MongoDB-backed application data, wallet integration, and the spin-wheel experience. The work also covered referral validation and rewards, bonuses, credit claims, account histories, and administrative controls for users, transfers, claims, referral percentages, prizes, and free-spin timing. I integrated a smart contract supplied by the client. The delivery turned a visual demo into connected full-stack functionality.
+### Contributions
 
-**Outcome**
+- **Full-stack application:** Converted the demo into a connected Next.js frontend and backend with persistent application data.
+- **Accounts & gameplay:** Implemented Google and email/password authentication, wallet connectivity and spin-wheel gameplay. Integrated the client-provided smart contract.
+- **Referrals & credits:** Built referral validation, bonuses, credit claims and user history views.
+- **Administrative controls:** Added user editing, account enable/disable, claim and transfer approvals, and configurable reward settings.
 
-Converted the client’s frontend demo into a working full-stack application with authentication, wallet interactions, gameplay, referrals, credits, and user/admin workflows. Smart-contract work covered integration with the client’s supplied contract.
+### Implementation
+
+- Google & email/password authentication
+- Wallet & client-provided contract integration
+- Spin-wheel gameplay & reward history
+- Referrals, bonuses & credit claims
+- User management & claim approvals
+- Referral, prize & free-spin settings
+
+**Stack:** Next.js · TypeScript · Tailwind CSS · MongoDB · NextAuth · Web3
+
+### Optional technical decisions
+
+- **Application structure:** Next.js frontend and backend with MongoDB. Turn the client’s frontend demo into a connected full-stack application.
+- **Authentication:** NextAuth Google OAuth and credentials. Support Google and email/password sign-in.
+
+### Outcome
+
+Turned the frontend demo into a working full-stack application with connected accounts, gameplay, referrals, credits and administrative workflows.
 
 ## Development Solutions Group
 
-**Card / introduction**
+**Introduction:** A responsive company website built to the client’s requested presentation.
 
-A company website built around the client’s requested presentation. I delivered responsive Home, About, Projects, and Contact pages, including a validated contact interface, using React and TypeScript.
+**Role:** Frontend Developer
 
-**Overview**
+### Overview
 
-Development Solutions Group needed a company website that followed the client’s requested design and presented its business and projects. The scope was focused: responsive Home, About, Projects, and Contact interfaces with a consistent presentation across screen sizes.
+Development Solutions Group’s company website presents its business and projects through Home, About and Projects pages, with a Contact interface for enquiries.
 
-I built the frontend using React 19, TypeScript, and Tailwind CSS, following the supplied direction. For the contact interface, I used Formik and Yup to implement form validation. The delivery provided the requested company presentation and contact experience. The delivered pages covered the client’s requested company presentation and contact interface.
+### Contributions
 
-**Outcome**
+- **Responsive company pages:** My role on this project was frontend development within a full-stack company position. Built Home, About, Projects, and Contact interfaces following the client’s design using React 19, TypeScript and Tailwind CSS.
+- **Contact validation:** Implemented contact-form validation with Formik and Yup.
 
-Delivered the requested company presentation through responsive Home, About, Projects, and Contact pages, with a validated contact interface.
+### Implementation
+
+- Responsive company pages
+- Client-requested visual presentation
+- Formik & Yup contact validation
+
+**Stack:** React 19 · TypeScript · Tailwind CSS · Formik · Yup
+
+### Outcome
+
+Delivered the requested company website with responsive page layouts and a validated contact interface.
 
 ## Get Foodies
 
-**Card / introduction**
+**Introduction:** A food application with web, iOS and Android experiences, product listings, discounts and account settings.
 
-An iOS and Android food application built from Figma designs. I built the mobile interface, contributed backend/API work, and connected onboarding, OTP verification, profile completion, multilingual and location-related features.
+**Role:** Full-Stack Developer · Web & Mobile
 
-**Overview**
+### Overview
 
-Get Foodies is a company food application for iOS and Android, with onboarding, multilingual interfaces, and location-related features. The project started with Figma designs that needed to become a mobile interface connected to backend services. I built the application UI from scratch using React Native and Expo.
+Get Foodies is a food application for web, iOS and Android. It combines product listings, dynamic banners and discounts with account and theme settings; its mobile experience also includes onboarding, multilingual interfaces and location-related features.
 
-My work covered registration, OTP verification, profile completion, banner interfaces, Redux Toolkit state, and API integrations. I also implemented multilingual support, location-related features, and file-based routing. The delivery connected the described mobile interfaces and flows across iOS and Android. This was also my first React Native/Expo project, providing practical experience with mobile application structure and lifecycle behavior.
+### Contributions
 
-Alongside the mobile interface and API integrations, I also contributed backend/API work.
+- **Mobile interfaces:** Built iOS and Android screens from Figma and connected registration, OTP verification, profile completion and banner interfaces.
+- **Web UI & backend features:** Built web application interfaces and backend features for product listings, dynamic banners, discounts, account settings and theme settings.
+- **State & localization:** Implemented Redux Toolkit state, multilingual interfaces, location-related features and file-based routing.
 
-**Outcome**
+### Implementation
 
-Implemented the supplied mobile designs and connected registration, OTP, profile, multilingual, location, and banner features to the application’s state and backend services across iOS and Android.
+- iOS & Android screens from Figma
+- Registration, OTP & profile completion
+- Web UI & product-listing backend
+- Dynamic banners & discounts
+- Account & theme settings
+- Redux Toolkit & file-based routing
+- Multilingual & location-related features
+
+**Stack:** React Native · Expo · Node.js · Express · Redux Toolkit · i18n · File-based routing
+
+**Development workflow:** I used AI-assisted learning alongside implementation to understand React Native, Expo and mobile application lifecycle behavior.
+
+### Outcome
+
+Delivered web interfaces and backend features for listings, banners, discounts and settings, alongside connected onboarding, profile, multilingual and location-related mobile flows.
 
 ## Onyx
 
-**Card / introduction**
+**Introduction:** Browser-based operation and monitoring for an existing desktop printing system.
 
-A web interface for a client’s desktop printing workflow. I connected existing desktop APIs and displayed live job and printer updates, enabling browser-based operation while the desktop software handled printing.
+**Role:** Frontend Developer
 
-**Overview**
+### Overview
 
-Onyx desktop printing software connects to physical printers, accepts PDF jobs and copy quantities, and reports job and printer states. The client wanted different users to operate the workflow through a browser from different locations, rather than relying on a single computer’s interface. My role was to build and integrate the web frontend around the existing desktop application.
+The client wanted users in different locations to operate printing workflows through a browser. The existing desktop application accepted PDF jobs and copy quantities and remained responsible for printer execution.
 
-Web actions used the desktop application’s APIs, and a frontend Socket.io listener received updates for ready, queued, printing, failed, and printed jobs, plus online or offline printer status. The existing desktop software remained responsible for execution; I did not build a custom backend or Socket.io server. Work was carried out on the client’s laptop through remote/proxy access, so this is a private case study without public media.
+### Contributions
 
-**Outcome**
+- **Browser operation:** Built web interfaces consuming the desktop application’s existing APIs for printing actions.
+- **Live monitoring:** Added a frontend Socket.io listener to display job progress and printer connectivity.
 
-Enabled the client’s printing workflow to be operated and monitored through a browser. The interface displayed job progress and printer connectivity while the existing desktop application continued to execute print jobs.
+### Implementation
+
+- Browser controls for existing desktop APIs
+- PDF jobs & copy-quantity commands
+- Frontend Socket.io event listener
+- Ready, queued & printing states
+- Failed & printed job updates
+- Printer online/offline status
+
+**Stack:** Onyx Thrive / desktop APIs · Socket.io frontend listener
+
+### Outcome
+
+Enabled browser-based operation and monitoring while the existing desktop application continued to execute print jobs.
 
 ## Keller Williams
 
-**Card / introduction**
+**Introduction:** A real-estate platform connecting property search, local agents and customer experiences.
 
-A real-estate platform spanning 27+ connected repositories. As a junior engineer shadowing the CTO, I resolved bugs and translation tickets, coordinated dependent changes, and updated Jest tests and coverage checks.
+**Role:** Junior Software Engineer
 
-**Overview**
+### Overview
 
-Keller Williams provided experience working within a real-estate platform made up of more than 27 interconnected React/Next.js repositories. These included applications and shared packages, such as table components, with translation support for up to 22 languages. I contributed as a Junior Software Engineer at Strategist HUB while shadowing the CTO.
+Keller Williams’ public real-estate platform helps people explore homes to buy or rent and connect with local agents. Its wider technology ecosystem supports agents and customer relationships across the property journey.
 
-My responsibility was to investigate assigned bugs and translation tickets, trace issues through parent and child repositories, and add required translation keys. I incorporated generated pull requests from the team’s existing translation tool, tested locally, and followed the dependency process: review and merge child changes, retest consuming applications, then progress parent changes. I also updated or added affected Jest tests to satisfy CI and coverage checks.
+### Contributions
 
-**Outcome**
+- **Ticket investigation:** As a Junior Software Engineer at Strategist HUB shadowing the CTO, traced bugs through 27+ connected React/Next.js repositories and shared packages.
+- **Translation updates:** Added i18next key/value pairs for translation workflows supporting up to 22 languages and incorporated generated translation pull requests from the team’s existing tooling.
+- **Dependent changes & tests:** Coordinated child-repository merges, retested parent applications and updated affected Jest tests and CI coverage checks.
 
-Resolved assigned bugs and translation tickets, verified changes across dependent repositories, and updated affected Jest tests and coverage checks. The work supported the platform’s existing applications, shared packages, and multilingual interfaces.
+### Implementation
+
+- Cross-repository bug investigation
+- i18next translation key/value updates
+- Generated translation PR integration
+- Child/parent merge coordination
+- Jest regression & CI coverage checks
+
+**Stack:** React.js · Next.js · i18next · Jest · Git / pull requests · CI coverage checks · Microfrontends / shared packages
+
+### Outcome
+
+Resolved assigned bugs and translation tickets, verified dependent applications and maintained affected tests and coverage checks.
 
 ## Shopify GP-Lite / Barcode Buddy
 
-**Card / introduction**
+**Introduction:** Shopify picking, packing, barcode scanning and product-label printing.
 
-Completed Shopify feature work across embedded and standalone workflows. I added mobile camera scanning and worked on product labels, PDF generation, Shopify data integrations, and scan/rescan behavior using React and Ruby on Rails.
+**Role:** Freelance Full-Stack Developer
 
-**Overview**
+### Overview
 
-GP-Lite / Barcode Buddy supports Shopify picking, packing, barcode scanning, and product-label printing. The existing application was embedded-only, and the feature work needed mobile camera scanning and standalone workflows alongside that experience. I completed the described work as a freelance full-stack developer, contributing across React and Ruby on Rails.
+GP-Lite / Barcode Buddy helps Shopify merchants with picking, packing, barcode scanning and product-label printing. It connects product and inventory information to scanning and printable-label workflows.
 
-I implemented iOS and Android camera scanning with camera selection, zoom, torch controls, and permission handling. I also worked on configurable label sizes, product selection and quantities, Save/Cancel layout editing, barcode and PDF generation, and long-text handling. Shopify GraphQL integration covered product, variant, inventory-location, and metafield data, including missing-location fixes. The completed work preserved embedded use while adding standalone workflows and improving printing and scanning features.
+### Contributions
 
-**Outcome**
+- **Mobile scanning:** Implemented iOS/Android camera scanning with camera selection, zoom, torch controls and permission handling.
+- **Application modes:** The embedded iframe restricted camera/media permissions in this implementation. Added an in-app button opening the application in a standalone browser context, where users could grant camera access and scan successfully. Kept the existing embedded experience.
+- **Labels & Shopify data:** Worked across React and Rails on configurable labels, PDF generation, inventory data, scan tags and rescan handling.
 
-Completed combined embedded and standalone scanning workflows with mobile camera controls, alongside the described label-printing, Shopify data, and order scan/rescan improvements.
+### Implementation
+
+- iOS/Android camera scanning & controls
+- Embedded-to-browser scanning launch
+- Configurable product-label sizes
+- Product search, selection & quantities
+- Quantity-on-hand edits & location fallback
+- Save/Cancel layouts & long-text handling
+- Barcode/PDF generation & rescan handling
+
+**Stack:** Ruby on Rails · React · Shopify GraphQL API · JsBarcode · WickedPDF · PDF-merging tools
+
+### Optional technical decisions
+
+- **Camera access in the embedded app:** Keep embedded workflows and launch scanning in a standalone browser context. The embedded iframe restricted camera/media permissions in this implementation. An in-app button opened the application outside the iframe, letting users grant camera access and complete scanning without converting the entire app to standalone mode.
+- **Label generation:** JsBarcode, WickedPDF and PDF-merging tools. Generate barcodes and printable product labels.
+- **Shopify data:** GraphQL product, variant, location and metafield integration. Support labels and handle missing inventory-location data.
+
+### Outcome
+
+Enabled successful camera scanning in a standalone browser context while preserving the embedded app, and completed the described label-printing and Shopify-data improvements.
