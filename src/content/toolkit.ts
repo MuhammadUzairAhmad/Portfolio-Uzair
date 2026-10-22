@@ -38,11 +38,11 @@ export const toolkitGroups = [
       },
       {
         label: "Backend frameworks",
-        items: ["Express.js", "NestJS", "Ruby on Rails"],
+        items: ["Express.js", "NestJS", "NextJS"],
       },
       {
         label: "APIs",
-        items: ["REST", "GraphQL", "Next.js API routes"],
+        items: ["REST", "Third-party", "Next.js API routes"],
       },
       {
         label: "Authentication",
@@ -50,7 +50,7 @@ export const toolkitGroups = [
       },
       {
         label: "Validation & email",
-        items: ["Joi", "Nodemailer"],
+        items: ["Joi", "Yup", "Nodemailer"],
       },
       {
         label: "API documentation",
@@ -115,11 +115,7 @@ export const toolkitGroups = [
       },
       {
         label: "Editors",
-        items: ["VS Code", "Cursor"],
-      },
-      {
-        label: "AI-assisted workflow",
-        items: ["Codex-assisted planning, implementation and review"],
+        items: ["VS Code", "Cursor", "Codex", "Antigravity"],
       },
     ],
   },
