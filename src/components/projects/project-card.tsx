@@ -37,7 +37,7 @@ export function ProjectCard({
         href={projectHref(project)}
         prefetch
         className={cn(
-          "relative grid min-h-60 grid-cols-[.9fr_1.1fr] gap-1 p-5 sm:p-6",
+          "relative grid grid-cols-1 gap-6 p-5 sm:min-h-60 sm:grid-cols-[.9fr_1.1fr] sm:gap-1 sm:p-6",
           wide && "sm:min-h-72 sm:grid-cols-[.9fr_1.2fr] sm:p-8",
         )}
       >
@@ -50,11 +50,11 @@ export function ProjectCard({
           <h3 className={cn("text-xl sm:text-2xl", wide && "sm:text-4xl")}>
             {project.name}
           </h3>
-          <p className="mt-1 max-w-xs text-xs font-medium leading-relaxed sm:text-sm">
+          <p className="mt-1 text-xs font-medium leading-relaxed sm:max-w-xs sm:text-sm">
             {project.cardSubtitle ?? project.subtitle}
           </p>
           {wide && (
-            <p className="mt-3 max-w-xs text-xs leading-relaxed text-muted-foreground sm:text-sm">
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground sm:max-w-xs sm:text-sm">
               {project.summary}
             </p>
           )}
@@ -72,13 +72,13 @@ export function ProjectCard({
             />
           </span>
         </div>
-        <div className="relative flex min-w-0 items-center">
+        <div className="relative flex h-52 min-w-0 items-center sm:h-auto">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#c0a76518,transparent_70%)] dark:bg-[radial-gradient(ellipse_at_center,#b3d94922,transparent_70%)]" />
           <DevicePreview
             project={project}
             compact={!wide}
             className={cn(
-              "absolute -right-6 top-1/2 h-56 w-[115%] max-w-none -translate-y-1/2 transition-transform duration-300 motion-safe:group-hover:-translate-y-[52%]",
+              "relative mx-auto h-52 w-full max-w-none transition-transform duration-300 motion-safe:group-hover:-translate-y-1 sm:absolute sm:-right-6 sm:top-1/2 sm:h-56 sm:w-[115%] sm:-translate-y-1/2 motion-safe:sm:group-hover:-translate-y-[52%]",
               wide && "sm:-right-5 sm:h-72 sm:w-[118%]",
             )}
           />
@@ -112,7 +112,8 @@ export function ToolCard({
         prefetch
         className={cn(
           "flex h-full flex-col p-5",
-          archive && "grid min-h-72 items-center gap-6 sm:grid-cols-2 sm:p-7",
+          archive &&
+            "grid grid-cols-1 items-center gap-6 sm:min-h-72 sm:grid-cols-2 sm:p-7",
         )}
       >
         <div className={cn(archive && "flex h-full flex-col items-start")}>
@@ -127,13 +128,6 @@ export function ToolCard({
           <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
             {project.summary}
           </p>
-          {archive && (
-            <div className="mt-auto flex flex-wrap gap-2 pt-5">
-              {project.scope.map((scope) => (
-                <Badge key={scope}>{scope}</Badge>
-              ))}
-            </div>
-          )}
           {archive && (
             <span className="mt-5 inline-flex items-center gap-3 text-sm font-medium text-primary">
               Explore project
@@ -173,14 +167,14 @@ export function NextProjectCard({ project }: { project: PortfolioProject }) {
       prefetch
       className="group grid items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-[border-color,transform] duration-200 hover:border-primary/50 focus-visible:border-primary/50 motion-safe:hover:-translate-y-0.5 sm:grid-cols-[160px_1fr_auto]"
     >
-      <div className="h-28 overflow-hidden">
+      <div className="order-2 h-40 overflow-hidden sm:order-none sm:h-28">
         {project.illustration ? (
-          <ToolVisual kind={project.illustration} className="h-28" />
+          <ToolVisual kind={project.illustration} className="h-40 sm:h-28" />
         ) : (
           <DevicePreview project={project} />
         )}
       </div>
-      <div>
+      <div className="order-1 sm:order-none">
         <h3 className="text-xl">{project.name}</h3>
         <p className="mt-1 text-xs text-muted-foreground">{project.subtitle}</p>
         <div className="mt-3 flex flex-wrap gap-2">
@@ -189,7 +183,7 @@ export function NextProjectCard({ project }: { project: PortfolioProject }) {
           ))}
         </div>
       </div>
-      <span className="flex items-center gap-3 text-xs font-medium text-primary">
+      <span className="order-3 flex items-center gap-3 text-xs font-medium text-primary sm:order-none">
         View case study
         <ArrowRight
           size={14}
