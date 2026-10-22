@@ -86,8 +86,17 @@ for (const route of routes) {
   if (route === "/contact") {
     assert.match(html, /Hiring for your team/);
     assert.match(html, /Building or improving a product/);
-    assert.match(html, /subject=Software%20engineering%20role/);
-    assert.match(html, /subject=Project%20enquiry/);
+    assert.match(html, /Remote, hybrid or on-site arrangement/);
+    assert.match(html, /Preferred timeline and budget, if known/);
+    assert.equal((html.match(/>Chat on WhatsApp/g) ?? []).length, 1);
+    assert.ok(html.includes(profile.whatsapp));
+    assert.doesNotMatch(
+      html,
+      /calendly|Discuss a role|Discuss a project|Have something else in mind/,
+    );
+    assert.ok(
+      html.indexOf('aria-label="Contact details"') < html.indexOf('id="roles"'),
+    );
   }
   if (route.startsWith("/tools/")) {
     const tool = tools.find((item) => route === `/tools/${item.slug}`)!;
