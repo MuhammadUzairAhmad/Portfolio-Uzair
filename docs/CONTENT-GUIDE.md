@@ -165,3 +165,9 @@ Tools with remaining narrative draft flags use `ToolSnapshot`, showing only the 
 All Tools use `ToolSnapshot`, including complete records. It shows overview, role/contributions, verified stack and any confirmed decisions, workflow and outcomes. Lessons are optional and omitted when absent; demo-marked decisions/results/lessons never render. TypeSpark/GlobePick are complete written records. Blogsite retains draft fields and `stackVerified: false`, so its unconfirmed stack is hidden.
 
 Set `developmentWorkflow` only when confirmed; current Codex wording is qualitative, with no invented speed percentage. Add a future owner-supplied live URL through `productUrl`. Optional `media` and `walkthroughs` use the existing on-page viewers. Absent URLs or company-laptop evidence do not create empty media sections or require fabricated screenshots.
+
+## Homepage selections and service scope
+
+`profile.homeFeaturedProjectSlugs` controls only the ordered Home cards: SkillMatch, Hestiya, Bitlux. It is independent of Work archive `featured` flags and `heroProjectSlug`. Services use `href: "/work"`, a short description, three `deliverables`, and a compact stack list. Keep deliverables client-facing; detailed library inventory belongs on About.
+
+Employment focus labels were retired; titles/dates and factual highlights remain. Home `toolkitHighlights` uses frontend/mobile, backend/authentication, data/state and API integrations. TanStack Query belongs with data fetching/caching; jsPDF describes PDF generation within connected document workflows. Related project links are examples, not a claim that every badge was used on that one project. The shared approach describes scope → full-stack MVP → test/launch → improve/scale and also appears on About.

@@ -67,3 +67,8 @@ The changes are local; no remote, push, or deployment was added.
 
 - Content/UI phase: remove Bitlux external URL, restore supported stack/authentication facts, complete TypeSpark/GlobePick from build evidence, render concise tool detail pages with optional decisions/lessons and confirmed Codex workflows, and update regression/smoke coverage.
 - Documentation phase: source provenance, resolved audit items, remaining Blogsite/owner material, editing guidance and verification. Local only; résumé/GitHub deferred by owner.
+
+### Homepage content refinement — 22 October 2026
+
+- Implementation phase: collection-wide service links and deliverables, explicit Home featured selection, retired Gaming spotlight, cleaner employment headers, reorganized practical skills and MVP-to-growth process.
+- Documentation phase: latest source precedence, independent homepage/archive editing guidance, responsive checks and refreshed screenshots. Local commits only.

@@ -1,6 +1,6 @@
 # Remaining content — 22 October 2026
 
-The owner’s `portfolio-content-additions.md` has been applied. All ten company/client case studies now have substantive supported narratives. Bitlux, Linxx, and SkillMatch remain featured in that order. Welcome to Food has been removed, including its generated route. Résumé dates and downloadable PDF remain unchanged.
+The owner’s `portfolio-content-additions.md` has been applied. All ten company/client case studies now have substantive supported narratives. Home features SkillMatch, Hestiya Marketplace and Bitlux; the Work archive retains its separate primary trio. Welcome to Food has been removed, including its generated route. Résumé dates and downloadable PDF remain unchanged.
 
 ## Required next content
 
