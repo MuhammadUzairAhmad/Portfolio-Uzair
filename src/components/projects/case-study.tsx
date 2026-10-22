@@ -7,8 +7,8 @@ import { ContactCta } from "@/components/layout/footer";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
 import { DevicePreview } from "./device-preview";
-import { ImplementationMap } from "./implementation-map";
-import { ImplementationChecklist } from "./implementation-checklist";
+import { ProjectStack } from "./project-stack";
+import { ProjectChallenge } from "./project-challenge";
 import { ProjectContributions } from "./project-contributions";
 import { ProjectDecisions } from "./project-decisions";
 import { ProjectEvidence } from "./project-evidence";
@@ -60,8 +60,13 @@ export function CaseStudy({
   const hasDecisions = project.decisions.some((item) => !item.demo);
   const sections = [
     { id: "overview", label: "Overview" },
-    { id: "contributions", label: "My role & contributions" },
-    { id: "implementation", label: "Implementation" },
+    { id: "contributions", label: "My contribution" },
+    ...(project.highlightChallenge
+      ? [{ id: "challenge", label: "Key challenge & solution" }]
+      : []),
+    ...(project.stackVerified !== false
+      ? [{ id: "tech-stack", label: "Tech stack" }]
+      : []),
     ...(hasEvidence
       ? [{ id: "evidence", label: "Screenshots & walkthroughs" }]
       : []),
@@ -239,20 +244,13 @@ export function CaseStudy({
                   </div>
                 )}
                 {section.id === "contributions" && (
-                  <>
-                    <ProjectContributions project={project} />
-                    {project.implementation && (
-                      <div className="mt-5">
-                        <ImplementationMap
-                          map={project.implementation}
-                          compact
-                        />
-                      </div>
-                    )}
-                  </>
+                  <ProjectContributions project={project} />
                 )}
-                {section.id === "implementation" && (
-                  <ImplementationChecklist project={project} />
+                {section.id === "challenge" && (
+                  <ProjectChallenge project={project} />
+                )}
+                {section.id === "tech-stack" && (
+                  <ProjectStack stack={project.stack} />
                 )}
                 {section.id === "evidence" && (
                   <ProjectEvidence project={project} />

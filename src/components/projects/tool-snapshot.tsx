@@ -7,7 +7,7 @@ import { ContactCta } from "@/components/layout/footer";
 import { ButtonLink } from "@/components/ui/button";
 import { ToolVisual } from "./tool-visual";
 import { NextProjectCard } from "./project-card";
-import { ImplementationChecklist } from "./implementation-checklist";
+import { ProjectStack } from "./project-stack";
 import { ProjectContributions } from "./project-contributions";
 import { ProjectDecisions } from "./project-decisions";
 import { ProjectEvidence } from "./project-evidence";
@@ -96,12 +96,14 @@ export function ToolSnapshot({
             ))}
           </div>
         </ToolSection>
-        <ToolSection id="contributions" title="My role & contributions">
+        <ToolSection id="contributions" title="My contribution">
           <ProjectContributions project={project} />
         </ToolSection>
-        <ToolSection id="implementation" title="Implementation">
-          <ImplementationChecklist project={project} />
-        </ToolSection>
+        {project.stackVerified !== false && (
+          <ToolSection id="tech-stack" title="Tech stack">
+            <ProjectStack stack={project.stack} />
+          </ToolSection>
+        )}
         {(!!project.media?.length || !!project.walkthroughs?.length) && (
           <ToolSection id="evidence" title="Screenshots & walkthroughs">
             <ProjectEvidence project={project} />

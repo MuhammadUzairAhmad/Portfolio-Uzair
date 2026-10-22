@@ -84,7 +84,7 @@ for (const route of routes) {
       /Replace this draft|Add a verified lesson|framework and public URL remain to be verified|Illustrative details/,
     );
     assert.doesNotMatch(html, /Scrollable technical decisions/);
-    assert.match(html, /aria-label="Implemented features"/);
+    assert.match(html, /aria-label="My contributions"/);
   }
   if (route === "/tools/typespark" || route === "/tools/globepick") {
     assert.match(html, /Tech stack/);
@@ -136,10 +136,19 @@ for (const route of routes) {
       assert.match(html, /Contributed from day one/);
       assert.doesNotMatch(html, /Ongoing product/);
     }
-    if (project.implementation) assert.match(html, /Workflow/);
-    assert.match(html, /aria-label="Implemented features"/);
-    assert.match(html, /id="implementation"/);
-    assert.doesNotMatch(html, /href="#challenge"/);
+    assert.match(html, /aria-label="My contributions"/);
+    assert.match(html, /id="contributions"/);
+    assert.doesNotMatch(
+      html,
+      /id="implementation"|href="#implementation"|My role &amp; contributions/,
+    );
+    if (project.stackVerified !== false) assert.match(html, /id="tech-stack"/);
+    else assert.doesNotMatch(html, /id="tech-stack"/);
+    if (project.highlightChallenge) {
+      assert.match(html, /id="challenge"/);
+      assert.match(html, /The challenge/);
+      assert.match(html, /My solution/);
+    } else assert.doesNotMatch(html, /id="challenge"|href="#challenge"/);
     if (!project.decisions.some((item) => !item.demo)) {
       assert.doesNotMatch(html, /id="decisions"|href="#decisions"/);
     }

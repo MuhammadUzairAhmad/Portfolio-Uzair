@@ -61,6 +61,7 @@ export type PortfolioProject = {
     steps: { title: string; description: string }[];
   };
   contributions: { title: string; description: string }[];
+  highlightChallenge?: boolean;
   problem: Narrative;
   solution: Narrative;
   decisions: Decision[];

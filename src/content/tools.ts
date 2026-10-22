@@ -31,7 +31,7 @@ export const tools: PortfolioProject[] = [
       "Saved preferences & responsive controls",
     ],
     overview:
-      "TypeSpark combines text styling, glitch effects and signature creation in one browser toolkit. I built the responsive workspaces, text-processing logic and copy/export flows with Next.js and React.\n\nProcessing runs locally, with no account or application backend. Shared controls, licensed local fonts and recoverable preferences support the three tools.",
+      "TypeSpark combines text styling, glitch effects and signature creation in one browser toolkit.\n\nProcessing runs locally, with no account or application backend. Shared controls, licensed local fonts and recoverable preferences support the three tools.",
     contributions: [
       {
         title: "Text styling & editing",
@@ -115,7 +115,7 @@ export const tools: PortfolioProject[] = [
       "Country worksheets & starter packs",
     ],
     overview:
-      "GlobePick helps users discover countries, capitals and cities, save and share results, and create learning activities. I built its generators, persistence, sharing and worksheet flows with Next.js and React.\n\nThe frontend uses bundled geography data and validated local state, without accounts or a runtime geography service. Explanatory content is server-rendered, and the homepage loads city records on demand.",
+      "GlobePick helps users discover countries, capitals and cities, save and share results, and create learning activities.\n\nThe frontend uses bundled geography data and validated local state, without accounts or a runtime geography service. Explanatory content is server-rendered, and the homepage loads city records on demand.",
     contributions: [
       {
         title: "Generators & selection logic",
@@ -189,18 +189,19 @@ export const tools: PortfolioProject[] = [
       "A blog frontend with article, listing, category, search, and author-page layouts. The related project notes focus on consistent containers, typography, spacing, and themes.",
     contributions: [
       {
-        title: "Content layouts",
-        description: "Created multiple page types for browsing and reading.",
+        title: "Browsing layouts",
+        description:
+          "Created listing, category, search and author-page layouts for browsing content.",
       },
       {
-        title: "Visual consistency",
+        title: "Article reading",
         description:
-          "Worked on shared layout, spacing, typography, and color rules.",
+          "Built readable article layouts with responsive widths and typography.",
       },
       {
-        title: "Responsive reading",
+        title: "Shared presentation",
         description:
-          "Adapted readable article widths and broader listing layouts.",
+          "Applied consistent containers, spacing, themes and color rules across the pages.",
       },
     ],
     problem: {

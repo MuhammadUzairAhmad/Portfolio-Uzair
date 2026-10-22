@@ -1,3 +1,4 @@
+import { CheckCircle2 } from "lucide-react";
 import type { PortfolioProject } from "@/types/content";
 
 export function ProjectContributions({
@@ -7,24 +8,28 @@ export function ProjectContributions({
 }) {
   return (
     <div>
-      <ul className="space-y-4">
-        {project.contributions.map((item, i) => (
+      <ul aria-label="My contributions" className="grid gap-3 sm:grid-cols-2">
+        {project.contributions.map((item) => (
           <li
             key={item.title}
-            className="grid items-start gap-3 sm:grid-cols-[35px_190px_1fr]"
+            className="flex items-start gap-3 rounded-lg border border-border p-4"
           >
-            <span className="flex size-8 items-center justify-center rounded-lg bg-accent text-sm text-primary">
-              {String(i + 1).padStart(2, "0")}
-            </span>
-            <h3 className="pt-1 text-sm">{item.title}</h3>
-            <p className="pt-1 text-sm leading-relaxed text-muted-foreground">
-              {item.description}
-            </p>
+            <CheckCircle2
+              size={17}
+              className="mt-0.5 shrink-0 text-primary"
+              aria-hidden
+            />
+            <div className="min-w-0">
+              <h3 className="text-sm">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {item.description}
+              </p>
+            </div>
           </li>
         ))}
       </ul>
       {project.developmentWorkflow && (
-        <p className="mt-5 border-t border-border pt-4 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
           <span className="font-medium text-foreground">
             Development workflow:{" "}
           </span>

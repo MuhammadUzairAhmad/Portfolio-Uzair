@@ -160,19 +160,19 @@ export const projects: PortfolioProject[] = [
       "Linxx connects marketplace listings with ambassador and shopper workflows across web and mobile. Its features include job discovery, GPS-related functionality, approvals, and a Plaid integration. My work focused on connecting these interfaces to backend services and making the affected user journeys work from beginning to end.\n\nI integrated APIs, updated screens, investigated bugs, and tested the connected flows. On mobile, I worked through issues specific to the Capacitor integration while supporting deployment. My contributions also included approval and decline flows, GPS features, and Plaid integration. After the changes, I verified the affected workflows across web and mobile. The ongoing product provided practical experience improving connected features across two delivery environments.\n\nMy responsibilities also included backend/API work, in addition to frontend integration and mobile debugging.",
     contributions: [
       {
-        title: "Connected application flows",
+        title: "Marketplace features & APIs",
         description:
-          "Contributed frontend and backend/API work, integrated services and updated marketplace interfaces.",
+          "Contributed frontend and backend/API work for marketplace listings, approval/decline workflows, GPS discovery and Plaid integration.",
       },
       {
-        title: "Mobile debugging",
+        title: "Mobile fixes & delivery",
         description:
-          "Investigated Capacitor-specific issues, fixed affected mobile behavior and supported deployment.",
+          "Investigated Capacitor-specific issues, fixed mobile behavior and supported deployment.",
       },
       {
-        title: "Marketplace verification",
+        title: "End-to-end verification",
         description:
-          "Worked on approvals, GPS-related features and Plaid integration, then tested affected end-to-end journeys.",
+          "Tested affected web and mobile journeys to verify the connected flows.",
       },
     ],
     problem: {
@@ -381,17 +381,17 @@ export const projects: PortfolioProject[] = [
       {
         title: "Marketplace frontend",
         description:
-          "My role on this project was frontend development within a full-stack company position. Built responsive React screens for discovery, cart, transactions and holdings from Figma.",
+          "Built responsive React screens from Figma, including listing filters, cart, P2P transactions and holdings. My project responsibility was frontend development.",
       },
       {
-        title: "Accounts & service integration",
+        title: "Accounts & API integration",
         description:
-          "Integrated Clerk authentication and coordinated directly with the backend developer to connect existing Python APIs.",
+          "Integrated Clerk sign-in, sign-up and OTP, and worked with the backend developer to connect their existing Python APIs.",
       },
       {
-        title: "Wallet & transaction interfaces",
+        title: "Wallets & credit workflows",
         description:
-          "Connected wallets and smart-contract interactions using Wagmi and Reown AppKit, alongside retirement and receipt workflows.",
+          "Connected wallets and smart-contract interactions with Wagmi and Reown AppKit, including carbon-credit retirement and PDF transaction receipts.",
       },
     ],
     problem: {
@@ -469,24 +469,24 @@ export const projects: PortfolioProject[] = [
       "The client began with a frontend demo created in v0. To become a working product, it needed application data, authentication, wallet connections, gameplay, and the user and administrative workflows behind referrals and credits. I converted that starting point into a Next.js application and built both frontend and backend functionality.\n\nI implemented Google and email/password sign-in with NextAuth, MongoDB-backed application data, wallet integration, and the spin-wheel experience. The work also covered referral validation and rewards, bonuses, credit claims, account histories, and administrative controls for users, transfers, claims, referral percentages, prizes, and free-spin timing. I integrated a smart contract supplied by the client. The delivery turned a visual demo into connected full-stack functionality.",
     contributions: [
       {
-        title: "Full-stack application",
+        title: "Full-stack delivery",
         description:
-          "Converted the demo into a connected Next.js frontend and backend with persistent application data.",
+          "Turned the client’s v0 demo into a connected Next.js frontend and backend with MongoDB application data.",
       },
       {
         title: "Accounts & gameplay",
         description:
-          "Implemented Google and email/password authentication, wallet connectivity and spin-wheel gameplay. Integrated the client-provided smart contract.",
+          "Implemented Google and email/password sign-in, wallet connectivity and spin-wheel gameplay. Integrated the client-provided smart contract.",
       },
       {
-        title: "Referrals & credits",
+        title: "Referrals & rewards",
         description:
-          "Built referral validation, bonuses, credit claims and user history views.",
+          "Built referral validation, bonuses, credit claims and user reward histories.",
       },
       {
-        title: "Administrative controls",
+        title: "Administration",
         description:
-          "Added user editing, account enable/disable, claim and transfer approvals, and configurable reward settings.",
+          "Added user editing and account controls, claim/transfer approvals, and settings for referral percentages, prizes and free-spin timing.",
       },
     ],
     problem: {
@@ -555,13 +555,14 @@ export const projects: PortfolioProject[] = [
       "Development Solutions Group needed a company website that followed the client’s requested design and presented its business and projects. The scope was focused: responsive Home, About, Projects, and Contact interfaces with a consistent presentation across screen sizes.\n\nI built the frontend using React 19, TypeScript, and Tailwind CSS, following the supplied direction. For the contact interface, I used Formik and Yup to implement form validation. The delivery provided the requested company presentation and contact experience. The delivered pages covered the client’s requested company presentation and contact interface.",
     contributions: [
       {
-        title: "Responsive company pages",
+        title: "Company pages",
         description:
-          "My role on this project was frontend development within a full-stack company position. Built Home, About, Projects, and Contact interfaces following the client’s design using React 19, TypeScript and Tailwind CSS.",
+          "Built responsive Home, About, Projects and Contact pages from the client’s design with React, TypeScript and Tailwind CSS. My project responsibility was frontend development.",
       },
       {
-        title: "Contact validation",
-        description: "Implemented contact-form validation with Formik and Yup.",
+        title: "Contact experience",
+        description:
+          "Implemented contact-form validation with Formik and Yup, alongside consistent spacing and presentation across screen sizes.",
       },
     ],
     problem: {
@@ -682,14 +683,14 @@ export const projects: PortfolioProject[] = [
       "Onyx desktop printing software connects to physical printers, accepts PDF jobs and copy quantities, and reports job and printer states. The client wanted different users to operate the workflow through a browser from different locations, rather than relying on a single computer’s interface. My role was to build and integrate the web frontend around the existing desktop application.\n\nWeb actions used the desktop application’s APIs, and a frontend Socket.io listener received updates for ready, queued, printing, failed, and printed jobs, plus online or offline printer status. The existing desktop software remained responsible for execution; I did not build a custom backend or Socket.io server. Work was carried out on the client’s laptop through remote/proxy access, so this is a private case study without public media.",
     contributions: [
       {
-        title: "Browser operation",
+        title: "Browser-based printing",
         description:
-          "Built web interfaces consuming the desktop application’s existing APIs for printing actions.",
+          "Built web controls that used existing desktop APIs to submit PDF print jobs and copy quantities. The desktop application handled printer execution.",
       },
       {
-        title: "Live monitoring",
+        title: "Live job & printer status",
         description:
-          "Added a frontend Socket.io listener to display job progress and printer connectivity.",
+          "Integrated a frontend Socket.io listener for ready, queued, printing, failed and printed states, plus printer online/offline updates.",
       },
     ],
     problem: {
@@ -852,19 +853,24 @@ export const projects: PortfolioProject[] = [
       "GP-Lite / Barcode Buddy supports Shopify picking, packing, barcode scanning, and product-label printing. The existing application was embedded-only. Its iframe restricted the media permissions needed for camera scanning in this implementation. I added a button opening the application outside the iframe so users could grant camera access and scan successfully while retaining embedded workflows. I completed the described work as a freelance full-stack developer, contributing across React and Ruby on Rails.\n\nI implemented iOS and Android camera scanning with camera selection, zoom, torch controls, and permission handling. I also worked on configurable label sizes, product selection and quantities, Save/Cancel layout editing, barcode and PDF generation, and long-text handling. Shopify GraphQL integration covered product, variant, inventory-location, and metafield data, including missing-location fixes. The completed work preserved embedded use while adding standalone workflows and improving printing and scanning features.",
     contributions: [
       {
-        title: "Mobile scanning",
+        title: "Mobile camera scanning",
         description:
           "Implemented iOS/Android camera scanning with camera selection, zoom, torch controls and permission handling.",
       },
       {
-        title: "Application modes",
+        title: "Combined app experience",
         description:
-          "The embedded iframe restricted camera/media permissions in this implementation. Added an in-app button opening the application in a standalone browser context, where users could grant camera access and scan successfully. Kept the existing embedded experience.",
+          "Added a button to open scanning in a standalone browser context while preserving the existing embedded Shopify experience.",
       },
       {
-        title: "Labels & Shopify data",
+        title: "Product labels & PDFs",
         description:
-          "Worked across React and Rails on configurable labels, PDF generation, inventory data, scan tags and rescan handling.",
+          "Built configurable label sizes, product search/selection and quantities, Save/Cancel editing and long-text handling across React and Rails. Connected barcode and PDF generation.",
+      },
+      {
+        title: "Inventory & scan handling",
+        description:
+          "Integrated Shopify product, variant, inventory-location and metafield data. Worked on quantity-on-hand edits, missing-location fallback, scan tags and rescan behavior.",
       },
     ],
     results: [
@@ -872,20 +878,14 @@ export const projects: PortfolioProject[] = [
         text: "Enabled successful camera scanning in a standalone browser context while preserving the embedded app, and completed the described label-printing and Shopify-data improvements.",
       },
     ],
+    highlightChallenge: true,
     problem: {
       text: "The existing application was embedded-only. In this implementation, the Shopify iframe restricted the camera/media permissions needed for mobile barcode scanning, so the scanning workflow could not run successfully inside that embedded context.",
     },
     solution: {
-      text: "Kept the embedded app and added an in-app button that opened the application in a standalone browser context. Users could grant camera access there and complete barcode scanning successfully. This combined approach preserved embedded workflows without moving the whole app to standalone mode. Shopify GraphQL and label-generation tools supported the remaining data and printing features.",
+      text: "Kept the embedded app and added an in-app button that opened the application in a standalone browser context. Users could grant camera access there and complete barcode scanning successfully. This combined approach preserved embedded workflows without converting the entire app to standalone mode.",
     },
     decisions: [
-      {
-        topic: "Camera access in the embedded app",
-        choice:
-          "Keep embedded workflows and launch scanning in a standalone browser context",
-        reason:
-          "The embedded iframe restricted camera/media permissions in this implementation. An in-app button opened the application outside the iframe, letting users grant camera access and complete scanning without converting the entire app to standalone mode.",
-      },
       {
         topic: "Label generation",
         choice: "JsBarcode, WickedPDF and PDF-merging tools",

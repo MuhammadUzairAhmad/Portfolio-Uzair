@@ -292,20 +292,17 @@ test("project roles, Foodies web work and Shopify camera workaround preserve con
     assert.ok(work.includes(feature), feature);
   const shopify = getProject("shopify-app")!;
   const modes = shopify.contributions.find(
-    (item) => item.title === "Application modes",
+    (item) => item.title === "Combined app experience",
   )!;
   for (const detail of [
-    "iframe",
-    "permissions",
     "button",
     "standalone browser",
-    "embedded experience",
+    "embedded Shopify experience",
   ])
     assert.ok(modes.description.includes(detail), detail);
-  assert.match(
-    shopify.decisions[0].reason,
-    /without converting the entire app/,
-  );
+  assert.equal(shopify.highlightChallenge, true);
+  assert.match(shopify.problem.text, /iframe.*permissions/);
+  assert.match(shopify.solution.text, /without converting the entire app/);
   const kw = getProject("keller-williams")!;
   assert.match(kw.context!, /homes to buy or rent/);
   assert.doesNotMatch(kw.context!, /I worked|I built|shadowing/);
