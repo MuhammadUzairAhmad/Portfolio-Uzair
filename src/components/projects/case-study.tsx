@@ -198,11 +198,11 @@ export function CaseStudy({
             </ButtonLink>
           )}
         </div>
-        <div className="mt-6 grid items-start gap-6 lg:grid-cols-[220px_1fr] lg:gap-10">
-          <aside className="border-border lg:sticky lg:top-5 lg:border-r lg:pr-6">
+        <div className="mt-6 grid items-start gap-6 xl:grid-cols-[220px_1fr] xl:gap-10">
+          <aside className="hidden border-border xl:sticky xl:top-5 xl:block xl:border-r xl:pr-6">
             <nav
               aria-label="Case study contents"
-              className="flex flex-wrap gap-3 lg:flex-col"
+              className="flex flex-col gap-3"
             >
               <Eyebrow className="mb-1 w-full">On this page</Eyebrow>
               {sections.map((section, i) => (
