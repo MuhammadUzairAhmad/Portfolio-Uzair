@@ -53,9 +53,11 @@ export function ProjectCard({
           <p className="mt-1 text-xs font-medium leading-relaxed sm:max-w-xs sm:text-sm">
             {project.cardSubtitle ?? project.subtitle}
           </p>
-          <p className="mt-3 text-xs leading-relaxed text-muted-foreground sm:max-w-xs sm:text-sm">
-            {project.summary}
-          </p>
+          {wide && (
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground sm:max-w-xs sm:text-sm">
+              {project.summary}
+            </p>
+          )}
           <div className="mt-auto hidden flex-wrap gap-1.5 pt-5 sm:flex">
             {project.stack.slice(0, 3).map((tech) => (
               <Badge key={tech}>{tech}</Badge>
