@@ -171,3 +171,7 @@ Set `developmentWorkflow` only when confirmed; current Codex wording is qualitat
 `profile.homeFeaturedProjectSlugs` controls only the ordered Home cards: SkillMatch, Hestiya, Bitlux. It is independent of Work archive `featured` flags and `heroProjectSlug`. Services use `href: "/work"`, a short description, three `deliverables`, and a compact stack list. Keep deliverables client-facing; detailed library inventory belongs on About.
 
 Employment focus labels were retired; titles/dates and factual highlights remain. Home `toolkitHighlights` uses frontend/mobile, backend/authentication, data/state and API integrations. TanStack Query belongs with data fetching/caching; jsPDF describes PDF generation within connected document workflows. Related project links are examples, not a claim that every badge was used on that one project. The shared approach describes scope → full-stack MVP → test/launch → improve/scale and also appears on About.
+
+## Current compact Home layout
+
+Home uses Services as its single capability overview: one short description, three technology badges and a /work link per card. Detailed skills/capabilities live on About; Services links to /about#toolkit. The former Home SkillsSection/toolkitHighlights and deliverable lists have been removed. Edit detailed toolkitGroups in toolkit.ts and About capabilities in services.ts. Keep homepage featured selection and the MVP process independent of this simplification.

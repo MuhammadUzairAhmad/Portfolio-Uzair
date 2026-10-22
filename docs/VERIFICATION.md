@@ -164,3 +164,11 @@ Validation passed: 20 content/media/publication tests, ESLint, route types/TypeS
 Browser checks confirmed all service destinations are /work and the clicked service action opens the complete collection. The new Hestiya feature navigates to its existing case study. Home and About have no document overflow at 320px and 768px dark; Home also fits at those widths in light. Desktop services/skills layouts were visually inspected at 1280px. The employment labels are absent in both displays. No browser errors were captured. Temporary viewport overrides were reset and dark Home restored.
 
 Previews: [services and featured work](previews/home-services-refined-dark.jpg), [reorganized skills](previews/home-skills-refined-dark.jpg), [complete homepage](previews/home-refined-full-dark.jpg). Local commits only; no push or deployment.
+
+## Compact Services as the Home capability overview — 22 October 2026
+
+Consolidated the homepage into three concise service cards, each with one description, three badges and a /work link. Removed duplicate What I bring content from Home and deleted its unused component/highlights data. About retains its capability cards and full toolkit; the new Explore my skills & tools link reaches /about#toolkit. The approved homepage feature order, SkillMatch hero and MVP-to-growth process remain intact.
+
+Validation passed: 20 tests, lint, route types/TypeScript, production build, formatting, diff whitespace and HTTP smoke across all 18 pages plus four expected 404s/assets/preview protections. Browser inspection confirmed three service cards without bullet lists, absence of Home What I bring, correct service targets, and successful navigation to About’s toolkit with capability content retained. Home fits 320px in light and dark; the desktop Services layout was inspected at 1280px. Temporary viewport overrides were reset and dark Home restored.
+
+Preview: [compact Services](previews/home-compact-services-dark.jpg). Local only; no push or deployment.
