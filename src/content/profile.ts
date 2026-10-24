@@ -37,7 +37,7 @@ export const profile = {
   phone: "+92 323 6639090",
   phoneHref: "tel:+923236639090",
   recentWork:
-    "Completed Shopify GP-Lite feature work across React and Ruby on Rails, combining embedded and standalone workflows, mobile camera scanning, product labels, and Shopify GraphQL integrations.",
+    "Completed a React and Supabase freelance engagement on FieldBlink, an SFA/DMS prototype. Took end-to-end ownership of primary-order, secondary-order and stock-management workflows, from requirements research to implementation.",
   languages: ["English", "Urdu"],
   certifications: [
     "AI Fluency: Framework & Foundations",

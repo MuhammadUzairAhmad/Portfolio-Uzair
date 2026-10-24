@@ -147,7 +147,7 @@ test("employment dates, company assets, and contribution links are valid", () =>
 });
 
 test("owner handoff completes project and tool narratives", () => {
-  assert.equal(projects.length, 10);
+  assert.equal(projects.length, 11);
   assert.equal(getProject("welcome-to-food"), undefined);
   assert.deepEqual(
     projects.filter((p) => p.featured).map((p) => p.slug),

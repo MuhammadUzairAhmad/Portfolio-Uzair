@@ -8,12 +8,14 @@ export function BackgroundSection() {
       <Container className="grid gap-4 border-t border-border py-7 md:grid-cols-2">
         <article className="flex flex-col rounded-xl border border-border bg-surface/40 p-5 sm:p-6">
           <Eyebrow>Recent work</Eyebrow>
-          <h2 className="mt-3 text-xl">Shopify workflows, connected.</h2>
+          <h2 className="mt-3 text-xl">
+            FieldBlink: orders, stock & delivery.
+          </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             {profile.recentWork}
           </p>
           <Link
-            href="/work/shopify-app"
+            href="/work/fieldblink"
             prefetch
             className="mt-auto inline-flex items-center gap-3 self-start pt-5 text-xs font-medium text-primary"
           >

@@ -71,7 +71,10 @@ export type PortfolioProject = {
   lessons?: Narrative;
   productUrl?: string;
   productLinkLabel?: string;
-  projectStatus?: "Ongoing product" | "Completed feature work";
+  projectStatus?:
+    | "Ongoing product"
+    | "Completed feature work"
+    | "Prototype · Engagement completed";
   walkthroughs?: { label: string; url: string; provider: "Loom" }[];
   illustration?: "type" | "globe" | "blog";
 };

@@ -18,6 +18,38 @@ export type ExperienceEntry = {
 // EDIT HERE: résumé dates use YYYY-MM; highlights, skill badges, and original logos are shared by Home and About.
 export const experience: ExperienceEntry[] = [
   {
+    company: "Freelance",
+    role: "Software Engineer",
+    startDate: "2026-07",
+    endDate: "2026-10",
+    location: "Pakistan",
+    initials: "FL",
+    highlights: [
+      {
+        title: "FieldBlink · 15 Aug–10 Oct 2026",
+        description:
+          "Took end-to-end ownership of primary-order, secondary-order and stock-management workflows, from researching requirements and mapping business processes to implementing React interfaces and Supabase data integration. Also implemented shop onboarding and verification workflows and reusable operational data tables.",
+        project: "fieldblink",
+      },
+      {
+        title: "Shopify GP-Lite / Barcode Buddy · 1 Jul–10 Aug 2026",
+        description:
+          "Delivered React and Ruby on Rails features for product labels, barcode/PDF generation and Shopify integrations. Added a standalone browser camera-scanning flow alongside the embedded app to address iframe permission restrictions.",
+        project: "shopify-app",
+      },
+    ],
+    skills: [
+      "React",
+      "TypeScript",
+      "Supabase",
+      "TanStack Table",
+      "TanStack Query",
+      "Ruby on Rails",
+      "Shopify GraphQL API",
+    ],
+    datesDemo: false,
+  },
+  {
     company: "Sofrix",
     role: "Software Engineer",
     startDate: "2025-07",

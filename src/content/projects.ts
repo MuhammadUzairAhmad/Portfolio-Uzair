@@ -2,6 +2,93 @@ import type { PortfolioProject } from "../types/content.ts";
 // Owner-confirmed scope; concise detail copy preserves attribution, media and access boundaries.
 export const projects: PortfolioProject[] = [
   {
+    slug: "fieldblink",
+    name: "FieldBlink",
+    category: "Web platforms",
+    subtitle: "Sales force automation & distribution management",
+    summary:
+      "A React and Supabase prototype connecting shop verification, orders, stock and delivery workflows. I owned primary orders, secondary orders and stock management from requirements research through implementation.",
+    detailSummary:
+      "An SFA/DMS application for coordinating shop onboarding, sales orders, inventory, delivery and payments.",
+    role: "Freelance Full-Stack Developer",
+    developmentScope: "Full-stack",
+    involvement: "15 August–10 October 2026",
+    team: "Client project",
+    platform: "Web",
+    status: "Private project",
+    projectStatus: "Prototype · Engagement completed",
+    stack: [
+      "React",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "TanStack Query",
+      "TanStack Table",
+      "React Hook Form",
+      "Zod",
+    ],
+    keyTechnologies: ["React", "TypeScript", "Supabase"],
+    scope: [
+      "Shop onboarding & two-stage verification",
+      "Primary-order booking, approval & receiving",
+      "Secondary-order booking through delivery",
+      "Stock movements, balances & low-stock alerts",
+      "Invoices & shop ledgers",
+      "Reusable operational data tables",
+    ],
+    overview:
+      "FieldBlink is a sales force automation and distribution management application designed to help companies coordinate B2B distribution and B2C sales operations. It connects shop onboarding and verification, order booking, inventory, delivery, invoicing and shop ledgers, helping office and field teams manage the sales process with clearer visibility into orders, stock and payments.",
+    context:
+      "A sales force automation and distribution management prototype connecting office and field teams across shop onboarding, orders, inventory and delivery.",
+    ownership: {
+      label: "Freelance · End-to-end workflow ownership",
+      summary:
+        "As a freelance full-stack developer, I took end-to-end ownership of the primary-order, secondary-order and stock-management workflows—from researching business requirements and mapping processes to implementing the React interfaces and Supabase data integration. The application used Supabase as its backend, with the React frontend connecting directly to its database services.",
+    },
+    contributions: [
+      {
+        title: "Primary orders",
+        description:
+          "Owned the workflow from requirements research through implementation: order booking, approval and stock receiving.",
+      },
+      {
+        title: "Secondary orders",
+        description:
+          "Owned booking, credit-limit and payment checks for cash-on-delivery or advance payments, stock allocation, load forms, delivery, pre- and post-delivery invoice generation and per-shop ledgers.",
+      },
+      {
+        title: "Stock management",
+        description:
+          "Owned opening stock, product movement history, order allocations, van-out/van-in, good and damaged stock, and the stock overview. Added low-stock settings using fixed thresholds or suggestions based on past sales.",
+      },
+      {
+        title: "Shop onboarding & verification",
+        description:
+          "Implemented progression from raw-shop submissions through online verification (Level 1), on-ground verification (Level 2) and verified shops.",
+      },
+      {
+        title: "Operational interfaces",
+        description:
+          "Built reusable data tables and screens supporting back-office KPO and field-sales/DSR order-booking workflows.",
+      },
+    ],
+    problem: {
+      text: "Shop verification, ordering, stock movements and delivery involve connected steps across office and field teams. The prototype needed to make those stages and their related records clear in one application.",
+    },
+    solution: {
+      text: "Implemented connected operational workflows with React interfaces and Supabase data integration, covering shop verification, primary and secondary orders, inventory movements, delivery, invoices and ledgers.",
+    },
+    decisions: [],
+    results: [
+      {
+        text: "Completed the freelance engagement with implemented prototype workflows spanning shop verification, primary and secondary orders, stock management, delivery, invoicing and shop ledgers.",
+      },
+    ],
+  },
+  {
     slug: "bitlux",
     mockup: "/images/projects/bitlux.webp",
     name: "Bitlux",
@@ -866,6 +953,7 @@ export const projects: PortfolioProject[] = [
       "Barcode/PDF generation & rescan handling",
     ],
     slug: "shopify-app",
+    involvement: "1 July–10 August 2026",
     name: "Shopify GP-Lite / Barcode Buddy",
     category: "Web platforms",
     subtitle: "Embedded & standalone scanning and labels",

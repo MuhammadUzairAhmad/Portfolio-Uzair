@@ -8,7 +8,7 @@ export function ThemeProviderShell({
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="light"
+      defaultTheme="dark"
       enableSystem={false}
       disableTransitionOnChange
     >
